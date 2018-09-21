@@ -1,4 +1,4 @@
-html, body {
+html, body, #body {
   height: 100%;
   }
 
@@ -280,4 +280,67 @@ footer {
     padding: 13.75px 4px;
     letter-spacing: 7.5px;
   }
+}
+
+.black-layer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.head-menu {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.head-menu a {
+  align-self: flex-end;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social-icons {
+  align-self: flex-end;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/*=========== Sidebar nav flex ================== */
+#mySideNav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.close-button {
+  align-self: flex-end;
+}
+
+
+@media only screen and (min-width: 800px) {
+  .head-menu {
+    display: flex;
+    justify-content: space-around;
+  }
+
 }
