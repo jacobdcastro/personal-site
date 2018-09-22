@@ -146,7 +146,7 @@ class Home extends React.Component {
                   Together</Text2></Link>
             </TextContainer>
 
-            <Footer />
+            <Footer backgroundIsBlack={true} />
 
           </MainContent>
         </BlackLayer>
