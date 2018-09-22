@@ -5,7 +5,6 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import registerServiceWorker from './registerServiceWorker';
 import { BrowserRouter as Router, Link } from 'react-router-dom';
-import styles from './styles/index-styles.css';
 
 class About extends React.Component {
   render() {
