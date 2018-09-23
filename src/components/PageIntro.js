@@ -1,8 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import Navbar from './Navbar';
-import img from '../images/cave.jpg';
-import img2 from '../images/icons/angle-arrow-down.svg';
+import aboutImg from '../images/cave.jpg';
+import contactImg from '../images/yellow-telephone.jpg';
+import img from '../images/icons/angle-arrow-down.svg';
 
 const Header = styled.div`
   display: flex;
@@ -10,7 +11,7 @@ const Header = styled.div`
   flex-direction: column;
   height: 650px;
   width: 100%;
-  background-image: url(${img});
+  background-image: url(${props => props.about ? aboutImg : contactImg });
   background-size: cover;
   background-position: center;
   margin: 0;
@@ -56,13 +57,13 @@ const DownArrow = styled.img`
 class PageIntro extends React.Component {
   render() {
     return (
-      <Header>
+      <Header about={this.props.aboutPage}>
         <BlackLayer>
 
           <Navbar action={this.props.action} />
 
           <Headline>{this.props.headline}</Headline>
-          <DownArrow src={img2} alt="down arrow icon" />
+          <DownArrow src={img} alt="down arrow icon" />
         </BlackLayer>
       </Header>
     );

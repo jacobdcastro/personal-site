@@ -75,7 +75,8 @@ class About extends React.Component {
     this.closeMobileNav = this.closeMobileNav.bind(this);
 
     this.state = {
-      mobileNavIsOpen: false
+      mobileNavIsOpen: false,
+      bgImg: './images/cave.jpg'
     }
   }
 
@@ -96,7 +97,7 @@ class About extends React.Component {
       <Container>
         <MobileNav action={this.closeMobileNav} open={this.state.mobileNavIsOpen} />
 
-        <PageIntro action={this.openMobileNav} headline="Who Am I?"/>
+        <PageIntro action={this.openMobileNav} headline="Who Am I?" aboutPage={true} />
 
         <MainContent>
 

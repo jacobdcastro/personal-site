@@ -9,97 +9,11 @@ p {
   font-family: 'Montserrat', 'Helvetica', sans-serif;
 }
 
-.container {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  padding: auto 18%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center right;
-}
-
-.main-content {
-  background-color: #fafafa;
-  height: 100%;
-}
-
 a {
   text-decoration: none;
   color: inherit;
 }
 
-header {
-  height: 450px;
-  width: 100%;
-  background-image: url('../images/yellow-telephone.jpg');
-  background-size: cover;
-  background-position: center left;
-  margin: 0;
-  padding: 0;
-}
-
-header h1 {
-  color: #fff;
-  text-transform: uppercase;
-  letter-spacing: 4px;
-}
-.down-arrow {
-  height: 33px;
-  width: auto;
-  fill: #000;
-  padding-bottom: 11px;
-}
-
-.header-container {
-  width: 90%;
-  max-width: 1125px;
-  margin-top: 15px;
-}
-
-.black-layer {
-  background-color: rgba(0, 0, 0, 0.4);
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-.head-logo {
-  height: 45px;
-  width: auto;
-  margin: 0;
-  float: left;
-}
-
-.menuButton {
-  height: 35px;
-  width: auto;
-  float: right;
-  padding: none;
-  margin: none;
-}
-.menuButton:hover {
-  cursor: pointer;
-}
-#closeButton:hover {
-  cursor: pointer;
-}
-
-.head-menu li a {
-  font-weight: 400;
-  font-size: 1.05em;
-}
-
-/* menu item styles in media query */
-.menuItem {
-  display: none;
-}
-
-.head-menu {
-  list-style-type: none;
-  max-width: 585px;
-}
 
 /* ====== Moblie Menu Styles ======== */
 
@@ -108,59 +22,7 @@ header h1 {
   transition: margin-left 0.5s;
 }
 
-.side-nav {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #fff;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 8px;
-}
 
-.side-menu-item {
-  text-transform: uppercase;
-  color: #353535;
-  font-size: 1.4em;
-  font-weight: 700;
-  letter-spacing: 1px;
-  padding: 10px;
-}
-
-.black-logo {
-  height: 40px;
-  width: auto;
-}
-
-.side-menu-item:last-child {
-  border: none;
-}
-
-.close-button {
-  height: 40px;
-  width: auto;
-  padding: 20px 20px
-}
-.close-button:hover {
-    cursor: pointer;
-}
-
-main {
-  padding: 12px 10px 24px;
-  text-align: center;
-
-}
-
-.form-buttons button{
-  margin: 8px auto;
-  background-color: #fff;
-  padding: 10px;
-  border: none;
-  box-shadow: 0px 0px 15px #444;
-}
 .form-buttons button:hover {
   cursor: pointer;
 }
@@ -246,29 +108,6 @@ label {
 }
 .submit-btn:hover {cursor:pointer;}
 
-footer {
-  margin: 15px auto 5px;
-  width: 50%;
-  text-align: center;
-}
-
-.social-icons {
-  width: 265px;
-}
-
-.socialIcon {
-  height: 30px;
-  width: auto;
-  fill: #000;
-}
-
-.copyright {
-  text-align: center;
-  font-weight: 500;
-  font-size: 14px;
-  letter-spacing: 2px;
-}
-
 
 
 
@@ -277,54 +116,6 @@ footer {
  ============================== */
 
  @media only screen and (min-width: 820px) {
- header {
-   height: 650px;
- }
-
- .head-menu {
-   width: 45%;
- }
-
- .head-logo {
-   padding-top: 5px;
-   margin: 0;
-   height: 55px;
-   width: auto;
- }
-
- .menuItem {
-   font-size: 1.05em;
-   font-weight: 700;
-   display: inline;
-   padding: 8px 0;
-   padding-left: 4.75px;
-   margin-left: 30px;
-   color: #ffffff;
-   text-transform: uppercase;
-   letter-spacing: 4.75px;
-   border-bottom: solid 2.4px rgba(0,0,0,0);
- }
-
- .menuItem:hover {
-   /* color: #323232; */
-   border-bottom: solid 2.4px white;
-   transition: 320ms;
- }
-
- .menuButton {
-   display: none;
- }
-
- .black-layer h1 {
-   font-size: 2.5em;
- }
-
- .form-title h2 {
-   font-size: 2em;
- }
- .form-title h3 {
-   font-size: 1.6em;
- }
 
  .form-buttons button {
    padding: 15px;
@@ -333,74 +124,6 @@ footer {
 }
 
 @media only screen and (min-width: 1080px) {
-  .black-layer h1 {
-    font-size: 3.15em;
-    letter-spacing: 12px;
-  }
-}
-
-.black-layer {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-}
-
-header {
-  display: flex;
-  justify-content: space-around;
-  flex-direction: column;
-}
-
-.black-layer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: column;
-}
-
-.header-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.head-menu {
-  display: flex;
-}
-
-main {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.main-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}
-
-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.form-title {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.form-buttons {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 
 form {
   display: flex;
@@ -417,38 +140,5 @@ form div {
   align-items: center;
   align-content: center;
 }
-
-/*=========== Sidebar nav flex ================== */
-#mySideNav {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.close-button {
-  align-self: flex-end;
-}
-
-footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.social-icons {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-
-
-
-@media only screen and (min-width: 800px) {
-  .head-menu {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
 
 }
