@@ -22,123 +22,22 @@ a {
   transition: margin-left 0.5s;
 }
 
-
-.form-buttons button:hover {
-  cursor: pointer;
-}
-
-form {
-  width: 85%;
-  max-width: 800px;
-  height: auto;
-  text-align: left;
-  background-color: #fff;
-  padding: 12px 8px;
-  margin: 22px;
-  box-shadow: 0px 0px 18px #444;
-  /* border: 5px solid #555; */
-  /* border-radius: 12px; */
-}
-
-form div {
-  margin: 9px;
-}
-
-input,
-textarea {
-  font-family: 'Open Sans', sans-serif;
-  padding: 8px;
-  border: 3px solid #999;
-  background-color: rgba(0,0,0,0);
-  font-weight: 500;
-  letter-spacing: 1px;
-}
-
-textarea {
-  height: 90px;
-}
-
 .checkbox:hover,
 .check-label:hover {
   cursor: pointer;
 }
 
-label,
-legend,
-button {
-  font-family: 'Montserrat', 'Helvetica', sans-serif;
-  font-weight: 700;
-  letter-spacing: 1px;
-}
-
-label {
-  padding-bottom: 4px;
-}
-
 #services div label {
-  margin-left: 10px;
 }
 
 #services div input {
-  margin-left: 5px;
+
 }
 
 .checkbox {
-  height: 25px;
-  width: 25px;
-  background-color: rgba(0,0,0,0);
-  border-radius: 0;
+
 }
 
 .recaptcha {
-  padding: 0;
-  margin: 2px auto 8px;
-}
-
-.submit-btn {
-  font-family: 'Montserrat', 'Helvetica', sans-serif;
-  font-weight: 700;
-  font-size: 1.05em;
-  padding: 12px;
-  color: white;
-  background-color: #353535;
-  margin: 7px auto;
-  box-shadow: none;
-  border: none;
-}
-.submit-btn:hover {cursor:pointer;}
-
-
-
-
-/* ============================
-       Media Queries
- ============================== */
-
- @media only screen and (min-width: 820px) {
-
- .form-buttons button {
-   padding: 15px;
-   font-size: 1.1em;
- }
-}
-
-@media only screen and (min-width: 1080px) {
-
-form {
-  display: flex;
-  flex-direction: column;
-}
-
-form div {
-  display: flex;
-  flex-direction: column;
-}
-
-#services div {
-  flex-direction: row;
-  align-items: center;
-  align-content: center;
-}
 
 }

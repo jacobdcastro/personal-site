@@ -63,6 +63,9 @@ const FormBtnContainer = styled.div`
 `;
 
 const FormButton = styled.button`
+  font-family: 'Montserrat', 'Helvetica', sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
   margin: 8px auto;
   background-color: #fff;
   padding: 10px;
