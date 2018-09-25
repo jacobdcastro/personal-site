@@ -4,6 +4,7 @@ import styled from 'styled-components';
 const Container = styled.div`
   display: flex;
   flex-direction: column;
+  width: 100%;
   margin: 9px auto;
 `;
 
@@ -35,7 +36,7 @@ class TextArea extends React.Component {
           name={this.props.info.name}
           type={this.props.info.input_type}
           id={this.props.info.id}
-          required={this.props.info.required} >          
+          required={this.props.info.required} >
           </Textarea>
       </Container>
     );

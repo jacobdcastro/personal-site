@@ -6,7 +6,6 @@ import GeneralForm from './components/GeneralForm';
 import ProjectForm from './components/ProjectForm';
 import Footer from './components/Footer';
 import { BrowserRouter as Router, Link } from 'react-router-dom';
-import styles from './styles/contact-styles.css';
 
 const Container = styled.div`
   height: 100%;
@@ -45,12 +44,14 @@ const FormsHeader = styled.div`
 `;
 
 const FormH2 = styled.h2`
+  font-family: 'Montserrat', 'Helvetica', sans-serif;
   @media (min-width: 820px) {
     font-size: 2em;
   }
 `;
 
 const FormH3 = styled.h3`
+  font-family: 'Montserrat', 'Helvetica', sans-serif;
   @media (min-width: 820px) {
     font-size: 1.6em;
   }

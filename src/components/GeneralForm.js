@@ -8,23 +8,39 @@ const Form = styled.form`
   display: flex;
   flex-direction: column;
   width: 85%;
-  max-width: 800px;
+  max-width: 635px;
   height: auto;
   text-align: left;
   background-color: #fff;
-  padding: 12px 8px;
+  padding: 20px;
   margin: 22px;
-  box-shadow: 0px 0px 18px #444;
+  box-shadow: 0px 0px 8px #444;
 `;
 
 const Legend = styled.legend`
   font-family: 'Montserrat', 'Helvetica', sans-serif;
   font-weight: 700;
   letter-spacing: 1px;
+  font-size: 1.1em;
+  margin: 0px 8px;
 `;
 
 const ReqText = styled.p`
+  font-family: 'Montserrat', 'Helvetica', sans-serif;
+`;
 
+const NameSection = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-content: space-between;
+  width: 100%;
+`;
+
+const NameLine = styled.div`
+  width: 48%;
+  &:nth-child(2) {
+    margin-left: 4%;
+  }
 `;
 
 const Recaptcha = styled.div`
@@ -96,8 +112,14 @@ class GeneralForm extends React.Component {
       <Form id="genForm" name="genForm" method="POST" netlify>
         <Legend>Have any questions or comments? Or just wanna say hi? Hit me up!</Legend>
         <ReqText>* indicates required field</ReqText>
-        <FormLine info={this.state.first_name} />
-        <FormLine info={this.state.last_name} />
+        <NameSection>
+          <NameLine>
+            <FormLine info={this.state.first_name} />
+          </NameLine>
+          <NameLine>
+            <FormLine info={this.state.last_name} />
+          </NameLine>
+        </NameSection>
         <FormLine info={this.state.email} />
         <TextArea info={this.state.textarea} />
         <Recaptcha netlify-recaptcha></Recaptcha>

@@ -8,30 +8,48 @@ import styled from 'styled-components';
 const Form = styled.form`
   display: flex;
   flex-direction: column;
+  align-content: space-between;
   width: 85%;
-  max-width: 800px;
+  max-width: 635px;
   height: auto;
   text-align: left;
   background-color: #fff;
-  padding: 12px 8px;
+  padding: 20px;
   margin: 22px;
-  box-shadow: 0px 0px 18px #444;
+  box-shadow: 0px 0px 8px #444;
 `;
 
 const Legend = styled.legend`
   font-family: 'Montserrat', 'Helvetica', sans-serif;
   font-weight: 700;
   letter-spacing: 1px;
+  font-size: 1.1em;
+  margin: 0px 8px;
 `;
 
 const ReqText = styled.p`
+  font-family: 'Montserrat', 'Helvetica', sans-serif;
+`;
 
+const NameSection = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+`;
+
+const NameLine = styled.div`
+  width: 48%;
+  &:nth-child(2) {
+    margin-left: 4%;
+  }
 `;
 
 const ServicesSection = styled.div`
   flex-direction: row;
   align-items: center;
   align-content: center;
+  margin: 25px;
 `;
 
 const Textarea = styled.textarea`
@@ -42,6 +60,7 @@ const Textarea = styled.textarea`
   background-color: rgba(0,0,0,0);
   font-weight: 500;
   letter-spacing: 1px;
+  box-shadow: none;
 `;
 
 const Recaptcha = styled.div`
@@ -95,6 +114,14 @@ class ProjectForm extends React.Component {
         name: 'email',
         id: 'genEmail',
         required: true
+      },
+      company: {
+        label_text: 'Company:',
+        label_for: 'proCompany',
+        input_type: 'text',
+        name: 'company',
+        id: 'proCompany',
+        required: false
       },
       textarea: {
         label_text: 'Message:*',
@@ -156,11 +183,16 @@ class ProjectForm extends React.Component {
       <Form id="projectForm" name="projectForm" method="POST" netlify>
         <Legend>I just need a quick overview of your project!</Legend>
         <ReqText>* indicates required field</ReqText>
-
-        <FormLine info={this.state.first_name} />
-        <FormLine info={this.state.last_name} />
+        <NameSection>
+          <NameLine>
+            <FormLine info={this.state.first_name} />
+          </NameLine>
+          <NameLine>
+            <FormLine info={this.state.last_name} />
+          </NameLine>
+        </NameSection>
         <FormLine info={this.state.email} />
-        <FormLine info={this.state.textarea} />
+        <FormLine info={this.state.company} />
 
         <ServicesSection>
           <Legend>What services do you need done?</Legend>

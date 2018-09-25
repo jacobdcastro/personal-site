@@ -4,6 +4,7 @@ import styled from 'styled-components';
 const Container = styled.div`
   display: flex;
   flex-direction: column;
+  width: 100%;
   margin: 9px auto;
 `;
 
@@ -16,7 +17,6 @@ const Label = styled.label`
 
 const Input = styled.input`
   font-family: 'Open Sans', sans-serif;
-  width: 90%;
   padding: 8px;
   border: 3px solid #999;
   background-color: rgba(0,0,0,0);

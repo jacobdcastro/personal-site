@@ -2,7 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 
 const CheckLine = styled.div`
-  margin-left: 5px;
+  margin: 7px 25px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 `;
 
 const CheckboxLabel = styled.label`
