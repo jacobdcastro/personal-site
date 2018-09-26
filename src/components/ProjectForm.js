@@ -11,12 +11,14 @@ const Form = styled.form`
   align-content: space-between;
   width: 85%;
   max-width: 635px;
-  height: auto;
+  height: ${props => props.height};
+  overflow: hidden;
   text-align: left;
   background-color: #fff;
-  padding: 20px;
-  margin: 22px;
+  padding: ${props => props.padding};
+  margin: ${props => props.margin};
   box-shadow: 0px 0px 8px #444;
+  transition: 300ms;
 `;
 
 const Legend = styled.legend`
@@ -180,7 +182,13 @@ class ProjectForm extends React.Component {
 
   render() {
     return (
-      <Form id="projectForm" name="projectForm" method="POST" netlify>
+      <Form
+        height={this.props.open ? 'auto' : '0px'}
+        padding={this.props.open ? '20px' : '0px'}
+        margin={this.props.open ? '22px' : '0px'}
+        id="projectForm"
+        name="projectForm"
+        method="POST" netlify>
         <Legend>I just need a quick overview of your project!</Legend>
         <ReqText>* indicates required field</ReqText>
         <NameSection>

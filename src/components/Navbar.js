@@ -65,10 +65,10 @@ const MenuItem = styled.li`
   font-family: 'Montserrat', 'Helvetica', sans-serif;
   display: none;
   font-weight: 400;
+  transition: 320ms;
 
   &:hover {
     border-bottom: solid 2.4px white;
-    transition: 320ms;
   }
 
   @media (min-width: 820px) {

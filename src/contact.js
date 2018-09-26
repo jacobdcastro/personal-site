@@ -11,7 +11,7 @@ const Container = styled.div`
   height: 100%;
   width: 100%;
   margin: 0;
-  padding: auto 18%;
+  padding: auto 0;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
@@ -20,7 +20,7 @@ const Container = styled.div`
 const MainContent = styled.div`
   background-color: #fafafa;
   width: 100%;
-  padding: 12px 5px 24px;
+  padding: 12px 0 24px;
   margin: 2px auto;
   display: flex;
   flex-direction: column;
@@ -30,6 +30,7 @@ const MainContent = styled.div`
 
 const Body = styled.div`
   padding: 15px;
+  margin: auto 0;
   width: 88%;
   max-width: 1125px;
   display: flex;
@@ -71,8 +72,12 @@ const FormButton = styled.button`
   background-color: #fff;
   padding: 10px;
   border: none;
-  box-shadow: 0px 0px 15px #444;
-  &:hover {cursor: pointer;}
+  box-shadow: 0px 0px 8px #444;
+  transition: 225ms;
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.14, 1.14);
+  }
 `;
 
 class Contact extends React.Component {
@@ -80,10 +85,16 @@ class Contact extends React.Component {
     super(props);
     this.openMobileNav = this.openMobileNav.bind(this);
     this.closeMobileNav = this.closeMobileNav.bind(this);
+    this.showGenForm = this.showGenForm.bind(this);
+    this.hideGenForm = this.hideGenForm.bind(this);
+    this.showProjectForm = this.showProjectForm.bind(this);
+    this.hideProjectForm = this.hideProjectForm.bind(this);
 
     this.state = {
       mobileNavIsOpen: false,
-      bgImg: './images/yellow-telephone.jpg'
+      bgImg: './images/yellow-telephone.jpg',
+      genFormOpen: false,
+      proFormOpen: false
     }
   }
 
@@ -99,7 +110,42 @@ class Contact extends React.Component {
     })
   }
 
+
+  showGenForm() {
+    //if other form is open, close it first
+    if (this.state.proFormOpen) {
+      this.setState({
+        proFormOpen: false
+      });
+    }
+    this.setState({
+      genFormOpen: true
+    })
+  }
+  hideGenForm() {
+    this.setState({
+      genFormOpen: false
+    })
+  }
+
+  showProjectForm() {
+    if (this.state.genFormOpen) {
+      this.setState({
+        genFormOpen: false
+      });
+    }
+    this.setState({
+      proFormOpen: true
+    })
+  }
+  hideProjectForm() {
+    this.setState({
+      proFormOpen: false
+    })
+  }
+
   render() {
+
     return (
       <Container>
         <MobileNav action={this.closeMobileNav} open={this.state.mobileNavIsOpen} />
@@ -113,14 +159,14 @@ class Contact extends React.Component {
               <FormH2>I can't wait to hear from you!</FormH2>
               <FormH3>So, what do you need?</FormH3>
               <FormBtnContainer>
-                <FormButton id="genBtn" onClick="showGenForm()">Question or Comment</FormButton>
-                <FormButton id="protBtn" onClick="showProjectForm()">I need a website built!</FormButton>
+                <FormButton id="genBtn" onClick={this.state.genFormOpen ? this.hideGenForm : this.showGenForm}>Question or Comment</FormButton>
+                <FormButton id="protBtn" onClick={this.state.proFormOpen ? this.hideProjectForm : this.showProjectForm }>I need a website built!</FormButton>
               </FormBtnContainer>
             </FormsHeader>
 
-            <GeneralForm />
+            <GeneralForm open={this.state.genFormOpen} />
 
-            <ProjectForm />
+            <ProjectForm open={this.state.proFormOpen} />
 
           </Body>
 

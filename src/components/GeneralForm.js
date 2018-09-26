@@ -9,12 +9,14 @@ const Form = styled.form`
   flex-direction: column;
   width: 85%;
   max-width: 635px;
-  height: auto;
+  height: ${props => props.height};
+  overflow: hidden;
   text-align: left;
   background-color: #fff;
-  padding: 20px;
-  margin: 22px;
+  padding: ${props => props.padding};
+  margin: ${props => props.margin};
   box-shadow: 0px 0px 8px #444;
+  transition: 300ms;
 `;
 
 const Legend = styled.legend`
@@ -109,7 +111,13 @@ class GeneralForm extends React.Component {
 
   render() {
     return (
-      <Form id="genForm" name="genForm" method="POST" netlify>
+      <Form
+        height={this.props.open ? 'auto' : '0px'}
+        padding={this.props.open ? '20px' : '0px'}
+        margin={this.props.open ? '22px' : '0px'}
+        id="genForm"
+        name="genForm"
+        method="POST" netlify>
         <Legend>Have any questions or comments? Or just wanna say hi? Hit me up!</Legend>
         <ReqText>* indicates required field</ReqText>
         <NameSection>
