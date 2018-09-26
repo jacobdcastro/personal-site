@@ -46,7 +46,7 @@ const BlackLogo = styled.img`
 
 const linkStyles = {
   textDecoration: 'none',
-  margin: 0,
+  margin: '9px',
   outline: 0
 }
 
