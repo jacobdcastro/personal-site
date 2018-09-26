@@ -86,16 +86,22 @@ const MenuItem = styled.li`
   }
 `;
 
+const linkStyles = {
+  textDecoration: 'none',
+  margin: 0,
+  outline: 0
+}
+
 class Navbar extends React.Component {
   render() {
     return (
       <Header>
         <HeaderContainer>
-          <Link to="."><HeadLogo src={require('../images/Jacob-D-Castro.png')} alt="logo" /></Link>
+          <Link to="." style={linkStyles}><HeadLogo src={require('../images/Jacob-D-Castro.png')} alt="logo" /></Link>
           <HeadMenu>
-            <Link to="." style={{textDecoration: 'none', margin:0}}><MenuItem>Home</MenuItem></Link>
-            <Link to="./about" style={{textDecoration: 'none', margin:0}}><MenuItem>About</MenuItem></Link>
-            <Link to="./contact" style={{textDecoration: 'none', margin:0}}><MenuItem>Contact</MenuItem></Link>
+            <Link to="." style={linkStyles}><MenuItem>Home</MenuItem></Link>
+            <Link to="./about" style={linkStyles}><MenuItem>About</MenuItem></Link>
+            <Link to="./contact" style={linkStyles}><MenuItem>Contact</MenuItem></Link>
             {/* <a href="#">Portfolio</a> */}
             {/* <a href="#">Blog</a> */}
             <HamButton onClick={this.props.action} src={require('../images/icons/menu-options.svg')} alt="menu button" />

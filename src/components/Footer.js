@@ -17,6 +17,7 @@ const SocialIcons = styled.div`
 
 const IconLink = styled.a`
   text-decoration: none;
+  outline: 0;
   @media (min-width: 420px) {
     width: 320px;
   }

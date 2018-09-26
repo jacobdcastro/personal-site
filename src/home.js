@@ -104,6 +104,12 @@ const Text2 = styled.h4`
   }
 `;
 
+const linkStyles = {
+  textDecoration: 'none',
+  margin: 0,
+  outline: 0
+}
+
 class Home extends React.Component {
   constructor(props) {
     super(props);
@@ -142,7 +148,7 @@ class Home extends React.Component {
               <Text1>I Design &amp; develop<br />
                   Modern Websites.<br />
                   For You.</Text1>
-              <Link to="/contact" style={{textDecoration: 'none', margin:0}}><Text2>Let's work<br />
+              <Link to="/contact" style={linkStyles}><Text2>Let's work<br />
                   Together</Text2></Link>
             </TextContainer>
 

@@ -44,17 +44,23 @@ const BlackLogo = styled.img`
   width: auto;
 `;
 
+const linkStyles = {
+  textDecoration: 'none',
+  margin: 0,
+  outline: 0
+}
+
 class MobileNav extends React.Component {
   render() {
     return (
       <SideNav style={this.props.open ? {width:100+'%'} : {width:0+'px'}}>
         <CloseButton onClick={this.props.action} id="closeButton" src={require('../images/icons/delete-button.svg')} href="javascript:void(0)" />
-        <Link to="" style={{textDecoration: 'none', marginBottom:'17px'}}><BlackLogo src={require('../images/JacobDCastro-black.png')} alt="logo" /></Link>
-        <Link to="" style={{textDecoration: 'none', marginBottom:'17px'}}><MobileLink>Home</MobileLink></Link>
-        <Link to="./about" style={{textDecoration: 'none', marginBottom:'17px'}}><MobileLink>About</MobileLink></Link>
+        <Link to="" style={linkStyles}><BlackLogo src={require('../images/JacobDCastro-black.png')} alt="logo" /></Link>
+        <Link to="" style={linkStyles}><MobileLink>Home</MobileLink></Link>
+        <Link to="./about" style={linkStyles}><MobileLink>About</MobileLink></Link>
         {/* <Link  href="#">Portfolio</Link> */}
         {/* <Link  href="#">Blog</Link> */}
-        <Link to="./contact" style={{textDecoration: 'none', marginBottom:'17px'}}><MobileLink>Contact</MobileLink></Link>
+        <Link to="./contact" style={linkStyles}><MobileLink>Contact</MobileLink></Link>
       </SideNav>
     );
   }
