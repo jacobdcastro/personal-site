@@ -1,7 +1,6 @@
 {
   "name": "jdcastro-react",
   "version": "0.1.0",
-  "homepage": "https://jacobdcastro.com",
   "private": true,
   "dependencies": {
     "babel-cli": "^6.26.0",
