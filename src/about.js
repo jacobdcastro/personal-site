@@ -17,7 +17,7 @@ const Container = styled.div`
 const MainContent = styled.div`
   background-color: #fafafa;
   width: 100%;
-  padding: 12px 5px 24px;
+  padding: 12px 0px 24px;
   margin: 2px auto;
   display: flex;
   flex-direction: column;
