@@ -1,5 +1,4 @@
 import React from 'react';
-import { BrowserRouter as Router, Link } from 'react-router-dom';
 import FormLine from './FormLine';
 import CheckboxItem from './Checkbox';
 import TextArea from './TextArea';
@@ -52,17 +51,6 @@ const ServicesSection = styled.div`
   align-items: center;
   align-content: center;
   margin: 25px;
-`;
-
-const Textarea = styled.textarea`
-  height: 90px;
-  font-family: 'Open Sans', sans-serif;
-  padding: 8px;
-  border: 3px solid #999;
-  background-color: rgba(0,0,0,0);
-  font-weight: 500;
-  letter-spacing: 1px;
-  box-shadow: none;
 `;
 
 const Recaptcha = styled.div`

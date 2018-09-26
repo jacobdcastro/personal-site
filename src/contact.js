@@ -5,7 +5,6 @@ import PageIntro from './components/PageIntro';
 import GeneralForm from './components/GeneralForm';
 import ProjectForm from './components/ProjectForm';
 import Footer from './components/Footer';
-import { BrowserRouter as Router, Link } from 'react-router-dom';
 
 const Container = styled.div`
   height: 100%;

@@ -1,5 +1,4 @@
 import React from 'react';
-import { BrowserRouter as Router, Link } from 'react-router-dom';
 import FormLine from './FormLine';
 import TextArea from './TextArea';
 import styled from 'styled-components';
