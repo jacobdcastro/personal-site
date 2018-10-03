@@ -9,13 +9,17 @@ const Header = styled.div`
   display: flex;
   justify-content: space-around;
   flex-direction: column;
-  height: 650px;
+  height: 500px;
   width: 100%;
   background-image: url(${props => props.about ? aboutImg : contactImg });
   background-size: cover;
   background-position: center;
   margin: 0;
   padding: 0;
+
+  @media (min-width: 820px) {
+    height: 650px;
+  }
 `;
 
 const BlackLayer = styled.div`
@@ -52,6 +56,10 @@ const DownArrow = styled.img`
   width: auto;
   fill: #000;
   padding-bottom: 11px;
+
+  @media (min-width: 820px) {
+    height: 42px;
+  }
 `;
 
 class PageIntro extends React.Component {
