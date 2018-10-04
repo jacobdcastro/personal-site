@@ -24,6 +24,67 @@
     <title>Jacob D. Castro</title>
   </head>
   <body style="height:100%;">
+    <form name="genForm" method="POST" netlify netlify-honeypot="bot-field" hidden>
+      <legend>Have any questions or comments? Or just wanna say hi? Hit me up!</legend>
+      <p class="required-text">* indicates required field</p>
+      <div>
+        <input type="text" name="firstName" required />
+      </div>
+      <div>
+        <input type="text" name="lastName" />
+      </div>
+      <div>
+        <input type="email" name="email" required />
+      </div>
+      <div>
+        <textarea name="message" type="text" required></textarea>
+      </div>
+      <div class="recaptcha" netlify-recaptcha></div>
+      <button class="submit-btn" type="submit">Submit</button>
+    </form> <!-- /#genForm -->
+
+    <form name="projectForm" method="POST" netlify netlify-honeypot="bot-field" hidden>
+      <legend>I just need a quick overview of your project!</legend>
+      <p class="required-text">* indicates required field</p>
+      <div>
+        <input type="text" name="first-name" required />
+      </div>
+      <div>
+        <input type="text" name="last-name" required />
+      </div>
+      <div>
+        <input type="email" name="email" required />
+      </div>
+      <div>
+        <input type="text" name="company" />
+      </div>
+      <div>
+        <legend>What services do you need done?</legend>
+        <div>
+          <input class="checkbox" type="checkbox" name="new_site">
+        </div>
+        <div>
+          <input class="checkbox" type="checkbox" name="current_site">
+        </div>
+        <div>
+          <input class="checkbox" type="checkbox" name="blog">
+        </div>
+        <div>
+          <input class="checkbox" type="checkbox" name="portfolio">
+        </div>
+        <div>
+          <input class="checkbox" type="checkbox" name="ecommerce">
+        </div>
+        <div>
+          <input class="checkbox" type="checkbox" name="unknown">
+        </div>
+      </div> <!-- /#services -->
+      <div>
+        <textarea form="projectForm" type="text" name="description" required></textarea>
+      </div>
+      <div class="recaptcha" data-netlify-recaptcha></div>
+      <button class="submit-btn" type="submit">Submit</button>
+    </form> <!-- /#projectForm -->
     <noscript>
       You need to enable JavaScript to run this app.
     </noscript>

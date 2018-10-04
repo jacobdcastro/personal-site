@@ -176,7 +176,9 @@ class ProjectForm extends React.Component {
         margin={this.props.open ? '22px' : '0px'}
         id="projectForm"
         name="projectForm"
-        method="POST" netlify>
+        method="POST"
+        data-netlify="true">
+        <input type="hidden" name="form-name" value="projectForm" />
         <Legend>I just need a quick overview of your project!</Legend>
         <ReqText>* indicates required field</ReqText>
         <NameSection>
