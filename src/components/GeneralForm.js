@@ -116,8 +116,7 @@ class GeneralForm extends React.Component {
         margin={this.props.open ? '22px' : '0px'}
         id="genForm"
         name="genForm"
-        method="POST"
-        data-netlify="true">
+        method="POST">
         <input type="hidden" name="form-name" value="genForm" />
         <Legend>Have any questions or comments? Or just wanna say hi? Hit me up!</Legend>
         <ReqText>* indicates required field</ReqText>
