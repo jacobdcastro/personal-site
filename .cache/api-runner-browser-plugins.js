@@ -1,14 +1,7 @@
-// During bootstrap, we write requires at top of this file which looks
-// basically like:
-// module.exports = [
-//   {
-//     plugin: require("/path/to/plugin1/gatsby-browser.js"),
-//     options: { ... },
-//   },
-//   {
-//     plugin: require("/path/to/plugin2/gatsby-browser.js"),
-//     options: { ... },
-//   },
-// ]
-
-module.exports = []
+module.exports = [{
+      plugin: require('C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/node_modules/gatsby-plugin-offline/gatsby-browser'),
+      options: {"plugins":[]},
+    },{
+      plugin: require('C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/gatsby-browser.js'),
+      options: {"plugins":[]},
+    }]
