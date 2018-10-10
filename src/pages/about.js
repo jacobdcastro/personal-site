@@ -79,7 +79,7 @@ class About extends React.Component {
 
     this.state = {
       mobileNavIsOpen: false,
-      bgImg: './images/cave.jpg'
+      bgImg: '../images/cave.jpg'
     }
   }
 
