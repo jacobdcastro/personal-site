@@ -187,334 +187,11 @@
         "owner": "internal-data-bridge"
       }
     },
-    "Plugin gatsby-plugin-styled-components": {
-      "resolve": "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/node_modules/gatsby-plugin-styled-components",
-      "id": "Plugin gatsby-plugin-styled-components",
-      "name": "gatsby-plugin-styled-components",
-      "version": "3.0.0",
-      "pluginOptions": {
-        "plugins": []
-      },
-      "nodeAPIs": [
-        "onCreateBabelConfig"
-      ],
-      "browserAPIs": [],
-      "ssrAPIs": [
-        "wrapRootElement",
-        "onRenderBody"
-      ],
-      "pluginFilepath": "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/node_modules/gatsby-plugin-styled-components",
-      "packageJson": {
-        "name": "gatsby-plugin-styled-components",
-        "description": "Gatsby plugin to add support for styled components",
-        "version": "3.0.0",
-        "main": "index.js",
-        "keywords": [
-          "gatsby",
-          "gatsby-plugin",
-          "styled-components"
-        ],
-        "author": {
-          "name": "Guten Ye",
-          "email": "ywzhaifei@gmail.com"
-        },
-        "license": "MIT",
-        "dependencies": [
-          {
-            "name": "@babel/runtime",
-            "version": "^7.0.0"
-          }
-        ],
-        "devDependencies": [
-          {
-            "name": "@babel/cli",
-            "version": "^7.0.0"
-          },
-          {
-            "name": "@babel/core",
-            "version": "^7.0.0"
-          }
-        ],
-        "peerDependencies": [
-          {
-            "name": "babel-plugin-styled-components",
-            "version": ">1.5.0"
-          },
-          {
-            "name": "gatsby",
-            "version": ">2.0.0-alpha"
-          },
-          {
-            "name": "styled-components",
-            "version": ">= 2.0.0"
-          }
-        ],
-        "optionalDependecies": [],
-        "bundledDependecies": []
-      },
-      "parent": "SOURCE",
-      "children": [],
-      "internal": {
-        "contentDigest": "91745cecf4371930a5ceedbf5e9bac32",
-        "type": "SitePlugin",
-        "owner": "internal-data-bridge"
-      }
-    },
-    "Plugin gatsby-plugin-react-helmet": {
-      "resolve": "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/node_modules/gatsby-plugin-react-helmet",
-      "id": "Plugin gatsby-plugin-react-helmet",
-      "name": "gatsby-plugin-react-helmet",
-      "version": "3.0.0",
-      "pluginOptions": {
-        "plugins": []
-      },
-      "nodeAPIs": [],
-      "browserAPIs": [],
-      "ssrAPIs": [
-        "onRenderBody"
-      ],
-      "pluginFilepath": "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/node_modules/gatsby-plugin-react-helmet",
-      "packageJson": {
-        "name": "gatsby-plugin-react-helmet",
-        "description": "Manage document head data with react-helmet. Provides drop-in server rendering support for Gatsby.",
-        "version": "3.0.0",
-        "main": "index.js",
-        "keywords": [
-          "gatsby",
-          "gatsby-plugin",
-          "favicon",
-          "react-helmet",
-          "seo",
-          "document",
-          "head",
-          "title",
-          "meta",
-          "link",
-          "script",
-          "base",
-          "noscript",
-          "style"
-        ],
-        "author": {
-          "name": "Kyle Mathews",
-          "email": "matthews.kyle@gmail.com"
-        },
-        "license": "MIT",
-        "dependencies": [
-          {
-            "name": "@babel/runtime",
-            "version": "^7.0.0"
-          }
-        ],
-        "devDependencies": [
-          {
-            "name": "@babel/cli",
-            "version": "^7.0.0"
-          },
-          {
-            "name": "@babel/core",
-            "version": "^7.0.0"
-          },
-          {
-            "name": "cross-env",
-            "version": "^5.1.4"
-          }
-        ],
-        "peerDependencies": [
-          {
-            "name": "gatsby",
-            "version": ">2.0.0-alpha"
-          },
-          {
-            "name": "react-helmet",
-            "version": ">=5.1.3"
-          }
-        ],
-        "optionalDependecies": [],
-        "bundledDependecies": []
-      },
-      "parent": "SOURCE",
-      "children": [],
-      "internal": {
-        "contentDigest": "d7f7beb555522816558c6a82a1b948d9",
-        "type": "SitePlugin",
-        "owner": "internal-data-bridge"
-      }
-    },
-    "Plugin gatsby-plugin-manifest": {
-      "resolve": "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/node_modules/gatsby-plugin-manifest",
-      "id": "Plugin gatsby-plugin-manifest",
-      "name": "gatsby-plugin-manifest",
-      "version": "2.0.5",
-      "pluginOptions": {
-        "plugins": [],
-        "name": "gatsby-starter-default",
-        "short_name": "starter",
-        "start_url": "/",
-        "icon": "src/images/jdc-favicon.png"
-      },
-      "nodeAPIs": [
-        "onPostBootstrap"
-      ],
-      "browserAPIs": [],
-      "ssrAPIs": [
-        "onRenderBody"
-      ],
-      "pluginFilepath": "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/node_modules/gatsby-plugin-manifest",
-      "packageJson": {
-        "name": "gatsby-plugin-manifest",
-        "description": "Gatsby plugin which adds a manifest.webmanifest to make sites progressive web apps",
-        "version": "2.0.5",
-        "main": "index.js",
-        "keywords": [
-          "gatsby",
-          "gatsby-plugin",
-          "favicon",
-          "icons",
-          "manifest.webmanifest",
-          "progressive-web-app",
-          "pwa"
-        ],
-        "author": {
-          "name": "Kyle Mathews",
-          "email": "mathews.kyle@gmail.com"
-        },
-        "license": "MIT",
-        "dependencies": [
-          {
-            "name": "@babel/runtime",
-            "version": "^7.0.0"
-          },
-          {
-            "name": "bluebird",
-            "version": "^3.5.0"
-          },
-          {
-            "name": "sharp",
-            "version": "^0.20.2"
-          }
-        ],
-        "devDependencies": [
-          {
-            "name": "@babel/cli",
-            "version": "^7.0.0"
-          },
-          {
-            "name": "@babel/core",
-            "version": "^7.0.0"
-          },
-          {
-            "name": "cross-env",
-            "version": "^5.1.4"
-          }
-        ],
-        "peerDependencies": [
-          {
-            "name": "gatsby",
-            "version": ">2.0.0-alpha"
-          }
-        ],
-        "optionalDependecies": [],
-        "bundledDependecies": []
-      },
-      "parent": "SOURCE",
-      "children": [],
-      "internal": {
-        "contentDigest": "dd7a112dddf5a6b667e53db3f996fb93",
-        "type": "SitePlugin",
-        "owner": "internal-data-bridge"
-      }
-    },
-    "Plugin gatsby-plugin-offline": {
-      "resolve": "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/node_modules/gatsby-plugin-offline",
-      "id": "Plugin gatsby-plugin-offline",
-      "name": "gatsby-plugin-offline",
-      "version": "2.0.5",
-      "pluginOptions": {
-        "plugins": []
-      },
-      "nodeAPIs": [
-        "createPages",
-        "onPostBuild"
-      ],
-      "browserAPIs": [
-        "registerServiceWorker",
-        "onPrefetchPathname",
-        "onServiceWorkerActive"
-      ],
-      "ssrAPIs": [],
-      "pluginFilepath": "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/node_modules/gatsby-plugin-offline",
-      "packageJson": {
-        "name": "gatsby-plugin-offline",
-        "description": "Gatsby plugin which sets up a site to be able to run offline",
-        "version": "2.0.5",
-        "main": "index.js",
-        "keywords": [
-          "gatsby",
-          "gatsby-plugin",
-          "offline",
-          "precache",
-          "service-worker"
-        ],
-        "author": {
-          "name": "Kyle Mathews",
-          "email": "mathews.kyle@gmail.com"
-        },
-        "license": "MIT",
-        "dependencies": [
-          {
-            "name": "@babel/runtime",
-            "version": "^7.0.0"
-          },
-          {
-            "name": "cheerio",
-            "version": "^1.0.0-rc.2"
-          },
-          {
-            "name": "lodash",
-            "version": "^4.17.10"
-          },
-          {
-            "name": "workbox-build",
-            "version": "^3.4.1"
-          }
-        ],
-        "devDependencies": [
-          {
-            "name": "@babel/cli",
-            "version": "^7.0.0"
-          },
-          {
-            "name": "@babel/core",
-            "version": "^7.0.0"
-          },
-          {
-            "name": "cross-env",
-            "version": "^5.1.4"
-          }
-        ],
-        "peerDependencies": [
-          {
-            "name": "gatsby",
-            "version": ">2.0.0-beta"
-          }
-        ],
-        "optionalDependecies": [],
-        "bundledDependecies": []
-      },
-      "parent": "SOURCE",
-      "children": [],
-      "internal": {
-        "contentDigest": "5abbf767b58b613f3d419a9f04919732",
-        "type": "SitePlugin",
-        "owner": "internal-data-bridge"
-      }
-    },
     "Plugin default-site-plugin": {
       "resolve": "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react",
       "id": "Plugin default-site-plugin",
       "name": "default-site-plugin",
-      "version": "8270731dd098bfc272834f0bb30e1414",
+      "version": "d41d8cd98f00b204e9800998ecf8427e",
       "pluginOptions": {
         "plugins": []
       },
@@ -598,7 +275,7 @@
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "6e374693ed75ef4755b0d9282593750c",
+        "contentDigest": "d3b478484c339d0fb21b94d009e3a90b",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
@@ -699,38 +376,16 @@
       }
     },
     "Site": {
-      "siteMetadata": {
-        "title": "Jacob D. Castro"
-      },
+      "siteMetadata": {},
       "pathPrefix": "",
       "polyfill": true,
-      "buildTime": "2018-10-10T21:31:43.727Z",
+      "buildTime": "2018-10-10T21:46:12.204Z",
       "id": "Site",
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "1b42b8432c9f0b4d8f310f5609055ae1",
+        "contentDigest": "0abf58aab32029e09268d5f336a9308a",
         "type": "Site",
-        "owner": "internal-data-bridge"
-      }
-    },
-    "SitePage /offline-plugin-app-shell-fallback/": {
-      "jsonName": "offline-plugin-app-shell-fallback-a30",
-      "internalComponentName": "ComponentOfflinePluginAppShellFallback",
-      "path": "/offline-plugin-app-shell-fallback/",
-      "component": "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/node_modules/gatsby-plugin-offline/app-shell.js",
-      "componentChunkName": "component---node-modules-gatsby-plugin-offline-app-shell-js",
-      "context": {},
-      "pluginCreator___NODE": "Plugin gatsby-plugin-offline",
-      "pluginCreatorId": "Plugin gatsby-plugin-offline",
-      "componentPath": "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/node_modules/gatsby-plugin-offline/app-shell.js",
-      "id": "SitePage /offline-plugin-app-shell-fallback/",
-      "parent": "SOURCE",
-      "children": [],
-      "internal": {
-        "type": "SitePage",
-        "contentDigest": "d8eb27137fc0e23d51a7abd9191c4457",
-        "description": "Plugin gatsby-plugin-offline",
         "owner": "internal-data-bridge"
       }
     },
@@ -797,18 +452,17 @@
   },
   "status": {
     "plugins": {},
-    "PLUGINS_HASH": "de56a500acc1fe9bf0c49c9fba03f7ee"
+    "PLUGINS_HASH": "3d678ddac880282751971d20ff32a51e"
   },
   "componentDataDependencies": {
     "nodes": {},
     "connections": {}
   },
   "jsonDataPaths": {
-    "contact-26a": "686/path---contact-26-a-cd9-NZuapzHg3X9TaN1iIixfv1W23E",
     "about-f34": "125/path---about-f-34-4c2-NZuapzHg3X9TaN1iIixfv1W23E",
-    "dev-404-page-5f9": "920/path---dev-404-page-5-f-9-fab-NZuapzHg3X9TaN1iIixfv1W23E",
     "index": "173/path---index-6a9-NZuapzHg3X9TaN1iIixfv1W23E",
-    "offline-plugin-app-shell-fallback-a30": "520/path---offline-plugin-app-shell-fallback-a-30-c5a-NZuapzHg3X9TaN1iIixfv1W23E"
+    "contact-26a": "686/path---contact-26-a-cd9-NZuapzHg3X9TaN1iIixfv1W23E",
+    "dev-404-page-5f9": "920/path---dev-404-page-5-f-9-fab-NZuapzHg3X9TaN1iIixfv1W23E"
   },
   "components": {
     "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/src/pages/about.js": {
@@ -822,10 +476,6 @@
     "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/src/pages/index.js": {
       "query": "",
       "componentPath": "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/src/pages/index.js"
-    },
-    "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/node_modules/gatsby-plugin-offline/app-shell.js": {
-      "query": "",
-      "componentPath": "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/node_modules/gatsby-plugin-offline/app-shell.js"
     }
   },
   "staticQueryComponents": {}

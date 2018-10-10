@@ -1,13 +1,4 @@
-var plugins = [{
-      plugin: require('C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/node_modules/gatsby-plugin-styled-components/gatsby-ssr'),
-      options: {"plugins":[]},
-    },{
-      plugin: require('C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/node_modules/gatsby-plugin-react-helmet/gatsby-ssr'),
-      options: {"plugins":[]},
-    },{
-      plugin: require('C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/node_modules/gatsby-plugin-manifest/gatsby-ssr'),
-      options: {"plugins":[],"name":"gatsby-starter-default","short_name":"starter","start_url":"/","icon":"src/images/jdc-favicon.png"},
-    }]
+var plugins = []
 // During bootstrap, we write requires at top of this file which looks like:
 // var plugins = [
 //   {
