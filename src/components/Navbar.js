@@ -97,11 +97,11 @@ class Navbar extends React.Component {
     return (
       <Header>
         <HeaderContainer>
-          <Link to="." style={linkStyles}><HeadLogo src={require('../images/Jacob-D-Castro.png')} alt="logo" /></Link>
+          <Link to="/" style={linkStyles}><HeadLogo src={require('../images/Jacob-D-Castro.png')} alt="logo" /></Link>
           <HeadMenu>
-            <Link to="." style={linkStyles}><MenuItem>Home</MenuItem></Link>
-            <Link to="./about" style={linkStyles}><MenuItem>About</MenuItem></Link>
-            <Link to="./contact" style={linkStyles}><MenuItem>Contact</MenuItem></Link>
+            <Link to="/" style={linkStyles}><MenuItem>Home</MenuItem></Link>
+            <Link to="/about/" style={linkStyles}><MenuItem>About</MenuItem></Link>
+            <Link to="/contact/" style={linkStyles}><MenuItem>Contact</MenuItem></Link>
             {/* <a href="#">Portfolio</a> */}
             {/* <a href="#">Blog</a> */}
             <HamButton onClick={this.props.action} src={require('../images/icons/menu-options.svg')} alt="menu button" />
