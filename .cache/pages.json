@@ -1,0 +1,22 @@
+[
+    {
+        "componentChunkName": "component---src-pages-index-js",
+        "jsonName": "index",
+        "path": "/"
+    },
+    {
+        "componentChunkName": "component---src-pages-about-js",
+        "jsonName": "about-f34",
+        "path": "/about/"
+    },
+    {
+        "componentChunkName": "component---src-pages-contact-js",
+        "jsonName": "contact-26a",
+        "path": "/contact/"
+    },
+    {
+        "componentChunkName": "component---node-modules-gatsby-plugin-offline-app-shell-js",
+        "jsonName": "offline-plugin-app-shell-fallback-a30",
+        "path": "/offline-plugin-app-shell-fallback/"
+    }
+]
