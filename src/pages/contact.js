@@ -93,7 +93,7 @@ class Contact extends React.Component {
 
     this.state = {
       mobileNavIsOpen: false,
-      bgImg: './images/yellow-telephone.jpg',
+      bgImg: '../images/yellow-telephone.jpg',
       genFormOpen: false,
       proFormOpen: false
     }
