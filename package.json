@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
-  "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "name": "jdcastro-personal-site",
+  "description": "The personal site of Jacob D. Castro",
+  "version": "2.2.1",
+  "author": "Jacob D. Castro <jdcastro.business@gmail.com>",
   "dependencies": {
     "babel-plugin-styled-components": "^1.8.0",
     "gatsby": "^2.0.0",
@@ -19,7 +19,10 @@
     "typography": "^0.16.17"
   },
   "keywords": [
-    "gatsby"
+    "gatsby",
+    "portfolio",
+    "react",
+    "static"
   ],
   "license": "MIT",
   "scripts": {
@@ -33,6 +36,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/jacobdcastro/personal-site/"
   }
 }
