@@ -1,13 +1,22 @@
 {
   "nodes": {
     "SitePage /dev-404-page/": {
+      "jsonName": "dev-404-page-5f9",
+      "internalComponentName": "ComponentDev404Page",
       "path": "/dev-404-page/",
+      "component": "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/.cache/dev-404-page.js",
+      "componentChunkName": "component---cache-dev-404-page-js",
+      "context": {},
+      "pluginCreator___NODE": "Plugin dev-404-page",
+      "pluginCreatorId": "Plugin dev-404-page",
+      "componentPath": "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/.cache/dev-404-page.js",
       "id": "SitePage /dev-404-page/",
       "parent": "SOURCE",
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "f91d29e10ba680b413138cf9ed86e655",
+        "contentDigest": "d86028d454af27979e336c82501ed30a",
+        "description": "Plugin dev-404-page",
         "owner": "internal-data-bridge"
       }
     },
@@ -523,13 +532,16 @@
       "ssrAPIs": [],
       "pluginFilepath": "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react",
       "packageJson": {
-        "name": "gatsby-starter-default",
-        "description": "Gatsby default starter",
-        "version": "1.0.0",
+        "name": "jdcastro-personal-site",
+        "description": "The personal site of Jacob D. Castro",
+        "version": "2.2.1",
         "keywords": [
-          "gatsby"
+          "gatsby",
+          "portfolio",
+          "react",
+          "static"
         ],
-        "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+        "author": "Jacob D. Castro <jdcastro.business@gmail.com>",
         "license": "MIT",
         "dependencies": [
           {
@@ -702,35 +714,17 @@
       "siteMetadata": {
         "title": "Jacob D. Castro"
       },
+      "port": "8000",
+      "host": "localhost",
       "pathPrefix": "",
       "polyfill": true,
-      "buildTime": "2018-10-10T22:56:56.902Z",
+      "buildTime": "2018-10-13T02:06:12.992Z",
       "id": "Site",
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "1e9868d82bf77a4470848aaefa8fa79b",
+        "contentDigest": "0b87a14bf9bfb41293235a85ad42b99e",
         "type": "Site",
-        "owner": "internal-data-bridge"
-      }
-    },
-    "SitePage /offline-plugin-app-shell-fallback/": {
-      "jsonName": "offline-plugin-app-shell-fallback-a30",
-      "internalComponentName": "ComponentOfflinePluginAppShellFallback",
-      "path": "/offline-plugin-app-shell-fallback/",
-      "component": "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/node_modules/gatsby-plugin-offline/app-shell.js",
-      "componentChunkName": "component---node-modules-gatsby-plugin-offline-app-shell-js",
-      "context": {},
-      "pluginCreator___NODE": "Plugin gatsby-plugin-offline",
-      "pluginCreatorId": "Plugin gatsby-plugin-offline",
-      "componentPath": "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/node_modules/gatsby-plugin-offline/app-shell.js",
-      "id": "SitePage /offline-plugin-app-shell-fallback/",
-      "parent": "SOURCE",
-      "children": [],
-      "internal": {
-        "type": "SitePage",
-        "contentDigest": "d8eb27137fc0e23d51a7abd9191c4457",
-        "description": "Plugin gatsby-plugin-offline",
         "owner": "internal-data-bridge"
       }
     },
@@ -797,7 +791,7 @@
   },
   "status": {
     "plugins": {},
-    "PLUGINS_HASH": "de56a500acc1fe9bf0c49c9fba03f7ee"
+    "PLUGINS_HASH": "f0668fc600695df65d17274a77c7bf7d"
   },
   "componentDataDependencies": {
     "nodes": {},
@@ -811,6 +805,10 @@
     "offline-plugin-app-shell-fallback-a30": "520/path---offline-plugin-app-shell-fallback-a-30-c5a-NZuapzHg3X9TaN1iIixfv1W23E"
   },
   "components": {
+    "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/.cache/dev-404-page.js": {
+      "query": "",
+      "componentPath": "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/.cache/dev-404-page.js"
+    },
     "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/src/pages/about.js": {
       "query": "",
       "componentPath": "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/src/pages/about.js"
@@ -822,10 +820,6 @@
     "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/src/pages/index.js": {
       "query": "",
       "componentPath": "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/src/pages/index.js"
-    },
-    "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/node_modules/gatsby-plugin-offline/app-shell.js": {
-      "query": "",
-      "componentPath": "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/node_modules/gatsby-plugin-offline/app-shell.js"
     }
   },
   "staticQueryComponents": {}

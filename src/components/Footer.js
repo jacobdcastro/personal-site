@@ -26,6 +26,9 @@ const IconLink = styled.a`
 const Icon = styled.img`
   height: 30px;
   width: auto;
+  &:hover  {
+     /* add bouncing animation to icons */
+  }
 `;
 
 const Copyright = styled.p`
