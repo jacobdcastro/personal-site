@@ -639,7 +639,7 @@
       "resolve": "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react",
       "id": "Plugin default-site-plugin",
       "name": "default-site-plugin",
-      "version": "599e98b85597c0fc18e42b06dc5f881e",
+      "version": "945fcfa0720094c4ccb184040f573f4d",
       "pluginOptions": {
         "plugins": []
       },
@@ -740,7 +740,7 @@
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "4cda6293e4a2c061eeef5cf6428b1ac7",
+        "contentDigest": "6fa90110d61c4af1b1ee97463a0fdd3f",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
@@ -847,14 +847,14 @@
       },
       "port": "8000",
       "host": "localhost",
-      "pathPrefix": "",
+      "pathPrefix": "/blog",
       "polyfill": true,
-      "buildTime": "2018-10-19T01:35:55.305Z",
+      "buildTime": "2018-10-19T05:35:18.167Z",
       "id": "Site",
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "620904c2900821b21dd4e741ab7df30a",
+        "contentDigest": "954c7747107f87b998b7fa79fc914070",
         "type": "Site",
         "owner": "internal-data-bridge"
       }
@@ -908,19 +908,18 @@
       "slug": "my-second-test-blog-post",
       "subtitle": "Why I finally figured out my last bug.",
       "published": "2018-10-18T06:13-07:00",
-      "heroImage___NODE": "a8367f41-c9c7-5842-9762-b1f6fb884dad",
       "bodyContent___NODE": "03e6221e-71b2-51ff-9e63-95f4b3e1f7da",
       "id": "b7b77cb5-f51e-52fd-9648-a679c64bd7d7",
       "contentful_id": "2Dzj8hWMykweg02SQUE2EG",
       "createdAt": "2018-10-19T01:13:26.818Z",
-      "updatedAt": "2018-10-19T01:34:47.713Z",
+      "updatedAt": "2018-10-19T05:18:00.028Z",
       "parent": "Blog Post",
       "children": [
         "03e6221e-71b2-51ff-9e63-95f4b3e1f7da"
       ],
       "internal": {
         "type": "ContentfulBlogPost",
-        "contentDigest": "573427340aa655ebe90747dc58e3f2e8",
+        "contentDigest": "cdee124a653c4c791f29c195f5f6827e",
         "owner": "gatsby-source-contentful"
       },
       "node_locale": "en-US"
@@ -930,33 +929,45 @@
       "slug": "this-is-my-test-post",
       "subtitle": "Why I enjoy Contentful with Gatsby",
       "published": "2018-10-17T00:00-07:00",
-      "heroImage___NODE": "d9d5d7bf-3681-5ec4-939d-c4d41c0d9d8f",
       "bodyContent___NODE": "a0d73be9-a3da-5539-8b1c-99db32ec9f91",
       "id": "83b21fcb-dff9-5d9f-952f-530da47a6b4c",
       "contentful_id": "6UhP6543MkCEWggsk2GYY8",
       "createdAt": "2018-10-18T06:29:15.020Z",
-      "updatedAt": "2018-10-18T06:29:15.020Z",
+      "updatedAt": "2018-10-19T05:17:38.611Z",
       "parent": "Blog Post",
       "children": [
         "a0d73be9-a3da-5539-8b1c-99db32ec9f91"
       ],
       "internal": {
         "type": "ContentfulBlogPost",
-        "contentDigest": "582b70d0e9e1022ed6944c9355d5dd38",
+        "contentDigest": "f82f19303a0b1fc8484b38329fbeedff",
         "owner": "gatsby-source-contentful"
       },
       "node_locale": "en-US"
     },
-    "a0d73be9-a3da-5539-8b1c-99db32ec9f91": {
-      "id": "a0d73be9-a3da-5539-8b1c-99db32ec9f91",
-      "parent": "83b21fcb-dff9-5d9f-952f-530da47a6b4c",
+    "a8367f41-c9c7-5842-9762-b1f6fb884dad": {
+      "contentful_id": "6dSzflXsd2KAigqsKeKkyG",
+      "id": "a8367f41-c9c7-5842-9762-b1f6fb884dad",
+      "parent": null,
       "children": [],
-      "bodyContent": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lacus nibh, eleifend id tincidunt eget, mattis vitae nunc. Praesent metus neque, lobortis vel dapibus sit amet, pulvinar a ante. Cras fringilla at augue ac molestie. Proin iaculis congue lacus, ut elementum mi. Pellentesque id magna commodo, lobortis metus et, finibus quam. Morbi eu neque ac erat pellentesque facilisis. Cras eu semper erat. Nunc tempor, est hendrerit euismod consectetur, lacus nisi porttitor enim, eget tincidunt ligula nunc quis nulla. Nullam eu odio at turpis sodales venenatis vitae nec elit. In fermentum efficitur augue, nec suscipit urna.\n\nInteger non dolor a arcu aliquet euismod eu vitae lorem. Quisque id tortor maximus, luctus elit at, posuere nibh. Nunc bibendum augue odio, at feugiat metus interdum id. Cras id lacus vitae lectus bibendum porta quis accumsan felis. Vivamus ut nunc vitae orci vehicula porta. Morbi quis lacus eget felis dignissim dapibus quis in dolor. Nunc libero lorem, eleifend ut fermentum id, mollis nec est. Integer lorem eros, volutpat at viverra eget, consequat nec nulla. Mauris at sapien odio.\n\nDuis nec dolor et lectus eleifend porta. Fusce mollis consectetur lobortis. Fusce luctus diam sit amet est vulputate, a rutrum sapien fringilla. Integer lacinia commodo finibus. Aliquam lacus tortor, vulputate vel dignissim lacinia, faucibus in metus. Pellentesque lectus elit, cursus et egestas et, elementum nec neque. Ut placerat rutrum ex, a luctus mi semper vitae. Nullam dui neque, cursus ut ipsum at, tempor tincidunt enim. Donec ut felis quis erat suscipit ullamcorper ac eget ex. ",
+      "file": {
+        "url": "//images.ctfassets.net/oghc6wtiomc3/6dSzflXsd2KAigqsKeKkyG/7bd341997ccdfb1f0b574b8c051ee3f1/chuttersnap-297551.jpg",
+        "details": {
+          "size": 712271,
+          "image": {
+            "width": 6016,
+            "height": 4016
+          }
+        },
+        "fileName": "chuttersnap-297551.jpg",
+        "contentType": "image/jpeg"
+      },
+      "title": "chuttersnap-297551",
+      "description": "",
+      "node_locale": "en-US",
       "internal": {
-        "type": "contentfulBlogPostBodyContentTextNode",
-        "mediaType": "text/markdown",
-        "content": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lacus nibh, eleifend id tincidunt eget, mattis vitae nunc. Praesent metus neque, lobortis vel dapibus sit amet, pulvinar a ante. Cras fringilla at augue ac molestie. Proin iaculis congue lacus, ut elementum mi. Pellentesque id magna commodo, lobortis metus et, finibus quam. Morbi eu neque ac erat pellentesque facilisis. Cras eu semper erat. Nunc tempor, est hendrerit euismod consectetur, lacus nisi porttitor enim, eget tincidunt ligula nunc quis nulla. Nullam eu odio at turpis sodales venenatis vitae nec elit. In fermentum efficitur augue, nec suscipit urna.\n\nInteger non dolor a arcu aliquet euismod eu vitae lorem. Quisque id tortor maximus, luctus elit at, posuere nibh. Nunc bibendum augue odio, at feugiat metus interdum id. Cras id lacus vitae lectus bibendum porta quis accumsan felis. Vivamus ut nunc vitae orci vehicula porta. Morbi quis lacus eget felis dignissim dapibus quis in dolor. Nunc libero lorem, eleifend ut fermentum id, mollis nec est. Integer lorem eros, volutpat at viverra eget, consequat nec nulla. Mauris at sapien odio.\n\nDuis nec dolor et lectus eleifend porta. Fusce mollis consectetur lobortis. Fusce luctus diam sit amet est vulputate, a rutrum sapien fringilla. Integer lacinia commodo finibus. Aliquam lacus tortor, vulputate vel dignissim lacinia, faucibus in metus. Pellentesque lectus elit, cursus et egestas et, elementum nec neque. Ut placerat rutrum ex, a luctus mi semper vitae. Nullam dui neque, cursus ut ipsum at, tempor tincidunt enim. Donec ut felis quis erat suscipit ullamcorper ac eget ex. ",
-        "contentDigest": "c9faa830ec531e9de1bb33ea714edfea",
+        "type": "ContentfulAsset",
+        "contentDigest": "1fe11133d2031ab9a4194fcae488db12",
         "owner": "gatsby-source-contentful"
       }
     },
@@ -999,29 +1010,16 @@
         "owner": "gatsby-source-contentful"
       }
     },
-    "a8367f41-c9c7-5842-9762-b1f6fb884dad": {
-      "contentful_id": "6dSzflXsd2KAigqsKeKkyG",
-      "id": "a8367f41-c9c7-5842-9762-b1f6fb884dad",
-      "parent": null,
+    "a0d73be9-a3da-5539-8b1c-99db32ec9f91": {
+      "id": "a0d73be9-a3da-5539-8b1c-99db32ec9f91",
+      "parent": "83b21fcb-dff9-5d9f-952f-530da47a6b4c",
       "children": [],
-      "file": {
-        "url": "//images.ctfassets.net/oghc6wtiomc3/6dSzflXsd2KAigqsKeKkyG/7bd341997ccdfb1f0b574b8c051ee3f1/chuttersnap-297551.jpg",
-        "details": {
-          "size": 712271,
-          "image": {
-            "width": 6016,
-            "height": 4016
-          }
-        },
-        "fileName": "chuttersnap-297551.jpg",
-        "contentType": "image/jpeg"
-      },
-      "title": "chuttersnap-297551",
-      "description": "",
-      "node_locale": "en-US",
+      "bodyContent": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lacus nibh, eleifend id tincidunt eget, mattis vitae nunc. Praesent metus neque, lobortis vel dapibus sit amet, pulvinar a ante. Cras fringilla at augue ac molestie. Proin iaculis congue lacus, ut elementum mi. Pellentesque id magna commodo, lobortis metus et, finibus quam. Morbi eu neque ac erat pellentesque facilisis. Cras eu semper erat. Nunc tempor, est hendrerit euismod consectetur, lacus nisi porttitor enim, eget tincidunt ligula nunc quis nulla. Nullam eu odio at turpis sodales venenatis vitae nec elit. In fermentum efficitur augue, nec suscipit urna.\n\nInteger non dolor a arcu aliquet euismod eu vitae lorem. Quisque id tortor maximus, luctus elit at, posuere nibh. Nunc bibendum augue odio, at feugiat metus interdum id. Cras id lacus vitae lectus bibendum porta quis accumsan felis. Vivamus ut nunc vitae orci vehicula porta. Morbi quis lacus eget felis dignissim dapibus quis in dolor. Nunc libero lorem, eleifend ut fermentum id, mollis nec est. Integer lorem eros, volutpat at viverra eget, consequat nec nulla. Mauris at sapien odio.\n\nDuis nec dolor et lectus eleifend porta. Fusce mollis consectetur lobortis. Fusce luctus diam sit amet est vulputate, a rutrum sapien fringilla. Integer lacinia commodo finibus. Aliquam lacus tortor, vulputate vel dignissim lacinia, faucibus in metus. Pellentesque lectus elit, cursus et egestas et, elementum nec neque. Ut placerat rutrum ex, a luctus mi semper vitae. Nullam dui neque, cursus ut ipsum at, tempor tincidunt enim. Donec ut felis quis erat suscipit ullamcorper ac eget ex. ",
       "internal": {
-        "type": "ContentfulAsset",
-        "contentDigest": "1fe11133d2031ab9a4194fcae488db12",
+        "type": "contentfulBlogPostBodyContentTextNode",
+        "mediaType": "text/markdown",
+        "content": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lacus nibh, eleifend id tincidunt eget, mattis vitae nunc. Praesent metus neque, lobortis vel dapibus sit amet, pulvinar a ante. Cras fringilla at augue ac molestie. Proin iaculis congue lacus, ut elementum mi. Pellentesque id magna commodo, lobortis metus et, finibus quam. Morbi eu neque ac erat pellentesque facilisis. Cras eu semper erat. Nunc tempor, est hendrerit euismod consectetur, lacus nisi porttitor enim, eget tincidunt ligula nunc quis nulla. Nullam eu odio at turpis sodales venenatis vitae nec elit. In fermentum efficitur augue, nec suscipit urna.\n\nInteger non dolor a arcu aliquet euismod eu vitae lorem. Quisque id tortor maximus, luctus elit at, posuere nibh. Nunc bibendum augue odio, at feugiat metus interdum id. Cras id lacus vitae lectus bibendum porta quis accumsan felis. Vivamus ut nunc vitae orci vehicula porta. Morbi quis lacus eget felis dignissim dapibus quis in dolor. Nunc libero lorem, eleifend ut fermentum id, mollis nec est. Integer lorem eros, volutpat at viverra eget, consequat nec nulla. Mauris at sapien odio.\n\nDuis nec dolor et lectus eleifend porta. Fusce mollis consectetur lobortis. Fusce luctus diam sit amet est vulputate, a rutrum sapien fringilla. Integer lacinia commodo finibus. Aliquam lacus tortor, vulputate vel dignissim lacinia, faucibus in metus. Pellentesque lectus elit, cursus et egestas et, elementum nec neque. Ut placerat rutrum ex, a luctus mi semper vitae. Nullam dui neque, cursus ut ipsum at, tempor tincidunt enim. Donec ut felis quis erat suscipit ullamcorper ac eget ex. ",
+        "contentDigest": "c9faa830ec531e9de1bb33ea714edfea",
         "owner": "gatsby-source-contentful"
       }
     },
@@ -1153,54 +1151,46 @@
   "status": {
     "plugins": {
       "gatsby-source-contentful": {
-        "oghc6wtiomc3-master-cdn.contentful.com": "w5ZGw6JFwqZmVcKsE8Kow4grw45QdyYTwrcnwq14w4bCmlxLwrATw7LCisO5wo_DvXLChnlFTxHDi8KWw7jCmFtqHjLDvcO5w6rCiCbCnlFmTz4Zw6oBDcKyL8KQw5fCnUdUY8Ksw53DsjrDosKPwp_DhC_CscOmeg"
+        "oghc6wtiomc3-master-cdn.contentful.com": "w5ZGw6JFwqZmVcKsE8Kow4grw45QdybDkwnCjy_CgsOaw6ltw6dfw6wfZAfCrsOVw4XCvMKTPMOMwqnDmcOiwqfCiGrDhAEcU380Z8K9woIHw5HCkMKUw7jCtn9nwpvCvEbDgsOMw4QuTsO5wowTDnTDj2JLwo_CuVF1"
       }
     },
-    "PLUGINS_HASH": "10ddf559dd1a8c32d55161a69a8c9f49"
+    "PLUGINS_HASH": "af89576f962e153c5fdb32207d848a22"
   },
   "componentDataDependencies": {
     "nodes": {
       "b7b77cb5-f51e-52fd-9648-a679c64bd7d7": [
-        "/my-second-test-blog-post"
-      ],
-      "83b21fcb-dff9-5d9f-952f-530da47a6b4c": [
-        "/this-is-my-test-post"
+        "/"
       ],
       "03e6221e-71b2-51ff-9e63-95f4b3e1f7da": [
-        "/",
-        "/my-second-test-blog-post"
-      ],
-      "a0d73be9-a3da-5539-8b1c-99db32ec9f91": [
-        "/",
-        "/this-is-my-test-post"
-      ],
-      "d9d5d7bf-3681-5ec4-939d-c4d41c0d9d8f": [
-        "/",
-        "/this-is-my-test-post"
+        "/"
       ],
       "a8367f41-c9c7-5842-9762-b1f6fb884dad": [
-        "/",
-        "/my-second-test-blog-post"
+        "/"
+      ],
+      "83b21fcb-dff9-5d9f-952f-530da47a6b4c": [],
+      "a0d73be9-a3da-5539-8b1c-99db32ec9f91": [
+        "/"
+      ],
+      "d9d5d7bf-3681-5ec4-939d-c4d41c0d9d8f": [
+        "/"
       ]
     },
     "connections": {
-      "ContentfulBlogPost": [
-        "/blog/"
-      ]
+      "ContentfulBlogPost": []
     }
   },
   "jsonDataPaths": {
     "about-f34": "125/path---about-f-34-4c2-NZuapzHg3X9TaN1iIixfv1W23E",
     "contact-26a": "686/path---contact-26-a-cd9-NZuapzHg3X9TaN1iIixfv1W23E",
     "dev-404-page-5f9": "920/path---dev-404-page-5-f-9-fab-NZuapzHg3X9TaN1iIixfv1W23E",
-    "this-is-my-test-post-e62": "110/path---this-is-my-test-post-e-62-51c-rnvoehefsNIiSjcygGXKrQ9kDrM",
+    "this-is-my-test-post-e62": "486/path---this-is-my-test-post-e-62-51c-YnSeZnauZ2cWQQcsHWFbsWnz7Hg",
     "index": "173/path---index-6a9-NZuapzHg3X9TaN1iIixfv1W23E",
-    "blog-f7a": "680/path---blog-f-7-a-05d-YFbQUgVdyB1js3Ib2XOFuoAQPl0",
-    "my-second-test-blog-post-a5a": "526/path---my-second-test-blog-post-a-5-a-f5a-tBzie2jgOMayRKgkSOWV4zCU"
+    "blog-f7a": "32/path---blog-f-7-a-05d-NZuapzHg3X9TaN1iIixfv1W23E",
+    "my-second-test-blog-post-a5a": "801/path---my-second-test-blog-post-a-5-a-f5a-mWV6pxpSMe5QEfNl4jUSsavm6Q"
   },
   "components": {
     "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/src/templates/BlogPost.js": {
-      "query": "query blogPostQuery(\n  $slug: String!\n) {\n  contentfulBlogPost(slug: {eq: $slug}) {\n    title\n    slug\n    subtitle\n    bodyContent {\n      bodyContent\n    }\n    published\n    heroImage {\n      file {\n        url\n        fileName\n        contentType\n      }\n      title\n      description\n    }\n  }\n}\n",
+      "query": "",
       "componentPath": "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/src/templates/BlogPost.js"
     },
     "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/.cache/dev-404-page.js": {
@@ -1212,7 +1202,7 @@
       "componentPath": "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/src/pages/about.js"
     },
     "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/src/pages/blog.js": {
-      "query": "query BlogPageQuery {\n  allContentfulBlogPost(filter: {node_locale: {eq: \"en-US\"}}) {\n    edges {\n      node {\n        title\n        slug\n      }\n    }\n  }\n}\n",
+      "query": "",
       "componentPath": "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/src/pages/blog.js"
     },
     "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/src/pages/contact.js": {

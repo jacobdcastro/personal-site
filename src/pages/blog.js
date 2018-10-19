@@ -13,7 +13,7 @@ const Container = styled.div`
 	padding: 0;
 `;
 
-const Body = styled.div`
+const BodyContent = styled.div`
   padding: 15px;
   width: 88%;
   max-width: 1125px;
@@ -62,14 +62,14 @@ class Blog extends React.Component {
 
 				<PageIntro action={this.openMobileNav} headline="Blog" aboutPage={true} />
 
-				<Body>
+				<BodyContent>
 					<Link to={posts.edges[0].node.slug}>
 						<h1>{posts.edges[0].node.title}</h1>
 					</Link>
 					<Link to={posts.edges[1].node.slug}>
 						<h1>{posts.edges[1].node.title}</h1>
 					</Link>
-				</Body>
+				</BodyContent>
 
 				<Footer backgroundIsBlack={false} />
 
