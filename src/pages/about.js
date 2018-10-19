@@ -72,76 +72,76 @@ const MiscLinks = styled.a`
 `;
 
 const linkStyles = {
-  color: 'black'
-}
+	color: 'black'
+};
 
 class About extends React.Component {
-  constructor(props) {
-    super(props);
-    this.openMobileNav = this.openMobileNav.bind(this);
-    this.closeMobileNav = this.closeMobileNav.bind(this);
+	constructor(props) {
+		super(props);
+		this.openMobileNav = this.openMobileNav.bind(this);
+		this.closeMobileNav = this.closeMobileNav.bind(this);
 
-    this.state = {
-      mobileNavIsOpen: false,
-      bgImg: '../images/cave.jpg'
-    }
-  }
+		this.state = {
+			mobileNavIsOpen: false,
+			bgImg: '../images/cave.jpg'
+		};
+	}
 
-  openMobileNav() {
-    this.setState({
-      mobileNavIsOpen: true
-    })
-  }
+	openMobileNav() {
+		this.setState({
+			mobileNavIsOpen: true
+		});
+	}
 
-  closeMobileNav() {
-    this.setState({
-      mobileNavIsOpen: false
-    })
-  }
+	closeMobileNav() {
+		this.setState({
+			mobileNavIsOpen: false
+		});
+	}
 
-  render() {
-    return (
-      <Container>
-        <Helmet>
-          <meta charSet="utf-8" />
-          <title>About Me - Jacob D. Castro</title>
-          <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
-          <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet" />
-        </Helmet>
-        <MobileNav action={this.closeMobileNav} open={this.state.mobileNavIsOpen} />
+	render() {
+		return (
+			<Container>
+				<Helmet>
+					<meta charSet="utf-8" />
+					<title>About Me - Jacob D. Castro</title>
+					<link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
+					<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet" />
+				</Helmet>
+				<MobileNav action={this.closeMobileNav} open={this.state.mobileNavIsOpen} />
 
-        <PageIntro action={this.openMobileNav} headline="Who Am I?" aboutPage={true} />
+				<PageIntro action={this.openMobileNav} headline="Who Am I?" aboutPage={true} />
 
-        <MainContent>
+				<MainContent>
 
-          <Body>
-            <AboutSection>
-              <AboutHeadline>About Me</AboutHeadline>
-              <AboutContent>
+					<Body>
+						<AboutSection>
+							<AboutHeadline>About Me</AboutHeadline>
+							<AboutContent>
                 My name is Jacob Daniel Castro. I am a front-end web developer. I love to code websites and stuff like that.<br />
                 I started learning to code HTML and CSS in 2015 after I graduated high school. I was a little on-and-off with my learning up until the end of 2017 where I decided that web development was, indeed, the career I wanted to pursue. From there, I jumped into JavaScript and have been falling more and more in love with web development ever since.
-              </AboutContent>
-              <AboutContent>
+							</AboutContent>
+							<AboutContent>
                 After coding, I also really enjoy design. My favorite sans-serif fonts are <MiscLinks href="https://www.myfonts.com/fonts/linotype/helvetica/">Helvetica</MiscLinks> and <MiscLinks href="https://fonts.google.com/specimen/Montserrat">Montserrat</MiscLinks>. I don't really have a favorite serif font (yet), but they're cool too, I guess.
-              </AboutContent>
-              <AboutContent>
+							</AboutContent>
+							<AboutContent>
                 One of my favorite things to do is take my passion for design and love for coding and combine them in my projects. I'm obssessed with gorgeous UI's; designing my own (for clients or otherwise) is so satisfying. And then translating that into code and crafting a truly memorable UX is my passion.
-              </AboutContent>
-              <AboutContent>
+							</AboutContent>
+							<AboutContent>
                 I live in Santa Maria, CA but my goal is to move to Chicago, IL someday soon. Some would say that's a downgrade, at least in weather quality, but I'm focused as hell to get there. If you're from Chicago, I'd love to <Link to="/contact/" style={linkStyles} >hear from you</Link>!
-              </AboutContent>
-              <AboutContent>
+							</AboutContent>
+							<AboutContent>
                 Some hobbies of mine include music and sports. I play guitar and sing a bit. I also really really love sports. All Chicago-based teams are my favorite (except the White Sox, of course).
-              </AboutContent>
-            </AboutSection>
-          </Body>
+							</AboutContent>
+						</AboutSection>
+					</Body>
 
-          <Footer backgroundIsBlack={false} />
+					<Footer backgroundIsBlack={false} />
 
-        </MainContent>
-      </Container>
-    );
-  }
+				</MainContent>
+			</Container>
+		);
+	}
 }
 
 export default About;

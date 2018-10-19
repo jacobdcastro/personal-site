@@ -5,6 +5,7 @@
   "author": "Jacob D. Castro <jdcastro.business@gmail.com>",
   "dependencies": {
     "babel-plugin-styled-components": "^1.8.0",
+    "contentful": "^7.0.4",
     "gatsby": "^2.0.0",
     "gatsby-plugin-manifest": "^2.0.5",
     "gatsby-plugin-offline": "^2.0.5",
@@ -33,6 +34,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
+    "eslint-plugin-styled-components": "0.0.0",
     "prettier": "^1.14.2"
   },
   "repository": {

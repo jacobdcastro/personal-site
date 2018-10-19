@@ -49,7 +49,7 @@ const Headline = styled.h1`
     font-size: 3.15em;
     letter-spacing: 12px;
   }
-`
+`;
 
 const DownArrow = styled.img`
   height: 33px;
@@ -63,19 +63,19 @@ const DownArrow = styled.img`
 `;
 
 class PageIntro extends React.Component {
-  render() {
-    return (
-      <Header about={this.props.aboutPage}>
-        <BlackLayer>
+	render() {
+		return (
+			<Header about={this.props.aboutPage}>
+				<BlackLayer>
 
-          <Navbar action={this.props.action} />
+					<Navbar action={this.props.action} />
 
-          <Headline>{this.props.headline}</Headline>
-          <DownArrow src={img} alt="down arrow icon" />
-        </BlackLayer>
-      </Header>
-    );
-  }
+					<Headline>{this.props.headline}</Headline>
+					<DownArrow src={img} alt="down arrow icon" />
+				</BlackLayer>
+			</Header>
+		);
+	}
 }
 
 export default PageIntro;

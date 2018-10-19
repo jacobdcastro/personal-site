@@ -87,29 +87,29 @@ const MenuItem = styled.li`
 `;
 
 const linkStyles = {
-  textDecoration: 'none',
-  margin: 0,
-  outline: 0
-}
+	textDecoration: 'none',
+	margin: 0,
+	outline: 0
+};
 
 class Navbar extends React.Component {
-  render() {
-    return (
-      <Header>
-        <HeaderContainer>
-          <Link to="/" style={linkStyles}><HeadLogo src={require('../images/Jacob-D-Castro.png')} alt="logo" /></Link>
-          <HeadMenu>
-            <Link to="/" style={linkStyles}><MenuItem>Home</MenuItem></Link>
-            <Link to="/about/" style={linkStyles}><MenuItem>About</MenuItem></Link>
-            <Link to="/contact/" style={linkStyles}><MenuItem>Contact</MenuItem></Link>
-            {/* <a href="#">Portfolio</a> */}
-            {/* <a href="#">Blog</a> */}
-            <HamButton onClick={this.props.action} src={require('../images/icons/menu-options.svg')} alt="menu button" />
-          </HeadMenu>
-        </HeaderContainer>
-      </Header>
-    );
-  }
+	render() {
+		return (
+			<Header>
+				<HeaderContainer>
+					<Link to="/" style={linkStyles}><HeadLogo src={require('../images/Jacob-D-Castro.png')} alt="logo" /></Link>
+					<HeadMenu>
+						<Link to="/" style={linkStyles}><MenuItem>Home</MenuItem></Link>
+						<Link to="/about/" style={linkStyles}><MenuItem>About</MenuItem></Link>
+						<Link to="/contact/" style={linkStyles}><MenuItem>Contact</MenuItem></Link>
+						<Link to="/blog/" style={linkStyles}><MenuItem>Blog</MenuItem></Link>
+						{/* <a href="#">Portfolio</a> */}
+						<HamButton onClick={this.props.action} src={require('../images/icons/menu-options.svg')} alt="menu button" />
+					</HeadMenu>
+				</HeaderContainer>
+			</Header>
+		);
+	}
 }
 
 export default Navbar;

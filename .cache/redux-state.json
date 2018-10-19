@@ -269,6 +269,122 @@
         "owner": "internal-data-bridge"
       }
     },
+    "Plugin gatsby-source-contentful": {
+      "resolve": "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/node_modules/gatsby-source-contentful",
+      "id": "Plugin gatsby-source-contentful",
+      "name": "gatsby-source-contentful",
+      "version": "2.0.4",
+      "pluginOptions": {
+        "plugins": [],
+        "spaceId": "oghc6wtiomc3",
+        "accessToken": "9f37d0ec8416ebe8c9c11b5db58b1a85d39c0f369f15fcc863b47f53c32179e7",
+        "host": "cdn.contentful.com",
+        "environment": "master"
+      },
+      "nodeAPIs": [
+        "setFieldsOnGraphQLNodeType",
+        "sourceNodes",
+        "onPreExtractQueries"
+      ],
+      "browserAPIs": [],
+      "ssrAPIs": [],
+      "pluginFilepath": "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/node_modules/gatsby-source-contentful",
+      "packageJson": {
+        "name": "gatsby-source-contentful",
+        "description": "Gatsby source plugin for building websites using the Contentful CMS as a data source",
+        "version": "2.0.4",
+        "keywords": [
+          "gatsby",
+          "gatsby-plugin",
+          "gatsby-source-plugin"
+        ],
+        "author": {
+          "name": "Marcus Ericsson",
+          "email": "mericsson@gmail.com",
+          "url": "mericsson.com"
+        },
+        "license": "MIT",
+        "dependencies": [
+          {
+            "name": "@babel/runtime",
+            "version": "^7.0.0"
+          },
+          {
+            "name": "axios",
+            "version": "^0.18.0"
+          },
+          {
+            "name": "base64-img",
+            "version": "^1.0.3"
+          },
+          {
+            "name": "bluebird",
+            "version": "^3.5.0"
+          },
+          {
+            "name": "contentful",
+            "version": "^6.1.0"
+          },
+          {
+            "name": "deep-map",
+            "version": "^1.5.0"
+          },
+          {
+            "name": "fs-extra",
+            "version": "^4.0.2"
+          },
+          {
+            "name": "gatsby-plugin-sharp",
+            "version": "^2.0.7"
+          },
+          {
+            "name": "is-online",
+            "version": "^7.0.0"
+          },
+          {
+            "name": "json-stringify-safe",
+            "version": "^5.0.1"
+          },
+          {
+            "name": "lodash",
+            "version": "^4.17.10"
+          },
+          {
+            "name": "qs",
+            "version": "^6.4.0"
+          }
+        ],
+        "devDependencies": [
+          {
+            "name": "@babel/cli",
+            "version": "^7.0.0"
+          },
+          {
+            "name": "@babel/core",
+            "version": "^7.0.0"
+          },
+          {
+            "name": "cross-env",
+            "version": "^5.1.4"
+          }
+        ],
+        "peerDependencies": [
+          {
+            "name": "gatsby",
+            "version": ">2.0.0-alpha"
+          }
+        ],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "contentDigest": "9ddc778993908c2337a54745dd0eaf59",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
     "Plugin gatsby-plugin-react-helmet": {
       "resolve": "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/node_modules/gatsby-plugin-react-helmet",
       "id": "Plugin gatsby-plugin-react-helmet",
@@ -357,8 +473,8 @@
       "version": "2.0.5",
       "pluginOptions": {
         "plugins": [],
-        "name": "gatsby-starter-default",
-        "short_name": "starter",
+        "name": "Jacob D. Castro Personal Website",
+        "short_name": "personal",
         "start_url": "/",
         "icon": "src/images/jdc-favicon.png"
       },
@@ -429,7 +545,7 @@
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "dd7a112dddf5a6b667e53db3f996fb93",
+        "contentDigest": "a65ef243675d386e713b120905c8cb1b",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
@@ -523,11 +639,13 @@
       "resolve": "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react",
       "id": "Plugin default-site-plugin",
       "name": "default-site-plugin",
-      "version": "8270731dd098bfc272834f0bb30e1414",
+      "version": "599e98b85597c0fc18e42b06dc5f881e",
       "pluginOptions": {
         "plugins": []
       },
-      "nodeAPIs": [],
+      "nodeAPIs": [
+        "createPages"
+      ],
       "browserAPIs": [],
       "ssrAPIs": [],
       "pluginFilepath": "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react",
@@ -547,6 +665,10 @@
           {
             "name": "babel-plugin-styled-components",
             "version": "^1.8.0"
+          },
+          {
+            "name": "contentful",
+            "version": "^7.0.4"
           },
           {
             "name": "gatsby",
@@ -571,6 +693,10 @@
           {
             "name": "gatsby-plugin-typography",
             "version": "^2.2.0"
+          },
+          {
+            "name": "gatsby-source-contentful",
+            "version": "^2.0.4"
           },
           {
             "name": "react",
@@ -599,6 +725,10 @@
         ],
         "devDependencies": [
           {
+            "name": "eslint-plugin-styled-components",
+            "version": "0.0.0"
+          },
+          {
             "name": "prettier",
             "version": "^1.14.2"
           }
@@ -610,7 +740,7 @@
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "6e374693ed75ef4755b0d9282593750c",
+        "contentDigest": "4cda6293e4a2c061eeef5cf6428b1ac7",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
@@ -712,19 +842,230 @@
     },
     "Site": {
       "siteMetadata": {
-        "title": "Jacob D. Castro"
+        "title": "Jacob D. Castro",
+        "desc": "A personal, information website and design/development playground for Jacob D. Castro"
       },
       "port": "8000",
       "host": "localhost",
       "pathPrefix": "",
       "polyfill": true,
-      "buildTime": "2018-10-13T02:06:12.992Z",
+      "buildTime": "2018-10-19T01:35:55.305Z",
       "id": "Site",
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "0b87a14bf9bfb41293235a85ad42b99e",
+        "contentDigest": "620904c2900821b21dd4e741ab7df30a",
         "type": "Site",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "0260e977-483f-511b-8fe5-bbb0a9d45808": {
+      "id": "0260e977-483f-511b-8fe5-bbb0a9d45808",
+      "parent": null,
+      "children": [],
+      "name": "Author",
+      "displayField": "firstName",
+      "description": "Creator or editor of content",
+      "internal": {
+        "type": "ContentfulContentType",
+        "contentDigest": "5acd96e8d13e30bb67b9d7fb213cbe8a",
+        "owner": "gatsby-source-contentful"
+      }
+    },
+    "184c794a-b337-50ca-8b95-a4293d5c79c7": {
+      "firstName": "Jacob",
+      "middleInitial": "D.",
+      "lastName": "Castro",
+      "birthday": "1997-05-27T06:32-07:00",
+      "id": "184c794a-b337-50ca-8b95-a4293d5c79c7",
+      "contentful_id": "2kMOzSV5Qs0KGG2S2msQsg",
+      "createdAt": "2018-10-18T06:30:08.865Z",
+      "updatedAt": "2018-10-18T06:36:18.704Z",
+      "parent": "Author",
+      "children": [],
+      "internal": {
+        "type": "ContentfulAuthor",
+        "contentDigest": "cd20efb76c1d0cd48687fb96b939e26b",
+        "owner": "gatsby-source-contentful"
+      },
+      "node_locale": "en-US"
+    },
+    "e1e094a9-007c-553e-99c6-c41fa78bf5d4": {
+      "id": "e1e094a9-007c-553e-99c6-c41fa78bf5d4",
+      "parent": null,
+      "children": [],
+      "name": "Blog Post",
+      "displayField": "title",
+      "description": "The Blog posts for Jacob D. Castro's blog on the personal site!",
+      "internal": {
+        "type": "ContentfulContentType",
+        "contentDigest": "4b1ab19d6bbe724eee10051e8587a991",
+        "owner": "gatsby-source-contentful"
+      }
+    },
+    "b7b77cb5-f51e-52fd-9648-a679c64bd7d7": {
+      "title": "My Second Test Blog Post",
+      "slug": "my-second-test-blog-post",
+      "subtitle": "Why I finally figured out my last bug.",
+      "published": "2018-10-18T06:13-07:00",
+      "heroImage___NODE": "a8367f41-c9c7-5842-9762-b1f6fb884dad",
+      "bodyContent___NODE": "03e6221e-71b2-51ff-9e63-95f4b3e1f7da",
+      "id": "b7b77cb5-f51e-52fd-9648-a679c64bd7d7",
+      "contentful_id": "2Dzj8hWMykweg02SQUE2EG",
+      "createdAt": "2018-10-19T01:13:26.818Z",
+      "updatedAt": "2018-10-19T01:34:47.713Z",
+      "parent": "Blog Post",
+      "children": [
+        "03e6221e-71b2-51ff-9e63-95f4b3e1f7da"
+      ],
+      "internal": {
+        "type": "ContentfulBlogPost",
+        "contentDigest": "573427340aa655ebe90747dc58e3f2e8",
+        "owner": "gatsby-source-contentful"
+      },
+      "node_locale": "en-US"
+    },
+    "83b21fcb-dff9-5d9f-952f-530da47a6b4c": {
+      "title": "This Is my test Post",
+      "slug": "this-is-my-test-post",
+      "subtitle": "Why I enjoy Contentful with Gatsby",
+      "published": "2018-10-17T00:00-07:00",
+      "heroImage___NODE": "d9d5d7bf-3681-5ec4-939d-c4d41c0d9d8f",
+      "bodyContent___NODE": "a0d73be9-a3da-5539-8b1c-99db32ec9f91",
+      "id": "83b21fcb-dff9-5d9f-952f-530da47a6b4c",
+      "contentful_id": "6UhP6543MkCEWggsk2GYY8",
+      "createdAt": "2018-10-18T06:29:15.020Z",
+      "updatedAt": "2018-10-18T06:29:15.020Z",
+      "parent": "Blog Post",
+      "children": [
+        "a0d73be9-a3da-5539-8b1c-99db32ec9f91"
+      ],
+      "internal": {
+        "type": "ContentfulBlogPost",
+        "contentDigest": "582b70d0e9e1022ed6944c9355d5dd38",
+        "owner": "gatsby-source-contentful"
+      },
+      "node_locale": "en-US"
+    },
+    "a0d73be9-a3da-5539-8b1c-99db32ec9f91": {
+      "id": "a0d73be9-a3da-5539-8b1c-99db32ec9f91",
+      "parent": "83b21fcb-dff9-5d9f-952f-530da47a6b4c",
+      "children": [],
+      "bodyContent": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lacus nibh, eleifend id tincidunt eget, mattis vitae nunc. Praesent metus neque, lobortis vel dapibus sit amet, pulvinar a ante. Cras fringilla at augue ac molestie. Proin iaculis congue lacus, ut elementum mi. Pellentesque id magna commodo, lobortis metus et, finibus quam. Morbi eu neque ac erat pellentesque facilisis. Cras eu semper erat. Nunc tempor, est hendrerit euismod consectetur, lacus nisi porttitor enim, eget tincidunt ligula nunc quis nulla. Nullam eu odio at turpis sodales venenatis vitae nec elit. In fermentum efficitur augue, nec suscipit urna.\n\nInteger non dolor a arcu aliquet euismod eu vitae lorem. Quisque id tortor maximus, luctus elit at, posuere nibh. Nunc bibendum augue odio, at feugiat metus interdum id. Cras id lacus vitae lectus bibendum porta quis accumsan felis. Vivamus ut nunc vitae orci vehicula porta. Morbi quis lacus eget felis dignissim dapibus quis in dolor. Nunc libero lorem, eleifend ut fermentum id, mollis nec est. Integer lorem eros, volutpat at viverra eget, consequat nec nulla. Mauris at sapien odio.\n\nDuis nec dolor et lectus eleifend porta. Fusce mollis consectetur lobortis. Fusce luctus diam sit amet est vulputate, a rutrum sapien fringilla. Integer lacinia commodo finibus. Aliquam lacus tortor, vulputate vel dignissim lacinia, faucibus in metus. Pellentesque lectus elit, cursus et egestas et, elementum nec neque. Ut placerat rutrum ex, a luctus mi semper vitae. Nullam dui neque, cursus ut ipsum at, tempor tincidunt enim. Donec ut felis quis erat suscipit ullamcorper ac eget ex. ",
+      "internal": {
+        "type": "contentfulBlogPostBodyContentTextNode",
+        "mediaType": "text/markdown",
+        "content": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lacus nibh, eleifend id tincidunt eget, mattis vitae nunc. Praesent metus neque, lobortis vel dapibus sit amet, pulvinar a ante. Cras fringilla at augue ac molestie. Proin iaculis congue lacus, ut elementum mi. Pellentesque id magna commodo, lobortis metus et, finibus quam. Morbi eu neque ac erat pellentesque facilisis. Cras eu semper erat. Nunc tempor, est hendrerit euismod consectetur, lacus nisi porttitor enim, eget tincidunt ligula nunc quis nulla. Nullam eu odio at turpis sodales venenatis vitae nec elit. In fermentum efficitur augue, nec suscipit urna.\n\nInteger non dolor a arcu aliquet euismod eu vitae lorem. Quisque id tortor maximus, luctus elit at, posuere nibh. Nunc bibendum augue odio, at feugiat metus interdum id. Cras id lacus vitae lectus bibendum porta quis accumsan felis. Vivamus ut nunc vitae orci vehicula porta. Morbi quis lacus eget felis dignissim dapibus quis in dolor. Nunc libero lorem, eleifend ut fermentum id, mollis nec est. Integer lorem eros, volutpat at viverra eget, consequat nec nulla. Mauris at sapien odio.\n\nDuis nec dolor et lectus eleifend porta. Fusce mollis consectetur lobortis. Fusce luctus diam sit amet est vulputate, a rutrum sapien fringilla. Integer lacinia commodo finibus. Aliquam lacus tortor, vulputate vel dignissim lacinia, faucibus in metus. Pellentesque lectus elit, cursus et egestas et, elementum nec neque. Ut placerat rutrum ex, a luctus mi semper vitae. Nullam dui neque, cursus ut ipsum at, tempor tincidunt enim. Donec ut felis quis erat suscipit ullamcorper ac eget ex. ",
+        "contentDigest": "c9faa830ec531e9de1bb33ea714edfea",
+        "owner": "gatsby-source-contentful"
+      }
+    },
+    "d9d5d7bf-3681-5ec4-939d-c4d41c0d9d8f": {
+      "contentful_id": "1PcwXTwgZmqkeEESCskEgg",
+      "id": "d9d5d7bf-3681-5ec4-939d-c4d41c0d9d8f",
+      "parent": null,
+      "children": [],
+      "file": {
+        "url": "//images.ctfassets.net/oghc6wtiomc3/1PcwXTwgZmqkeEESCskEgg/16c7c28bef56983c9b5dbcb9da74d768/revenuehalfempty-full_0.jpg",
+        "details": {
+          "size": 18952,
+          "image": {
+            "width": 600,
+            "height": 300
+          }
+        },
+        "fileName": "revenuehalfempty-full_0.jpg",
+        "contentType": "image/jpeg"
+      },
+      "title": "Glass Half Empty and Full",
+      "description": "Taken from Google Images",
+      "node_locale": "en-US",
+      "internal": {
+        "type": "ContentfulAsset",
+        "contentDigest": "06b9623f0a3f0a438fbd433c48b8d618",
+        "owner": "gatsby-source-contentful"
+      }
+    },
+    "03e6221e-71b2-51ff-9e63-95f4b3e1f7da": {
+      "id": "03e6221e-71b2-51ff-9e63-95f4b3e1f7da",
+      "parent": "b7b77cb5-f51e-52fd-9648-a679c64bd7d7",
+      "children": [],
+      "bodyContent": "\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris consectetur diam nec justo malesuada tempor. Etiam suscipit massa quis semper tristique. Sed ultricies augue sed dolor auctor porttitor. Nulla consectetur sodales felis eget feugiat. Curabitur nisi urna, eleifend in nisi pharetra, tincidunt eleifend elit. Vestibulum imperdiet porttitor lectus, non aliquet quam posuere non. Maecenas magna nisl, sollicitudin vel ante a, rhoncus finibus justo.\n\nDonec rutrum interdum arcu at posuere. Aliquam rhoncus facilisis erat eget aliquam. Morbi ut commodo quam. Aenean iaculis, leo non pellentesque finibus, risus nulla eleifend eros, accumsan maximus mauris massa at nisl. Sed nec lacus vitae mauris lacinia volutpat. Phasellus enim libero, consequat at sollicitudin a, tempor eget orci. Curabitur facilisis tincidunt arcu, quis rutrum ligula convallis varius. Cras eu turpis felis. Nullam suscipit rhoncus quam vitae consectetur. Sed quis ipsum blandit, pretium sem eget, efficitur ante. Etiam gravida risus id interdum consectetur. Praesent rhoncus justo ac lacinia aliquet. Curabitur at convallis eros. Curabitur lacinia ante vel sapien viverra, ut mattis orci cursus. Fusce tristique viverra augue, id gravida turpis cursus tincidunt. Nulla volutpat eros scelerisque leo porta, nec facilisis nunc mollis. ",
+      "internal": {
+        "type": "contentfulBlogPostBodyContentTextNode",
+        "mediaType": "text/markdown",
+        "content": "\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris consectetur diam nec justo malesuada tempor. Etiam suscipit massa quis semper tristique. Sed ultricies augue sed dolor auctor porttitor. Nulla consectetur sodales felis eget feugiat. Curabitur nisi urna, eleifend in nisi pharetra, tincidunt eleifend elit. Vestibulum imperdiet porttitor lectus, non aliquet quam posuere non. Maecenas magna nisl, sollicitudin vel ante a, rhoncus finibus justo.\n\nDonec rutrum interdum arcu at posuere. Aliquam rhoncus facilisis erat eget aliquam. Morbi ut commodo quam. Aenean iaculis, leo non pellentesque finibus, risus nulla eleifend eros, accumsan maximus mauris massa at nisl. Sed nec lacus vitae mauris lacinia volutpat. Phasellus enim libero, consequat at sollicitudin a, tempor eget orci. Curabitur facilisis tincidunt arcu, quis rutrum ligula convallis varius. Cras eu turpis felis. Nullam suscipit rhoncus quam vitae consectetur. Sed quis ipsum blandit, pretium sem eget, efficitur ante. Etiam gravida risus id interdum consectetur. Praesent rhoncus justo ac lacinia aliquet. Curabitur at convallis eros. Curabitur lacinia ante vel sapien viverra, ut mattis orci cursus. Fusce tristique viverra augue, id gravida turpis cursus tincidunt. Nulla volutpat eros scelerisque leo porta, nec facilisis nunc mollis. ",
+        "contentDigest": "69d0777090a8774b3c7691a60435d97f",
+        "owner": "gatsby-source-contentful"
+      }
+    },
+    "a8367f41-c9c7-5842-9762-b1f6fb884dad": {
+      "contentful_id": "6dSzflXsd2KAigqsKeKkyG",
+      "id": "a8367f41-c9c7-5842-9762-b1f6fb884dad",
+      "parent": null,
+      "children": [],
+      "file": {
+        "url": "//images.ctfassets.net/oghc6wtiomc3/6dSzflXsd2KAigqsKeKkyG/7bd341997ccdfb1f0b574b8c051ee3f1/chuttersnap-297551.jpg",
+        "details": {
+          "size": 712271,
+          "image": {
+            "width": 6016,
+            "height": 4016
+          }
+        },
+        "fileName": "chuttersnap-297551.jpg",
+        "contentType": "image/jpeg"
+      },
+      "title": "chuttersnap-297551",
+      "description": "",
+      "node_locale": "en-US",
+      "internal": {
+        "type": "ContentfulAsset",
+        "contentDigest": "1fe11133d2031ab9a4194fcae488db12",
+        "owner": "gatsby-source-contentful"
+      }
+    },
+    "SitePage /my-second-test-blog-post": {
+      "jsonName": "my-second-test-blog-post-a5a",
+      "internalComponentName": "ComponentMySecondTestBlogPost",
+      "path": "/my-second-test-blog-post",
+      "component": "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/src/templates/BlogPost.js",
+      "componentChunkName": "component---src-templates-blog-post-js",
+      "context": {
+        "slug": "my-second-test-blog-post"
+      },
+      "pluginCreator___NODE": "Plugin default-site-plugin",
+      "pluginCreatorId": "Plugin default-site-plugin",
+      "componentPath": "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/src/templates/BlogPost.js",
+      "id": "SitePage /my-second-test-blog-post",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "e29f998f8a89424af8d71c73ce90001d",
+        "description": "Your site's \"gatsby-node.js\"",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /this-is-my-test-post": {
+      "jsonName": "this-is-my-test-post-e62",
+      "internalComponentName": "ComponentThisIsMyTestPost",
+      "path": "/this-is-my-test-post",
+      "component": "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/src/templates/BlogPost.js",
+      "componentChunkName": "component---src-templates-blog-post-js",
+      "context": {
+        "slug": "this-is-my-test-post"
+      },
+      "pluginCreator___NODE": "Plugin default-site-plugin",
+      "pluginCreatorId": "Plugin default-site-plugin",
+      "componentPath": "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/src/templates/BlogPost.js",
+      "id": "SitePage /this-is-my-test-post",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "44743fa0b6e54bb608a1dc11eb36a8ac",
+        "description": "Your site's \"gatsby-node.js\"",
         "owner": "internal-data-bridge"
       }
     },
@@ -744,6 +1085,26 @@
       "internal": {
         "type": "SitePage",
         "contentDigest": "742051aa618c62c816d0703206c25d27",
+        "description": "Plugin gatsby-plugin-page-creator",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /blog/": {
+      "jsonName": "blog-f7a",
+      "internalComponentName": "ComponentBlog",
+      "path": "/blog/",
+      "component": "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/src/pages/blog.js",
+      "componentChunkName": "component---src-pages-blog-js",
+      "context": {},
+      "pluginCreator___NODE": "Plugin gatsby-plugin-page-creator",
+      "pluginCreatorId": "Plugin gatsby-plugin-page-creator",
+      "componentPath": "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/src/pages/blog.js",
+      "id": "SitePage /blog/",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "ad117f74b507ad9418c4aeba7e1e9c2d",
         "description": "Plugin gatsby-plugin-page-creator",
         "owner": "internal-data-bridge"
       }
@@ -790,21 +1151,58 @@
     }
   },
   "status": {
-    "plugins": {},
-    "PLUGINS_HASH": "f0668fc600695df65d17274a77c7bf7d"
+    "plugins": {
+      "gatsby-source-contentful": {
+        "oghc6wtiomc3-master-cdn.contentful.com": "w5ZGw6JFwqZmVcKsE8Kow4grw45QdyYTwrcnwq14w4bCmlxLwrATw7LCisO5wo_DvXLChnlFTxHDi8KWw7jCmFtqHjLDvcO5w6rCiCbCnlFmTz4Zw6oBDcKyL8KQw5fCnUdUY8Ksw53DsjrDosKPwp_DhC_CscOmeg"
+      }
+    },
+    "PLUGINS_HASH": "10ddf559dd1a8c32d55161a69a8c9f49"
   },
   "componentDataDependencies": {
-    "nodes": {},
-    "connections": {}
+    "nodes": {
+      "b7b77cb5-f51e-52fd-9648-a679c64bd7d7": [
+        "/my-second-test-blog-post"
+      ],
+      "83b21fcb-dff9-5d9f-952f-530da47a6b4c": [
+        "/this-is-my-test-post"
+      ],
+      "03e6221e-71b2-51ff-9e63-95f4b3e1f7da": [
+        "/",
+        "/my-second-test-blog-post"
+      ],
+      "a0d73be9-a3da-5539-8b1c-99db32ec9f91": [
+        "/",
+        "/this-is-my-test-post"
+      ],
+      "d9d5d7bf-3681-5ec4-939d-c4d41c0d9d8f": [
+        "/",
+        "/this-is-my-test-post"
+      ],
+      "a8367f41-c9c7-5842-9762-b1f6fb884dad": [
+        "/",
+        "/my-second-test-blog-post"
+      ]
+    },
+    "connections": {
+      "ContentfulBlogPost": [
+        "/blog/"
+      ]
+    }
   },
   "jsonDataPaths": {
     "about-f34": "125/path---about-f-34-4c2-NZuapzHg3X9TaN1iIixfv1W23E",
-    "index": "173/path---index-6a9-NZuapzHg3X9TaN1iIixfv1W23E",
     "contact-26a": "686/path---contact-26-a-cd9-NZuapzHg3X9TaN1iIixfv1W23E",
     "dev-404-page-5f9": "920/path---dev-404-page-5-f-9-fab-NZuapzHg3X9TaN1iIixfv1W23E",
-    "offline-plugin-app-shell-fallback-a30": "520/path---offline-plugin-app-shell-fallback-a-30-c5a-NZuapzHg3X9TaN1iIixfv1W23E"
+    "this-is-my-test-post-e62": "110/path---this-is-my-test-post-e-62-51c-rnvoehefsNIiSjcygGXKrQ9kDrM",
+    "index": "173/path---index-6a9-NZuapzHg3X9TaN1iIixfv1W23E",
+    "blog-f7a": "680/path---blog-f-7-a-05d-YFbQUgVdyB1js3Ib2XOFuoAQPl0",
+    "my-second-test-blog-post-a5a": "526/path---my-second-test-blog-post-a-5-a-f5a-tBzie2jgOMayRKgkSOWV4zCU"
   },
   "components": {
+    "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/src/templates/BlogPost.js": {
+      "query": "query blogPostQuery(\n  $slug: String!\n) {\n  contentfulBlogPost(slug: {eq: $slug}) {\n    title\n    slug\n    subtitle\n    bodyContent {\n      bodyContent\n    }\n    published\n    heroImage {\n      file {\n        url\n        fileName\n        contentType\n      }\n      title\n      description\n    }\n  }\n}\n",
+      "componentPath": "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/src/templates/BlogPost.js"
+    },
     "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/.cache/dev-404-page.js": {
       "query": "",
       "componentPath": "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/.cache/dev-404-page.js"
@@ -812,6 +1210,10 @@
     "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/src/pages/about.js": {
       "query": "",
       "componentPath": "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/src/pages/about.js"
+    },
+    "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/src/pages/blog.js": {
+      "query": "query BlogPageQuery {\n  allContentfulBlogPost(filter: {node_locale: {eq: \"en-US\"}}) {\n    edges {\n      node {\n        title\n        slug\n      }\n    }\n  }\n}\n",
+      "componentPath": "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/src/pages/blog.js"
     },
     "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/src/pages/contact.js": {
       "query": "",

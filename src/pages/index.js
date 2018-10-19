@@ -107,66 +107,66 @@ const Text2 = styled.h4`
 `;
 
 const linkStyles = {
-  textDecoration: 'none',
-  margin: 0,
-  outline: 0
-}
+	textDecoration: 'none',
+	margin: 0,
+	outline: 0
+};
 
 class Index extends React.Component {
-  constructor(props) {
-    super(props);
+	constructor(props) {
+		super(props);
 
-    this.openMobileNav = this.openMobileNav.bind(this);
-    this.closeMobileNav = this.closeMobileNav.bind(this);
+		this.openMobileNav = this.openMobileNav.bind(this);
+		this.closeMobileNav = this.closeMobileNav.bind(this);
 
-    this.state = {
-      mobileNavIsOpen: false
-    }
-  }
+		this.state = {
+			mobileNavIsOpen: false
+		};
+	}
 
-  openMobileNav() {
-    this.setState({
-      mobileNavIsOpen: true
-    })
-  }
+	openMobileNav() {
+		this.setState({
+			mobileNavIsOpen: true
+		});
+	}
 
-  closeMobileNav() {
-    this.setState({
-      mobileNavIsOpen: false
-    })
-  }
+	closeMobileNav() {
+		this.setState({
+			mobileNavIsOpen: false
+		});
+	}
 
-  render() {
-    return (
-      <Container>
-        <Helmet>
-          <meta charSet="utf-8" />
-          <title>Jacob D. Castro</title>
-          <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
-          <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet" />
-        </Helmet>
-        <MobileNav action={this.closeMobileNav} open={this.state.mobileNavIsOpen} />
-        <BlackLayer>
-          <MainContent>
+	render() {
+		return (
+			<Container>
+				<Helmet>
+					<meta charSet="utf-8" />
+					<title>Jacob D. Castro</title>
+					<link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
+					<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet" />
+				</Helmet>
+				<MobileNav action={this.closeMobileNav} open={this.state.mobileNavIsOpen} />
+				<BlackLayer>
+					<MainContent>
 
-            {/* normal header menu */}
-            <Navbar action={this.openMobileNav} />
+						{/* normal header menu */}
+						<Navbar action={this.openMobileNav} />
 
-            <TextContainer>
-              <Text1>I Design &amp; develop<br />
+						<TextContainer>
+							<Text1>I Design &amp; develop<br />
                   Modern Websites.<br />
                   For You.</Text1>
-              <Link to="/contact/" style={linkStyles}><Text2>Let's work<br />
+							<Link to="/contact/" style={linkStyles}><Text2>Let's work<br />
                   Together</Text2></Link>
-            </TextContainer>
+						</TextContainer>
 
-            <Footer backgroundIsBlack={true} />
+						<Footer backgroundIsBlack={true} />
 
-          </MainContent>
-        </BlackLayer>
-      </Container>
-    );
-  }
+					</MainContent>
+				</BlackLayer>
+			</Container>
+		);
+	}
 }
 
 export default Index;
