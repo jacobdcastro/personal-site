@@ -5,7 +5,7 @@ import { Helmet } from 'react-helmet';
 import './normalize.css';
 import PageIntro from '../components/PageIntro';
 import MobileNav from '../components/MobileNav';
-import BlogPostPreview from '../components/BlogPostPreview';
+import BlogPostCard from '../components/BlogPostCard';
 import Footer from '../components/Footer';
 
 const Container = styled.div`
@@ -85,12 +85,12 @@ export const pageQuery = graphql`
 		allContentfulBlogPost (filter: {
 			node_locale: {eq: "en-US"}
 		}) {
-				edges {
-					node {
-						title
-						slug
-					}
+			edges {
+				node {
+					title
+					slug
 				}
+			}
 		}
 	}
 `;

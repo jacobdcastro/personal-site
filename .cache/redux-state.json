@@ -849,12 +849,12 @@
       "host": "localhost",
       "pathPrefix": "/blog",
       "polyfill": true,
-      "buildTime": "2018-10-19T05:35:18.167Z",
+      "buildTime": "2018-10-20T01:41:25.105Z",
       "id": "Site",
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "954c7747107f87b998b7fa79fc914070",
+        "contentDigest": "2db87ca722c30a6acf523df826023d89",
         "type": "Site",
         "owner": "internal-data-bridge"
       }
@@ -1159,38 +1159,45 @@
   "componentDataDependencies": {
     "nodes": {
       "b7b77cb5-f51e-52fd-9648-a679c64bd7d7": [
-        "/"
+        "/",
+        "/my-second-test-blog-post"
       ],
       "03e6221e-71b2-51ff-9e63-95f4b3e1f7da": [
-        "/"
+        "/",
+        "/my-second-test-blog-post"
       ],
       "a8367f41-c9c7-5842-9762-b1f6fb884dad": [
         "/"
       ],
-      "83b21fcb-dff9-5d9f-952f-530da47a6b4c": [],
+      "83b21fcb-dff9-5d9f-952f-530da47a6b4c": [
+        "/this-is-my-test-post"
+      ],
       "a0d73be9-a3da-5539-8b1c-99db32ec9f91": [
-        "/"
+        "/",
+        "/this-is-my-test-post"
       ],
       "d9d5d7bf-3681-5ec4-939d-c4d41c0d9d8f": [
         "/"
       ]
     },
     "connections": {
-      "ContentfulBlogPost": []
+      "ContentfulBlogPost": [
+        "/blog/"
+      ]
     }
   },
   "jsonDataPaths": {
     "about-f34": "125/path---about-f-34-4c2-NZuapzHg3X9TaN1iIixfv1W23E",
     "contact-26a": "686/path---contact-26-a-cd9-NZuapzHg3X9TaN1iIixfv1W23E",
     "dev-404-page-5f9": "920/path---dev-404-page-5-f-9-fab-NZuapzHg3X9TaN1iIixfv1W23E",
-    "this-is-my-test-post-e62": "486/path---this-is-my-test-post-e-62-51c-YnSeZnauZ2cWQQcsHWFbsWnz7Hg",
+    "this-is-my-test-post-e62": "779/path---this-is-my-test-post-e-62-51c-22HFdjUaK6wRfGA4ijIXp2P4Us",
     "index": "173/path---index-6a9-NZuapzHg3X9TaN1iIixfv1W23E",
-    "blog-f7a": "32/path---blog-f-7-a-05d-NZuapzHg3X9TaN1iIixfv1W23E",
-    "my-second-test-blog-post-a5a": "801/path---my-second-test-blog-post-a-5-a-f5a-mWV6pxpSMe5QEfNl4jUSsavm6Q"
+    "blog-f7a": "680/path---blog-f-7-a-05d-YFbQUgVdyB1js3Ib2XOFuoAQPl0",
+    "my-second-test-blog-post-a5a": "743/path---my-second-test-blog-post-a-5-a-f5a-7rX255G9iKlpXSXiAykoBpZSBE"
   },
   "components": {
     "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/src/templates/BlogPost.js": {
-      "query": "",
+      "query": "query blogPostQuery(\n  $slug: String!\n) {\n  contentfulBlogPost(slug: {eq: $slug}) {\n    title\n    slug\n    subtitle\n    bodyContent {\n      bodyContent\n    }\n    published\n  }\n}\n",
       "componentPath": "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/src/templates/BlogPost.js"
     },
     "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/.cache/dev-404-page.js": {
@@ -1202,7 +1209,7 @@
       "componentPath": "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/src/pages/about.js"
     },
     "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/src/pages/blog.js": {
-      "query": "",
+      "query": "query BlogPageQuery {\n  allContentfulBlogPost(filter: {node_locale: {eq: \"en-US\"}}) {\n    edges {\n      node {\n        title\n        slug\n      }\n    }\n  }\n}\n",
       "componentPath": "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/src/pages/blog.js"
     },
     "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/src/pages/contact.js": {

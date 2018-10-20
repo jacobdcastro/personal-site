@@ -79,7 +79,7 @@ class BlogPost extends React.Component {
 
 				<ContentWrapper>
 					<BlogParagraph>
-						{this.props.data.contentfulBlogPost.bodyContent.bodyContent}
+						{this.props.data[0].contentfulBlogPost.title}
 					</BlogParagraph>
 				</ContentWrapper>
 
@@ -104,14 +104,7 @@ export const pageQuery = graphql`
       bodyContent {
         bodyContent
       }
-      published
-      heroImage {
-        file {
-          url
-          fileName
-          contentType
-        }
-      }
+			published
     }
   }
 `;
