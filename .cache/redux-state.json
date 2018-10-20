@@ -635,11 +635,85 @@
         "owner": "internal-data-bridge"
       }
     },
+    "Plugin gatsby-plugin-lodash": {
+      "resolve": "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/node_modules/gatsby-plugin-lodash",
+      "id": "Plugin gatsby-plugin-lodash",
+      "name": "gatsby-plugin-lodash",
+      "version": "3.0.1",
+      "pluginOptions": {
+        "plugins": []
+      },
+      "nodeAPIs": [
+        "onCreateWebpackConfig",
+        "onCreateBabelConfig"
+      ],
+      "browserAPIs": [],
+      "ssrAPIs": [],
+      "pluginFilepath": "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/node_modules/gatsby-plugin-lodash",
+      "packageJson": {
+        "name": "gatsby-plugin-lodash",
+        "description": "Easy modular Lodash builds. Adds the Lodash webpack & Babel plugins to your Gatsby build",
+        "version": "3.0.1",
+        "main": "index.js",
+        "keywords": [
+          "gatsby",
+          "gatsby-plugin"
+        ],
+        "author": {
+          "name": "Kyle Mathews",
+          "email": "mathews.kyle@gmail.com"
+        },
+        "license": "MIT",
+        "dependencies": [
+          {
+            "name": "@babel/runtime",
+            "version": "^7.0.0"
+          },
+          {
+            "name": "babel-plugin-lodash",
+            "version": "^3.2.11"
+          },
+          {
+            "name": "lodash-webpack-plugin",
+            "version": "^0.11.5"
+          }
+        ],
+        "devDependencies": [
+          {
+            "name": "@babel/cli",
+            "version": "^7.0.0"
+          },
+          {
+            "name": "@babel/core",
+            "version": "^7.0.0"
+          },
+          {
+            "name": "cross-env",
+            "version": "^5.1.4"
+          }
+        ],
+        "peerDependencies": [
+          {
+            "name": "gatsby",
+            "version": ">2.0.0-alpha"
+          }
+        ],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "contentDigest": "1be8d0d72e82ed6865d39b0ace3228cc",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
     "Plugin default-site-plugin": {
       "resolve": "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react",
       "id": "Plugin default-site-plugin",
       "name": "default-site-plugin",
-      "version": "945fcfa0720094c4ccb184040f573f4d",
+      "version": "37cb033e39268babe5cab7ad4e666fa5",
       "pluginOptions": {
         "plugins": []
       },
@@ -675,6 +749,10 @@
             "version": "^2.0.0"
           },
           {
+            "name": "gatsby-plugin-lodash",
+            "version": "^3.0.1"
+          },
+          {
             "name": "gatsby-plugin-manifest",
             "version": "^2.0.5"
           },
@@ -697,6 +775,10 @@
           {
             "name": "gatsby-source-contentful",
             "version": "^2.0.4"
+          },
+          {
+            "name": "lodash",
+            "version": "^4.17.11"
           },
           {
             "name": "react",
@@ -740,7 +822,7 @@
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "6fa90110d61c4af1b1ee97463a0fdd3f",
+        "contentDigest": "34b8459e8fc4d4147389c6cb3c7c966f",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
@@ -849,12 +931,12 @@
       "host": "localhost",
       "pathPrefix": "/blog",
       "polyfill": true,
-      "buildTime": "2018-10-20T01:41:25.105Z",
+      "buildTime": "2018-10-20T01:49:30.403Z",
       "id": "Site",
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "2db87ca722c30a6acf523df826023d89",
+        "contentDigest": "2b793c77faa5df841caadbcb4ed86022",
         "type": "Site",
         "owner": "internal-data-bridge"
       }
@@ -877,6 +959,10 @@
       "middleInitial": "D.",
       "lastName": "Castro",
       "birthday": "1997-05-27T06:32-07:00",
+      "blog post___NODE": [
+        "b7b77cb5-f51e-52fd-9648-a679c64bd7d7",
+        "83b21fcb-dff9-5d9f-952f-530da47a6b4c"
+      ],
       "id": "184c794a-b337-50ca-8b95-a4293d5c79c7",
       "contentful_id": "2kMOzSV5Qs0KGG2S2msQsg",
       "createdAt": "2018-10-18T06:30:08.865Z",
@@ -885,7 +971,7 @@
       "children": [],
       "internal": {
         "type": "ContentfulAuthor",
-        "contentDigest": "cd20efb76c1d0cd48687fb96b939e26b",
+        "contentDigest": "ed8aa9c31559cf72374de4d8d4fe5b67",
         "owner": "gatsby-source-contentful"
       },
       "node_locale": "en-US"
@@ -908,6 +994,8 @@
       "slug": "my-second-test-blog-post",
       "subtitle": "Why I finally figured out my last bug.",
       "published": "2018-10-18T06:13-07:00",
+      "heroImage___NODE": "a8367f41-c9c7-5842-9762-b1f6fb884dad",
+      "author___NODE": "184c794a-b337-50ca-8b95-a4293d5c79c7",
       "bodyContent___NODE": "03e6221e-71b2-51ff-9e63-95f4b3e1f7da",
       "id": "b7b77cb5-f51e-52fd-9648-a679c64bd7d7",
       "contentful_id": "2Dzj8hWMykweg02SQUE2EG",
@@ -919,7 +1007,7 @@
       ],
       "internal": {
         "type": "ContentfulBlogPost",
-        "contentDigest": "cdee124a653c4c791f29c195f5f6827e",
+        "contentDigest": "18d32bcda957701c3ba8d9831c5014c9",
         "owner": "gatsby-source-contentful"
       },
       "node_locale": "en-US"
@@ -929,6 +1017,8 @@
       "slug": "this-is-my-test-post",
       "subtitle": "Why I enjoy Contentful with Gatsby",
       "published": "2018-10-17T00:00-07:00",
+      "heroImage___NODE": "d9d5d7bf-3681-5ec4-939d-c4d41c0d9d8f",
+      "author___NODE": "184c794a-b337-50ca-8b95-a4293d5c79c7",
       "bodyContent___NODE": "a0d73be9-a3da-5539-8b1c-99db32ec9f91",
       "id": "83b21fcb-dff9-5d9f-952f-530da47a6b4c",
       "contentful_id": "6UhP6543MkCEWggsk2GYY8",
@@ -940,10 +1030,36 @@
       ],
       "internal": {
         "type": "ContentfulBlogPost",
-        "contentDigest": "f82f19303a0b1fc8484b38329fbeedff",
+        "contentDigest": "b9e79b9fea073780feff39ad250ca79b",
         "owner": "gatsby-source-contentful"
       },
       "node_locale": "en-US"
+    },
+    "03e6221e-71b2-51ff-9e63-95f4b3e1f7da": {
+      "id": "03e6221e-71b2-51ff-9e63-95f4b3e1f7da",
+      "parent": "b7b77cb5-f51e-52fd-9648-a679c64bd7d7",
+      "children": [],
+      "bodyContent": "\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris consectetur diam nec justo malesuada tempor. Etiam suscipit massa quis semper tristique. Sed ultricies augue sed dolor auctor porttitor. Nulla consectetur sodales felis eget feugiat. Curabitur nisi urna, eleifend in nisi pharetra, tincidunt eleifend elit. Vestibulum imperdiet porttitor lectus, non aliquet quam posuere non. Maecenas magna nisl, sollicitudin vel ante a, rhoncus finibus justo.\n\nDonec rutrum interdum arcu at posuere. Aliquam rhoncus facilisis erat eget aliquam. Morbi ut commodo quam. Aenean iaculis, leo non pellentesque finibus, risus nulla eleifend eros, accumsan maximus mauris massa at nisl. Sed nec lacus vitae mauris lacinia volutpat. Phasellus enim libero, consequat at sollicitudin a, tempor eget orci. Curabitur facilisis tincidunt arcu, quis rutrum ligula convallis varius. Cras eu turpis felis. Nullam suscipit rhoncus quam vitae consectetur. Sed quis ipsum blandit, pretium sem eget, efficitur ante. Etiam gravida risus id interdum consectetur. Praesent rhoncus justo ac lacinia aliquet. Curabitur at convallis eros. Curabitur lacinia ante vel sapien viverra, ut mattis orci cursus. Fusce tristique viverra augue, id gravida turpis cursus tincidunt. Nulla volutpat eros scelerisque leo porta, nec facilisis nunc mollis. ",
+      "internal": {
+        "type": "contentfulBlogPostBodyContentTextNode",
+        "mediaType": "text/markdown",
+        "content": "\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris consectetur diam nec justo malesuada tempor. Etiam suscipit massa quis semper tristique. Sed ultricies augue sed dolor auctor porttitor. Nulla consectetur sodales felis eget feugiat. Curabitur nisi urna, eleifend in nisi pharetra, tincidunt eleifend elit. Vestibulum imperdiet porttitor lectus, non aliquet quam posuere non. Maecenas magna nisl, sollicitudin vel ante a, rhoncus finibus justo.\n\nDonec rutrum interdum arcu at posuere. Aliquam rhoncus facilisis erat eget aliquam. Morbi ut commodo quam. Aenean iaculis, leo non pellentesque finibus, risus nulla eleifend eros, accumsan maximus mauris massa at nisl. Sed nec lacus vitae mauris lacinia volutpat. Phasellus enim libero, consequat at sollicitudin a, tempor eget orci. Curabitur facilisis tincidunt arcu, quis rutrum ligula convallis varius. Cras eu turpis felis. Nullam suscipit rhoncus quam vitae consectetur. Sed quis ipsum blandit, pretium sem eget, efficitur ante. Etiam gravida risus id interdum consectetur. Praesent rhoncus justo ac lacinia aliquet. Curabitur at convallis eros. Curabitur lacinia ante vel sapien viverra, ut mattis orci cursus. Fusce tristique viverra augue, id gravida turpis cursus tincidunt. Nulla volutpat eros scelerisque leo porta, nec facilisis nunc mollis. ",
+        "contentDigest": "69d0777090a8774b3c7691a60435d97f",
+        "owner": "gatsby-source-contentful"
+      }
+    },
+    "a0d73be9-a3da-5539-8b1c-99db32ec9f91": {
+      "id": "a0d73be9-a3da-5539-8b1c-99db32ec9f91",
+      "parent": "83b21fcb-dff9-5d9f-952f-530da47a6b4c",
+      "children": [],
+      "bodyContent": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lacus nibh, eleifend id tincidunt eget, mattis vitae nunc. Praesent metus neque, lobortis vel dapibus sit amet, pulvinar a ante. Cras fringilla at augue ac molestie. Proin iaculis congue lacus, ut elementum mi. Pellentesque id magna commodo, lobortis metus et, finibus quam. Morbi eu neque ac erat pellentesque facilisis. Cras eu semper erat. Nunc tempor, est hendrerit euismod consectetur, lacus nisi porttitor enim, eget tincidunt ligula nunc quis nulla. Nullam eu odio at turpis sodales venenatis vitae nec elit. In fermentum efficitur augue, nec suscipit urna.\n\nInteger non dolor a arcu aliquet euismod eu vitae lorem. Quisque id tortor maximus, luctus elit at, posuere nibh. Nunc bibendum augue odio, at feugiat metus interdum id. Cras id lacus vitae lectus bibendum porta quis accumsan felis. Vivamus ut nunc vitae orci vehicula porta. Morbi quis lacus eget felis dignissim dapibus quis in dolor. Nunc libero lorem, eleifend ut fermentum id, mollis nec est. Integer lorem eros, volutpat at viverra eget, consequat nec nulla. Mauris at sapien odio.\n\nDuis nec dolor et lectus eleifend porta. Fusce mollis consectetur lobortis. Fusce luctus diam sit amet est vulputate, a rutrum sapien fringilla. Integer lacinia commodo finibus. Aliquam lacus tortor, vulputate vel dignissim lacinia, faucibus in metus. Pellentesque lectus elit, cursus et egestas et, elementum nec neque. Ut placerat rutrum ex, a luctus mi semper vitae. Nullam dui neque, cursus ut ipsum at, tempor tincidunt enim. Donec ut felis quis erat suscipit ullamcorper ac eget ex. ",
+      "internal": {
+        "type": "contentfulBlogPostBodyContentTextNode",
+        "mediaType": "text/markdown",
+        "content": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lacus nibh, eleifend id tincidunt eget, mattis vitae nunc. Praesent metus neque, lobortis vel dapibus sit amet, pulvinar a ante. Cras fringilla at augue ac molestie. Proin iaculis congue lacus, ut elementum mi. Pellentesque id magna commodo, lobortis metus et, finibus quam. Morbi eu neque ac erat pellentesque facilisis. Cras eu semper erat. Nunc tempor, est hendrerit euismod consectetur, lacus nisi porttitor enim, eget tincidunt ligula nunc quis nulla. Nullam eu odio at turpis sodales venenatis vitae nec elit. In fermentum efficitur augue, nec suscipit urna.\n\nInteger non dolor a arcu aliquet euismod eu vitae lorem. Quisque id tortor maximus, luctus elit at, posuere nibh. Nunc bibendum augue odio, at feugiat metus interdum id. Cras id lacus vitae lectus bibendum porta quis accumsan felis. Vivamus ut nunc vitae orci vehicula porta. Morbi quis lacus eget felis dignissim dapibus quis in dolor. Nunc libero lorem, eleifend ut fermentum id, mollis nec est. Integer lorem eros, volutpat at viverra eget, consequat nec nulla. Mauris at sapien odio.\n\nDuis nec dolor et lectus eleifend porta. Fusce mollis consectetur lobortis. Fusce luctus diam sit amet est vulputate, a rutrum sapien fringilla. Integer lacinia commodo finibus. Aliquam lacus tortor, vulputate vel dignissim lacinia, faucibus in metus. Pellentesque lectus elit, cursus et egestas et, elementum nec neque. Ut placerat rutrum ex, a luctus mi semper vitae. Nullam dui neque, cursus ut ipsum at, tempor tincidunt enim. Donec ut felis quis erat suscipit ullamcorper ac eget ex. ",
+        "contentDigest": "c9faa830ec531e9de1bb33ea714edfea",
+        "owner": "gatsby-source-contentful"
+      }
     },
     "a8367f41-c9c7-5842-9762-b1f6fb884dad": {
       "contentful_id": "6dSzflXsd2KAigqsKeKkyG",
@@ -994,32 +1110,6 @@
       "internal": {
         "type": "ContentfulAsset",
         "contentDigest": "06b9623f0a3f0a438fbd433c48b8d618",
-        "owner": "gatsby-source-contentful"
-      }
-    },
-    "03e6221e-71b2-51ff-9e63-95f4b3e1f7da": {
-      "id": "03e6221e-71b2-51ff-9e63-95f4b3e1f7da",
-      "parent": "b7b77cb5-f51e-52fd-9648-a679c64bd7d7",
-      "children": [],
-      "bodyContent": "\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris consectetur diam nec justo malesuada tempor. Etiam suscipit massa quis semper tristique. Sed ultricies augue sed dolor auctor porttitor. Nulla consectetur sodales felis eget feugiat. Curabitur nisi urna, eleifend in nisi pharetra, tincidunt eleifend elit. Vestibulum imperdiet porttitor lectus, non aliquet quam posuere non. Maecenas magna nisl, sollicitudin vel ante a, rhoncus finibus justo.\n\nDonec rutrum interdum arcu at posuere. Aliquam rhoncus facilisis erat eget aliquam. Morbi ut commodo quam. Aenean iaculis, leo non pellentesque finibus, risus nulla eleifend eros, accumsan maximus mauris massa at nisl. Sed nec lacus vitae mauris lacinia volutpat. Phasellus enim libero, consequat at sollicitudin a, tempor eget orci. Curabitur facilisis tincidunt arcu, quis rutrum ligula convallis varius. Cras eu turpis felis. Nullam suscipit rhoncus quam vitae consectetur. Sed quis ipsum blandit, pretium sem eget, efficitur ante. Etiam gravida risus id interdum consectetur. Praesent rhoncus justo ac lacinia aliquet. Curabitur at convallis eros. Curabitur lacinia ante vel sapien viverra, ut mattis orci cursus. Fusce tristique viverra augue, id gravida turpis cursus tincidunt. Nulla volutpat eros scelerisque leo porta, nec facilisis nunc mollis. ",
-      "internal": {
-        "type": "contentfulBlogPostBodyContentTextNode",
-        "mediaType": "text/markdown",
-        "content": "\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris consectetur diam nec justo malesuada tempor. Etiam suscipit massa quis semper tristique. Sed ultricies augue sed dolor auctor porttitor. Nulla consectetur sodales felis eget feugiat. Curabitur nisi urna, eleifend in nisi pharetra, tincidunt eleifend elit. Vestibulum imperdiet porttitor lectus, non aliquet quam posuere non. Maecenas magna nisl, sollicitudin vel ante a, rhoncus finibus justo.\n\nDonec rutrum interdum arcu at posuere. Aliquam rhoncus facilisis erat eget aliquam. Morbi ut commodo quam. Aenean iaculis, leo non pellentesque finibus, risus nulla eleifend eros, accumsan maximus mauris massa at nisl. Sed nec lacus vitae mauris lacinia volutpat. Phasellus enim libero, consequat at sollicitudin a, tempor eget orci. Curabitur facilisis tincidunt arcu, quis rutrum ligula convallis varius. Cras eu turpis felis. Nullam suscipit rhoncus quam vitae consectetur. Sed quis ipsum blandit, pretium sem eget, efficitur ante. Etiam gravida risus id interdum consectetur. Praesent rhoncus justo ac lacinia aliquet. Curabitur at convallis eros. Curabitur lacinia ante vel sapien viverra, ut mattis orci cursus. Fusce tristique viverra augue, id gravida turpis cursus tincidunt. Nulla volutpat eros scelerisque leo porta, nec facilisis nunc mollis. ",
-        "contentDigest": "69d0777090a8774b3c7691a60435d97f",
-        "owner": "gatsby-source-contentful"
-      }
-    },
-    "a0d73be9-a3da-5539-8b1c-99db32ec9f91": {
-      "id": "a0d73be9-a3da-5539-8b1c-99db32ec9f91",
-      "parent": "83b21fcb-dff9-5d9f-952f-530da47a6b4c",
-      "children": [],
-      "bodyContent": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lacus nibh, eleifend id tincidunt eget, mattis vitae nunc. Praesent metus neque, lobortis vel dapibus sit amet, pulvinar a ante. Cras fringilla at augue ac molestie. Proin iaculis congue lacus, ut elementum mi. Pellentesque id magna commodo, lobortis metus et, finibus quam. Morbi eu neque ac erat pellentesque facilisis. Cras eu semper erat. Nunc tempor, est hendrerit euismod consectetur, lacus nisi porttitor enim, eget tincidunt ligula nunc quis nulla. Nullam eu odio at turpis sodales venenatis vitae nec elit. In fermentum efficitur augue, nec suscipit urna.\n\nInteger non dolor a arcu aliquet euismod eu vitae lorem. Quisque id tortor maximus, luctus elit at, posuere nibh. Nunc bibendum augue odio, at feugiat metus interdum id. Cras id lacus vitae lectus bibendum porta quis accumsan felis. Vivamus ut nunc vitae orci vehicula porta. Morbi quis lacus eget felis dignissim dapibus quis in dolor. Nunc libero lorem, eleifend ut fermentum id, mollis nec est. Integer lorem eros, volutpat at viverra eget, consequat nec nulla. Mauris at sapien odio.\n\nDuis nec dolor et lectus eleifend porta. Fusce mollis consectetur lobortis. Fusce luctus diam sit amet est vulputate, a rutrum sapien fringilla. Integer lacinia commodo finibus. Aliquam lacus tortor, vulputate vel dignissim lacinia, faucibus in metus. Pellentesque lectus elit, cursus et egestas et, elementum nec neque. Ut placerat rutrum ex, a luctus mi semper vitae. Nullam dui neque, cursus ut ipsum at, tempor tincidunt enim. Donec ut felis quis erat suscipit ullamcorper ac eget ex. ",
-      "internal": {
-        "type": "contentfulBlogPostBodyContentTextNode",
-        "mediaType": "text/markdown",
-        "content": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lacus nibh, eleifend id tincidunt eget, mattis vitae nunc. Praesent metus neque, lobortis vel dapibus sit amet, pulvinar a ante. Cras fringilla at augue ac molestie. Proin iaculis congue lacus, ut elementum mi. Pellentesque id magna commodo, lobortis metus et, finibus quam. Morbi eu neque ac erat pellentesque facilisis. Cras eu semper erat. Nunc tempor, est hendrerit euismod consectetur, lacus nisi porttitor enim, eget tincidunt ligula nunc quis nulla. Nullam eu odio at turpis sodales venenatis vitae nec elit. In fermentum efficitur augue, nec suscipit urna.\n\nInteger non dolor a arcu aliquet euismod eu vitae lorem. Quisque id tortor maximus, luctus elit at, posuere nibh. Nunc bibendum augue odio, at feugiat metus interdum id. Cras id lacus vitae lectus bibendum porta quis accumsan felis. Vivamus ut nunc vitae orci vehicula porta. Morbi quis lacus eget felis dignissim dapibus quis in dolor. Nunc libero lorem, eleifend ut fermentum id, mollis nec est. Integer lorem eros, volutpat at viverra eget, consequat nec nulla. Mauris at sapien odio.\n\nDuis nec dolor et lectus eleifend porta. Fusce mollis consectetur lobortis. Fusce luctus diam sit amet est vulputate, a rutrum sapien fringilla. Integer lacinia commodo finibus. Aliquam lacus tortor, vulputate vel dignissim lacinia, faucibus in metus. Pellentesque lectus elit, cursus et egestas et, elementum nec neque. Ut placerat rutrum ex, a luctus mi semper vitae. Nullam dui neque, cursus ut ipsum at, tempor tincidunt enim. Donec ut felis quis erat suscipit ullamcorper ac eget ex. ",
-        "contentDigest": "c9faa830ec531e9de1bb33ea714edfea",
         "owner": "gatsby-source-contentful"
       }
     },
@@ -1154,36 +1244,25 @@
         "oghc6wtiomc3-master-cdn.contentful.com": "w5ZGw6JFwqZmVcKsE8Kow4grw45QdybDkwnCjy_CgsOaw6ltw6dfw6wfZAfCrsOVw4XCvMKTPMOMwqnDmcOiwqfCiGrDhAEcU380Z8K9woIHw5HCkMKUw7jCtn9nwpvCvEbDgsOMw4QuTsO5wowTDnTDj2JLwo_CuVF1"
       }
     },
-    "PLUGINS_HASH": "af89576f962e153c5fdb32207d848a22"
+    "PLUGINS_HASH": "65008bae0edb63dac2b48ccc2630a72a"
   },
   "componentDataDependencies": {
     "nodes": {
       "b7b77cb5-f51e-52fd-9648-a679c64bd7d7": [
-        "/",
         "/my-second-test-blog-post"
       ],
       "03e6221e-71b2-51ff-9e63-95f4b3e1f7da": [
-        "/",
         "/my-second-test-blog-post"
-      ],
-      "a8367f41-c9c7-5842-9762-b1f6fb884dad": [
-        "/"
       ],
       "83b21fcb-dff9-5d9f-952f-530da47a6b4c": [
         "/this-is-my-test-post"
       ],
       "a0d73be9-a3da-5539-8b1c-99db32ec9f91": [
-        "/",
         "/this-is-my-test-post"
-      ],
-      "d9d5d7bf-3681-5ec4-939d-c4d41c0d9d8f": [
-        "/"
       ]
     },
     "connections": {
-      "ContentfulBlogPost": [
-        "/blog/"
-      ]
+      "ContentfulBlogPost": []
     }
   },
   "jsonDataPaths": {
@@ -1192,7 +1271,7 @@
     "dev-404-page-5f9": "920/path---dev-404-page-5-f-9-fab-NZuapzHg3X9TaN1iIixfv1W23E",
     "this-is-my-test-post-e62": "779/path---this-is-my-test-post-e-62-51c-22HFdjUaK6wRfGA4ijIXp2P4Us",
     "index": "173/path---index-6a9-NZuapzHg3X9TaN1iIixfv1W23E",
-    "blog-f7a": "680/path---blog-f-7-a-05d-YFbQUgVdyB1js3Ib2XOFuoAQPl0",
+    "blog-f7a": "32/path---blog-f-7-a-05d-NZuapzHg3X9TaN1iIixfv1W23E",
     "my-second-test-blog-post-a5a": "743/path---my-second-test-blog-post-a-5-a-f5a-7rX255G9iKlpXSXiAykoBpZSBE"
   },
   "components": {
@@ -1209,7 +1288,7 @@
       "componentPath": "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/src/pages/about.js"
     },
     "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/src/pages/blog.js": {
-      "query": "query BlogPageQuery {\n  allContentfulBlogPost(filter: {node_locale: {eq: \"en-US\"}}) {\n    edges {\n      node {\n        title\n        slug\n      }\n    }\n  }\n}\n",
+      "query": "",
       "componentPath": "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/src/pages/blog.js"
     },
     "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/src/pages/contact.js": {

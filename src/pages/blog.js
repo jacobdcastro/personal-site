@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, graphql } from 'gatsby';
 import styled from 'styled-components';
 import { Helmet } from 'react-helmet';
+import get from 'lodash';
 import './normalize.css';
 import PageIntro from '../components/PageIntro';
 import MobileNav from '../components/MobileNav';
@@ -46,9 +47,9 @@ class Blog extends React.Component {
 		});
 	}
 
+	const posts = get(this, 'data.allContentfulBlogPost');
 
 	render() {
-		const posts = this.props.data.allContentfulBlogPost;
 		return (
 			<Container>
 				<Helmet>
