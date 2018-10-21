@@ -26,21 +26,21 @@ const Textarea = styled.textarea`
 `;
 
 class TextArea extends React.Component {
-  render() {
-    return (
-      <Container>
-        <Label for={this.props.info.label_for}>
-          {this.props.info.label_text}
-        </Label>
-        <Textarea
-          name={this.props.info.name}
-          type={this.props.info.input_type}
-          id={this.props.info.id}
-          required={this.props.info.required} >
-          </Textarea>
-      </Container>
-    );
-  }
+	render() {
+		return (
+			<Container>
+				<Label htmlFor={this.props.info.label_for}>
+					{this.props.info.label_text}
+				</Label>
+				<Textarea
+					name={this.props.info.name}
+					type={this.props.info.input_type}
+					id={this.props.info.id}
+					required={this.props.info.required} >
+				</Textarea>
+			</Container>
+		);
+	}
 }
 
 export default TextArea;

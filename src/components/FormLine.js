@@ -25,20 +25,20 @@ const Input = styled.input`
 `;
 
 class FormLine extends React.Component {
-  render() {
-    return (
-      <Container>
-        <Label for={this.props.info.label_for}>
-          {this.props.info.label_text}
-        </Label>
-        <Input
-          type={this.props.info.input_type}
-          name={this.props.info.name}
-          id={this.props.info.id}
-          required={this.props.info.required} />
-      </Container>
-    );
-  }
+	render() {
+		return (
+			<Container>
+				<Label htmlFor={this.props.info.label_for}>
+					{this.props.info.label_text}
+				</Label>
+				<Input
+					type={this.props.info.input_type}
+					name={this.props.info.name}
+					id={this.props.info.id}
+					required={this.props.info.required} />
+			</Container>
+		);
+	}
 }
 
 export default FormLine;

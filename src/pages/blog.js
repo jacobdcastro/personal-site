@@ -9,18 +9,27 @@ import MobileNav from '../components/MobileNav';
 import BlogPostCard from '../components/BlogPostCard';
 import Footer from '../components/Footer';
 
-const Container = styled.div`
+const PageContainer = styled.div`
 	margin: 0;
 	padding: 0;
 `;
 
-const BodyContent = styled.div`
+const BlogListContainer = styled.div`
+	height: auto;
+	max-width: 1125px;
+	margin: 20px auto;
+	text-align: center;
+`;
+
+const BlogPostList = styled.div`
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
   padding: 15px;
+	margin: 0 auto;
   width: 88%;
   max-width: 1125px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+
 `;
 
 class Blog extends React.Component {
@@ -31,7 +40,7 @@ class Blog extends React.Component {
 
 		this.state = {
 			mobileNavIsOpen: false,
-			bgImg: '../images/cave.jpg'
+			bgImg: '../images/cave.jpg',
 		};
 	}
 
@@ -47,34 +56,38 @@ class Blog extends React.Component {
 		});
 	}
 
-	const posts = get(this, 'data.allContentfulBlogPost');
 
 	render() {
+		// variable 'posts' is an array of all blog posts
+		// const posts = this.props.data.allContentfulBlogPost.edges;
+		console.log(this.props.data.allContentfulBlogPost.edges);
+
 		return (
-			<Container>
+			<PageContainer>
 				<Helmet>
 					<meta charSet="utf-8" />
 					<title>Blog - Jacob D. Castro</title>
 					<link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
 					<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet" />
 				</Helmet>
-
 				<MobileNav action={this.closeMobileNav} open={this.state.mobileNavIsOpen} />
+				<PageIntro action={this.openMobileNav} headline="Blog" aboutPage={false} />
 
-				<PageIntro action={this.openMobileNav} headline="Blog" aboutPage={true} />
-
-				<BodyContent>
-					<Link to={posts.edges[0].node.slug}>
-						<h1>{posts.edges[0].node.title}</h1>
-					</Link>
-					<Link to={posts.edges[1].node.slug}>
-						<h1>{posts.edges[1].node.title}</h1>
-					</Link>
-				</BodyContent>
+				<BlogListContainer>
+					<h1>Recent Posts</h1>
+					<BlogPostList>
+						{this.props.data.allContentfulBlogPost.edges.map(({node}) => {
+							return (
+								<Link key={node.id} to={node.slug}>
+									<BlogPostCard key={node.id} postData={node} />
+								</Link>
+							);
+						})}
+					</BlogPostList>
+				</BlogListContainer>
 
 				<Footer backgroundIsBlack={false} />
-
-			</Container>
+			</PageContainer>
 		);
 	}
 }
@@ -83,13 +96,26 @@ export default Blog;
 
 export const pageQuery = graphql`
 	query BlogPageQuery {
-		allContentfulBlogPost (filter: {
-			node_locale: {eq: "en-US"}
-		}) {
+		allContentfulBlogPost {
 			edges {
 				node {
+					id
 					title
 					slug
+					subtitle
+					published
+					heroImage {
+						file {
+							url
+							fileName
+							contentType
+						}
+					}
+					author {
+						firstName
+						lastName
+						birthday
+					}
 				}
 			}
 		}

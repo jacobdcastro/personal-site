@@ -24,19 +24,19 @@ const Checkbox = styled.input`
 `;
 
 class CheckboxItem extends React.Component {
-  render() {
-    return (
-      <CheckLine>
-        <Checkbox
-          type={this.props.info.input_type}
-          id={this.props.info.id}
-          name={this.props.info.name} />
-        <CheckboxLabel for={this.props.info.label_for}>
-          {this.props.info.label_text}
-        </CheckboxLabel>
-      </CheckLine>
-    );
-  }
+	render() {
+		return (
+			<CheckLine>
+				<Checkbox
+					type={this.props.info.input_type}
+					id={this.props.info.id}
+					name={this.props.info.name} />
+				<CheckboxLabel htmlFor={this.props.info.label_for}>
+					{this.props.info.label_text}
+				</CheckboxLabel>
+			</CheckLine>
+		);
+	}
 }
 
 export default CheckboxItem;

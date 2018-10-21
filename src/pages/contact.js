@@ -82,107 +82,107 @@ const FormButton = styled.button`
 `;
 
 class Contact extends React.Component {
-  constructor(props) {
-    super(props);
-    this.openMobileNav = this.openMobileNav.bind(this);
-    this.closeMobileNav = this.closeMobileNav.bind(this);
-    this.showGenForm = this.showGenForm.bind(this);
-    this.hideGenForm = this.hideGenForm.bind(this);
-    this.showProjectForm = this.showProjectForm.bind(this);
-    this.hideProjectForm = this.hideProjectForm.bind(this);
+	constructor(props) {
+		super(props);
+		this.openMobileNav = this.openMobileNav.bind(this);
+		this.closeMobileNav = this.closeMobileNav.bind(this);
+		this.showGenForm = this.showGenForm.bind(this);
+		this.hideGenForm = this.hideGenForm.bind(this);
+		this.showProjectForm = this.showProjectForm.bind(this);
+		this.hideProjectForm = this.hideProjectForm.bind(this);
 
-    this.state = {
-      mobileNavIsOpen: false,
-      bgImg: '../images/yellow-telephone.jpg',
-      genFormOpen: false,
-      proFormOpen: false
-    }
-  }
+		this.state = {
+			mobileNavIsOpen: false,
+			bgImg: '../images/yellow-telephone.jpg',
+			genFormOpen: false,
+			proFormOpen: false
+		};
+	}
 
-  openMobileNav() {
-    this.setState({
-      mobileNavIsOpen: true
-    })
-  }
+	openMobileNav() {
+		this.setState({
+			mobileNavIsOpen: true
+		});
+	}
 
-  closeMobileNav() {
-    this.setState({
-      mobileNavIsOpen: false
-    })
-  }
+	closeMobileNav() {
+		this.setState({
+			mobileNavIsOpen: false
+		});
+	}
 
 
-  showGenForm() {
-    //if other form is open, close it first
-    if (this.state.proFormOpen) {
-      this.setState({
-        proFormOpen: false
-      });
-    }
-    this.setState({
-      genFormOpen: true
-    })
-  }
-  hideGenForm() {
-    this.setState({
-      genFormOpen: false
-    })
-  }
+	showGenForm() {
+		//if other form is open, close it first
+		if (this.state.proFormOpen) {
+			this.setState({
+				proFormOpen: false
+			});
+		}
+		this.setState({
+			genFormOpen: true
+		});
+	}
+	hideGenForm() {
+		this.setState({
+			genFormOpen: false
+		});
+	}
 
-  showProjectForm() {
-    if (this.state.genFormOpen) {
-      this.setState({
-        genFormOpen: false
-      });
-    }
-    this.setState({
-      proFormOpen: true
-    })
-  }
-  hideProjectForm() {
-    this.setState({
-      proFormOpen: false
-    })
-  }
+	showProjectForm() {
+		if (this.state.genFormOpen) {
+			this.setState({
+				genFormOpen: false
+			});
+		}
+		this.setState({
+			proFormOpen: true
+		});
+	}
+	hideProjectForm() {
+		this.setState({
+			proFormOpen: false
+		});
+	}
 
-  render() {
+	render() {
 
-    return (
-      <Container>
-        <Helmet>
-          <meta charSet="utf-8" />
-          <title>Contact Me - Jacob D. Castro</title>
-          <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
-          <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet" />
-        </Helmet>
-        <MobileNav action={this.closeMobileNav} open={this.state.mobileNavIsOpen} />
+		return (
+			<Container>
+				<Helmet>
+					<meta charSet="utf-8" />
+					<title>Contact Me - Jacob D. Castro</title>
+					<link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
+					<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet" />
+				</Helmet>
+				<MobileNav action={this.closeMobileNav} open={this.state.mobileNavIsOpen} />
 
-        <PageIntro action={this.openMobileNav} headline="Let's Chat" aboutPage={false} />
+				<PageIntro action={this.openMobileNav} headline="Let's Chat" aboutPage={false} />
 
-        <MainContent>
+				<MainContent>
 
-          <Body>
-            <FormsHeader>
-              <FormH2>I can't wait to hear from you!</FormH2>
-              <FormH3>So, what do you need?</FormH3>
-              <FormBtnContainer>
-                <FormButton id="genBtn" onClick={this.state.genFormOpen ? this.hideGenForm : this.showGenForm}>Question or Comment</FormButton>
-                <FormButton id="protBtn" onClick={this.state.proFormOpen ? this.hideProjectForm : this.showProjectForm }>I need a website built!</FormButton>
-              </FormBtnContainer>
-            </FormsHeader>
+					<Body>
+						<FormsHeader>
+							<FormH2>I can't wait to hear from you!</FormH2>
+							<FormH3>So, what do you need?</FormH3>
+							<FormBtnContainer>
+								<FormButton id="genBtn" onClick={this.state.genFormOpen ? this.hideGenForm : this.showGenForm}>Question or Comment</FormButton>
+								<FormButton id="protBtn" onClick={this.state.proFormOpen ? this.hideProjectForm : this.showProjectForm} >I need a website built!</FormButton>
+							</FormBtnContainer>
+						</FormsHeader>
 
-            <GeneralForm open={this.state.genFormOpen} />
+						<GeneralForm open={this.state.genFormOpen} />
 
-            <ProjectForm open={this.state.proFormOpen} />
+						<ProjectForm open={this.state.proFormOpen} />
 
-          </Body>
+					</Body>
 
-          <Footer backgroundIsBlack={false} />
+					<Footer backgroundIsBlack={false} />
 
-        </MainContent>
-      </Container>
-    );
-  }
+				</MainContent>
+			</Container>
+		);
+	}
 }
 
 export default Contact;
