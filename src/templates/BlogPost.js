@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import '../pages/normalize.css';
 import { graphql } from 'gatsby';
-import Helmet from 'gatsby';
+import { Helmet } from 'react-helmet';
 import BlogPageIntro from '../components/BlogPageIntro';
 import Footer from '../components/Footer';
 
@@ -63,23 +63,26 @@ class BlogPost extends React.Component {
 	}
 
 	render() {
+		const data = this.props.data.contentfulBlogPost;
+		console.log(this.props.data.contentfulBlogPost);
 		return (
 			<Container>
 				<Helmet>
 					<meta charSet="utf-8" />
-					<title>{this.props.data.contentfulBlogPost.title} - Jacob D. Castro</title>
+					<title>{data.title} - Jacob D. Castro</title>
 					<link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
 					<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet" />
 				</Helmet>
 				<BlogPageIntro
 					action={this.openMobileNav}
-					headline={this.props.data.contentfulBlogPost.title}
-					subheadline={this.props.data.contentfulBlogPost.subtitle}
+					headline={data.title}
+					subheadline={data.subtitle}
+					bgImg={data.heroImage.file.url}
 					aboutPage={false} />
 
 				<ContentWrapper>
 					<BlogParagraph>
-						{this.props.data[0].contentfulBlogPost.title}
+						{data.bodyContent.bodyContent}
 					</BlogParagraph>
 				</ContentWrapper>
 
@@ -98,13 +101,20 @@ export default BlogPost;
 export const pageQuery = graphql`
   query blogPostQuery($slug: String!){
     contentfulBlogPost(slug: {eq: $slug}) {
-			title
-      slug
-      subtitle
-      bodyContent {
-        bodyContent
-      }
-			published
-    }
+			id
+	    slug
+	    title
+	    subtitle
+	    published
+	    heroImage {
+	      id
+				file {
+					url
+				}
+	    }
+	    bodyContent {
+	      bodyContent
+	    }
+	  }
   }
 `;

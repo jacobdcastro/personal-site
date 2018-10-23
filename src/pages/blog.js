@@ -26,7 +26,7 @@ const BlogPostList = styled.div`
 	justify-content: space-around;
   padding: 15px;
 	margin: 0 auto;
-  width: 88%;
+  width: 100%;
   max-width: 1125px;
 
 `;
@@ -76,8 +76,9 @@ class Blog extends React.Component {
 					<h1>Recent Posts</h1>
 					<BlogPostList>
 						{this.props.data.allContentfulBlogPost.edges.map(({node}) => {
+							const blogSlug = `blog/${node.slug}`;
 							return (
-								<Link key={node.id} to={node.slug}>
+								<Link key={node.id} to={blogSlug}>
 									<BlogPreviewCard key={node.id} postData={node} />
 								</Link>
 							);

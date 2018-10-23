@@ -31,14 +31,16 @@ const BlogSubtitle = styled.h3`
 
 class BlogPreviewCard extends React.Component {
 	render() {
+		const data = this.props.postData;
+		console.log(data);
 		return (
 			<CardContainer>
-				<CoverImg src={this.props.postData.heroImage.file.url} alt={this.props.postData.heroImage.file.fileName} />
-				<BlogTitle>{this.props.postData.title}</BlogTitle>
-				<BlogSubtitle>{this.props.postData.subtitle}</BlogSubtitle>
-				<h4>{this.props.postData.author.firstName}</h4>
+				<CoverImg src={data.heroImage.file.url} alt={data.heroImage.file.fileName} />
+				<BlogTitle>{data.title}</BlogTitle>
+				<BlogSubtitle>{data.subtitle}</BlogSubtitle>
+				<h4>By: {data.author.firstName} {data.author.lastName}</h4>
 				<p>Excerpt...</p>
-				<h5>{this.props.postData.published}</h5>
+				<h5>{data.published}</h5>
 			</CardContainer>
 		);
 	}

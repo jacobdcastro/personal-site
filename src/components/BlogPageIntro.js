@@ -11,7 +11,7 @@ const Header = styled.div`
   flex-direction: column;
   height: 500px;
   width: 100%;
-  background-image: url(${props => props.about ? aboutImg : contactImg });
+  background-image: url(${props => props.bgImg});
   background-size: cover;
   background-position: center;
   margin: 0;
@@ -86,7 +86,7 @@ const DownArrow = styled.img`
 class BlogPageIntro extends React.Component {
 	render() {
 		return (
-			<Header about={this.props.aboutPage}>
+			<Header bgImg={this.props.bgImg}>
 				<BlackLayer>
 
 					<Navbar action={this.props.action} />

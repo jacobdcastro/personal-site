@@ -931,12 +931,12 @@
       "host": "localhost",
       "pathPrefix": "/blog",
       "polyfill": true,
-      "buildTime": "2018-10-23T02:50:41.809Z",
+      "buildTime": "2018-10-23T02:58:50.192Z",
       "id": "Site",
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "141399ad8a48172033995c07b0a1d212",
+        "contentDigest": "7cd2bee3742eefeb213e2717f9ff1e92",
         "type": "Site",
         "owner": "internal-data-bridge"
       }
@@ -1335,7 +1335,8 @@
     "nodes": {
       "74f21fcb-49f3-5bad-9c8f-cde71295333b": [
         "/blog/",
-        "/"
+        "/",
+        "/blog/random-third-post"
       ],
       "184c794a-b337-50ca-8b95-a4293d5c79c7": [
         "/blog/",
@@ -1343,32 +1344,35 @@
       ],
       "a8367f41-c9c7-5842-9762-b1f6fb884dad": [
         "/blog/",
-        "/"
+        "/",
+        "/blog/my-second-test-blog-post"
       ],
       "d9d5d7bf-3681-5ec4-939d-c4d41c0d9d8f": [
         "/blog/",
-        "/"
+        "/",
+        "/blog/this-is-my-test-post"
       ],
       "5903c3d4-dc72-595b-8f4c-99fed8dcc8a6": [
+        "/",
         "/blog/random-third-post"
       ],
       "d20fc2dc-960d-5489-a740-a743f58e30e5": [
-        "/blog/random-third-post",
-        "/"
+        "/",
+        "/blog/random-third-post"
       ],
       "b7b77cb5-f51e-52fd-9648-a679c64bd7d7": [
         "/blog/my-second-test-blog-post"
       ],
       "03e6221e-71b2-51ff-9e63-95f4b3e1f7da": [
-        "/blog/my-second-test-blog-post",
-        "/"
+        "/",
+        "/blog/my-second-test-blog-post"
       ],
       "83b21fcb-dff9-5d9f-952f-530da47a6b4c": [
         "/blog/this-is-my-test-post"
       ],
       "a0d73be9-a3da-5539-8b1c-99db32ec9f91": [
-        "/blog/this-is-my-test-post",
-        "/"
+        "/",
+        "/blog/this-is-my-test-post"
       ]
     },
     "connections": {
@@ -1386,13 +1390,13 @@
     "blog-f7a": "343/path---blog-f-7-a-05d-n06P5u3vusclNy0V1PEby3FQs",
     "my-second-test-blog-post-a5a": "743/path---my-second-test-blog-post-a-5-a-f5a-7rX255G9iKlpXSXiAykoBpZSBE",
     "random-third-post-b7e": "763/path---random-third-post-b-7-e-9dd-byCfBWjndflcBN8d3YU0D40Y8gM",
-    "blog-random-third-post-9b7": "739/path---blog-random-third-post-9-b-7-c8c-byCfBWjndflcBN8d3YU0D40Y8gM",
-    "blog-my-second-test-blog-post-198": "744/path---blog-my-second-test-blog-post-198-f88-7rX255G9iKlpXSXiAykoBpZSBE",
-    "blog-this-is-my-test-post-95c": "129/path---blog-this-is-my-test-post-95-c-670-22HFdjUaK6wRfGA4ijIXp2P4Us"
+    "blog-random-third-post-9b7": "259/path---blog-random-third-post-9-b-7-c8c-8LGhU1doyIg5NqEgzvABNYH1To",
+    "blog-my-second-test-blog-post-198": "998/path---blog-my-second-test-blog-post-198-f88-6t8chqAkAAO8RCVHBOfd5FSp4",
+    "blog-this-is-my-test-post-95c": "159/path---blog-this-is-my-test-post-95-c-670-pcRwjrMQfek4630SLIcpdgu8zzQ"
   },
   "components": {
     "C:/Users/jdcas/jdcastro-web-dd/personal-site/src/templates/BlogPost.js": {
-      "query": "query blogPostQuery(\n  $slug: String!\n) {\n  contentfulBlogPost(slug: {eq: $slug}) {\n    title\n    slug\n    subtitle\n    bodyContent {\n      bodyContent\n    }\n    published\n  }\n}\n",
+      "query": "query blogPostQuery(\n  $slug: String!\n) {\n  contentfulBlogPost(slug: {eq: $slug}) {\n    id\n    slug\n    title\n    subtitle\n    published\n    heroImage {\n      id\n      file {\n        url\n      }\n    }\n    bodyContent {\n      bodyContent\n    }\n  }\n}\n",
       "componentPath": "C:/Users/jdcas/jdcastro-web-dd/personal-site/src/templates/BlogPost.js"
     },
     "C:/Users/jdcas/jdcastro-web-dd/personal-site/.cache/dev-404-page.js": {
