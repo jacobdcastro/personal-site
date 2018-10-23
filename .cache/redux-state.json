@@ -931,12 +931,12 @@
       "host": "localhost",
       "pathPrefix": "/blog",
       "polyfill": true,
-      "buildTime": "2018-10-23T05:26:22.445Z",
+      "buildTime": "2018-10-23T23:41:26.654Z",
       "id": "Site",
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "25a3b13bd116ce93c42c46aac05c23e7",
+        "contentDigest": "4b083eb0e29dffb90d52e16aa3dfe882",
         "type": "Site",
         "owner": "internal-data-bridge"
       }
@@ -1384,10 +1384,16 @@
         "/blog/random-third-post"
       ],
       "184c794a-b337-50ca-8b95-a4293d5c79c7": [
-        "/blog/"
+        "/blog/",
+        "/blog/random-third-post",
+        "/blog/my-second-test-blog-post",
+        "/blog/this-is-my-test-post"
       ],
       "66e1b74f-271f-5434-ac0f-d5d5f9c8210f": [
-        "/blog/"
+        "/blog/",
+        "/blog/random-third-post",
+        "/blog/my-second-test-blog-post",
+        "/blog/this-is-my-test-post"
       ],
       "03e6221e-71b2-51ff-9e63-95f4b3e1f7da": [
         "/blog/",
@@ -1427,13 +1433,13 @@
     "about-f34": "125/path---about-f-34-4c2-NZuapzHg3X9TaN1iIixfv1W23E",
     "blog-f7a": "689/path---blog-f-7-a-05d-1iUhlfTspxPcYO5qoTaWQEzqug",
     "index": "173/path---index-6a9-NZuapzHg3X9TaN1iIixfv1W23E",
-    "blog-my-second-test-blog-post-198": "998/path---blog-my-second-test-blog-post-198-f88-6t8chqAkAAO8RCVHBOfd5FSp4",
-    "blog-this-is-my-test-post-95c": "159/path---blog-this-is-my-test-post-95-c-670-pcRwjrMQfek4630SLIcpdgu8zzQ",
-    "blog-random-third-post-9b7": "259/path---blog-random-third-post-9-b-7-c8c-8LGhU1doyIg5NqEgzvABNYH1To"
+    "blog-my-second-test-blog-post-198": "420/path---blog-my-second-test-blog-post-198-f88-KAvZtOFc1eZRlTQF1ThWHjf9i1w",
+    "blog-this-is-my-test-post-95c": "301/path---blog-this-is-my-test-post-95-c-670-qYQLGxpAth793pBoA218tVy6mc",
+    "blog-random-third-post-9b7": "806/path---blog-random-third-post-9-b-7-c8c-BIIlcKs2QwACMxlOQv86EAxcGq0"
   },
   "components": {
     "C:/Users/jdcas/jdcastro-web-dd/personal-site/src/templates/BlogPost.js": {
-      "query": "query blogPostQuery(\n  $slug: String!\n) {\n  contentfulBlogPost(slug: {eq: $slug}) {\n    id\n    slug\n    title\n    subtitle\n    published\n    heroImage {\n      id\n      file {\n        url\n      }\n    }\n    bodyContent {\n      bodyContent\n    }\n  }\n}\n",
+      "query": "query blogPostQuery(\n  $slug: String!\n) {\n  contentfulBlogPost(slug: {eq: $slug}) {\n    id\n    slug\n    title\n    subtitle\n    published\n    heroImage {\n      id\n      title\n      description\n      file {\n        url\n      }\n    }\n    bodyContent {\n      bodyContent\n    }\n    author {\n      id\n      name\n      email\n      birthday\n      biography {\n        biography\n      }\n    }\n  }\n}\n",
       "componentPath": "C:/Users/jdcas/jdcastro-web-dd/personal-site/src/templates/BlogPost.js"
     },
     "C:/Users/jdcas/jdcastro-web-dd/personal-site/.cache/dev-404-page.js": {

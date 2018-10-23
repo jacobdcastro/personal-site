@@ -8,11 +8,13 @@ import MobileNav from '../components/MobileNav';
 import BlogPreviewCard from '../components/BlogPreviewCard';
 import Footer from '../components/Footer';
 
+//styled component
 const PageContainer = styled.div`
 	margin: 0;
 	padding: 0;
 `;
 
+//styled component
 const BlogListContainer = styled.div`
 	height: auto;
 	max-width: 1125px;
@@ -20,6 +22,17 @@ const BlogListContainer = styled.div`
 	text-align: center;
 `;
 
+const AboutHeadline = styled.h2`
+  font-family: 'Montserrat', 'Helvetica', sans-serif;
+  text-align: center;
+  letter-spacing: 1px;
+  color: #353535;
+    @media (min-width: 820px) {
+      font-size: 2em;
+    }
+`;
+
+//styled component
 const BlogPostList = styled.div`
 	display: flex;
 	flex-direction: row;
@@ -28,7 +41,6 @@ const BlogPostList = styled.div`
 	margin: 0 auto;
   width: 100%;
   max-width: 1125px;
-
 `;
 
 class Blog extends React.Component {
@@ -73,9 +85,11 @@ class Blog extends React.Component {
 				<PageIntro action={this.openMobileNav} headline="Blog" aboutPage={false} />
 
 				<BlogListContainer>
-					<h1>Recent Posts</h1>
+					<AboutHeadline>Recent Posts</AboutHeadline>
 					<BlogPostList>
+						{/* create new array of individual blog post preview cards */}
 						{this.props.data.allContentfulBlogPost.edges.map(({node}) => {
+							//set dynamic slug and insert in <Link> component
 							const blogSlug = `blog/${node.slug}`;
 							return (
 								<Link key={node.id} to={blogSlug}>
