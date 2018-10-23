@@ -108,6 +108,8 @@ export const pageQuery = graphql`
 	    published
 	    heroImage {
 	      id
+				title
+				description
 				file {
 					url
 				}
@@ -115,6 +117,15 @@ export const pageQuery = graphql`
 	    bodyContent {
 	      bodyContent
 	    }
+			author {
+				id
+				name
+				email
+				birthday
+				biography {
+					biography
+				}
+			}
 	  }
   }
 `;
