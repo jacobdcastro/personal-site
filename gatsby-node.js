@@ -2,7 +2,6 @@ const path = require('path');
 
 exports.createPages = ({ graphql, actions }) => {
 	const {createPage} = actions;
-
 	return new Promise((resolve, reject) => {
 		const blogPostTemplate = path.resolve('src/templates/BlogPost.js');
 		resolve(
@@ -16,7 +15,12 @@ exports.createPages = ({ graphql, actions }) => {
 				        slug
 				        subtitle
 				        published
+				        bodyContent {
+				          bodyContent
+				        }
 				        heroImage {
+				          title
+				          description
 				          file {
 				            url
 				            fileName
@@ -24,9 +28,13 @@ exports.createPages = ({ graphql, actions }) => {
 				          }
 				        }
 				        author {
-				          firstName
-				          lastName
+				          id
+				          name
+				          email
 				          birthday
+				          biography {
+				            biography
+				          }
 				        }
 				      }
 				    }

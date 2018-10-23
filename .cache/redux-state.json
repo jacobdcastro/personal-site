@@ -713,7 +713,7 @@
       "resolve": "C:/Users/jdcas/jdcastro-web-dd/personal-site",
       "id": "Plugin default-site-plugin",
       "name": "default-site-plugin",
-      "version": "035cfeb6360e66453c103190d1899ab9",
+      "version": "3742ee184bf6419e6003a59d82a8e073",
       "pluginOptions": {
         "plugins": []
       },
@@ -822,7 +822,7 @@
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "a204f1aa127c6d9c84a592026842e5a2",
+        "contentDigest": "364ccb7af531aa5e97ad232db80bdcf6",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
@@ -931,12 +931,12 @@
       "host": "localhost",
       "pathPrefix": "/blog",
       "polyfill": true,
-      "buildTime": "2018-10-23T02:58:50.192Z",
+      "buildTime": "2018-10-23T05:26:22.445Z",
       "id": "Site",
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "7cd2bee3742eefeb213e2717f9ff1e92",
+        "contentDigest": "25a3b13bd116ce93c42c46aac05c23e7",
         "type": "Site",
         "owner": "internal-data-bridge"
       }
@@ -946,36 +946,52 @@
       "parent": null,
       "children": [],
       "name": "Author",
-      "displayField": "firstName",
+      "displayField": "name",
       "description": "Creator or editor of content",
       "internal": {
         "type": "ContentfulContentType",
-        "contentDigest": "5acd96e8d13e30bb67b9d7fb213cbe8a",
+        "contentDigest": "7ee9e68f43803c753fa9c90ac9c3d1b4",
         "owner": "gatsby-source-contentful"
       }
     },
     "184c794a-b337-50ca-8b95-a4293d5c79c7": {
-      "firstName": "Jacob",
-      "middleInitial": "D.",
-      "lastName": "Castro",
+      "name": "Jacob D. Castro",
+      "email": "jdcastro.business@gmail.com",
       "birthday": "1997-05-27T06:32-07:00",
+      "avatar___NODE": "02bc2210-586f-5459-920f-81d918e3caba",
       "blog post___NODE": [
         "5903c3d4-dc72-595b-8f4c-99fed8dcc8a6",
         "b7b77cb5-f51e-52fd-9648-a679c64bd7d7",
         "83b21fcb-dff9-5d9f-952f-530da47a6b4c"
       ],
+      "biography___NODE": "66e1b74f-271f-5434-ac0f-d5d5f9c8210f",
       "id": "184c794a-b337-50ca-8b95-a4293d5c79c7",
       "contentful_id": "2kMOzSV5Qs0KGG2S2msQsg",
       "createdAt": "2018-10-18T06:30:08.865Z",
-      "updatedAt": "2018-10-18T06:36:18.704Z",
+      "updatedAt": "2018-10-23T05:21:02.716Z",
       "parent": "Author",
-      "children": [],
+      "children": [
+        "66e1b74f-271f-5434-ac0f-d5d5f9c8210f"
+      ],
       "internal": {
         "type": "ContentfulAuthor",
-        "contentDigest": "90204a130da4ac68e0cce92031422fa8",
+        "contentDigest": "8c6e9dc9ca8c3017795126f06345eac3",
         "owner": "gatsby-source-contentful"
       },
       "node_locale": "en-US"
+    },
+    "66e1b74f-271f-5434-ac0f-d5d5f9c8210f": {
+      "id": "66e1b74f-271f-5434-ac0f-d5d5f9c8210f",
+      "parent": "184c794a-b337-50ca-8b95-a4293d5c79c7",
+      "children": [],
+      "biography": "I love lots of cool things. But especially web development!",
+      "internal": {
+        "type": "contentfulAuthorBiographyTextNode",
+        "mediaType": "text/markdown",
+        "content": "I love lots of cool things. But especially web development!",
+        "contentDigest": "b182d5ef8e132e7d4bfc32cb84f74428",
+        "owner": "gatsby-source-contentful"
+      }
     },
     "e1e094a9-007c-553e-99c6-c41fa78bf5d4": {
       "id": "e1e094a9-007c-553e-99c6-c41fa78bf5d4",
@@ -1098,6 +1114,58 @@
         "owner": "gatsby-source-contentful"
       }
     },
+    "02bc2210-586f-5459-920f-81d918e3caba": {
+      "contentful_id": "1jW1gN58D4W2I8WEe6gOuY",
+      "id": "02bc2210-586f-5459-920f-81d918e3caba",
+      "parent": null,
+      "children": [],
+      "file": {
+        "url": "//images.ctfassets.net/oghc6wtiomc3/1jW1gN58D4W2I8WEe6gOuY/24a28ad6a13d72b9f97a991d3ce83251/me-in-chicago-2017.jpg",
+        "details": {
+          "size": 1211126,
+          "image": {
+            "width": 3088,
+            "height": 2320
+          }
+        },
+        "fileName": "me-in-chicago-2017.jpg",
+        "contentType": "image/jpeg"
+      },
+      "title": "Jacob In Chicago",
+      "description": "A selfie of Jacob in front of the bean in Chicago.",
+      "node_locale": "en-US",
+      "internal": {
+        "type": "ContentfulAsset",
+        "contentDigest": "1537bbdc39cd9e31aefa6b858097ea16",
+        "owner": "gatsby-source-contentful"
+      }
+    },
+    "a8367f41-c9c7-5842-9762-b1f6fb884dad": {
+      "contentful_id": "6dSzflXsd2KAigqsKeKkyG",
+      "id": "a8367f41-c9c7-5842-9762-b1f6fb884dad",
+      "parent": null,
+      "children": [],
+      "file": {
+        "url": "//images.ctfassets.net/oghc6wtiomc3/6dSzflXsd2KAigqsKeKkyG/7bd341997ccdfb1f0b574b8c051ee3f1/chuttersnap-297551.jpg",
+        "details": {
+          "size": 712271,
+          "image": {
+            "width": 6016,
+            "height": 4016
+          }
+        },
+        "fileName": "chuttersnap-297551.jpg",
+        "contentType": "image/jpeg"
+      },
+      "title": "Yellow Smoke",
+      "description": "Elegant yellow smoke with a black background",
+      "node_locale": "en-US",
+      "internal": {
+        "type": "ContentfulAsset",
+        "contentDigest": "a7e04a8cdab5350eb53b9e5aef959267",
+        "owner": "gatsby-source-contentful"
+      }
+    },
     "74f21fcb-49f3-5bad-9c8f-cde71295333b": {
       "contentful_id": "5k06azDEM0SqQqequAKwQQ",
       "id": "74f21fcb-49f3-5bad-9c8f-cde71295333b",
@@ -1121,32 +1189,6 @@
       "internal": {
         "type": "ContentfulAsset",
         "contentDigest": "702da9068448a3c30f43cff8d0cc948d",
-        "owner": "gatsby-source-contentful"
-      }
-    },
-    "a8367f41-c9c7-5842-9762-b1f6fb884dad": {
-      "contentful_id": "6dSzflXsd2KAigqsKeKkyG",
-      "id": "a8367f41-c9c7-5842-9762-b1f6fb884dad",
-      "parent": null,
-      "children": [],
-      "file": {
-        "url": "//images.ctfassets.net/oghc6wtiomc3/6dSzflXsd2KAigqsKeKkyG/7bd341997ccdfb1f0b574b8c051ee3f1/chuttersnap-297551.jpg",
-        "details": {
-          "size": 712271,
-          "image": {
-            "width": 6016,
-            "height": 4016
-          }
-        },
-        "fileName": "chuttersnap-297551.jpg",
-        "contentType": "image/jpeg"
-      },
-      "title": "chuttersnap-297551",
-      "description": "",
-      "node_locale": "en-US",
-      "internal": {
-        "type": "ContentfulAsset",
-        "contentDigest": "1fe11133d2031ab9a4194fcae488db12",
         "owner": "gatsby-source-contentful"
       }
     },
@@ -1326,52 +1368,50 @@
   "status": {
     "plugins": {
       "gatsby-source-contentful": {
-        "oghc6wtiomc3-master-cdn.contentful.com": "w5ZGw6JFwqZmVcKsE8Kow4grw45QdybDgsKUwqvCmsOUwo04Q1QiT0pAwpvDgEXDhMOrH0TCosO7KS3Ch2gtL38Nw4_CiQ_DksKiM8KNXnlOVMKGw5PDtB_Dp8OcCcKLF8K2Ky_CmsONw55TXsONC8KFAsKTTQ"
+        "oghc6wtiomc3-master-cdn.contentful.com": "w5ZGw6JFwqZmVcKsE8Kow4grw45QdyYwC8KIw5HCh116wpvCvsO_eMOswp3CqB98w5hTScOhwqZCPcKlJAFgw4_Dkx8cBCLDtyMORsKGw5QqwrbCpsKAw5sCTnTDn8K6KHAXwrLDu1zDlm5ndFMIM8KJwp8"
       }
     },
-    "PLUGINS_HASH": "e1f282df734720a9745cdecaf7a73563"
+    "PLUGINS_HASH": "c43b5fb55766bbfdb84c9321a1123812"
   },
   "componentDataDependencies": {
     "nodes": {
+      "d20fc2dc-960d-5489-a740-a743f58e30e5": [
+        "/blog/",
+        "/blog/random-third-post"
+      ],
       "74f21fcb-49f3-5bad-9c8f-cde71295333b": [
         "/blog/",
-        "/",
         "/blog/random-third-post"
       ],
       "184c794a-b337-50ca-8b95-a4293d5c79c7": [
+        "/blog/"
+      ],
+      "66e1b74f-271f-5434-ac0f-d5d5f9c8210f": [
+        "/blog/"
+      ],
+      "03e6221e-71b2-51ff-9e63-95f4b3e1f7da": [
         "/blog/",
-        "/"
+        "/blog/my-second-test-blog-post"
       ],
       "a8367f41-c9c7-5842-9762-b1f6fb884dad": [
         "/blog/",
-        "/",
         "/blog/my-second-test-blog-post"
+      ],
+      "a0d73be9-a3da-5539-8b1c-99db32ec9f91": [
+        "/blog/",
+        "/blog/this-is-my-test-post"
       ],
       "d9d5d7bf-3681-5ec4-939d-c4d41c0d9d8f": [
         "/blog/",
-        "/",
         "/blog/this-is-my-test-post"
       ],
       "5903c3d4-dc72-595b-8f4c-99fed8dcc8a6": [
-        "/",
-        "/blog/random-third-post"
-      ],
-      "d20fc2dc-960d-5489-a740-a743f58e30e5": [
-        "/",
         "/blog/random-third-post"
       ],
       "b7b77cb5-f51e-52fd-9648-a679c64bd7d7": [
         "/blog/my-second-test-blog-post"
       ],
-      "03e6221e-71b2-51ff-9e63-95f4b3e1f7da": [
-        "/",
-        "/blog/my-second-test-blog-post"
-      ],
       "83b21fcb-dff9-5d9f-952f-530da47a6b4c": [
-        "/blog/this-is-my-test-post"
-      ],
-      "a0d73be9-a3da-5539-8b1c-99db32ec9f91": [
-        "/",
         "/blog/this-is-my-test-post"
       ]
     },
@@ -1382,17 +1422,14 @@
     }
   },
   "jsonDataPaths": {
-    "about-f34": "125/path---about-f-34-4c2-NZuapzHg3X9TaN1iIixfv1W23E",
-    "contact-26a": "686/path---contact-26-a-cd9-NZuapzHg3X9TaN1iIixfv1W23E",
     "dev-404-page-5f9": "920/path---dev-404-page-5-f-9-fab-NZuapzHg3X9TaN1iIixfv1W23E",
-    "this-is-my-test-post-e62": "779/path---this-is-my-test-post-e-62-51c-22HFdjUaK6wRfGA4ijIXp2P4Us",
+    "contact-26a": "686/path---contact-26-a-cd9-NZuapzHg3X9TaN1iIixfv1W23E",
+    "about-f34": "125/path---about-f-34-4c2-NZuapzHg3X9TaN1iIixfv1W23E",
+    "blog-f7a": "689/path---blog-f-7-a-05d-1iUhlfTspxPcYO5qoTaWQEzqug",
     "index": "173/path---index-6a9-NZuapzHg3X9TaN1iIixfv1W23E",
-    "blog-f7a": "343/path---blog-f-7-a-05d-n06P5u3vusclNy0V1PEby3FQs",
-    "my-second-test-blog-post-a5a": "743/path---my-second-test-blog-post-a-5-a-f5a-7rX255G9iKlpXSXiAykoBpZSBE",
-    "random-third-post-b7e": "763/path---random-third-post-b-7-e-9dd-byCfBWjndflcBN8d3YU0D40Y8gM",
-    "blog-random-third-post-9b7": "259/path---blog-random-third-post-9-b-7-c8c-8LGhU1doyIg5NqEgzvABNYH1To",
     "blog-my-second-test-blog-post-198": "998/path---blog-my-second-test-blog-post-198-f88-6t8chqAkAAO8RCVHBOfd5FSp4",
-    "blog-this-is-my-test-post-95c": "159/path---blog-this-is-my-test-post-95-c-670-pcRwjrMQfek4630SLIcpdgu8zzQ"
+    "blog-this-is-my-test-post-95c": "159/path---blog-this-is-my-test-post-95-c-670-pcRwjrMQfek4630SLIcpdgu8zzQ",
+    "blog-random-third-post-9b7": "259/path---blog-random-third-post-9-b-7-c8c-8LGhU1doyIg5NqEgzvABNYH1To"
   },
   "components": {
     "C:/Users/jdcas/jdcastro-web-dd/personal-site/src/templates/BlogPost.js": {
@@ -1408,7 +1445,7 @@
       "componentPath": "C:/Users/jdcas/jdcastro-web-dd/personal-site/src/pages/about.js"
     },
     "C:/Users/jdcas/jdcastro-web-dd/personal-site/src/pages/blog.js": {
-      "query": "query BlogPageQuery {\n  allContentfulBlogPost {\n    edges {\n      node {\n        id\n        title\n        slug\n        subtitle\n        published\n        heroImage {\n          file {\n            url\n            fileName\n            contentType\n          }\n        }\n        author {\n          firstName\n          lastName\n          birthday\n        }\n      }\n    }\n  }\n}\n",
+      "query": "query BlogPageQuery {\n  allContentfulBlogPost {\n    edges {\n      node {\n        id\n        title\n        slug\n        subtitle\n        published\n        bodyContent {\n          bodyContent\n        }\n        heroImage {\n          title\n          description\n          file {\n            url\n            fileName\n            contentType\n          }\n        }\n        author {\n          id\n          name\n          email\n          birthday\n          biography {\n            biography\n          }\n        }\n      }\n    }\n  }\n}\n",
       "componentPath": "C:/Users/jdcas/jdcastro-web-dd/personal-site/src/pages/blog.js"
     },
     "C:/Users/jdcas/jdcastro-web-dd/personal-site/src/pages/contact.js": {

@@ -100,22 +100,31 @@ export const pageQuery = graphql`
 			edges {
 				node {
 					id
-					title
-					slug
-					subtitle
-					published
-					heroImage {
-						file {
-							url
-							fileName
-							contentType
-						}
-					}
-					author {
-						firstName
-						lastName
-						birthday
-					}
+	        title
+	        slug
+	        subtitle
+	        published
+	        bodyContent {
+	          bodyContent
+	        }
+	        heroImage {
+	          title
+	          description
+	          file {
+	            url
+	            fileName
+	            contentType
+	          }
+	        }
+	        author {
+	          id
+	          name
+	          email
+	          birthday
+	          biography {
+	            biography
+	          }
+	        }
 				}
 			}
 		}
