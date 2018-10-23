@@ -2,13 +2,13 @@
 const preferDefault = m => m && m.default || m
 
 exports.components = {
-  "component---src-templates-blog-post-js": () => import("C:\\Users\\jdcas\\jdcastro-web-dd\\jdcastro-react\\src\\templates\\BlogPost.js" /* webpackChunkName: "component---src-templates-blog-post-js" */),
-  "component---cache-dev-404-page-js": () => import("C:\\Users\\jdcas\\jdcastro-web-dd\\jdcastro-react\\.cache\\dev-404-page.js" /* webpackChunkName: "component---cache-dev-404-page-js" */),
-  "component---src-pages-about-js": () => import("C:\\Users\\jdcas\\jdcastro-web-dd\\jdcastro-react\\src\\pages\\about.js" /* webpackChunkName: "component---src-pages-about-js" */),
-  "component---src-pages-blog-js": () => import("C:\\Users\\jdcas\\jdcastro-web-dd\\jdcastro-react\\src\\pages\\blog.js" /* webpackChunkName: "component---src-pages-blog-js" */),
-  "component---src-pages-contact-js": () => import("C:\\Users\\jdcas\\jdcastro-web-dd\\jdcastro-react\\src\\pages\\contact.js" /* webpackChunkName: "component---src-pages-contact-js" */),
-  "component---src-pages-index-js": () => import("C:\\Users\\jdcas\\jdcastro-web-dd\\jdcastro-react\\src\\pages\\index.js" /* webpackChunkName: "component---src-pages-index-js" */)
+  "component---src-templates-blog-post-js": () => import("C:\\Users\\jdcas\\jdcastro-web-dd\\personal-site\\src\\templates\\BlogPost.js" /* webpackChunkName: "component---src-templates-blog-post-js" */),
+  "component---cache-dev-404-page-js": () => import("C:\\Users\\jdcas\\jdcastro-web-dd\\personal-site\\.cache\\dev-404-page.js" /* webpackChunkName: "component---cache-dev-404-page-js" */),
+  "component---src-pages-about-js": () => import("C:\\Users\\jdcas\\jdcastro-web-dd\\personal-site\\src\\pages\\about.js" /* webpackChunkName: "component---src-pages-about-js" */),
+  "component---src-pages-blog-js": () => import("C:\\Users\\jdcas\\jdcastro-web-dd\\personal-site\\src\\pages\\blog.js" /* webpackChunkName: "component---src-pages-blog-js" */),
+  "component---src-pages-contact-js": () => import("C:\\Users\\jdcas\\jdcastro-web-dd\\personal-site\\src\\pages\\contact.js" /* webpackChunkName: "component---src-pages-contact-js" */),
+  "component---src-pages-index-js": () => import("C:\\Users\\jdcas\\jdcastro-web-dd\\personal-site\\src\\pages\\index.js" /* webpackChunkName: "component---src-pages-index-js" */)
 }
 
-exports.data = () => import("C:\\Users\\jdcas\\jdcastro-web-dd\\jdcastro-react\\.cache\\data.json")
+exports.data = () => import("C:\\Users\\jdcas\\jdcastro-web-dd\\personal-site\\.cache\\data.json")
 

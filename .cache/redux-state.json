@@ -4,24 +4,24 @@
       "jsonName": "dev-404-page-5f9",
       "internalComponentName": "ComponentDev404Page",
       "path": "/dev-404-page/",
-      "component": "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/.cache/dev-404-page.js",
+      "component": "C:/Users/jdcas/jdcastro-web-dd/personal-site/.cache/dev-404-page.js",
       "componentChunkName": "component---cache-dev-404-page-js",
       "context": {},
       "pluginCreator___NODE": "Plugin dev-404-page",
       "pluginCreatorId": "Plugin dev-404-page",
-      "componentPath": "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/.cache/dev-404-page.js",
+      "componentPath": "C:/Users/jdcas/jdcastro-web-dd/personal-site/.cache/dev-404-page.js",
       "id": "SitePage /dev-404-page/",
       "parent": "SOURCE",
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "d86028d454af27979e336c82501ed30a",
+        "contentDigest": "3b7bfb4702c49586274d0c0ddd4df51a",
         "description": "Plugin dev-404-page",
         "owner": "internal-data-bridge"
       }
     },
     "Plugin dev-404-page": {
-      "resolve": "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/node_modules/gatsby/dist/internal-plugins/dev-404-page",
+      "resolve": "C:/Users/jdcas/jdcastro-web-dd/personal-site/node_modules/gatsby/dist/internal-plugins/dev-404-page",
       "id": "Plugin dev-404-page",
       "name": "dev-404-page",
       "version": "1.0.0",
@@ -33,7 +33,7 @@
       ],
       "browserAPIs": [],
       "ssrAPIs": [],
-      "pluginFilepath": "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/node_modules/gatsby/dist/internal-plugins/dev-404-page",
+      "pluginFilepath": "C:/Users/jdcas/jdcastro-web-dd/personal-site/node_modules/gatsby/dist/internal-plugins/dev-404-page",
       "packageJson": {
         "name": "dev-404-page",
         "description": "Internal plugin to add a 404 page in development with helpful information",
@@ -50,13 +50,13 @@
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "3dd81e890a983ad7f725d14aa9ff496c",
+        "contentDigest": "7a1a4519893e9cc9c12e37d7600046da",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
     },
     "Plugin load-babel-config": {
-      "resolve": "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/node_modules/gatsby/dist/internal-plugins/load-babel-config",
+      "resolve": "C:/Users/jdcas/jdcastro-web-dd/personal-site/node_modules/gatsby/dist/internal-plugins/load-babel-config",
       "id": "Plugin load-babel-config",
       "name": "load-babel-config",
       "version": "1.0.0",
@@ -68,7 +68,7 @@
       ],
       "browserAPIs": [],
       "ssrAPIs": [],
-      "pluginFilepath": "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/node_modules/gatsby/dist/internal-plugins/load-babel-config",
+      "pluginFilepath": "C:/Users/jdcas/jdcastro-web-dd/personal-site/node_modules/gatsby/dist/internal-plugins/load-babel-config",
       "packageJson": {
         "name": "load-babel-config",
         "description": "Internal plugin that handles loading Babel configs",
@@ -85,13 +85,13 @@
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "0a4b4439d31980a68c1332c6c11a94eb",
+        "contentDigest": "a8c2c02e9e7f6f12816fc04c549cb2a8",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
     },
     "Plugin internal-data-bridge": {
-      "resolve": "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/node_modules/gatsby/dist/internal-plugins/internal-data-bridge",
+      "resolve": "C:/Users/jdcas/jdcastro-web-dd/personal-site/node_modules/gatsby/dist/internal-plugins/internal-data-bridge",
       "id": "Plugin internal-data-bridge",
       "name": "internal-data-bridge",
       "version": "1.0.0",
@@ -104,7 +104,7 @@
       ],
       "browserAPIs": [],
       "ssrAPIs": [],
-      "pluginFilepath": "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/node_modules/gatsby/dist/internal-plugins/internal-data-bridge",
+      "pluginFilepath": "C:/Users/jdcas/jdcastro-web-dd/personal-site/node_modules/gatsby/dist/internal-plugins/internal-data-bridge",
       "packageJson": {
         "name": "internal-data-bridge",
         "description": "An internal Gatsby plugin which creates data nodes from internal data",
@@ -121,13 +121,13 @@
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "7e8c9fc60174d10a683039998d222de7",
+        "contentDigest": "e16fc3f4b6a3ac69c2e69dc6073d9459",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
     },
     "Plugin prod-404": {
-      "resolve": "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/node_modules/gatsby/dist/internal-plugins/prod-404",
+      "resolve": "C:/Users/jdcas/jdcastro-web-dd/personal-site/node_modules/gatsby/dist/internal-plugins/prod-404",
       "id": "Plugin prod-404",
       "name": "prod-404",
       "version": "1.0.0",
@@ -139,7 +139,7 @@
       ],
       "browserAPIs": [],
       "ssrAPIs": [],
-      "pluginFilepath": "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/node_modules/gatsby/dist/internal-plugins/prod-404",
+      "pluginFilepath": "C:/Users/jdcas/jdcastro-web-dd/personal-site/node_modules/gatsby/dist/internal-plugins/prod-404",
       "packageJson": {
         "name": "prod-404",
         "description": "Internal plugin to detect various flavors of 404 pages and ensure there's a 404.html path created as well to ensure compatability with static hosts",
@@ -156,13 +156,13 @@
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "d7e0f74bb175c105df0837435c373125",
+        "contentDigest": "f549a4955b76660784dd32ead67c9e9d",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
     },
     "Plugin query-runner": {
-      "resolve": "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/node_modules/gatsby/dist/internal-plugins/query-runner",
+      "resolve": "C:/Users/jdcas/jdcastro-web-dd/personal-site/node_modules/gatsby/dist/internal-plugins/query-runner",
       "id": "Plugin query-runner",
       "name": "query-runner",
       "version": "1.0.0",
@@ -174,7 +174,7 @@
       ],
       "browserAPIs": [],
       "ssrAPIs": [],
-      "pluginFilepath": "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/node_modules/gatsby/dist/internal-plugins/query-runner",
+      "pluginFilepath": "C:/Users/jdcas/jdcastro-web-dd/personal-site/node_modules/gatsby/dist/internal-plugins/query-runner",
       "packageJson": {
         "name": "query-runner",
         "description": "Internal plugin for running queries",
@@ -191,13 +191,13 @@
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "1c77e72321685f752ecc741f7a83908f",
+        "contentDigest": "3d5f1988bfc5e5d5cee02dfcbf3ac82c",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
     },
     "Plugin gatsby-plugin-styled-components": {
-      "resolve": "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/node_modules/gatsby-plugin-styled-components",
+      "resolve": "C:/Users/jdcas/jdcastro-web-dd/personal-site/node_modules/gatsby-plugin-styled-components",
       "id": "Plugin gatsby-plugin-styled-components",
       "name": "gatsby-plugin-styled-components",
       "version": "3.0.0",
@@ -212,7 +212,7 @@
         "wrapRootElement",
         "onRenderBody"
       ],
-      "pluginFilepath": "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/node_modules/gatsby-plugin-styled-components",
+      "pluginFilepath": "C:/Users/jdcas/jdcastro-web-dd/personal-site/node_modules/gatsby-plugin-styled-components",
       "packageJson": {
         "name": "gatsby-plugin-styled-components",
         "description": "Gatsby plugin to add support for styled components",
@@ -264,13 +264,13 @@
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "91745cecf4371930a5ceedbf5e9bac32",
+        "contentDigest": "bda3341f245b8071eb4cd14ccf21f2f5",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
     },
     "Plugin gatsby-source-contentful": {
-      "resolve": "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/node_modules/gatsby-source-contentful",
+      "resolve": "C:/Users/jdcas/jdcastro-web-dd/personal-site/node_modules/gatsby-source-contentful",
       "id": "Plugin gatsby-source-contentful",
       "name": "gatsby-source-contentful",
       "version": "2.0.4",
@@ -288,7 +288,7 @@
       ],
       "browserAPIs": [],
       "ssrAPIs": [],
-      "pluginFilepath": "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/node_modules/gatsby-source-contentful",
+      "pluginFilepath": "C:/Users/jdcas/jdcastro-web-dd/personal-site/node_modules/gatsby-source-contentful",
       "packageJson": {
         "name": "gatsby-source-contentful",
         "description": "Gatsby source plugin for building websites using the Contentful CMS as a data source",
@@ -380,13 +380,13 @@
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "9ddc778993908c2337a54745dd0eaf59",
+        "contentDigest": "587cf3e1ba15d97cfd0ad635bacd932a",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
     },
     "Plugin gatsby-plugin-react-helmet": {
-      "resolve": "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/node_modules/gatsby-plugin-react-helmet",
+      "resolve": "C:/Users/jdcas/jdcastro-web-dd/personal-site/node_modules/gatsby-plugin-react-helmet",
       "id": "Plugin gatsby-plugin-react-helmet",
       "name": "gatsby-plugin-react-helmet",
       "version": "3.0.0",
@@ -398,7 +398,7 @@
       "ssrAPIs": [
         "onRenderBody"
       ],
-      "pluginFilepath": "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/node_modules/gatsby-plugin-react-helmet",
+      "pluginFilepath": "C:/Users/jdcas/jdcastro-web-dd/personal-site/node_modules/gatsby-plugin-react-helmet",
       "packageJson": {
         "name": "gatsby-plugin-react-helmet",
         "description": "Manage document head data with react-helmet. Provides drop-in server rendering support for Gatsby.",
@@ -461,13 +461,13 @@
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "d7f7beb555522816558c6a82a1b948d9",
+        "contentDigest": "c1cf18d40695e7926cfd44d9ec5e2536",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
     },
     "Plugin gatsby-plugin-manifest": {
-      "resolve": "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/node_modules/gatsby-plugin-manifest",
+      "resolve": "C:/Users/jdcas/jdcastro-web-dd/personal-site/node_modules/gatsby-plugin-manifest",
       "id": "Plugin gatsby-plugin-manifest",
       "name": "gatsby-plugin-manifest",
       "version": "2.0.5",
@@ -485,7 +485,7 @@
       "ssrAPIs": [
         "onRenderBody"
       ],
-      "pluginFilepath": "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/node_modules/gatsby-plugin-manifest",
+      "pluginFilepath": "C:/Users/jdcas/jdcastro-web-dd/personal-site/node_modules/gatsby-plugin-manifest",
       "packageJson": {
         "name": "gatsby-plugin-manifest",
         "description": "Gatsby plugin which adds a manifest.webmanifest to make sites progressive web apps",
@@ -545,13 +545,13 @@
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "a65ef243675d386e713b120905c8cb1b",
+        "contentDigest": "4ac921a0fcd7512e6a9ff9cc155db37e",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
     },
     "Plugin gatsby-plugin-offline": {
-      "resolve": "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/node_modules/gatsby-plugin-offline",
+      "resolve": "C:/Users/jdcas/jdcastro-web-dd/personal-site/node_modules/gatsby-plugin-offline",
       "id": "Plugin gatsby-plugin-offline",
       "name": "gatsby-plugin-offline",
       "version": "2.0.5",
@@ -568,7 +568,7 @@
         "onServiceWorkerActive"
       ],
       "ssrAPIs": [],
-      "pluginFilepath": "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/node_modules/gatsby-plugin-offline",
+      "pluginFilepath": "C:/Users/jdcas/jdcastro-web-dd/personal-site/node_modules/gatsby-plugin-offline",
       "packageJson": {
         "name": "gatsby-plugin-offline",
         "description": "Gatsby plugin which sets up a site to be able to run offline",
@@ -630,13 +630,13 @@
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "5abbf767b58b613f3d419a9f04919732",
+        "contentDigest": "0e7b47d7194fad83adea870c2d389d68",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
     },
     "Plugin gatsby-plugin-lodash": {
-      "resolve": "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/node_modules/gatsby-plugin-lodash",
+      "resolve": "C:/Users/jdcas/jdcastro-web-dd/personal-site/node_modules/gatsby-plugin-lodash",
       "id": "Plugin gatsby-plugin-lodash",
       "name": "gatsby-plugin-lodash",
       "version": "3.0.1",
@@ -649,7 +649,7 @@
       ],
       "browserAPIs": [],
       "ssrAPIs": [],
-      "pluginFilepath": "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/node_modules/gatsby-plugin-lodash",
+      "pluginFilepath": "C:/Users/jdcas/jdcastro-web-dd/personal-site/node_modules/gatsby-plugin-lodash",
       "packageJson": {
         "name": "gatsby-plugin-lodash",
         "description": "Easy modular Lodash builds. Adds the Lodash webpack & Babel plugins to your Gatsby build",
@@ -704,16 +704,16 @@
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "1be8d0d72e82ed6865d39b0ace3228cc",
+        "contentDigest": "4ed9a6b60ce30828fc8e80e48c697cb3",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
     },
     "Plugin default-site-plugin": {
-      "resolve": "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react",
+      "resolve": "C:/Users/jdcas/jdcastro-web-dd/personal-site",
       "id": "Plugin default-site-plugin",
       "name": "default-site-plugin",
-      "version": "940625d36099af79c1a5ddc5b8f3f37c",
+      "version": "035cfeb6360e66453c103190d1899ab9",
       "pluginOptions": {
         "plugins": []
       },
@@ -722,7 +722,7 @@
       ],
       "browserAPIs": [],
       "ssrAPIs": [],
-      "pluginFilepath": "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react",
+      "pluginFilepath": "C:/Users/jdcas/jdcastro-web-dd/personal-site",
       "packageJson": {
         "name": "jdcastro-personal-site",
         "description": "The personal site of Jacob D. Castro",
@@ -822,19 +822,19 @@
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "45fcaab86581b3ddda77e6664a6c0d0b",
+        "contentDigest": "a204f1aa127c6d9c84a592026842e5a2",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
     },
     "Plugin gatsby-plugin-page-creator": {
-      "resolve": "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/node_modules/gatsby-plugin-page-creator",
+      "resolve": "C:/Users/jdcas/jdcastro-web-dd/personal-site/node_modules/gatsby-plugin-page-creator",
       "id": "Plugin gatsby-plugin-page-creator",
       "name": "gatsby-plugin-page-creator",
       "version": "2.0.0",
       "pluginOptions": {
         "plugins": [],
-        "path": "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/src/pages",
+        "path": "C:/Users/jdcas/jdcastro-web-dd/personal-site/src/pages",
         "pathCheck": false
       },
       "nodeAPIs": [
@@ -842,7 +842,7 @@
       ],
       "browserAPIs": [],
       "ssrAPIs": [],
-      "pluginFilepath": "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/node_modules/gatsby-plugin-page-creator",
+      "pluginFilepath": "C:/Users/jdcas/jdcastro-web-dd/personal-site/node_modules/gatsby-plugin-page-creator",
       "packageJson": {
         "name": "gatsby-plugin-page-creator",
         "description": "Gatsby plugin that automatically creates pages from React components in specified directories",
@@ -917,7 +917,7 @@
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "89c8298fa64489f599763b84702e0a88",
+        "contentDigest": "f35d203a10af48ec3d3b1a8d2fd2a8a0",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
@@ -931,12 +931,12 @@
       "host": "localhost",
       "pathPrefix": "/blog",
       "polyfill": true,
-      "buildTime": "2018-10-21T06:26:37.463Z",
+      "buildTime": "2018-10-23T02:50:41.809Z",
       "id": "Site",
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "67b020f4924e09c5a1c920bb01ea993f",
+        "contentDigest": "141399ad8a48172033995c07b0a1d212",
         "type": "Site",
         "owner": "internal-data-bridge"
       }
@@ -1180,20 +1180,20 @@
       "jsonName": "blog-random-third-post-9b7",
       "internalComponentName": "ComponentBlogRandomThirdPost",
       "path": "/blog/random-third-post",
-      "component": "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/src/templates/BlogPost.js",
+      "component": "C:/Users/jdcas/jdcastro-web-dd/personal-site/src/templates/BlogPost.js",
       "componentChunkName": "component---src-templates-blog-post-js",
       "context": {
         "slug": "random-third-post"
       },
       "pluginCreator___NODE": "Plugin default-site-plugin",
       "pluginCreatorId": "Plugin default-site-plugin",
-      "componentPath": "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/src/templates/BlogPost.js",
+      "componentPath": "C:/Users/jdcas/jdcastro-web-dd/personal-site/src/templates/BlogPost.js",
       "id": "SitePage /blog/random-third-post",
       "parent": "SOURCE",
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "7c21c80621888fc03176fc6f9dde7b9c",
+        "contentDigest": "f080895bf0cf7f18c92a357a919f58aa",
         "description": "Your site's \"gatsby-node.js\"",
         "owner": "internal-data-bridge"
       }
@@ -1202,20 +1202,20 @@
       "jsonName": "blog-my-second-test-blog-post-198",
       "internalComponentName": "ComponentBlogMySecondTestBlogPost",
       "path": "/blog/my-second-test-blog-post",
-      "component": "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/src/templates/BlogPost.js",
+      "component": "C:/Users/jdcas/jdcastro-web-dd/personal-site/src/templates/BlogPost.js",
       "componentChunkName": "component---src-templates-blog-post-js",
       "context": {
         "slug": "my-second-test-blog-post"
       },
       "pluginCreator___NODE": "Plugin default-site-plugin",
       "pluginCreatorId": "Plugin default-site-plugin",
-      "componentPath": "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/src/templates/BlogPost.js",
+      "componentPath": "C:/Users/jdcas/jdcastro-web-dd/personal-site/src/templates/BlogPost.js",
       "id": "SitePage /blog/my-second-test-blog-post",
       "parent": "SOURCE",
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "ece7dae63de65f77a94195a721be9f23",
+        "contentDigest": "fb9a62051e6c8913b12a3c33d9e757f2",
         "description": "Your site's \"gatsby-node.js\"",
         "owner": "internal-data-bridge"
       }
@@ -1224,20 +1224,20 @@
       "jsonName": "blog-this-is-my-test-post-95c",
       "internalComponentName": "ComponentBlogThisIsMyTestPost",
       "path": "/blog/this-is-my-test-post",
-      "component": "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/src/templates/BlogPost.js",
+      "component": "C:/Users/jdcas/jdcastro-web-dd/personal-site/src/templates/BlogPost.js",
       "componentChunkName": "component---src-templates-blog-post-js",
       "context": {
         "slug": "this-is-my-test-post"
       },
       "pluginCreator___NODE": "Plugin default-site-plugin",
       "pluginCreatorId": "Plugin default-site-plugin",
-      "componentPath": "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/src/templates/BlogPost.js",
+      "componentPath": "C:/Users/jdcas/jdcastro-web-dd/personal-site/src/templates/BlogPost.js",
       "id": "SitePage /blog/this-is-my-test-post",
       "parent": "SOURCE",
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "959711055ea67466248b934c90525492",
+        "contentDigest": "66b82903bb8a65548d4c8a38ea37c7d3",
         "description": "Your site's \"gatsby-node.js\"",
         "owner": "internal-data-bridge"
       }
@@ -1246,18 +1246,18 @@
       "jsonName": "about-f34",
       "internalComponentName": "ComponentAbout",
       "path": "/about/",
-      "component": "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/src/pages/about.js",
+      "component": "C:/Users/jdcas/jdcastro-web-dd/personal-site/src/pages/about.js",
       "componentChunkName": "component---src-pages-about-js",
       "context": {},
       "pluginCreator___NODE": "Plugin gatsby-plugin-page-creator",
       "pluginCreatorId": "Plugin gatsby-plugin-page-creator",
-      "componentPath": "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/src/pages/about.js",
+      "componentPath": "C:/Users/jdcas/jdcastro-web-dd/personal-site/src/pages/about.js",
       "id": "SitePage /about/",
       "parent": "SOURCE",
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "742051aa618c62c816d0703206c25d27",
+        "contentDigest": "e10eac0a63331e074dbb6d8d952fddc6",
         "description": "Plugin gatsby-plugin-page-creator",
         "owner": "internal-data-bridge"
       }
@@ -1266,18 +1266,18 @@
       "jsonName": "blog-f7a",
       "internalComponentName": "ComponentBlog",
       "path": "/blog/",
-      "component": "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/src/pages/blog.js",
+      "component": "C:/Users/jdcas/jdcastro-web-dd/personal-site/src/pages/blog.js",
       "componentChunkName": "component---src-pages-blog-js",
       "context": {},
       "pluginCreator___NODE": "Plugin gatsby-plugin-page-creator",
       "pluginCreatorId": "Plugin gatsby-plugin-page-creator",
-      "componentPath": "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/src/pages/blog.js",
+      "componentPath": "C:/Users/jdcas/jdcastro-web-dd/personal-site/src/pages/blog.js",
       "id": "SitePage /blog/",
       "parent": "SOURCE",
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "ad117f74b507ad9418c4aeba7e1e9c2d",
+        "contentDigest": "d314bcb99c371ee20e8aee43d8f30943",
         "description": "Plugin gatsby-plugin-page-creator",
         "owner": "internal-data-bridge"
       }
@@ -1286,18 +1286,18 @@
       "jsonName": "contact-26a",
       "internalComponentName": "ComponentContact",
       "path": "/contact/",
-      "component": "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/src/pages/contact.js",
+      "component": "C:/Users/jdcas/jdcastro-web-dd/personal-site/src/pages/contact.js",
       "componentChunkName": "component---src-pages-contact-js",
       "context": {},
       "pluginCreator___NODE": "Plugin gatsby-plugin-page-creator",
       "pluginCreatorId": "Plugin gatsby-plugin-page-creator",
-      "componentPath": "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/src/pages/contact.js",
+      "componentPath": "C:/Users/jdcas/jdcastro-web-dd/personal-site/src/pages/contact.js",
       "id": "SitePage /contact/",
       "parent": "SOURCE",
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "e02519df6ed25338d223f170408eba8e",
+        "contentDigest": "1c430f554f6540483ab75636ee789b62",
         "description": "Plugin gatsby-plugin-page-creator",
         "owner": "internal-data-bridge"
       }
@@ -1306,18 +1306,18 @@
       "jsonName": "index",
       "internalComponentName": "ComponentIndex",
       "path": "/",
-      "component": "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/src/pages/index.js",
+      "component": "C:/Users/jdcas/jdcastro-web-dd/personal-site/src/pages/index.js",
       "componentChunkName": "component---src-pages-index-js",
       "context": {},
       "pluginCreator___NODE": "Plugin gatsby-plugin-page-creator",
       "pluginCreatorId": "Plugin gatsby-plugin-page-creator",
-      "componentPath": "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/src/pages/index.js",
+      "componentPath": "C:/Users/jdcas/jdcastro-web-dd/personal-site/src/pages/index.js",
       "id": "SitePage /",
       "parent": "SOURCE",
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "907cb42bdd2718185ac12c5a1e26a25a",
+        "contentDigest": "f6126cc6d437a431d657311ca2ad4cc1",
         "description": "Plugin gatsby-plugin-page-creator",
         "owner": "internal-data-bridge"
       }
@@ -1329,39 +1329,46 @@
         "oghc6wtiomc3-master-cdn.contentful.com": "w5ZGw6JFwqZmVcKsE8Kow4grw45QdybDgsKUwqvCmsOUwo04Q1QiT0pAwpvDgEXDhMOrH0TCosO7KS3Ch2gtL38Nw4_CiQ_DksKiM8KNXnlOVMKGw5PDtB_Dp8OcCcKLF8K2Ky_CmsONw55TXsONC8KFAsKTTQ"
       }
     },
-    "PLUGINS_HASH": "f54dc7fa6e4aae20f3900396f6174d20"
+    "PLUGINS_HASH": "e1f282df734720a9745cdecaf7a73563"
   },
   "componentDataDependencies": {
     "nodes": {
       "74f21fcb-49f3-5bad-9c8f-cde71295333b": [
-        "/blog/"
+        "/blog/",
+        "/"
       ],
       "184c794a-b337-50ca-8b95-a4293d5c79c7": [
-        "/blog/"
+        "/blog/",
+        "/"
       ],
       "a8367f41-c9c7-5842-9762-b1f6fb884dad": [
-        "/blog/"
+        "/blog/",
+        "/"
       ],
       "d9d5d7bf-3681-5ec4-939d-c4d41c0d9d8f": [
-        "/blog/"
+        "/blog/",
+        "/"
       ],
       "5903c3d4-dc72-595b-8f4c-99fed8dcc8a6": [
         "/blog/random-third-post"
       ],
       "d20fc2dc-960d-5489-a740-a743f58e30e5": [
-        "/blog/random-third-post"
+        "/blog/random-third-post",
+        "/"
       ],
       "b7b77cb5-f51e-52fd-9648-a679c64bd7d7": [
         "/blog/my-second-test-blog-post"
       ],
       "03e6221e-71b2-51ff-9e63-95f4b3e1f7da": [
-        "/blog/my-second-test-blog-post"
+        "/blog/my-second-test-blog-post",
+        "/"
       ],
       "83b21fcb-dff9-5d9f-952f-530da47a6b4c": [
         "/blog/this-is-my-test-post"
       ],
       "a0d73be9-a3da-5539-8b1c-99db32ec9f91": [
-        "/blog/this-is-my-test-post"
+        "/blog/this-is-my-test-post",
+        "/"
       ]
     },
     "connections": {
@@ -1384,29 +1391,29 @@
     "blog-this-is-my-test-post-95c": "129/path---blog-this-is-my-test-post-95-c-670-22HFdjUaK6wRfGA4ijIXp2P4Us"
   },
   "components": {
-    "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/src/templates/BlogPost.js": {
+    "C:/Users/jdcas/jdcastro-web-dd/personal-site/src/templates/BlogPost.js": {
       "query": "query blogPostQuery(\n  $slug: String!\n) {\n  contentfulBlogPost(slug: {eq: $slug}) {\n    title\n    slug\n    subtitle\n    bodyContent {\n      bodyContent\n    }\n    published\n  }\n}\n",
-      "componentPath": "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/src/templates/BlogPost.js"
+      "componentPath": "C:/Users/jdcas/jdcastro-web-dd/personal-site/src/templates/BlogPost.js"
     },
-    "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/.cache/dev-404-page.js": {
+    "C:/Users/jdcas/jdcastro-web-dd/personal-site/.cache/dev-404-page.js": {
       "query": "",
-      "componentPath": "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/.cache/dev-404-page.js"
+      "componentPath": "C:/Users/jdcas/jdcastro-web-dd/personal-site/.cache/dev-404-page.js"
     },
-    "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/src/pages/about.js": {
+    "C:/Users/jdcas/jdcastro-web-dd/personal-site/src/pages/about.js": {
       "query": "",
-      "componentPath": "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/src/pages/about.js"
+      "componentPath": "C:/Users/jdcas/jdcastro-web-dd/personal-site/src/pages/about.js"
     },
-    "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/src/pages/blog.js": {
+    "C:/Users/jdcas/jdcastro-web-dd/personal-site/src/pages/blog.js": {
       "query": "query BlogPageQuery {\n  allContentfulBlogPost {\n    edges {\n      node {\n        id\n        title\n        slug\n        subtitle\n        published\n        heroImage {\n          file {\n            url\n            fileName\n            contentType\n          }\n        }\n        author {\n          firstName\n          lastName\n          birthday\n        }\n      }\n    }\n  }\n}\n",
-      "componentPath": "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/src/pages/blog.js"
+      "componentPath": "C:/Users/jdcas/jdcastro-web-dd/personal-site/src/pages/blog.js"
     },
-    "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/src/pages/contact.js": {
+    "C:/Users/jdcas/jdcastro-web-dd/personal-site/src/pages/contact.js": {
       "query": "",
-      "componentPath": "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/src/pages/contact.js"
+      "componentPath": "C:/Users/jdcas/jdcastro-web-dd/personal-site/src/pages/contact.js"
     },
-    "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/src/pages/index.js": {
+    "C:/Users/jdcas/jdcastro-web-dd/personal-site/src/pages/index.js": {
       "query": "",
-      "componentPath": "C:/Users/jdcas/jdcastro-web-dd/jdcastro-react/src/pages/index.js"
+      "componentPath": "C:/Users/jdcas/jdcastro-web-dd/personal-site/src/pages/index.js"
     }
   },
   "staticQueryComponents": {}

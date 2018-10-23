@@ -2,11 +2,10 @@ import React from 'react';
 import { Link, graphql } from 'gatsby';
 import styled from 'styled-components';
 import { Helmet } from 'react-helmet';
-import get from 'lodash';
 import './normalize.css';
 import PageIntro from '../components/PageIntro';
 import MobileNav from '../components/MobileNav';
-import BlogPostCard from '../components/BlogPostCard';
+import BlogPreviewCard from '../components/BlogPreviewCard';
 import Footer from '../components/Footer';
 
 const PageContainer = styled.div`
@@ -79,7 +78,7 @@ class Blog extends React.Component {
 						{this.props.data.allContentfulBlogPost.edges.map(({node}) => {
 							return (
 								<Link key={node.id} to={node.slug}>
-									<BlogPostCard key={node.id} postData={node} />
+									<BlogPreviewCard key={node.id} postData={node} />
 								</Link>
 							);
 						})}
