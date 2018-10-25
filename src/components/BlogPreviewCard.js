@@ -38,7 +38,7 @@ class BlogPreviewCard extends React.Component {
 				<CoverImg src={data.heroImage.file.url} alt={data.heroImage.file.fileName} />
 				<BlogTitle>{data.title}</BlogTitle>
 				<BlogSubtitle>{data.subtitle}</BlogSubtitle>
-				<h4>By: {data.author.firstName}</h4>
+				<h4>By: {data.author.name}</h4>
 				<p>Excerpt...</p>
 				<h5>{data.published}</h5>
 			</CardContainer>
