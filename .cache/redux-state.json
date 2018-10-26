@@ -931,12 +931,12 @@
       "host": "localhost",
       "pathPrefix": "/blog",
       "polyfill": true,
-      "buildTime": "2018-10-26T01:20:32.628Z",
+      "buildTime": "2018-10-26T01:28:40.986Z",
       "id": "Site",
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "4a71e0c2509bec35f43eabcb54cdb86b",
+        "contentDigest": "ee622d3128154f8de4b13885d5907348",
         "type": "Site",
         "owner": "internal-data-bridge"
       }
@@ -960,7 +960,6 @@
       "birthday": "1997-05-27T06:32-07:00",
       "avatar___NODE": "02bc2210-586f-5459-920f-81d918e3caba",
       "blog post___NODE": [
-        "7a11263f-0f2f-533a-b59a-0cb30fde4a7b",
         "83b21fcb-dff9-5d9f-952f-530da47a6b4c",
         "5903c3d4-dc72-595b-8f4c-99fed8dcc8a6"
       ],
@@ -975,7 +974,7 @@
       ],
       "internal": {
         "type": "ContentfulAuthor",
-        "contentDigest": "e345d2260c527ff1f457c48e041b60f0",
+        "contentDigest": "18b9f4ddaf59b57d5e8a5647d946301d",
         "owner": "gatsby-source-contentful"
       },
       "node_locale": "en-US"
@@ -1005,29 +1004,6 @@
         "contentDigest": "4b1ab19d6bbe724eee10051e8587a991",
         "owner": "gatsby-source-contentful"
       }
-    },
-    "7a11263f-0f2f-533a-b59a-0cb30fde4a7b": {
-      "title": "My LAST Test Blog Post",
-      "slug": "my-last-test-blog-post",
-      "subtitle": "I'm pretty frustrated now",
-      "published": "2018-10-24",
-      "heroImage___NODE": "a8367f41-c9c7-5842-9762-b1f6fb884dad",
-      "author___NODE": "184c794a-b337-50ca-8b95-a4293d5c79c7",
-      "bodyContent___NODE": "4bf5fd11-55d4-573b-ab6e-82272a2831b0",
-      "id": "7a11263f-0f2f-533a-b59a-0cb30fde4a7b",
-      "contentful_id": "vjV1ul71M4qYCeCoEWqCU",
-      "createdAt": "2018-10-25T00:28:41.330Z",
-      "updatedAt": "2018-10-26T01:14:04.517Z",
-      "parent": "Blog Post",
-      "children": [
-        "4bf5fd11-55d4-573b-ab6e-82272a2831b0"
-      ],
-      "internal": {
-        "type": "ContentfulBlogPost",
-        "contentDigest": "9d35f37c3d550c22b46bee3beb433505",
-        "owner": "gatsby-source-contentful"
-      },
-      "node_locale": "en-US"
     },
     "83b21fcb-dff9-5d9f-952f-530da47a6b4c": {
       "title": "This Is my test Post",
@@ -1074,19 +1050,6 @@
         "owner": "gatsby-source-contentful"
       },
       "node_locale": "en-US"
-    },
-    "4bf5fd11-55d4-573b-ab6e-82272a2831b0": {
-      "id": "4bf5fd11-55d4-573b-ab6e-82272a2831b0",
-      "parent": "7a11263f-0f2f-533a-b59a-0cb30fde4a7b",
-      "children": [],
-      "bodyContent": "fdsalk;fjas;dfj;asjdf;kjasd;fkljsad;fkj;asdf\nasdfkjl;asdjf;sdkjf;asd\n## ;aksdjf;aslkdjf",
-      "internal": {
-        "type": "contentfulBlogPostBodyContentTextNode",
-        "mediaType": "text/markdown",
-        "content": "fdsalk;fjas;dfj;asjdf;kjasd;fkljsad;fkj;asdf\nasdfkjl;asdjf;sdkjf;asd\n## ;aksdjf;aslkdjf",
-        "contentDigest": "a5369ef3d823ee21fd634685b95095c8",
-        "owner": "gatsby-source-contentful"
-      }
     },
     "a0d73be9-a3da-5539-8b1c-99db32ec9f91": {
       "id": "a0d73be9-a3da-5539-8b1c-99db32ec9f91",
@@ -1218,28 +1181,6 @@
         "owner": "gatsby-source-contentful"
       }
     },
-    "SitePage /blog/my-last-test-blog-post": {
-      "jsonName": "blog-my-last-test-blog-post-f50",
-      "internalComponentName": "ComponentBlogMyLastTestBlogPost",
-      "path": "/blog/my-last-test-blog-post",
-      "component": "C:/Users/jdcas/jdcastro-web-dd/personal-site/src/templates/BlogPost.js",
-      "componentChunkName": "component---src-templates-blog-post-js",
-      "context": {
-        "slug": "my-last-test-blog-post"
-      },
-      "pluginCreator___NODE": "Plugin default-site-plugin",
-      "pluginCreatorId": "Plugin default-site-plugin",
-      "componentPath": "C:/Users/jdcas/jdcastro-web-dd/personal-site/src/templates/BlogPost.js",
-      "id": "SitePage /blog/my-last-test-blog-post",
-      "parent": "SOURCE",
-      "children": [],
-      "internal": {
-        "type": "SitePage",
-        "contentDigest": "07244f16d3022c6bc72cd2a565bbe40c",
-        "description": "Your site's \"gatsby-node.js\"",
-        "owner": "internal-data-bridge"
-      }
-    },
     "SitePage /blog/this-is-my-test-post": {
       "jsonName": "blog-this-is-my-test-post-95c",
       "internalComponentName": "ComponentBlogThisIsMyTestPost",
@@ -1368,33 +1309,13 @@
   "status": {
     "plugins": {
       "gatsby-source-contentful": {
-        "oghc6wtiomc3-master-cdn.contentful.com": "w5ZGw6JFwqZmVcKsE8Kow4grw45QdybDnyYlYMKZS29NKS1gNMO4wp3DiHcyJgzCocO9D8KqSsOFeMOew4vDqx5sE8K3VTlhw6bDgzQawrLCrcOLdsKNJsKzwqLDiUvCkxbClcKsK8K-HsKAwqQEw7ZTRj4"
+        "oghc6wtiomc3-master-cdn.contentful.com": "w5ZGw6JFwqZmVcKsE8Kow4grw45QdybDgAHCh8O_w69zwoZyXVMUwr91RGNQbQTChxgWw7YSF8Ksw6gZBR7DrMKjb8OONwHDnkshO8OwwofClhDDnMOWbFYMw5R8w4tPwobDuBjCkEtIw4XDssOkwqPDn3M"
       }
     },
     "PLUGINS_HASH": "79a27b37fb446c01b688ae53005fd01b"
   },
   "componentDataDependencies": {
     "nodes": {
-      "4bf5fd11-55d4-573b-ab6e-82272a2831b0": [
-        "/blog/",
-        "/blog/my-last-test-blog-post"
-      ],
-      "a8367f41-c9c7-5842-9762-b1f6fb884dad": [
-        "/blog/",
-        "/blog/my-last-test-blog-post"
-      ],
-      "184c794a-b337-50ca-8b95-a4293d5c79c7": [
-        "/blog/",
-        "/blog/my-last-test-blog-post",
-        "/blog/this-is-my-test-post",
-        "/blog/random-third-post"
-      ],
-      "66e1b74f-271f-5434-ac0f-d5d5f9c8210f": [
-        "/blog/",
-        "/blog/my-last-test-blog-post",
-        "/blog/this-is-my-test-post",
-        "/blog/random-third-post"
-      ],
       "a0d73be9-a3da-5539-8b1c-99db32ec9f91": [
         "/blog/",
         "/blog/this-is-my-test-post"
@@ -1403,6 +1324,16 @@
         "/blog/",
         "/blog/this-is-my-test-post"
       ],
+      "184c794a-b337-50ca-8b95-a4293d5c79c7": [
+        "/blog/",
+        "/blog/this-is-my-test-post",
+        "/blog/random-third-post"
+      ],
+      "66e1b74f-271f-5434-ac0f-d5d5f9c8210f": [
+        "/blog/",
+        "/blog/this-is-my-test-post",
+        "/blog/random-third-post"
+      ],
       "d20fc2dc-960d-5489-a740-a743f58e30e5": [
         "/blog/",
         "/blog/random-third-post"
@@ -1410,9 +1341,6 @@
       "74f21fcb-49f3-5bad-9c8f-cde71295333b": [
         "/blog/",
         "/blog/random-third-post"
-      ],
-      "7a11263f-0f2f-533a-b59a-0cb30fde4a7b": [
-        "/blog/my-last-test-blog-post"
       ],
       "83b21fcb-dff9-5d9f-952f-530da47a6b4c": [
         "/blog/this-is-my-test-post"
@@ -1428,14 +1356,13 @@
     }
   },
   "jsonDataPaths": {
-    "blog-random-third-post-9b7": "806/path---blog-random-third-post-9-b-7-c8c-BIIlcKs2QwACMxlOQv86EAxcGq0",
-    "blog-f7a": "911/path---blog-f-7-a-05d-Q3mSki7z1eIzY3qplL94XXrK0",
-    "blog-my-last-test-blog-post-f50": "13/path---blog-my-last-test-blog-post-f-50-807-ow8NvacRY8DQuU45COLKnEesY",
-    "blog-this-is-my-test-post-95c": "476/path---blog-this-is-my-test-post-95-c-670-ZCrOCEu2rKkR6Upasqf9mlUX8M",
-    "about-f34": "125/path---about-f-34-4c2-NZuapzHg3X9TaN1iIixfv1W23E",
-    "contact-26a": "686/path---contact-26-a-cd9-NZuapzHg3X9TaN1iIixfv1W23E",
     "dev-404-page-5f9": "920/path---dev-404-page-5-f-9-fab-NZuapzHg3X9TaN1iIixfv1W23E",
-    "index": "173/path---index-6a9-NZuapzHg3X9TaN1iIixfv1W23E"
+    "blog-this-is-my-test-post-95c": "476/path---blog-this-is-my-test-post-95-c-670-ZCrOCEu2rKkR6Upasqf9mlUX8M",
+    "blog-random-third-post-9b7": "806/path---blog-random-third-post-9-b-7-c8c-BIIlcKs2QwACMxlOQv86EAxcGq0",
+    "blog-f7a": "547/path---blog-f-7-a-05d-FtW6nbW7ktt5dygFprAvFDKlQso",
+    "about-f34": "125/path---about-f-34-4c2-NZuapzHg3X9TaN1iIixfv1W23E",
+    "index": "173/path---index-6a9-NZuapzHg3X9TaN1iIixfv1W23E",
+    "contact-26a": "686/path---contact-26-a-cd9-NZuapzHg3X9TaN1iIixfv1W23E"
   },
   "components": {
     "C:/Users/jdcas/jdcastro-web-dd/personal-site/src/templates/BlogPost.js": {
