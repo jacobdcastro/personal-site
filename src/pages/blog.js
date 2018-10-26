@@ -85,7 +85,7 @@ class Blog extends React.Component {
 				<PageIntro action={this.openMobileNav} headline="Blog" aboutPage={false} />
 
 				<BlogListContainer>
-					<AboutHeadline>Recent Posts</AboutHeadline>
+					<AboutHeadline>RECENT POSTS</AboutHeadline>
 					<BlogPostList>
 						{/* create new array of individual blog post preview cards */}
 						{this.props.data.allContentfulBlogPost.edges.map(({node}) => {
