@@ -23,10 +23,35 @@ const CoverImg = styled.img`
 
 const BlogTitle = styled.h1`
 	font-family: 'Montserrat', 'Helvetica', sans-serif;
+	font-size: 1.8em;
+	letter-spacing: 3px;
+	text-decoration: none;
+	color: #353535;
+	text-transform: uppercase;
 `;
 
 const BlogSubtitle = styled.h3`
-	font-family: 'Montserray', 'Helvetica', sans-serif;
+	font-family: 'Montserrat', 'Helvetica', sans-serif;
+	text-decoration: none;
+	color: #353535;
+`;
+
+const BlogAuthor = styled.h4`
+	font-family: 'Montserrat', 'Helvetica', sans-serif;
+	text-decoration: none;
+	color: #353535;
+`;
+
+const BlogExcerpt = styled.p`
+	font-family: 'Montserrat', 'Helvetica', sans-serif;
+	text-decoration: none;
+	color: #353535;
+`;
+
+const DatePublished = styled.h5`
+	font-family: 'Montserrat', 'Helvetica', sans-serif;
+	text-decoration: none;
+	color: #353535;
 `;
 
 class BlogPreviewCard extends React.Component {
@@ -38,9 +63,9 @@ class BlogPreviewCard extends React.Component {
 				<CoverImg src={data.heroImage.file.url} alt={data.heroImage.file.fileName} />
 				<BlogTitle>{data.title}</BlogTitle>
 				<BlogSubtitle>{data.subtitle}</BlogSubtitle>
-				<h4>By: {data.author.name}</h4>
-				<p>Excerpt...</p>
-				<h5>{data.published}</h5>
+				<BlogAuthor>By: {data.author.name}</BlogAuthor>
+				<BlogExcerpt>Excerpt...</BlogExcerpt>
+				<DatePublished>{data.published}</DatePublished>
 			</CardContainer>
 		);
 	}

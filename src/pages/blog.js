@@ -92,7 +92,7 @@ class Blog extends React.Component {
 							//set dynamic slug and insert in <Link> component
 							const blogSlug = `blog/${node.slug}`;
 							return (
-								<Link key={node.id} to={blogSlug}>
+								<Link key={node.id} to={blogSlug} style={{textDecoration: 'none'}}>
 									<BlogPreviewCard key={node.id} postData={node} />
 								</Link>
 							);
