@@ -4,7 +4,9 @@ import styled from 'styled-components';
 import '../pages/normalize.css';
 import { graphql } from 'gatsby';
 import { Helmet } from 'react-helmet';
+import MobileNav from '../components/MobileNav';
 import BlogPageIntro from '../components/BlogPageIntro';
+import BlogSubheader from '../components/BlogSubheader';
 import Footer from '../components/Footer';
 
 const Container = styled.div`
@@ -73,14 +75,22 @@ class BlogPost extends React.Component {
 					<link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
 					<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet" />
 				</Helmet>
+				<MobileNav
+					action={this.closeMobileNav}
+					open={this.state.mobileNavIsOpen}
+				/>
 				<BlogPageIntro
 					action={this.openMobileNav}
 					headline={data.title}
-					subheadline={data.subtitle}
+					author={data.author.name}
 					bgImg={data.heroImage.file.url}
-					aboutPage={false} />
+					aboutPage={false}
+				/>
 
 				<ContentWrapper>
+
+					<BlogSubheader data={data} />
+
 					<BlogParagraph>
 						{data.bodyContent.bodyContent}
 					</BlogParagraph>
@@ -103,6 +113,7 @@ export const pageQuery = graphql`
     contentfulBlogPost(slug: {eq: $slug}) {
 			id
 	    slug
+			tags
 	    title
 	    subtitle
 	    published
@@ -122,6 +133,11 @@ export const pageQuery = graphql`
 				name
 				email
 				birthday
+				avatar {
+					file {
+						url
+					}
+				}
 				biography {
 					biography
 				}

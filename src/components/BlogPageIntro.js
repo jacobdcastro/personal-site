@@ -9,7 +9,7 @@ const Header = styled.div`
   display: flex;
   justify-content: space-around;
   flex-direction: column;
-  height: 500px;
+  height: 414px;
   width: 100%;
   background-image: url(${props => props.bgImg});
   background-size: cover;
@@ -18,7 +18,7 @@ const Header = styled.div`
   padding: 0;
 
   @media (min-width: 820px) {
-    height: 650px;
+    height: 500px;
   }
 `;
 
@@ -56,22 +56,6 @@ const Headline = styled.h1`
   }
 `;
 
-const SubHeadline = styled.h3`
-	font-family: 'Montserrat', 'Helvetica', sans-serif;
-	color: #fff;
-	text-transform: uppercase;
-	letter-spacing: 4px;
-	@media (min-width: 820px) {
-		font-size: 1.4em;
-		letter-spacing: 9px;
-	}
-
-	@media (min-width: 1080px) {
-		font-size: 1.9em;
-		letter-spacing: 12px;
-	}
-`;
-
 const DownArrow = styled.img`
   height: 33px;
   width: auto;
@@ -88,12 +72,10 @@ class BlogPageIntro extends React.Component {
 		return (
 			<Header bgImg={this.props.bgImg}>
 				<BlackLayer>
-
 					<Navbar action={this.props.action} />
 
 					<TitleContainer>
 						<Headline>{this.props.headline}</Headline>
-						<SubHeadline>{this.props.subheadline}</SubHeadline>
 					</TitleContainer>
 
 					<DownArrow src={img} alt="down arrow icon" />

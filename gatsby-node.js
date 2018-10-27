@@ -18,6 +18,29 @@ exports.createPages = ({ graphql, actions }) => {
 				        bodyContent {
 				          bodyContent
 				        }
+								heroImage {
+				          title
+				          description
+				          file {
+				            url
+				            fileName
+				            contentType
+				          }
+				        }
+				        author {
+				          id
+				          name
+				          email
+				          birthday
+									avatar {
+										file {
+											url
+										}
+									}
+				          biography {
+				            biography
+				          }
+				        }
 				      }
 				    }
 				  }
