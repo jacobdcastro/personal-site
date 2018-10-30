@@ -5,10 +5,9 @@ import img from '../images/icons/tag-icon.svg';
 const Container = styled.div`
 	display: flex;
 	align-items: center;
-	height: 40px;
 	width: auto;
-	padding: 0px 12px;
-	margin: 3px 5px;
+	padding: 5px 10px;
+	margin: 9px 5px;
 	border-radius: 25px;
 	&:hover {
 		background-color: #eee;
@@ -19,7 +18,8 @@ const Container = styled.div`
 const TagIcon = styled.img`
 	height: 16px;
 	width: auto;
-	margin-right: 8px;
+	margin: 0 8px 0 0;
+	padding: 0;
 `;
 
 const Tag = styled.h5`
@@ -29,7 +29,6 @@ const Tag = styled.h5`
 	font-size: 12px;
 	margin: 0px;
 	padding: 0;
-	text-transform: lowercase;
 `;
 
 class BlogTagIcon extends React.Component {

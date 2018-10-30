@@ -4,8 +4,8 @@ import styled from 'styled-components';
 
 const CardContainer = styled.div`
 	height: 500px;
-	width: 325px;
-	margin: 0;
+	width: 80%;
+	margin: 10px;
 	padding: 12px;
 	background-color: #eee;
 	box-shadow: 0 5px 17px #676767;

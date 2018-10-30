@@ -931,12 +931,12 @@
       "host": "localhost",
       "pathPrefix": "/blog",
       "polyfill": true,
-      "buildTime": "2018-10-27T22:06:06.512Z",
+      "buildTime": "2018-10-30T00:53:23.047Z",
       "id": "Site",
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "e48fcd37b72120069f59b5f2a606d049",
+        "contentDigest": "94a55c670714875b5acee83ee423362e",
         "type": "Site",
         "owner": "internal-data-bridge"
       }
@@ -957,6 +957,9 @@
     "184c794a-b337-50ca-8b95-a4293d5c79c7": {
       "name": "Jacob D. Castro",
       "email": "jdcastro.business@gmail.com",
+      "twitterURL": "https://twitter.com/jacobdcastro/",
+      "instagramURL": "https://instagram.com/jacobdcastro/",
+      "githubURL": "https://github.com/jacobdcastro/",
       "birthday": "1997-05-27T06:32-07:00",
       "avatar___NODE": "02bc2210-586f-5459-920f-81d918e3caba",
       "blog post___NODE": [
@@ -968,14 +971,14 @@
       "id": "184c794a-b337-50ca-8b95-a4293d5c79c7",
       "contentful_id": "2kMOzSV5Qs0KGG2S2msQsg",
       "createdAt": "2018-10-18T06:30:08.865Z",
-      "updatedAt": "2018-10-23T05:21:02.716Z",
+      "updatedAt": "2018-10-29T23:04:59.471Z",
       "parent": "Author",
       "children": [
         "66e1b74f-271f-5434-ac0f-d5d5f9c8210f"
       ],
       "internal": {
         "type": "ContentfulAuthor",
-        "contentDigest": "28660731c639567fcbf91b0e12b23be8",
+        "contentDigest": "651e06af88c8e1e809d1a1a3c22c637e",
         "owner": "gatsby-source-contentful"
       },
       "node_locale": "en-US"
@@ -984,12 +987,12 @@
       "id": "66e1b74f-271f-5434-ac0f-d5d5f9c8210f",
       "parent": "184c794a-b337-50ca-8b95-a4293d5c79c7",
       "children": [],
-      "biography": "I love lots of cool things. But especially web development!",
+      "biography": "I love front-end web development. I also really love sports and super deep ideas! Follow me everywhere => @jacobdcastro",
       "internal": {
         "type": "contentfulAuthorBiographyTextNode",
         "mediaType": "text/markdown",
-        "content": "I love lots of cool things. But especially web development!",
-        "contentDigest": "b182d5ef8e132e7d4bfc32cb84f74428",
+        "content": "I love front-end web development. I also really love sports and super deep ideas! Follow me everywhere => @jacobdcastro",
+        "contentDigest": "04c7ad8accefe7d929e4235f356fc878",
         "owner": "gatsby-source-contentful"
       }
     },
@@ -1380,7 +1383,7 @@
   "status": {
     "plugins": {
       "gatsby-source-contentful": {
-        "oghc6wtiomc3-master-cdn.contentful.com": "w5ZGw6JFwqZmVcKsE8Kow4grw45QdybCnXpTwoDDscKdD8KBwoDCuiIcwq7Dh8OjKF3ClAAJw7ILwrrChMKqwow5Jmc4A8OIwpXDgDF9ZMKswphhAMO9wp8GCytMfsKawp1nXUnDr8KHw7LDhEhzXcKCwop0Yg"
+        "oghc6wtiomc3-master-cdn.contentful.com": "w5ZGw6JFwqZmVcKsE8Kow4grw45QdybCl0HDjcKAaXHDvwkewrVaGsOxwq7DkkXCtF_DlmXDgcK9w7zCsmJ7w6l3Y8OtGgHDvMKuM8OeAsOsC2LDsiFZw6FzPcKew614AsOVw7_CsMOFFsKqFsOewo7DmmfCkXFV"
       }
     },
     "PLUGINS_HASH": "12e0fad921f3e2ba67dc6dac4a4c0fb2"
@@ -1389,20 +1392,20 @@
     "nodes": {
       "a0d73be9-a3da-5539-8b1c-99db32ec9f91": [
         "/blog/",
-        "/blog/this-is-my-test-post",
-        "/"
+        "/",
+        "/blog/this-is-my-test-post"
       ],
       "d9d5d7bf-3681-5ec4-939d-c4d41c0d9d8f": [
         "/blog/",
-        "/blog/this-is-my-test-post",
-        "/"
+        "/",
+        "/blog/this-is-my-test-post"
       ],
       "184c794a-b337-50ca-8b95-a4293d5c79c7": [
         "/blog/",
+        "/",
         "/blog/this-is-my-test-post",
         "/blog/another-blog-post",
-        "/blog/random-third-post",
-        "/"
+        "/blog/random-third-post"
       ],
       "66e1b74f-271f-5434-ac0f-d5d5f9c8210f": [
         "/blog/",
@@ -1412,28 +1415,28 @@
       ],
       "7d5c07a9-2dd2-50b9-bb43-bd1c1d639eb8": [
         "/blog/",
-        "/blog/another-blog-post",
-        "/"
+        "/",
+        "/blog/another-blog-post"
       ],
       "74f21fcb-49f3-5bad-9c8f-cde71295333b": [
         "/blog/",
+        "/",
         "/blog/another-blog-post",
-        "/blog/random-third-post",
-        "/"
+        "/blog/random-third-post"
       ],
       "d20fc2dc-960d-5489-a740-a743f58e30e5": [
         "/blog/",
-        "/blog/random-third-post",
-        "/"
+        "/",
+        "/blog/random-third-post"
       ],
       "83b21fcb-dff9-5d9f-952f-530da47a6b4c": [
         "/blog/this-is-my-test-post"
       ],
       "02bc2210-586f-5459-920f-81d918e3caba": [
+        "/",
         "/blog/this-is-my-test-post",
         "/blog/another-blog-post",
-        "/blog/random-third-post",
-        "/"
+        "/blog/random-third-post"
       ],
       "119462ce-2156-54b4-9216-372675463996": [
         "/blog/another-blog-post"
@@ -1449,18 +1452,18 @@
     }
   },
   "jsonDataPaths": {
-    "blog-random-third-post-9b7": "244/path---blog-random-third-post-9-b-7-c8c-z7hkblwOoZTgEwNFHLGySl58M",
-    "blog-this-is-my-test-post-95c": "59/path---blog-this-is-my-test-post-95-c-670-eL7kRSOQE6l6s7nr7EdJa0YdM",
-    "blog-another-blog-post-611": "321/path---blog-another-blog-post-611-2dc-uBK3IKJtC1ZTS7Okrie1pKnAPeE",
-    "blog-f7a": "986/path---blog-f-7-a-05d-2R0id6NevNcccGIBE2KmwuAywlI",
-    "contact-26a": "686/path---contact-26-a-cd9-NZuapzHg3X9TaN1iIixfv1W23E",
+    "blog-this-is-my-test-post-95c": "810/path---blog-this-is-my-test-post-95-c-670-vFbxg4aOOOvlRxlSMstUGy84eoA",
+    "blog-f7a": "500/path---blog-f-7-a-05d-BcgC8LSkDfvurid6RpaGFPMgOAA",
+    "blog-another-blog-post-611": "666/path---blog-another-blog-post-611-2dc-DHQOBhQRE4EkMbzRssDs338aJII",
+    "blog-random-third-post-9b7": "804/path---blog-random-third-post-9-b-7-c8c-Skb2nww3wxgzkchRNrbzFcB5jR4",
     "about-f34": "125/path---about-f-34-4c2-NZuapzHg3X9TaN1iIixfv1W23E",
-    "index": "173/path---index-6a9-NZuapzHg3X9TaN1iIixfv1W23E",
-    "dev-404-page-5f9": "920/path---dev-404-page-5-f-9-fab-NZuapzHg3X9TaN1iIixfv1W23E"
+    "dev-404-page-5f9": "920/path---dev-404-page-5-f-9-fab-NZuapzHg3X9TaN1iIixfv1W23E",
+    "contact-26a": "686/path---contact-26-a-cd9-NZuapzHg3X9TaN1iIixfv1W23E",
+    "index": "173/path---index-6a9-NZuapzHg3X9TaN1iIixfv1W23E"
   },
   "components": {
     "C:/Users/jdcas/jdcastro-web-dd/personal-site/src/templates/BlogPost.js": {
-      "query": "query blogPostQuery(\n  $slug: String!\n) {\n  contentfulBlogPost(slug: {eq: $slug}) {\n    id\n    slug\n    tags\n    title\n    subtitle\n    published\n    heroImage {\n      id\n      title\n      description\n      file {\n        url\n      }\n    }\n    bodyContent {\n      bodyContent\n    }\n    author {\n      id\n      name\n      email\n      birthday\n      avatar {\n        file {\n          url\n        }\n      }\n      biography {\n        biography\n      }\n    }\n  }\n}\n",
+      "query": "query blogPostQuery(\n  $slug: String!\n) {\n  contentfulBlogPost(slug: {eq: $slug}) {\n    id\n    slug\n    tags\n    title\n    subtitle\n    published\n    heroImage {\n      id\n      title\n      description\n      file {\n        url\n      }\n    }\n    bodyContent {\n      bodyContent\n    }\n    author {\n      id\n      name\n      email\n      birthday\n      twitterURL\n      instagramURL\n      githubURL\n      avatar {\n        file {\n          url\n        }\n      }\n      biography {\n        biography\n      }\n    }\n  }\n}\n",
       "componentPath": "C:/Users/jdcas/jdcastro-web-dd/personal-site/src/templates/BlogPost.js"
     },
     "C:/Users/jdcas/jdcastro-web-dd/personal-site/.cache/dev-404-page.js": {

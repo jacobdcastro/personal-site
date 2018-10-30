@@ -35,7 +35,7 @@ const AboutHeadline = styled.h2`
 //styled component
 const BlogPostList = styled.div`
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	justify-content: space-around;
   padding: 15px;
 	margin: 0 auto;

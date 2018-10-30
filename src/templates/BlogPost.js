@@ -133,6 +133,9 @@ export const pageQuery = graphql`
 				name
 				email
 				birthday
+				twitterURL
+				instagramURL
+				githubURL
 				avatar {
 					file {
 						url

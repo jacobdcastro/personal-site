@@ -37,6 +37,7 @@ const BlackLayer = styled.div`
 const TitleContainer = styled.div`
 	text-align: center;
 	margin: 5px 14rem;
+	width: 90%;
 `;
 
 const Headline = styled.h1`
