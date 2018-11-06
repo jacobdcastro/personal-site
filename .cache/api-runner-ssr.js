@@ -2,11 +2,11 @@ var plugins = [{
       plugin: require('C:/Users/jdcas/jdcastro-web-dd/personal-site/node_modules/gatsby-plugin-styled-components/gatsby-ssr'),
       options: {"plugins":[]},
     },{
-      plugin: require('C:/Users/jdcas/jdcastro-web-dd/personal-site/node_modules/gatsby-plugin-react-helmet/gatsby-ssr'),
-      options: {"plugins":[]},
-    },{
       plugin: require('C:/Users/jdcas/jdcastro-web-dd/personal-site/node_modules/gatsby-plugin-manifest/gatsby-ssr'),
       options: {"plugins":[],"name":"Jacob D. Castro Personal Website","short_name":"personal","start_url":"/","icon":"src/images/jdc-favicon.png"},
+    },{
+      plugin: require('C:/Users/jdcas/jdcastro-web-dd/personal-site/node_modules/gatsby-plugin-react-helmet/gatsby-ssr'),
+      options: {"plugins":[]},
     }]
 // During bootstrap, we write requires at top of this file which looks like:
 // var plugins = [

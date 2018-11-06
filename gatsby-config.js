@@ -18,7 +18,6 @@ module.exports = {
 				accessToken: '9f37d0ec8416ebe8c9c11b5db58b1a85d39c0f369f15fcc863b47f53c32179e7',
 			},
 		},
-		'gatsby-plugin-react-helmet',
 		{
 			resolve: 'gatsby-plugin-manifest',
 			options: {
@@ -28,7 +27,9 @@ module.exports = {
 				icon: 'src/images/jdc-favicon.png', // This path is relative to the root of the site.
 			},
 		},
+		'gatsby-plugin-react-helmet',
 		'gatsby-plugin-offline',
 		'gatsby-plugin-lodash',
+		'gatsby-plugin-sharp',
 	],
 };

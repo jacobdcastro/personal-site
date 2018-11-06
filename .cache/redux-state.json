@@ -385,87 +385,6 @@
         "owner": "internal-data-bridge"
       }
     },
-    "Plugin gatsby-plugin-react-helmet": {
-      "resolve": "C:/Users/jdcas/jdcastro-web-dd/personal-site/node_modules/gatsby-plugin-react-helmet",
-      "id": "Plugin gatsby-plugin-react-helmet",
-      "name": "gatsby-plugin-react-helmet",
-      "version": "3.0.0",
-      "pluginOptions": {
-        "plugins": []
-      },
-      "nodeAPIs": [],
-      "browserAPIs": [],
-      "ssrAPIs": [
-        "onRenderBody"
-      ],
-      "pluginFilepath": "C:/Users/jdcas/jdcastro-web-dd/personal-site/node_modules/gatsby-plugin-react-helmet",
-      "packageJson": {
-        "name": "gatsby-plugin-react-helmet",
-        "description": "Manage document head data with react-helmet. Provides drop-in server rendering support for Gatsby.",
-        "version": "3.0.0",
-        "main": "index.js",
-        "keywords": [
-          "gatsby",
-          "gatsby-plugin",
-          "favicon",
-          "react-helmet",
-          "seo",
-          "document",
-          "head",
-          "title",
-          "meta",
-          "link",
-          "script",
-          "base",
-          "noscript",
-          "style"
-        ],
-        "author": {
-          "name": "Kyle Mathews",
-          "email": "matthews.kyle@gmail.com"
-        },
-        "license": "MIT",
-        "dependencies": [
-          {
-            "name": "@babel/runtime",
-            "version": "^7.0.0"
-          }
-        ],
-        "devDependencies": [
-          {
-            "name": "@babel/cli",
-            "version": "^7.0.0"
-          },
-          {
-            "name": "@babel/core",
-            "version": "^7.0.0"
-          },
-          {
-            "name": "cross-env",
-            "version": "^5.1.4"
-          }
-        ],
-        "peerDependencies": [
-          {
-            "name": "gatsby",
-            "version": ">2.0.0-alpha"
-          },
-          {
-            "name": "react-helmet",
-            "version": ">=5.1.3"
-          }
-        ],
-        "optionalDependecies": [],
-        "bundledDependecies": []
-      },
-      "parent": "SOURCE",
-      "children": [],
-      "internal": {
-        "contentDigest": "c1cf18d40695e7926cfd44d9ec5e2536",
-        "type": "SitePlugin",
-        "owner": "internal-data-bridge"
-      }
-    },
     "Plugin gatsby-plugin-manifest": {
       "resolve": "C:/Users/jdcas/jdcastro-web-dd/personal-site/node_modules/gatsby-plugin-manifest",
       "id": "Plugin gatsby-plugin-manifest",
@@ -546,6 +465,87 @@
       "children": [],
       "internal": {
         "contentDigest": "4ac921a0fcd7512e6a9ff9cc155db37e",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "Plugin gatsby-plugin-react-helmet": {
+      "resolve": "C:/Users/jdcas/jdcastro-web-dd/personal-site/node_modules/gatsby-plugin-react-helmet",
+      "id": "Plugin gatsby-plugin-react-helmet",
+      "name": "gatsby-plugin-react-helmet",
+      "version": "3.0.0",
+      "pluginOptions": {
+        "plugins": []
+      },
+      "nodeAPIs": [],
+      "browserAPIs": [],
+      "ssrAPIs": [
+        "onRenderBody"
+      ],
+      "pluginFilepath": "C:/Users/jdcas/jdcastro-web-dd/personal-site/node_modules/gatsby-plugin-react-helmet",
+      "packageJson": {
+        "name": "gatsby-plugin-react-helmet",
+        "description": "Manage document head data with react-helmet. Provides drop-in server rendering support for Gatsby.",
+        "version": "3.0.0",
+        "main": "index.js",
+        "keywords": [
+          "gatsby",
+          "gatsby-plugin",
+          "favicon",
+          "react-helmet",
+          "seo",
+          "document",
+          "head",
+          "title",
+          "meta",
+          "link",
+          "script",
+          "base",
+          "noscript",
+          "style"
+        ],
+        "author": {
+          "name": "Kyle Mathews",
+          "email": "matthews.kyle@gmail.com"
+        },
+        "license": "MIT",
+        "dependencies": [
+          {
+            "name": "@babel/runtime",
+            "version": "^7.0.0"
+          }
+        ],
+        "devDependencies": [
+          {
+            "name": "@babel/cli",
+            "version": "^7.0.0"
+          },
+          {
+            "name": "@babel/core",
+            "version": "^7.0.0"
+          },
+          {
+            "name": "cross-env",
+            "version": "^5.1.4"
+          }
+        ],
+        "peerDependencies": [
+          {
+            "name": "gatsby",
+            "version": ">2.0.0-alpha"
+          },
+          {
+            "name": "react-helmet",
+            "version": ">=5.1.3"
+          }
+        ],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "contentDigest": "c1cf18d40695e7926cfd44d9ec5e2536",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
@@ -709,11 +709,140 @@
         "owner": "internal-data-bridge"
       }
     },
+    "Plugin gatsby-plugin-sharp": {
+      "resolve": "C:/Users/jdcas/jdcastro-web-dd/personal-site/node_modules/gatsby-plugin-sharp",
+      "id": "Plugin gatsby-plugin-sharp",
+      "name": "gatsby-plugin-sharp",
+      "version": "2.0.11",
+      "pluginOptions": {
+        "plugins": []
+      },
+      "nodeAPIs": [],
+      "browserAPIs": [],
+      "ssrAPIs": [],
+      "pluginFilepath": "C:/Users/jdcas/jdcastro-web-dd/personal-site/node_modules/gatsby-plugin-sharp",
+      "packageJson": {
+        "name": "gatsby-plugin-sharp",
+        "description": "Wrapper of the Sharp image manipulation library for Gatsby plugins",
+        "version": "2.0.11",
+        "main": "index.js",
+        "keywords": [
+          "gatsby",
+          "gatsby-plugin",
+          "image",
+          "sharp"
+        ],
+        "author": {
+          "name": "Kyle Mathews",
+          "email": "mathews.kyle@gmail.com"
+        },
+        "license": "MIT",
+        "dependencies": [
+          {
+            "name": "@babel/runtime",
+            "version": "^7.0.0"
+          },
+          {
+            "name": "async",
+            "version": "^2.1.2"
+          },
+          {
+            "name": "bluebird",
+            "version": "^3.5.0"
+          },
+          {
+            "name": "fs-exists-cached",
+            "version": "^1.0.0"
+          },
+          {
+            "name": "fs-extra",
+            "version": "^7.0.0"
+          },
+          {
+            "name": "imagemin",
+            "version": "^6.0.0"
+          },
+          {
+            "name": "imagemin-mozjpeg",
+            "version": "^7.0.0"
+          },
+          {
+            "name": "imagemin-pngquant",
+            "version": "^6.0.0"
+          },
+          {
+            "name": "imagemin-webp",
+            "version": "^4.1.0"
+          },
+          {
+            "name": "lodash",
+            "version": "^4.17.10"
+          },
+          {
+            "name": "mini-svg-data-uri",
+            "version": "^1.0.0"
+          },
+          {
+            "name": "potrace",
+            "version": "^2.1.1"
+          },
+          {
+            "name": "probe-image-size",
+            "version": "^4.0.0"
+          },
+          {
+            "name": "progress",
+            "version": "^1.1.8"
+          },
+          {
+            "name": "sharp",
+            "version": "^0.21.0"
+          },
+          {
+            "name": "svgo",
+            "version": "^0.7.2"
+          }
+        ],
+        "devDependencies": [
+          {
+            "name": "@babel/cli",
+            "version": "^7.0.0"
+          },
+          {
+            "name": "@babel/core",
+            "version": "^7.0.0"
+          },
+          {
+            "name": "babel-preset-gatsby-package",
+            "version": "^0.1.2"
+          },
+          {
+            "name": "cross-env",
+            "version": "^5.1.4"
+          }
+        ],
+        "peerDependencies": [
+          {
+            "name": "gatsby",
+            "version": ">2.0.0-alpha"
+          }
+        ],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "contentDigest": "6d6c029e1caf245e364903ee9881054a",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
     "Plugin default-site-plugin": {
       "resolve": "C:/Users/jdcas/jdcastro-web-dd/personal-site",
       "id": "Plugin default-site-plugin",
       "name": "default-site-plugin",
-      "version": "573d344b6585c271205d1762a3f2a20b",
+      "version": "81a47265fa1c1b231c5437f31871af23",
       "pluginOptions": {
         "plugins": []
       },
@@ -749,6 +878,10 @@
             "version": "^2.0.0"
           },
           {
+            "name": "gatsby-image",
+            "version": "^2.0.19"
+          },
+          {
             "name": "gatsby-plugin-lodash",
             "version": "^3.0.1"
           },
@@ -765,6 +898,10 @@
             "version": "^3.0.0"
           },
           {
+            "name": "gatsby-plugin-sharp",
+            "version": "^2.0.11"
+          },
+          {
             "name": "gatsby-plugin-styled-components",
             "version": "^3.0.0"
           },
@@ -775,6 +912,10 @@
           {
             "name": "gatsby-source-contentful",
             "version": "^2.0.4"
+          },
+          {
+            "name": "gatsby-transformer-sharp",
+            "version": "^2.1.7"
           },
           {
             "name": "lodash",
@@ -822,7 +963,7 @@
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "ce54eaabb23f24778b8f6def0ffa0a0e",
+        "contentDigest": "e30631eb63c2991597a398ab452813e7",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
@@ -931,12 +1072,12 @@
       "host": "localhost",
       "pathPrefix": "/blog",
       "polyfill": true,
-      "buildTime": "2018-10-30T00:53:23.047Z",
+      "buildTime": "2018-11-06T20:04:14.213Z",
       "id": "Site",
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "94a55c670714875b5acee83ee423362e",
+        "contentDigest": "349024db8bcf53bc8be3a0b1710c5cf9",
         "type": "Site",
         "owner": "internal-data-bridge"
       }
@@ -1386,26 +1527,26 @@
         "oghc6wtiomc3-master-cdn.contentful.com": "w5ZGw6JFwqZmVcKsE8Kow4grw45QdybCl0HDjcKAaXHDvwkewrVaGsOxwq7DkkXCtF_DlmXDgcK9w7zCsmJ7w6l3Y8OtGgHDvMKuM8OeAsOsC2LDsiFZw6FzPcKew614AsOVw7_CsMOFFsKqFsOewo7DmmfCkXFV"
       }
     },
-    "PLUGINS_HASH": "12e0fad921f3e2ba67dc6dac4a4c0fb2"
+    "PLUGINS_HASH": "f08bab4c6ab4e9a6d656bef9a8dc8617"
   },
   "componentDataDependencies": {
     "nodes": {
       "a0d73be9-a3da-5539-8b1c-99db32ec9f91": [
         "/blog/",
-        "/",
-        "/blog/this-is-my-test-post"
+        "/blog/this-is-my-test-post",
+        "/"
       ],
       "d9d5d7bf-3681-5ec4-939d-c4d41c0d9d8f": [
         "/blog/",
-        "/",
-        "/blog/this-is-my-test-post"
+        "/blog/this-is-my-test-post",
+        "/"
       ],
       "184c794a-b337-50ca-8b95-a4293d5c79c7": [
         "/blog/",
-        "/",
         "/blog/this-is-my-test-post",
         "/blog/another-blog-post",
-        "/blog/random-third-post"
+        "/blog/random-third-post",
+        "/"
       ],
       "66e1b74f-271f-5434-ac0f-d5d5f9c8210f": [
         "/blog/",
@@ -1415,28 +1556,28 @@
       ],
       "7d5c07a9-2dd2-50b9-bb43-bd1c1d639eb8": [
         "/blog/",
-        "/",
-        "/blog/another-blog-post"
+        "/blog/another-blog-post",
+        "/"
       ],
       "74f21fcb-49f3-5bad-9c8f-cde71295333b": [
         "/blog/",
-        "/",
         "/blog/another-blog-post",
-        "/blog/random-third-post"
+        "/blog/random-third-post",
+        "/"
       ],
       "d20fc2dc-960d-5489-a740-a743f58e30e5": [
         "/blog/",
-        "/",
-        "/blog/random-third-post"
+        "/blog/random-third-post",
+        "/"
       ],
       "83b21fcb-dff9-5d9f-952f-530da47a6b4c": [
         "/blog/this-is-my-test-post"
       ],
       "02bc2210-586f-5459-920f-81d918e3caba": [
-        "/",
         "/blog/this-is-my-test-post",
         "/blog/another-blog-post",
-        "/blog/random-third-post"
+        "/blog/random-third-post",
+        "/"
       ],
       "119462ce-2156-54b4-9216-372675463996": [
         "/blog/another-blog-post"
@@ -1453,12 +1594,12 @@
   },
   "jsonDataPaths": {
     "blog-this-is-my-test-post-95c": "810/path---blog-this-is-my-test-post-95-c-670-vFbxg4aOOOvlRxlSMstUGy84eoA",
-    "blog-f7a": "500/path---blog-f-7-a-05d-BcgC8LSkDfvurid6RpaGFPMgOAA",
     "blog-another-blog-post-611": "666/path---blog-another-blog-post-611-2dc-DHQOBhQRE4EkMbzRssDs338aJII",
     "blog-random-third-post-9b7": "804/path---blog-random-third-post-9-b-7-c8c-Skb2nww3wxgzkchRNrbzFcB5jR4",
-    "about-f34": "125/path---about-f-34-4c2-NZuapzHg3X9TaN1iIixfv1W23E",
+    "blog-f7a": "500/path---blog-f-7-a-05d-BcgC8LSkDfvurid6RpaGFPMgOAA",
     "dev-404-page-5f9": "920/path---dev-404-page-5-f-9-fab-NZuapzHg3X9TaN1iIixfv1W23E",
     "contact-26a": "686/path---contact-26-a-cd9-NZuapzHg3X9TaN1iIixfv1W23E",
+    "about-f34": "125/path---about-f-34-4c2-NZuapzHg3X9TaN1iIixfv1W23E",
     "index": "173/path---index-6a9-NZuapzHg3X9TaN1iIixfv1W23E"
   },
   "components": {

@@ -37,7 +37,8 @@ const BlogPostList = styled.div`
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
-  padding: 15px;
+	align-items: center;
+  padding: 0;
 	margin: 0 auto;
   width: 100%;
   max-width: 1125px;

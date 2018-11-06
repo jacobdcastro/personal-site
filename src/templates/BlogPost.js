@@ -82,9 +82,7 @@ class BlogPost extends React.Component {
 				<BlogPageIntro
 					action={this.openMobileNav}
 					headline={data.title}
-					author={data.author.name}
 					bgImg={data.heroImage.file.url}
-					aboutPage={false}
 				/>
 
 				<ContentWrapper>
