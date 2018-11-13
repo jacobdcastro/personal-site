@@ -13,7 +13,8 @@ module.exports = {
         "sourceType": "module"
     },
     "plugins": [
-        "react"
+        "react",
+				"styled-components"
     ],
     "rules": {
         "indent": [
@@ -31,6 +32,7 @@ module.exports = {
         "semi": [
             "error",
             "always"
-        ]
+        ],
+				"styled-components/rule-name": 2
     }
 };

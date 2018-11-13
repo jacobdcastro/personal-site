@@ -1,7 +1,7 @@
 module.exports = {
 	siteMetadata: {
 		title: 'Jacob D. Castro',
-		desc: 'A personal, information website and design/development playground for Jacob D. Castro',
+		desc: 'A personal, informational website and design/development playground for Jacob D. Castro',
 	},
 	pathPrefix: '/blog',
 	plugins: [
@@ -14,7 +14,9 @@ module.exports = {
 		{
 			resolve: 'gatsby-source-contentful',
 			options: {
+				//SPACE_ID build environment variable from Netlify
 				spaceId: 'oghc6wtiomc3',
+				//DELIVERY_API_TOKEN build environment variable from Netlify
 				accessToken: '9f37d0ec8416ebe8c9c11b5db58b1a85d39c0f369f15fcc863b47f53c32179e7',
 			},
 		},

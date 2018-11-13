@@ -14,9 +14,9 @@ const PageContainer = styled.div`
 	padding: 0;
 `;
 
-//styled component
 const BlogListContainer = styled.div`
 	height: auto;
+	width: 90%;
 	max-width: 1125px;
 	margin: 20px auto;
 	text-align: center;
@@ -32,16 +32,23 @@ const AboutHeadline = styled.h2`
     }
 `;
 
-//styled component
 const BlogPostList = styled.div`
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
-	align-items: center;
+	display: grid;
+	grid: auto / auto;
   padding: 0;
 	margin: 0 auto;
-  width: 100%;
+  width: 95%;
   max-width: 1125px;
+	@media (min-width: 840px) {
+		width: 760px;
+		margin: auto;
+		grid: auto / repeat(2, auto);
+		grid-row-gap: 12px;
+	}
+	@media (min-width: 1270px) {
+		width: 1100px;
+		grid: auto / repeat(3, auto);
+	}
 `;
 
 class Blog extends React.Component {
@@ -71,7 +78,7 @@ class Blog extends React.Component {
 
 	render() {
 		// variable 'posts' is an array of all blog posts
-		// const posts = this.props.data.allContentfulBlogPost.edges;
+		const { posts } = this.props.data.allContentfulBlogPost.edges;
 		console.log(this.props.data.allContentfulBlogPost.edges);
 
 		return (
@@ -93,7 +100,11 @@ class Blog extends React.Component {
 							//set dynamic slug and insert in <Link> component
 							const blogSlug = `blog/${node.slug}`;
 							return (
-								<Link key={node.id} to={blogSlug} style={{textDecoration: 'none'}}>
+								<Link key={node.id} to={blogSlug}
+									style={{
+										textDecoration: 'none',
+										margin: '0',
+										padding: '0'}}>
 									<BlogPreviewCard key={node.id} postData={node} />
 								</Link>
 							);

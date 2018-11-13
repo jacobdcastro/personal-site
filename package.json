@@ -16,6 +16,7 @@
     "gatsby-plugin-styled-components": "^3.0.0",
     "gatsby-plugin-typography": "^2.2.0",
     "gatsby-source-contentful": "^2.0.4",
+    "gatsby-source-graphcms": "^1.0.0-alpha.3",
     "gatsby-transformer-sharp": "^2.1.7",
     "lodash": "^4.17.11",
     "react": "^16.5.1",

@@ -842,7 +842,7 @@
       "resolve": "C:/Users/jdcas/jdcastro-web-dd/personal-site",
       "id": "Plugin default-site-plugin",
       "name": "default-site-plugin",
-      "version": "81a47265fa1c1b231c5437f31871af23",
+      "version": "5e6c2564e42741cd6da3e6f6f7397860",
       "pluginOptions": {
         "plugins": []
       },
@@ -914,6 +914,10 @@
             "version": "^2.0.4"
           },
           {
+            "name": "gatsby-source-graphcms",
+            "version": "^1.0.0-alpha.3"
+          },
+          {
             "name": "gatsby-transformer-sharp",
             "version": "^2.1.7"
           },
@@ -963,7 +967,7 @@
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "e30631eb63c2991597a398ab452813e7",
+        "contentDigest": "3fad804c5e954cd43fc286a39bd50dae",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
@@ -1066,18 +1070,18 @@
     "Site": {
       "siteMetadata": {
         "title": "Jacob D. Castro",
-        "desc": "A personal, information website and design/development playground for Jacob D. Castro"
+        "desc": "A personal, informational website and design/development playground for Jacob D. Castro"
       },
       "port": "8000",
       "host": "localhost",
       "pathPrefix": "/blog",
       "polyfill": true,
-      "buildTime": "2018-11-06T20:04:14.213Z",
+      "buildTime": "2018-11-13T03:51:25.851Z",
       "id": "Site",
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "349024db8bcf53bc8be3a0b1710c5cf9",
+        "contentDigest": "97f8e79e2108c66eaf543a50c0751e88",
         "type": "Site",
         "owner": "internal-data-bridge"
       }
@@ -1527,7 +1531,7 @@
         "oghc6wtiomc3-master-cdn.contentful.com": "w5ZGw6JFwqZmVcKsE8Kow4grw45QdybCl0HDjcKAaXHDvwkewrVaGsOxwq7DkkXCtF_DlmXDgcK9w7zCsmJ7w6l3Y8OtGgHDvMKuM8OeAsOsC2LDsiFZw6FzPcKew614AsOVw7_CsMOFFsKqFsOewo7DmmfCkXFV"
       }
     },
-    "PLUGINS_HASH": "f08bab4c6ab4e9a6d656bef9a8dc8617"
+    "PLUGINS_HASH": "04e53f677a1488f9492ef3c409b1d410"
   },
   "componentDataDependencies": {
     "nodes": {
@@ -1594,9 +1598,9 @@
   },
   "jsonDataPaths": {
     "blog-this-is-my-test-post-95c": "810/path---blog-this-is-my-test-post-95-c-670-vFbxg4aOOOvlRxlSMstUGy84eoA",
-    "blog-another-blog-post-611": "666/path---blog-another-blog-post-611-2dc-DHQOBhQRE4EkMbzRssDs338aJII",
-    "blog-random-third-post-9b7": "804/path---blog-random-third-post-9-b-7-c8c-Skb2nww3wxgzkchRNrbzFcB5jR4",
     "blog-f7a": "500/path---blog-f-7-a-05d-BcgC8LSkDfvurid6RpaGFPMgOAA",
+    "blog-random-third-post-9b7": "804/path---blog-random-third-post-9-b-7-c8c-Skb2nww3wxgzkchRNrbzFcB5jR4",
+    "blog-another-blog-post-611": "666/path---blog-another-blog-post-611-2dc-DHQOBhQRE4EkMbzRssDs338aJII",
     "dev-404-page-5f9": "920/path---dev-404-page-5-f-9-fab-NZuapzHg3X9TaN1iIixfv1W23E",
     "contact-26a": "686/path---contact-26-a-cd9-NZuapzHg3X9TaN1iIixfv1W23E",
     "about-f34": "125/path---about-f-34-4c2-NZuapzHg3X9TaN1iIixfv1W23E",
