@@ -14,7 +14,6 @@ module.exports = {
     },
     "plugins": [
         "react",
-				"styled-components"
     ],
     "rules": {
         "indent": [
