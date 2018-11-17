@@ -39,11 +39,12 @@ const BlogPostList = styled.div`
 	margin: 0 auto;
   width: 95%;
   max-width: 1125px;
-	@media (min-width: 840px) {
+	grid-row-gap: 20px;
+	grid-column-gap: 20px;
+	@media (min-width: 820px) {
 		width: 760px;
 		margin: auto;
 		grid: auto / repeat(2, auto);
-		grid-row-gap: 12px;
 	}
 	@media (min-width: 1270px) {
 		width: 1100px;
@@ -77,10 +78,6 @@ class Blog extends React.Component {
 
 
 	render() {
-		// variable 'posts' is an array of all blog posts
-		const { posts } = this.props.data.allContentfulBlogPost.edges;
-		console.log(this.props.data.allContentfulBlogPost.edges);
-
 		return (
 			<PageContainer>
 				<Helmet>
@@ -97,8 +94,7 @@ class Blog extends React.Component {
 					<BlogPostList>
 						{/* create new array of individual blog post preview cards */}
 						{this.props.data.allContentfulBlogPost.edges.map(({node}) => {
-							//set dynamic slug and insert in <Link> component
-							const blogSlug = `blog/${node.slug}`;
+							const blogSlug = `blog/${node.slug}`; //set dynamic slug and insert in <Link> component
 							return (
 								<Link key={node.id} to={blogSlug}
 									style={{
@@ -129,10 +125,13 @@ export const pageQuery = graphql`
 	        title
 	        slug
 	        subtitle
-	        published
-	        bodyContent {
-	          bodyContent
-	        }
+	        published(formatString: "MMMM Do, YYYY")
+					bodyContent {
+			      childMarkdownRemark {
+							html
+							excerpt
+						}
+			    }
 	        heroImage {
 	          title
 	          description

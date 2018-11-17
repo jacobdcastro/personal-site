@@ -26,8 +26,9 @@ const IconLink = styled.a`
 const Icon = styled.img`
   height: 30px;
   width: auto;
+	transition: 0.23s;
   &:hover  {
-     /* add bouncing animation to icons */
+     transform: translate(0px, -6px);
   }
 `;
 
@@ -41,6 +42,8 @@ const Copyright = styled.p`
 `;
 
 const linkStyles = {
+	height: '33px',
+	width: '33px',
 	padding: '0',
 	margin: '0'
 };

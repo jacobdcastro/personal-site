@@ -84,17 +84,14 @@ class BlogPost extends React.Component {
 					headline={data.title}
 					bgImg={data.heroImage.file.url}
 				/>
-
 				<ContentWrapper>
-
 					<BlogSubheader data={data} />
-
-					<BlogParagraph>
-						{data.bodyContent.bodyContent}
-					</BlogParagraph>
+					<BlogParagraph
+						dangerouslySetInnerHTML={{__html: data.bodyContent.childMarkdownRemark.html}}
+					/>
 				</ContentWrapper>
 
-				<Footer />
+				<Footer backgroundIsBlack={false} />
 			</Container>
 		);
 	}
@@ -114,7 +111,7 @@ export const pageQuery = graphql`
 			tags
 	    title
 	    subtitle
-	    published
+	    published(formatString: "MMMM Do, YYYY")
 	    heroImage {
 	      id
 				title
@@ -124,7 +121,10 @@ export const pageQuery = graphql`
 				}
 	    }
 	    bodyContent {
-	      bodyContent
+	      childMarkdownRemark {
+					html
+					excerpt
+				}
 	    }
 			author {
 				id
