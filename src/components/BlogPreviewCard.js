@@ -26,28 +26,28 @@ const CardContainer = styled.div`
 	}
 `;
 
-const BlogTitleSection = styled.div`
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
-	align-self: flex-end;
-	margin: auto auto 0;
-	height: 80%;
-	width: 80%;
-	float: left;
-`;
-
 const BlackLayer = styled.div`
 	margin: 0;
-	padding: 12px;
-	background-color: rgba(0,0,0,0.4);
+	padding: 20px;
+	background-color: rgba(0,0,0,0.5);
 	height: 100%;
 	width: auto;
 `;
 
+const BlogTitleSection = styled.div`
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: stretch;
+	margin: auto auto 0;
+	height: 100%;
+	width: 80%;
+	float: left;
+`;
+
 const BlogTitle = styled.h1`
 	${fontFamily}
-	font-size: 1.4em;
+	font-size: 1.6em;
 	letter-spacing: 3px;
 	${padMar}
 	text-decoration: none;
@@ -73,7 +73,8 @@ const BlogAuthor = styled.h4`
 
 const BlogExcerpt = styled.p`
 	${fontFamily}
-	${padMar}
+	padding: 0;
+	margin: 0px;
 	text-decoration: none;
 	color: white;
 `;
@@ -81,6 +82,8 @@ const BlogExcerpt = styled.p`
 const DatePublished = styled.h5`
 	${fontFamily}
 	${padMar}
+	font-size: 1.05em;
+	letter-spacing: 1px;
 	text-decoration: none;
 	color: white;
 `;
@@ -95,7 +98,7 @@ class BlogPreviewCard extends React.Component {
 					<BlogTitleSection>
 						<BlogTitle>{data.title}</BlogTitle>
 						<BlogSubtitle>{data.subtitle}</BlogSubtitle>
-						<BlogAuthor>By: {data.author.name}</BlogAuthor>
+						{/* <BlogAuthor>By: {data.author.name}</BlogAuthor> */}
 						<BlogExcerpt>{data.bodyContent.childMarkdownRemark.excerpt}</BlogExcerpt>
 						<DatePublished>{data.published}</DatePublished>
 					</BlogTitleSection>

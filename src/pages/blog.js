@@ -63,19 +63,16 @@ class Blog extends React.Component {
 			bgImg: '../images/cave.jpg',
 		};
 	}
-
 	openMobileNav() {
 		this.setState({
 			mobileNavIsOpen: true
 		});
 	}
-
 	closeMobileNav() {
 		this.setState({
 			mobileNavIsOpen: false
 		});
 	}
-
 
 	render() {
 		return (
@@ -128,7 +125,6 @@ export const pageQuery = graphql`
 	        published(formatString: "MMMM Do, YYYY")
 					bodyContent {
 			      childMarkdownRemark {
-							html
 							excerpt
 						}
 			    }

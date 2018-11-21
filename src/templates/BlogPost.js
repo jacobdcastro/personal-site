@@ -7,6 +7,7 @@ import { Helmet } from 'react-helmet';
 import MobileNav from '../components/MobileNav';
 import BlogPageIntro from '../components/BlogPageIntro';
 import BlogSubheader from '../components/BlogSubheader';
+import Signature from '../components/Signature';
 import Footer from '../components/Footer';
 
 const Container = styled.div`
@@ -89,6 +90,7 @@ class BlogPost extends React.Component {
 					<BlogParagraph
 						dangerouslySetInnerHTML={{__html: data.bodyContent.childMarkdownRemark.html}}
 					/>
+					<Signature />
 				</ContentWrapper>
 
 				<Footer backgroundIsBlack={false} />
@@ -123,7 +125,6 @@ export const pageQuery = graphql`
 	    bodyContent {
 	      childMarkdownRemark {
 					html
-					excerpt
 				}
 	    }
 			author {

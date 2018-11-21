@@ -36,7 +36,7 @@ const Copyright = styled.p`
   font-family: 'Montserrat', 'Helvetica', sans-serif;
   {/* // color defined inline */}
   text-align: center;
-  font-weight: 200;
+  font-weight: 400;
   font-size: 14px;
   letter-spacing: 2px;
 `;

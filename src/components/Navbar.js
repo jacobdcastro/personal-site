@@ -23,7 +23,7 @@ const HeadMenu = styled.ul`
   max-width: 585px;
 
   @media (min-width: 820px) {
-    width: 45%;
+    width: 63%;
     display: flex;
     flex-direction: row;
     align-items: flex-end;
