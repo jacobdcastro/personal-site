@@ -37,6 +37,22 @@ const BlogParagraph = styled.p`
   line-height: 27px;
   color: #353535;
 
+	img {
+		width: 100%;
+		height: auto;
+		max-width: 650px;
+	}
+	pre code {
+		display: block;
+		padding: 8px 18px;
+	}
+	code {
+		padding: auto 8px;
+		background-color: #e9e9e9;
+		border: 1px solid #888;
+		border-radius: 5px;
+	}
+
   @media (min-width: 820px) {
     width: 80%;
     font-size: 1.1em;
@@ -69,6 +85,7 @@ class BlogPost extends React.Component {
 	render() {
 		const data = this.props.data.contentfulBlogPost;
 		console.log(this.props.data.contentfulBlogPost);
+		console.log(data.bodyContent.childMarkdownRemark.html);
 		return (
 			<Container>
 				<Helmet>
