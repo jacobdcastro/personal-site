@@ -1,0 +1,1955 @@
+{
+  "nodes": {
+    "SitePage /dev-404-page/": {
+      "jsonName": "dev-404-page-5f9",
+      "internalComponentName": "ComponentDev404Page",
+      "path": "/dev-404-page/",
+      "component": "C:/Users/jdcas/jdcastro-web-dd/personal-site/.cache/dev-404-page.js",
+      "componentChunkName": "component---cache-dev-404-page-js",
+      "context": {},
+      "pluginCreator___NODE": "d48d1c52-fe48-53cb-8f08-aa4b47dde5a5",
+      "pluginCreatorId": "d48d1c52-fe48-53cb-8f08-aa4b47dde5a5",
+      "componentPath": "C:/Users/jdcas/jdcastro-web-dd/personal-site/.cache/dev-404-page.js",
+      "id": "SitePage /dev-404-page/",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "440c2455ff38c1a65a01468ad714c77b",
+        "description": "d48d1c52-fe48-53cb-8f08-aa4b47dde5a5",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "d48d1c52-fe48-53cb-8f08-aa4b47dde5a5": {
+      "resolve": "C:/Users/jdcas/jdcastro-web-dd/personal-site/node_modules/gatsby/dist/internal-plugins/dev-404-page",
+      "id": "d48d1c52-fe48-53cb-8f08-aa4b47dde5a5",
+      "name": "dev-404-page",
+      "version": "1.0.0",
+      "pluginOptions": {
+        "plugins": []
+      },
+      "nodeAPIs": [
+        "createPagesStatefully"
+      ],
+      "browserAPIs": [],
+      "ssrAPIs": [],
+      "pluginFilepath": "C:/Users/jdcas/jdcastro-web-dd/personal-site/node_modules/gatsby/dist/internal-plugins/dev-404-page",
+      "packageJson": {
+        "name": "dev-404-page",
+        "description": "Internal plugin to add a 404 page in development with helpful information",
+        "version": "1.0.0",
+        "main": "index.js",
+        "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+        "license": "MIT",
+        "dependencies": [],
+        "devDependencies": [],
+        "peerDependencies": [],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "contentDigest": "8747b7b345bd8dc730b0dfa9dd150da4",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "1fc32581-893a-55e8-8927-bcd667e2b700": {
+      "resolve": "C:/Users/jdcas/jdcastro-web-dd/personal-site/node_modules/gatsby/dist/internal-plugins/load-babel-config",
+      "id": "1fc32581-893a-55e8-8927-bcd667e2b700",
+      "name": "load-babel-config",
+      "version": "1.0.0",
+      "pluginOptions": {
+        "plugins": []
+      },
+      "nodeAPIs": [
+        "onPreBootstrap"
+      ],
+      "browserAPIs": [],
+      "ssrAPIs": [],
+      "pluginFilepath": "C:/Users/jdcas/jdcastro-web-dd/personal-site/node_modules/gatsby/dist/internal-plugins/load-babel-config",
+      "packageJson": {
+        "name": "load-babel-config",
+        "description": "Internal plugin that handles loading Babel configs",
+        "version": "1.0.0",
+        "main": "index.js",
+        "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+        "license": "MIT",
+        "dependencies": [],
+        "devDependencies": [],
+        "peerDependencies": [],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "contentDigest": "ee6dbd9e8b18dc7ec67b1d767cf79b68",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "a5079d69-ba80-53dc-82f9-0f440bd5448c": {
+      "resolve": "C:/Users/jdcas/jdcastro-web-dd/personal-site/node_modules/gatsby/dist/internal-plugins/internal-data-bridge",
+      "id": "a5079d69-ba80-53dc-82f9-0f440bd5448c",
+      "name": "internal-data-bridge",
+      "version": "1.0.0",
+      "pluginOptions": {
+        "plugins": []
+      },
+      "nodeAPIs": [
+        "sourceNodes",
+        "onCreatePage"
+      ],
+      "browserAPIs": [],
+      "ssrAPIs": [],
+      "pluginFilepath": "C:/Users/jdcas/jdcastro-web-dd/personal-site/node_modules/gatsby/dist/internal-plugins/internal-data-bridge",
+      "packageJson": {
+        "name": "internal-data-bridge",
+        "description": "An internal Gatsby plugin which creates data nodes from internal data",
+        "version": "1.0.0",
+        "main": "index.js",
+        "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+        "license": "MIT",
+        "dependencies": [],
+        "devDependencies": [],
+        "peerDependencies": [],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "contentDigest": "7a058dbfa41244f5ea933767ce5629da",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "f795702c-a3b8-5a88-88ee-5d06019d44fa": {
+      "resolve": "C:/Users/jdcas/jdcastro-web-dd/personal-site/node_modules/gatsby/dist/internal-plugins/prod-404",
+      "id": "f795702c-a3b8-5a88-88ee-5d06019d44fa",
+      "name": "prod-404",
+      "version": "1.0.0",
+      "pluginOptions": {
+        "plugins": []
+      },
+      "nodeAPIs": [
+        "onCreatePage"
+      ],
+      "browserAPIs": [],
+      "ssrAPIs": [],
+      "pluginFilepath": "C:/Users/jdcas/jdcastro-web-dd/personal-site/node_modules/gatsby/dist/internal-plugins/prod-404",
+      "packageJson": {
+        "name": "prod-404",
+        "description": "Internal plugin to detect various flavors of 404 pages and ensure there's a 404.html path created as well to ensure compatability with static hosts",
+        "version": "1.0.0",
+        "main": "index.js",
+        "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+        "license": "MIT",
+        "dependencies": [],
+        "devDependencies": [],
+        "peerDependencies": [],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "contentDigest": "8b352a3559578ca93d8d12b99526ab3a",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "84dad27f-1d44-51fc-ac56-4db2e5222995": {
+      "resolve": "C:/Users/jdcas/jdcastro-web-dd/personal-site/node_modules/gatsby/dist/internal-plugins/query-runner",
+      "id": "84dad27f-1d44-51fc-ac56-4db2e5222995",
+      "name": "query-runner",
+      "version": "1.0.0",
+      "pluginOptions": {
+        "plugins": []
+      },
+      "nodeAPIs": [
+        "onCreatePage"
+      ],
+      "browserAPIs": [],
+      "ssrAPIs": [],
+      "pluginFilepath": "C:/Users/jdcas/jdcastro-web-dd/personal-site/node_modules/gatsby/dist/internal-plugins/query-runner",
+      "packageJson": {
+        "name": "query-runner",
+        "description": "Internal plugin for running queries",
+        "version": "1.0.0",
+        "main": "index.js",
+        "author": "",
+        "license": "MIT",
+        "dependencies": [],
+        "devDependencies": [],
+        "peerDependencies": [],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "contentDigest": "d70ff686c79813c019b75f2d4a16df65",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "d5c18d83-6ae2-52f0-a3bf-a892203bde4f": {
+      "resolve": "C:/Users/jdcas/jdcastro-web-dd/personal-site/node_modules/gatsby-plugin-styled-components",
+      "id": "d5c18d83-6ae2-52f0-a3bf-a892203bde4f",
+      "name": "gatsby-plugin-styled-components",
+      "version": "3.0.2",
+      "pluginOptions": {
+        "plugins": []
+      },
+      "nodeAPIs": [
+        "onCreateBabelConfig"
+      ],
+      "browserAPIs": [],
+      "ssrAPIs": [
+        "wrapRootElement",
+        "onRenderBody"
+      ],
+      "pluginFilepath": "C:/Users/jdcas/jdcastro-web-dd/personal-site/node_modules/gatsby-plugin-styled-components",
+      "packageJson": {
+        "name": "gatsby-plugin-styled-components",
+        "description": "Gatsby plugin to add support for styled components",
+        "version": "3.0.2",
+        "main": "index.js",
+        "keywords": [
+          "gatsby",
+          "gatsby-plugin",
+          "styled-components"
+        ],
+        "author": {
+          "name": "Guten Ye",
+          "email": "ywzhaifei@gmail.com"
+        },
+        "license": "MIT",
+        "dependencies": [
+          {
+            "name": "@babel/runtime",
+            "version": "^7.0.0"
+          }
+        ],
+        "devDependencies": [
+          {
+            "name": "@babel/cli",
+            "version": "^7.0.0"
+          },
+          {
+            "name": "@babel/core",
+            "version": "^7.0.0"
+          },
+          {
+            "name": "babel-preset-gatsby-package",
+            "version": "^0.1.2"
+          }
+        ],
+        "peerDependencies": [
+          {
+            "name": "babel-plugin-styled-components",
+            "version": ">1.5.0"
+          },
+          {
+            "name": "gatsby",
+            "version": ">2.0.0-alpha"
+          },
+          {
+            "name": "styled-components",
+            "version": ">= 2.0.0"
+          }
+        ],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "contentDigest": "fd6fec94444f62902233d651b0c64eab",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "39113146-9e4b-589c-88fe-942a67232640": {
+      "resolve": "C:/Users/jdcas/jdcastro-web-dd/personal-site/node_modules/gatsby-source-contentful",
+      "id": "39113146-9e4b-589c-88fe-942a67232640",
+      "name": "gatsby-source-contentful",
+      "version": "2.0.14",
+      "pluginOptions": {
+        "plugins": [],
+        "spaceId": "oghc6wtiomc3",
+        "accessToken": "9f37d0ec8416ebe8c9c11b5db58b1a85d39c0f369f15fcc863b47f53c32179e7",
+        "host": "cdn.contentful.com",
+        "environment": "master"
+      },
+      "nodeAPIs": [
+        "setFieldsOnGraphQLNodeType",
+        "sourceNodes",
+        "onPreExtractQueries"
+      ],
+      "browserAPIs": [],
+      "ssrAPIs": [],
+      "pluginFilepath": "C:/Users/jdcas/jdcastro-web-dd/personal-site/node_modules/gatsby-source-contentful",
+      "packageJson": {
+        "name": "gatsby-source-contentful",
+        "description": "Gatsby source plugin for building websites using the Contentful CMS as a data source",
+        "version": "2.0.14",
+        "keywords": [
+          "gatsby",
+          "gatsby-plugin",
+          "gatsby-source-plugin"
+        ],
+        "author": {
+          "name": "Marcus Ericsson",
+          "email": "mericsson@gmail.com",
+          "url": "mericsson.com"
+        },
+        "license": "MIT",
+        "dependencies": [
+          {
+            "name": "@babel/runtime",
+            "version": "^7.0.0"
+          },
+          {
+            "name": "axios",
+            "version": "^0.18.0"
+          },
+          {
+            "name": "base64-img",
+            "version": "^1.0.3"
+          },
+          {
+            "name": "bluebird",
+            "version": "^3.5.0"
+          },
+          {
+            "name": "contentful",
+            "version": "^6.1.0"
+          },
+          {
+            "name": "deep-map",
+            "version": "^1.5.0"
+          },
+          {
+            "name": "fs-extra",
+            "version": "^4.0.2"
+          },
+          {
+            "name": "gatsby-plugin-sharp",
+            "version": "^2.0.12"
+          },
+          {
+            "name": "is-online",
+            "version": "^7.0.0"
+          },
+          {
+            "name": "json-stringify-safe",
+            "version": "^5.0.1"
+          },
+          {
+            "name": "lodash",
+            "version": "^4.17.10"
+          },
+          {
+            "name": "qs",
+            "version": "^6.4.0"
+          }
+        ],
+        "devDependencies": [
+          {
+            "name": "@babel/cli",
+            "version": "^7.0.0"
+          },
+          {
+            "name": "@babel/core",
+            "version": "^7.0.0"
+          },
+          {
+            "name": "babel-preset-gatsby-package",
+            "version": "^0.1.2"
+          },
+          {
+            "name": "cross-env",
+            "version": "^5.1.4"
+          }
+        ],
+        "peerDependencies": [
+          {
+            "name": "gatsby",
+            "version": "^2.0.33"
+          }
+        ],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "contentDigest": "072008044be8e060ed3764d61d3e59db",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "a067d27b-5a51-505c-b0be-3ad27b125b98": {
+      "resolve": "C:/Users/jdcas/jdcastro-web-dd/personal-site/node_modules/gatsby-plugin-manifest",
+      "id": "a067d27b-5a51-505c-b0be-3ad27b125b98",
+      "name": "gatsby-plugin-manifest",
+      "version": "2.0.9",
+      "pluginOptions": {
+        "plugins": [],
+        "name": "Jacob D. Castro Personal Website",
+        "short_name": "personal",
+        "start_url": "/",
+        "icon": "src/images/jdc-favicon.png"
+      },
+      "nodeAPIs": [
+        "onPostBootstrap"
+      ],
+      "browserAPIs": [],
+      "ssrAPIs": [
+        "onRenderBody"
+      ],
+      "pluginFilepath": "C:/Users/jdcas/jdcastro-web-dd/personal-site/node_modules/gatsby-plugin-manifest",
+      "packageJson": {
+        "name": "gatsby-plugin-manifest",
+        "description": "Gatsby plugin which adds a manifest.webmanifest to make sites progressive web apps",
+        "version": "2.0.9",
+        "main": "index.js",
+        "keywords": [
+          "gatsby",
+          "gatsby-plugin",
+          "favicon",
+          "icons",
+          "manifest.webmanifest",
+          "progressive-web-app",
+          "pwa"
+        ],
+        "author": {
+          "name": "Kyle Mathews",
+          "email": "mathews.kyle@gmail.com"
+        },
+        "license": "MIT",
+        "dependencies": [
+          {
+            "name": "@babel/runtime",
+            "version": "^7.0.0"
+          },
+          {
+            "name": "bluebird",
+            "version": "^3.5.0"
+          },
+          {
+            "name": "sharp",
+            "version": "^0.21.0"
+          }
+        ],
+        "devDependencies": [
+          {
+            "name": "@babel/cli",
+            "version": "^7.0.0"
+          },
+          {
+            "name": "@babel/core",
+            "version": "^7.0.0"
+          },
+          {
+            "name": "babel-preset-gatsby-package",
+            "version": "^0.1.2"
+          },
+          {
+            "name": "cross-env",
+            "version": "^5.1.4"
+          }
+        ],
+        "peerDependencies": [
+          {
+            "name": "gatsby",
+            "version": ">2.0.0-alpha"
+          }
+        ],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "contentDigest": "395eaef5df0801ea5c850b76657b4a3f",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "9f28d07a-37b6-51d1-b2d0-5071b57d6dd2": {
+      "resolve": "C:/Users/jdcas/jdcastro-web-dd/personal-site/node_modules/gatsby-transformer-remark",
+      "id": "9f28d07a-37b6-51d1-b2d0-5071b57d6dd2",
+      "name": "gatsby-transformer-remark",
+      "version": "2.1.12",
+      "pluginOptions": {
+        "plugins": []
+      },
+      "nodeAPIs": [
+        "onCreateNode",
+        "setFieldsOnGraphQLNodeType"
+      ],
+      "browserAPIs": [],
+      "ssrAPIs": [],
+      "pluginFilepath": "C:/Users/jdcas/jdcastro-web-dd/personal-site/node_modules/gatsby-transformer-remark",
+      "packageJson": {
+        "name": "gatsby-transformer-remark",
+        "description": "Gatsby transformer plugin for Markdown using the Remark library and ecosystem",
+        "version": "2.1.12",
+        "keywords": [
+          "gatsby",
+          "gatsby-plugin",
+          "markdown",
+          "remark"
+        ],
+        "author": {
+          "name": "Kyle Mathews",
+          "email": "mathews.kyle@gmail.com"
+        },
+        "license": "MIT",
+        "dependencies": [
+          {
+            "name": "@babel/runtime",
+            "version": "^7.0.0"
+          },
+          {
+            "name": "bluebird",
+            "version": "^3.5.0"
+          },
+          {
+            "name": "gray-matter",
+            "version": "^4.0.0"
+          },
+          {
+            "name": "hast-util-raw",
+            "version": "^4.0.0"
+          },
+          {
+            "name": "hast-util-to-html",
+            "version": "^4.0.0"
+          },
+          {
+            "name": "lodash",
+            "version": "^4.17.10"
+          },
+          {
+            "name": "mdast-util-to-hast",
+            "version": "^3.0.0"
+          },
+          {
+            "name": "mdast-util-toc",
+            "version": "^2.0.1"
+          },
+          {
+            "name": "remark",
+            "version": "^9.0.0"
+          },
+          {
+            "name": "remark-parse",
+            "version": "^5.0.0"
+          },
+          {
+            "name": "remark-retext",
+            "version": "^3.1.0"
+          },
+          {
+            "name": "remark-stringify",
+            "version": "^5.0.0"
+          },
+          {
+            "name": "retext-english",
+            "version": "^3.0.0"
+          },
+          {
+            "name": "sanitize-html",
+            "version": "^1.18.2"
+          },
+          {
+            "name": "underscore.string",
+            "version": "^3.3.4"
+          },
+          {
+            "name": "unified",
+            "version": "^6.1.5"
+          },
+          {
+            "name": "unist-util-remove-position",
+            "version": "^1.1.2"
+          },
+          {
+            "name": "unist-util-select",
+            "version": "^1.5.0"
+          },
+          {
+            "name": "unist-util-visit",
+            "version": "^1.3.0"
+          }
+        ],
+        "devDependencies": [
+          {
+            "name": "@babel/cli",
+            "version": "^7.0.0"
+          },
+          {
+            "name": "@babel/core",
+            "version": "^7.0.0"
+          },
+          {
+            "name": "babel-preset-gatsby-package",
+            "version": "^0.1.2"
+          },
+          {
+            "name": "cross-env",
+            "version": "^5.1.4"
+          }
+        ],
+        "peerDependencies": [
+          {
+            "name": "gatsby",
+            "version": "^2.0.33"
+          }
+        ],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "contentDigest": "89bc7a97dc4cbf11f0f35da15484dad4",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "1943ff2f-9c0c-558d-8d0c-006603e8106a": {
+      "resolve": "C:/Users/jdcas/jdcastro-web-dd/personal-site/node_modules/gatsby-plugin-react-helmet",
+      "id": "1943ff2f-9c0c-558d-8d0c-006603e8106a",
+      "name": "gatsby-plugin-react-helmet",
+      "version": "3.0.2",
+      "pluginOptions": {
+        "plugins": []
+      },
+      "nodeAPIs": [],
+      "browserAPIs": [],
+      "ssrAPIs": [
+        "onRenderBody"
+      ],
+      "pluginFilepath": "C:/Users/jdcas/jdcastro-web-dd/personal-site/node_modules/gatsby-plugin-react-helmet",
+      "packageJson": {
+        "name": "gatsby-plugin-react-helmet",
+        "description": "Manage document head data with react-helmet. Provides drop-in server rendering support for Gatsby.",
+        "version": "3.0.2",
+        "main": "index.js",
+        "keywords": [
+          "gatsby",
+          "gatsby-plugin",
+          "favicon",
+          "react-helmet",
+          "seo",
+          "document",
+          "head",
+          "title",
+          "meta",
+          "link",
+          "script",
+          "base",
+          "noscript",
+          "style"
+        ],
+        "author": {
+          "name": "Kyle Mathews",
+          "email": "matthews.kyle@gmail.com"
+        },
+        "license": "MIT",
+        "dependencies": [
+          {
+            "name": "@babel/runtime",
+            "version": "^7.0.0"
+          }
+        ],
+        "devDependencies": [
+          {
+            "name": "@babel/cli",
+            "version": "^7.0.0"
+          },
+          {
+            "name": "@babel/core",
+            "version": "^7.0.0"
+          },
+          {
+            "name": "babel-preset-gatsby-package",
+            "version": "^0.1.2"
+          },
+          {
+            "name": "cross-env",
+            "version": "^5.1.4"
+          }
+        ],
+        "peerDependencies": [
+          {
+            "name": "gatsby",
+            "version": ">2.0.0-alpha"
+          },
+          {
+            "name": "react-helmet",
+            "version": ">=5.1.3"
+          }
+        ],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "contentDigest": "edb53544a0890e711dc915627d7751c0",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "63e5f7ff-e5f1-58f7-8e2c-55872ac42281": {
+      "resolve": "C:/Users/jdcas/jdcastro-web-dd/personal-site/node_modules/gatsby-plugin-offline",
+      "id": "63e5f7ff-e5f1-58f7-8e2c-55872ac42281",
+      "name": "gatsby-plugin-offline",
+      "version": "2.0.15",
+      "pluginOptions": {
+        "plugins": []
+      },
+      "nodeAPIs": [
+        "createPages",
+        "onPostBuild"
+      ],
+      "browserAPIs": [
+        "registerServiceWorker",
+        "onPostPrefetchPathname",
+        "onServiceWorkerActive"
+      ],
+      "ssrAPIs": [],
+      "pluginFilepath": "C:/Users/jdcas/jdcastro-web-dd/personal-site/node_modules/gatsby-plugin-offline",
+      "packageJson": {
+        "name": "gatsby-plugin-offline",
+        "description": "Gatsby plugin which sets up a site to be able to run offline",
+        "version": "2.0.15",
+        "main": "index.js",
+        "keywords": [
+          "gatsby",
+          "gatsby-plugin",
+          "offline",
+          "precache",
+          "service-worker"
+        ],
+        "author": {
+          "name": "Kyle Mathews",
+          "email": "mathews.kyle@gmail.com"
+        },
+        "license": "MIT",
+        "dependencies": [
+          {
+            "name": "@babel/runtime",
+            "version": "^7.0.0"
+          },
+          {
+            "name": "cheerio",
+            "version": "^1.0.0-rc.2"
+          },
+          {
+            "name": "lodash",
+            "version": "^4.17.10"
+          },
+          {
+            "name": "workbox-build",
+            "version": "^3.6.3"
+          }
+        ],
+        "devDependencies": [
+          {
+            "name": "@babel/cli",
+            "version": "^7.0.0"
+          },
+          {
+            "name": "@babel/core",
+            "version": "^7.0.0"
+          },
+          {
+            "name": "babel-preset-gatsby-package",
+            "version": "^0.1.2"
+          },
+          {
+            "name": "cross-env",
+            "version": "^5.1.4"
+          }
+        ],
+        "peerDependencies": [
+          {
+            "name": "gatsby",
+            "version": ">=2.0.20"
+          }
+        ],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "contentDigest": "c87959ea7b6b84b5c24fca60408a812b",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "0c7688ef-0ff5-529a-ab7c-7edcaf5c8ea2": {
+      "resolve": "C:/Users/jdcas/jdcastro-web-dd/personal-site/node_modules/gatsby-plugin-lodash",
+      "id": "0c7688ef-0ff5-529a-ab7c-7edcaf5c8ea2",
+      "name": "gatsby-plugin-lodash",
+      "version": "3.0.2",
+      "pluginOptions": {
+        "plugins": []
+      },
+      "nodeAPIs": [
+        "onCreateWebpackConfig",
+        "onCreateBabelConfig"
+      ],
+      "browserAPIs": [],
+      "ssrAPIs": [],
+      "pluginFilepath": "C:/Users/jdcas/jdcastro-web-dd/personal-site/node_modules/gatsby-plugin-lodash",
+      "packageJson": {
+        "name": "gatsby-plugin-lodash",
+        "description": "Easy modular Lodash builds. Adds the Lodash webpack & Babel plugins to your Gatsby build",
+        "version": "3.0.2",
+        "main": "index.js",
+        "keywords": [
+          "gatsby",
+          "gatsby-plugin"
+        ],
+        "author": {
+          "name": "Kyle Mathews",
+          "email": "mathews.kyle@gmail.com"
+        },
+        "license": "MIT",
+        "dependencies": [
+          {
+            "name": "@babel/runtime",
+            "version": "^7.0.0"
+          },
+          {
+            "name": "babel-plugin-lodash",
+            "version": "^3.2.11"
+          },
+          {
+            "name": "lodash-webpack-plugin",
+            "version": "^0.11.5"
+          }
+        ],
+        "devDependencies": [
+          {
+            "name": "@babel/cli",
+            "version": "^7.0.0"
+          },
+          {
+            "name": "@babel/core",
+            "version": "^7.0.0"
+          },
+          {
+            "name": "babel-preset-gatsby-package",
+            "version": "^0.1.2"
+          },
+          {
+            "name": "cross-env",
+            "version": "^5.1.4"
+          }
+        ],
+        "peerDependencies": [
+          {
+            "name": "gatsby",
+            "version": ">2.0.0-alpha"
+          }
+        ],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "contentDigest": "7a2e2c9f58df77c7704518af97b036cb",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "7374ebf2-d961-52ee-92a2-c25e7cb387a9": {
+      "resolve": "C:/Users/jdcas/jdcastro-web-dd/personal-site",
+      "id": "7374ebf2-d961-52ee-92a2-c25e7cb387a9",
+      "name": "default-site-plugin",
+      "version": "5582d313337f5aa265e179c178594a3f",
+      "pluginOptions": {
+        "plugins": []
+      },
+      "nodeAPIs": [
+        "createPages"
+      ],
+      "browserAPIs": [],
+      "ssrAPIs": [],
+      "pluginFilepath": "C:/Users/jdcas/jdcastro-web-dd/personal-site",
+      "packageJson": {
+        "name": "jdcastro-personal-site",
+        "description": "The personal site of Jacob D. Castro",
+        "version": "2.2.1",
+        "keywords": [
+          "gatsby",
+          "portfolio",
+          "react",
+          "static"
+        ],
+        "author": "Jacob D. Castro <jdcastro.business@gmail.com>",
+        "license": "MIT",
+        "dependencies": [
+          {
+            "name": "babel-plugin-styled-components",
+            "version": "^1.8.0"
+          },
+          {
+            "name": "contentful",
+            "version": "^7.0.4"
+          },
+          {
+            "name": "gatsby",
+            "version": "^2.0.0"
+          },
+          {
+            "name": "gatsby-image",
+            "version": "^2.0.20"
+          },
+          {
+            "name": "gatsby-plugin-lodash",
+            "version": "^3.0.1"
+          },
+          {
+            "name": "gatsby-plugin-manifest",
+            "version": "^2.0.5"
+          },
+          {
+            "name": "gatsby-plugin-offline",
+            "version": "^2.0.5"
+          },
+          {
+            "name": "gatsby-plugin-react-helmet",
+            "version": "^3.0.0"
+          },
+          {
+            "name": "gatsby-plugin-sharp",
+            "version": "^2.0.12"
+          },
+          {
+            "name": "gatsby-plugin-styled-components",
+            "version": "^3.0.0"
+          },
+          {
+            "name": "gatsby-plugin-typography",
+            "version": "^2.2.0"
+          },
+          {
+            "name": "gatsby-source-contentful",
+            "version": "^2.0.4"
+          },
+          {
+            "name": "gatsby-transformer-remark",
+            "version": "^2.1.12"
+          },
+          {
+            "name": "gatsby-transformer-sharp",
+            "version": "^2.1.8"
+          },
+          {
+            "name": "lodash",
+            "version": "^4.17.11"
+          },
+          {
+            "name": "react",
+            "version": "^16.5.1"
+          },
+          {
+            "name": "react-dom",
+            "version": "^16.5.1"
+          },
+          {
+            "name": "react-helmet",
+            "version": "^5.2.0"
+          },
+          {
+            "name": "react-typography",
+            "version": "^0.16.13"
+          },
+          {
+            "name": "styled-components",
+            "version": "^3.4.10"
+          },
+          {
+            "name": "typography",
+            "version": "^0.16.17"
+          }
+        ],
+        "devDependencies": [
+          {
+            "name": "eslint-plugin-styled-components",
+            "version": "0.0.0"
+          },
+          {
+            "name": "gatsby-plugin-eslint",
+            "version": "^2.0.1"
+          },
+          {
+            "name": "prettier",
+            "version": "^1.14.2"
+          }
+        ],
+        "peerDependencies": [],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "contentDigest": "0b036e431b1245277e98d151b3ff937a",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "4b36fca3-c013-572e-abed-d9c561ce1943": {
+      "resolve": "C:/Users/jdcas/jdcastro-web-dd/personal-site/node_modules/gatsby-plugin-page-creator",
+      "id": "4b36fca3-c013-572e-abed-d9c561ce1943",
+      "name": "gatsby-plugin-page-creator",
+      "version": "2.0.4",
+      "pluginOptions": {
+        "plugins": [],
+        "path": "C:/Users/jdcas/jdcastro-web-dd/personal-site/src/pages",
+        "pathCheck": false
+      },
+      "nodeAPIs": [
+        "createPagesStatefully"
+      ],
+      "browserAPIs": [],
+      "ssrAPIs": [],
+      "pluginFilepath": "C:/Users/jdcas/jdcastro-web-dd/personal-site/node_modules/gatsby-plugin-page-creator",
+      "packageJson": {
+        "name": "gatsby-plugin-page-creator",
+        "description": "Gatsby plugin that automatically creates pages from React components in specified directories",
+        "version": "2.0.4",
+        "main": "index.js",
+        "keywords": [
+          "gatsby",
+          "gatsby-plugin"
+        ],
+        "author": {
+          "name": "Kyle Mathews",
+          "email": "mathews.kyle@gmail.com"
+        },
+        "license": "MIT",
+        "dependencies": [
+          {
+            "name": "@babel/runtime",
+            "version": "^7.0.0"
+          },
+          {
+            "name": "bluebird",
+            "version": "^3.5.0"
+          },
+          {
+            "name": "chokidar",
+            "version": "^1.7.0"
+          },
+          {
+            "name": "fs-exists-cached",
+            "version": "^1.0.0"
+          },
+          {
+            "name": "glob",
+            "version": "^7.1.1"
+          },
+          {
+            "name": "lodash",
+            "version": "^4.17.10"
+          },
+          {
+            "name": "micromatch",
+            "version": "^3.1.10"
+          },
+          {
+            "name": "parse-filepath",
+            "version": "^1.0.1"
+          },
+          {
+            "name": "slash",
+            "version": "^1.0.0"
+          }
+        ],
+        "devDependencies": [
+          {
+            "name": "@babel/cli",
+            "version": "^7.0.0"
+          },
+          {
+            "name": "@babel/core",
+            "version": "^7.0.0"
+          },
+          {
+            "name": "babel-preset-gatsby-package",
+            "version": "^0.1.2"
+          },
+          {
+            "name": "cross-env",
+            "version": "^5.0.5"
+          }
+        ],
+        "peerDependencies": [
+          {
+            "name": "gatsby",
+            "version": ">2.0.0-alpha"
+          }
+        ],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "contentDigest": "13a4d959c328a38a9878c7030630bbd7",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "Site": {
+      "siteMetadata": {
+        "title": "Jacob D. Castro",
+        "desc": "A personal, informational website and design/development playground for Jacob D. Castro"
+      },
+      "port": "8000",
+      "host": "localhost",
+      "pathPrefix": "/blog",
+      "polyfill": true,
+      "buildTime": "2018-11-24T01:46:54.486Z",
+      "id": "Site",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "contentDigest": "2f1fb7760a42399da4c68e12e38c5da5",
+        "type": "Site",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "0260e977-483f-511b-8fe5-bbb0a9d45808": {
+      "id": "0260e977-483f-511b-8fe5-bbb0a9d45808",
+      "parent": null,
+      "children": [],
+      "name": "Author",
+      "displayField": "name",
+      "description": "Creator or editor of content",
+      "internal": {
+        "type": "ContentfulContentType",
+        "contentDigest": "7ee9e68f43803c753fa9c90ac9c3d1b4",
+        "owner": "gatsby-source-contentful"
+      }
+    },
+    "184c794a-b337-50ca-8b95-a4293d5c79c7": {
+      "name": "Jacob D. Castro",
+      "email": "jdcastro.business@gmail.com",
+      "twitterURL": "https://twitter.com/jacobdcastro/",
+      "instagramURL": "https://instagram.com/jacobdcastro/",
+      "githubURL": "https://github.com/jacobdcastro/",
+      "birthday": "1997-05-27T06:32-07:00",
+      "avatar___NODE": "02bc2210-586f-5459-920f-81d918e3caba",
+      "blog post___NODE": [
+        "55e245a5-ef4c-5af3-9b27-3cd60b06358d",
+        "8aa40e42-fdff-58d2-af55-3054f76bfcad",
+        "102d1ced-96c8-5df6-bc34-d05d58a476d7"
+      ],
+      "biography___NODE": "66e1b74f-271f-5434-ac0f-d5d5f9c8210f",
+      "id": "184c794a-b337-50ca-8b95-a4293d5c79c7",
+      "contentful_id": "2kMOzSV5Qs0KGG2S2msQsg",
+      "createdAt": "2018-10-18T06:30:08.865Z",
+      "updatedAt": "2018-10-29T23:04:59.471Z",
+      "parent": "Author",
+      "children": [
+        "66e1b74f-271f-5434-ac0f-d5d5f9c8210f"
+      ],
+      "internal": {
+        "type": "ContentfulAuthor",
+        "contentDigest": "b797b55c219069ead8f06c51b78601a2",
+        "owner": "gatsby-source-contentful"
+      },
+      "node_locale": "en-US"
+    },
+    "66e1b74f-271f-5434-ac0f-d5d5f9c8210f": {
+      "id": "66e1b74f-271f-5434-ac0f-d5d5f9c8210f",
+      "parent": "184c794a-b337-50ca-8b95-a4293d5c79c7",
+      "children": [
+        "aaddb730-5c58-52df-b045-a9aaa3e99bd3"
+      ],
+      "biography": "I love front-end web development. I also really love sports and super deep ideas! Follow me everywhere => @jacobdcastro",
+      "internal": {
+        "type": "contentfulAuthorBiographyTextNode",
+        "mediaType": "text/markdown",
+        "content": "I love front-end web development. I also really love sports and super deep ideas! Follow me everywhere => @jacobdcastro",
+        "contentDigest": "04c7ad8accefe7d929e4235f356fc878",
+        "owner": "gatsby-source-contentful"
+      }
+    },
+    "e1e094a9-007c-553e-99c6-c41fa78bf5d4": {
+      "id": "e1e094a9-007c-553e-99c6-c41fa78bf5d4",
+      "parent": null,
+      "children": [],
+      "name": "Blog Post",
+      "displayField": "title",
+      "description": "The Blog posts for Jacob D. Castro's blog on the personal site!",
+      "internal": {
+        "type": "ContentfulContentType",
+        "contentDigest": "4b1ab19d6bbe724eee10051e8587a991",
+        "owner": "gatsby-source-contentful"
+      }
+    },
+    "55e245a5-ef4c-5af3-9b27-3cd60b06358d": {
+      "title": "Using Contentful On My Blog",
+      "slug": "using-contentful-on-my-blog",
+      "subtitle": "My Blog is Headless and It's Incredible",
+      "published": "2018-11-23",
+      "tags": [
+        "Website",
+        "Contentful",
+        "CMS"
+      ],
+      "heroImage___NODE": "729e83da-bcbd-5813-bd29-e0140ef862a2",
+      "author___NODE": "184c794a-b337-50ca-8b95-a4293d5c79c7",
+      "bodyContent___NODE": "a2dad78f-eaf4-5fb0-8507-adc0a2d3aaf6",
+      "id": "55e245a5-ef4c-5af3-9b27-3cd60b06358d",
+      "contentful_id": "4hiWnxeCzmmKqgkuAOkauy",
+      "createdAt": "2018-11-24T01:35:06.065Z",
+      "updatedAt": "2018-11-24T01:46:41.949Z",
+      "parent": "Blog Post",
+      "children": [
+        "a2dad78f-eaf4-5fb0-8507-adc0a2d3aaf6"
+      ],
+      "internal": {
+        "type": "ContentfulBlogPost",
+        "contentDigest": "1cfcf39cc1ac676dc16a05ca6715821b",
+        "owner": "gatsby-source-contentful"
+      },
+      "node_locale": "en-US"
+    },
+    "8aa40e42-fdff-58d2-af55-3054f76bfcad": {
+      "title": "Gatsby First Thoughts",
+      "slug": "gatsby-first-thoughts",
+      "subtitle": "I Built My Website in Gatsby and I'm in Love",
+      "published": "2018-11-22",
+      "tags": [
+        "Website",
+        "Gatsby",
+        "GraphQL"
+      ],
+      "heroImage___NODE": "bb03ab44-fcc2-5642-95ff-be98d9d277c4",
+      "author___NODE": "184c794a-b337-50ca-8b95-a4293d5c79c7",
+      "bodyContent___NODE": "20072878-7cd7-56df-b32e-d81f88875362",
+      "id": "8aa40e42-fdff-58d2-af55-3054f76bfcad",
+      "contentful_id": "2PfovTwn846w66oasCgcmo",
+      "createdAt": "2018-11-22T08:18:49.799Z",
+      "updatedAt": "2018-11-22T21:40:23.283Z",
+      "parent": "Blog Post",
+      "children": [
+        "20072878-7cd7-56df-b32e-d81f88875362"
+      ],
+      "internal": {
+        "type": "ContentfulBlogPost",
+        "contentDigest": "c0b0fe55ced00c6879ac02dd3f716fe5",
+        "owner": "gatsby-source-contentful"
+      },
+      "node_locale": "en-US"
+    },
+    "102d1ced-96c8-5df6-bc34-d05d58a476d7": {
+      "title": "Welcome!",
+      "slug": "welcome",
+      "subtitle": "My First Blog Post",
+      "published": "2018-11-21",
+      "tags": [
+        "Life",
+        "Website"
+      ],
+      "heroImage___NODE": "fe71f04f-29ab-56d1-8c9b-2e17d6e326af",
+      "author___NODE": "184c794a-b337-50ca-8b95-a4293d5c79c7",
+      "bodyContent___NODE": "a76370a2-f65d-53de-b298-dff213d2c700",
+      "id": "102d1ced-96c8-5df6-bc34-d05d58a476d7",
+      "contentful_id": "32eRf9tW0ogKY0gIqms2ua",
+      "createdAt": "2018-11-21T10:23:18.039Z",
+      "updatedAt": "2018-11-21T10:23:18.039Z",
+      "parent": "Blog Post",
+      "children": [
+        "a76370a2-f65d-53de-b298-dff213d2c700"
+      ],
+      "internal": {
+        "type": "ContentfulBlogPost",
+        "contentDigest": "70c94c1efe37bfdd82f8daf7baadee8b",
+        "owner": "gatsby-source-contentful"
+      },
+      "node_locale": "en-US"
+    },
+    "a2dad78f-eaf4-5fb0-8507-adc0a2d3aaf6": {
+      "id": "a2dad78f-eaf4-5fb0-8507-adc0a2d3aaf6",
+      "parent": "55e245a5-ef4c-5af3-9b27-3cd60b06358d",
+      "children": [
+        "5f92e2f6-9aa5-5705-9e8f-8ddee50b3dba"
+      ],
+      "bodyContent": "Headless content management systems have become a thing in the web development world. They make it fast and easy to pull data and content from other places to throw on your site. There's a handful of different ones out there that people love.\n\nOne of the first ones I was considering using for this blog was GraphCMS, a GraphQL-based content management system. I'm not going to lie, I love the UI they have; it's so well-designed and intuitive. But I continued to explore my options.\n\nI checked out another system made my Netlify. It's literally called Netlify CMS. I didn't spend as much time researching this one as I did GraphCMS and Contentful, but I simply decided not to choose it. Even though I've only heard amazing things about it, Netlify CMS didn't become my final solution. Contentful did.\n\n\n## Getting to Know Contentful\nContentful simply looked amazing. Their UI looked simple and easy-to-use, the way their \"spaces\" and \"content model\" worked really made sense to me at first. Clicking around the admin pages made me excited to use a tool that was so flexible and straight forward.\n\nWhile looking for my CMS of choice, there was one question I had in the back of my mind: __would I feel confident using this CMS on a client project?__\n\nThe answer to Netlify CMS was \"probably.\"\nFor GraphCMS, \"sure.\"\nBut for Contentful, my answer was, with no doubt, \"absolutely.\"\n\nContentful seemed so much more able to handle a large-scale project. There's also features to add user profiles with separate permissions per account. It can be a truly team experience when working with multiple developers and content creators.\n\nI also enjoyed reading through the Contentful docs. It was very easy to get to know and there were plenty of resources to learn Contentful such as Youtube videos and blog articles.\n\n\n## Using React\nUsing GraphQL in my Gatsby blog was extremely easy to do. GraphiQL made it even easier to find my content.\n\nGraphQL seemed too good to be true. But once copying and pasting my query in my code, placing the content from the returned JSON data into my JSX, and seeing it pop up in the browser,  I was hooked on this system. Gatsby and Contentful were made for each other, I swear.\n\nThis is what my query looks like on my `BlogPost.js` page template:\n\n![BlogPost-query](//images.ctfassets.net/oghc6wtiomc3/4bnldexWysO6s2iIyGWkYm/f16a79a5b5a18a6691b6d50da7aa6bd9/BlogPost-query.png)\n\nOnce the content is called via GraphQL, I pretty much just slap the content into the markup. Fairly simple honestly! This is what my `render()` method looks like with the injected Contentful content:\n\n![render-method](//images.ctfassets.net/oghc6wtiomc3/2EF4t0NPbWgYoWsYqmUIki/3452cacb9733bce07977e2d806e9f647/render-method.png)\n\nIt's pretty straight forward to fetch the content and place it appropriately in the site, which I am passing the data as props to all of my main components on the `BlogPost.js` template.\n\n\n## 3 Favorite Things About Contentful\nAfter getting to know the Contentful system more and integrating it into my site, there were a few specific features that really stuck out to me. They were major contributors in my ultimate decision to choose Contentful over other ones. Here are my three favorite features in Contentful:\n\n### 1. Markdown Long Text Editor\nWhen creating a content type in the content model, there are two primary entry types for text: short text and long text. Short text is literally just a string that is shorter than 256 characters unless otherwise specified. But the long text entry type is much more robust. This is because it uses markdown (.md files) to write long copy, such as the body content of a blog post. This is what the markdown long text editor looks like: \n\n[INSERT MARKDOWN EDITOR IMAGE]\n\nWhen the body content of my blog is fetched, it returns raw, minified markdown. This would be useless if it wasn't for Gatsby's plugin called gatsby-transformer-remark. This is a transformer plugin that literally transforms markdown files into HTML. It creates a query in the schema called  `childMarkdownRemark` that I use access the body content of my blog post. The query looks like this:\n\n```\nbodyContent {\n     childMarkdownRemark {\n         html\n         excerpt\n     }\n}\n```\n\nAs you can see, not only can `childMarkdownRemark` return the HTML, it can also create a snippet of 50 words or less to place as a preview, as noted by the `excerpt` query. Overall, I love the way Contentful uses markdown and how Gatsby can transform it into usable markup. It's perfect.\n\n### 2. Roles and Permissions\nI have yet to really put this to good use. But with clients, this feature is a dream. There's no need to create shared login information. Both I, the developer, and my client, the content creator, can work on things equally without stepping on each other's toes in the project.\n\nNot to mention, when content is edited and published, it labels who the author was, when it was created, edited, and published. Permissions are also easily editable to restrict or free various rights to certain accounts and editors. This holds people accountable so not everyone contributing to a project can have access to everything. That is so important when working with clients.\n\n### 3. Webhooks\nOne of my favorite things in all of web development is automation. Contentful does automation extremely well with third-party services with webhooks. The only ones I'm currently using are the Netlify and Slack webhooks.\n\nThe Netlify webhook automatically triggers a build process (more on Netlify in the next blog post) every time a new entry is published, edited, deleted, etc. This is super nice for a blog like this one because when I delete, unpublish, or add a new blog post, it automatically builds my site including that update. I never have to do anything manually. It's beautiful, really.\n\nSimilarly, the Slack webhook notifies my Slack channel whenever there's an edit to the content. It's so nice to have a stream of notifications handy rather than digging through Netlify or Contentful menus to find when, what, or where something was edited. It makes it super convenient!\n\n\n## Final Thoughts on Contentful\nI've loved my experience using Contentful. Even without Gatsby, it would be a delight to use for any website's content infrastructure. But when paired with Gatsby, Contentful is a breeze to use and every little aspect of the two technologies seem to be made for each other.\n\nI have no plans on switching to another CMS any time soon; Contentful is just too good. But, of course, I'd be happy to learn a new CMS just to have options. But since I have a good feel for Contentful, I could probably pick up any other CMS pretty easily. Contentful has been a great start to my career in working with API's.\n\nThanks for reading, and let me know if you check out Contentful or use it in your own site! I'd love to hear more about how you make it work for you.\n\nThanks for reading!",
+      "internal": {
+        "type": "contentfulBlogPostBodyContentTextNode",
+        "mediaType": "text/markdown",
+        "content": "Headless content management systems have become a thing in the web development world. They make it fast and easy to pull data and content from other places to throw on your site. There's a handful of different ones out there that people love.\n\nOne of the first ones I was considering using for this blog was GraphCMS, a GraphQL-based content management system. I'm not going to lie, I love the UI they have; it's so well-designed and intuitive. But I continued to explore my options.\n\nI checked out another system made my Netlify. It's literally called Netlify CMS. I didn't spend as much time researching this one as I did GraphCMS and Contentful, but I simply decided not to choose it. Even though I've only heard amazing things about it, Netlify CMS didn't become my final solution. Contentful did.\n\n\n## Getting to Know Contentful\nContentful simply looked amazing. Their UI looked simple and easy-to-use, the way their \"spaces\" and \"content model\" worked really made sense to me at first. Clicking around the admin pages made me excited to use a tool that was so flexible and straight forward.\n\nWhile looking for my CMS of choice, there was one question I had in the back of my mind: __would I feel confident using this CMS on a client project?__\n\nThe answer to Netlify CMS was \"probably.\"\nFor GraphCMS, \"sure.\"\nBut for Contentful, my answer was, with no doubt, \"absolutely.\"\n\nContentful seemed so much more able to handle a large-scale project. There's also features to add user profiles with separate permissions per account. It can be a truly team experience when working with multiple developers and content creators.\n\nI also enjoyed reading through the Contentful docs. It was very easy to get to know and there were plenty of resources to learn Contentful such as Youtube videos and blog articles.\n\n\n## Using React\nUsing GraphQL in my Gatsby blog was extremely easy to do. GraphiQL made it even easier to find my content.\n\nGraphQL seemed too good to be true. But once copying and pasting my query in my code, placing the content from the returned JSON data into my JSX, and seeing it pop up in the browser,  I was hooked on this system. Gatsby and Contentful were made for each other, I swear.\n\nThis is what my query looks like on my `BlogPost.js` page template:\n\n![BlogPost-query](//images.ctfassets.net/oghc6wtiomc3/4bnldexWysO6s2iIyGWkYm/f16a79a5b5a18a6691b6d50da7aa6bd9/BlogPost-query.png)\n\nOnce the content is called via GraphQL, I pretty much just slap the content into the markup. Fairly simple honestly! This is what my `render()` method looks like with the injected Contentful content:\n\n![render-method](//images.ctfassets.net/oghc6wtiomc3/2EF4t0NPbWgYoWsYqmUIki/3452cacb9733bce07977e2d806e9f647/render-method.png)\n\nIt's pretty straight forward to fetch the content and place it appropriately in the site, which I am passing the data as props to all of my main components on the `BlogPost.js` template.\n\n\n## 3 Favorite Things About Contentful\nAfter getting to know the Contentful system more and integrating it into my site, there were a few specific features that really stuck out to me. They were major contributors in my ultimate decision to choose Contentful over other ones. Here are my three favorite features in Contentful:\n\n### 1. Markdown Long Text Editor\nWhen creating a content type in the content model, there are two primary entry types for text: short text and long text. Short text is literally just a string that is shorter than 256 characters unless otherwise specified. But the long text entry type is much more robust. This is because it uses markdown (.md files) to write long copy, such as the body content of a blog post. This is what the markdown long text editor looks like: \n\n[INSERT MARKDOWN EDITOR IMAGE]\n\nWhen the body content of my blog is fetched, it returns raw, minified markdown. This would be useless if it wasn't for Gatsby's plugin called gatsby-transformer-remark. This is a transformer plugin that literally transforms markdown files into HTML. It creates a query in the schema called  `childMarkdownRemark` that I use access the body content of my blog post. The query looks like this:\n\n```\nbodyContent {\n     childMarkdownRemark {\n         html\n         excerpt\n     }\n}\n```\n\nAs you can see, not only can `childMarkdownRemark` return the HTML, it can also create a snippet of 50 words or less to place as a preview, as noted by the `excerpt` query. Overall, I love the way Contentful uses markdown and how Gatsby can transform it into usable markup. It's perfect.\n\n### 2. Roles and Permissions\nI have yet to really put this to good use. But with clients, this feature is a dream. There's no need to create shared login information. Both I, the developer, and my client, the content creator, can work on things equally without stepping on each other's toes in the project.\n\nNot to mention, when content is edited and published, it labels who the author was, when it was created, edited, and published. Permissions are also easily editable to restrict or free various rights to certain accounts and editors. This holds people accountable so not everyone contributing to a project can have access to everything. That is so important when working with clients.\n\n### 3. Webhooks\nOne of my favorite things in all of web development is automation. Contentful does automation extremely well with third-party services with webhooks. The only ones I'm currently using are the Netlify and Slack webhooks.\n\nThe Netlify webhook automatically triggers a build process (more on Netlify in the next blog post) every time a new entry is published, edited, deleted, etc. This is super nice for a blog like this one because when I delete, unpublish, or add a new blog post, it automatically builds my site including that update. I never have to do anything manually. It's beautiful, really.\n\nSimilarly, the Slack webhook notifies my Slack channel whenever there's an edit to the content. It's so nice to have a stream of notifications handy rather than digging through Netlify or Contentful menus to find when, what, or where something was edited. It makes it super convenient!\n\n\n## Final Thoughts on Contentful\nI've loved my experience using Contentful. Even without Gatsby, it would be a delight to use for any website's content infrastructure. But when paired with Gatsby, Contentful is a breeze to use and every little aspect of the two technologies seem to be made for each other.\n\nI have no plans on switching to another CMS any time soon; Contentful is just too good. But, of course, I'd be happy to learn a new CMS just to have options. But since I have a good feel for Contentful, I could probably pick up any other CMS pretty easily. Contentful has been a great start to my career in working with API's.\n\nThanks for reading, and let me know if you check out Contentful or use it in your own site! I'd love to hear more about how you make it work for you.\n\nThanks for reading!",
+        "contentDigest": "cf0047d3a7fb0a3e83518b5771e8f516",
+        "owner": "gatsby-source-contentful"
+      }
+    },
+    "20072878-7cd7-56df-b32e-d81f88875362": {
+      "id": "20072878-7cd7-56df-b32e-d81f88875362",
+      "parent": "8aa40e42-fdff-58d2-af55-3054f76bfcad",
+      "children": [
+        "5cd5fedd-df46-5bee-87e5-e9daece42349"
+      ],
+      "bodyContent": "In the last 3-4 months, I've dedicated myself to learning React. I've been on Javascript for the last year or so and decided it was time to learn a framework/library to expand my Javascript skills. Javascript always excited me. And hearing a lot about frameworks such as Angular, React, Vue, and, formerly, Ember, made me super curious about what they were and why I would need to use one.\n\nAfter exploring the massive Javascript world, I made my decision on React. It seemed the most promising and it looked like it had a bright, long future that could help kick off my career in web development. But I soon had a slightly scary realization: the React ecosystem is gigantic in itself. There were extensions and libraries and frameworks for React that made it all seem so intense.\n\nI pushed all of the React craze aside and started with the React Basics course on Treehouse. My first React environment I learned was Create React App. It was an awesome experience!! I really loved React and it actually really made sense to me. I caught on pretty quickly!\n\n\n## Converting My Website\nBy this time, I had already created my website in vanilla HTML, CSS, and (a little bit of) JS. So decided to convert it to React using Create React App.\n\nAfter lots of copying and pasting, figuring out how to style things in React (styled components ftw), and stretching my limited React skills, I did it. My first React site was on the web. Netlify made it super easy to do so (more on Netlify in a future blog post).\n\nUnfortunately, my newly developed site was oddly slow. I wasn't sure why and I tried doing things to optimize performance but it never really helped. After all, my website was not a single page app. Create React App is amazing for single page apps but I felt there were better solutions out there for my small, personal website.\n\nAfter searching through lots of solutions, I decided on one that seemed to be getting a lot more hype than other React frameworks. And that was Gatsby.\n\n\n## Refactoring to Gatsby\nGatsby looked so interesting. I loved their website, I admired how fast it was (assuming it was also built on Gatsby), and I only saw extremely positive comments on Twitter about it. People were all for it!\n\nI went to the docs and went through the tutorial.\n\nWow. It was so easy, awesomely intuitive, and surprisingly fun! I just had to go with Gatsby. It made so much sense for my site since Gatsby specializes in static sites. It had a perfect system for pages similar to how you'd have multiple pages in a normal HTML-developed site. It made so much sense.\n\nAfter lots of stumbling over myself, reading through the docs, and trying to re-do all my Create React App website, I finally converted it. And wow, my website's performance improved by a long shot. Some may say, it is blazingly fast (at least compared to my site on Create React App).\n\n\n## Adding THIS Blog\nMy site at this point only featured the home, about, and contact pages. That's a bit boring, so I wanted to add a blog. So I set my next task to figuring out how the heck I'd do that. I decided on Contentful for my CMS (definitely a blog post on this soon).\n\nI knew I wouldn't be making this blog to be perfect on the first try. It'll be a little side project to improve over time as my skills progress.\n\nI started by making the blog home page and that was pretty simple and straight forward. The more difficult part was making the pages for each blog post. The Gatsby Node API `createPages` made it super easy!\n\nI started by following along with a tutorial on Youtube explaining how to use Contentful with Gatsby. After that tutorial, I really began to understand Gatsby. This is what I finished in my `gatsby-node.js` file:\n\n![createPages-API-code](//images.ctfassets.net/oghc6wtiomc3/HD5JviJqkE2wEy2iq0IUk/05d181ca03a92823b5a1a6be7f97a3a6/createPages-API-code.png)\n\nCreating the pages is super easy with the `createPages` Gatsby API. Not to mention, Contentful can automatically generate a slug for the URL. On my project, I have the slugs set to be the title of the blog post. For example, a blog post titled \"Hello World In Javascript\" would have its own page at jacobdcastro.com/blog/hello-world-in-javascript/. These tools make it so easy!\n\nOnce the pages are created behind the scenes in Gatsby, it uses a template to generate the markup for each page. So each blog post page is based on the same template. I love reusing code.\n\n\n## Using GraphQL\nOne of the reasons Gatsby is so cool is that it seamlessly integrates GraphQL in its data layer. GraphQL was fairly easy for me to learn, perhaps because I'm so new to the game that I'm not stuck in other ways.\n\nFollowing along with more tutorials and reading the Gatsby docs, I figured out how to write queries for fetching my content from Contentful. It made it super easy.\n\nFor example, the query I wrote in my `BlogPost.js` template looks like this:\n\n![BlogPost-query](//images.ctfassets.net/oghc6wtiomc3/4bnldexWysO6s2iIyGWkYm/f16a79a5b5a18a6691b6d50da7aa6bd9/BlogPost-query.png)\n\nWhen I receive the customized object from the query, I basically just stick the content in all of the appropriate places. It's really easy to be honest. Gatsby makes GraphQL wildly effortless.\n\n\n## Final Thoughts on Gatsby\nGatsby is amazing. I've grown a lot as a React developer by using Gatsby. It's taught me a lot from developing in React and using GraphQL to other soft skills such as reading docs, working with file systems, using the CLI, and how to work quickly.\n\nI definitely plan on using Gatsby in the future, especially on client projects when it's most beneficial. Gatsby is a fantastic tool and makes it easy to integrate tools like Contentful.\n\nOn my next blog post, I will be sharing my time working with Contentful and how I integrated it with Gatsby and why I it became my first choice CMS for my blog! So stay tuned.\n\nThanks for reading!",
+      "internal": {
+        "type": "contentfulBlogPostBodyContentTextNode",
+        "mediaType": "text/markdown",
+        "content": "In the last 3-4 months, I've dedicated myself to learning React. I've been on Javascript for the last year or so and decided it was time to learn a framework/library to expand my Javascript skills. Javascript always excited me. And hearing a lot about frameworks such as Angular, React, Vue, and, formerly, Ember, made me super curious about what they were and why I would need to use one.\n\nAfter exploring the massive Javascript world, I made my decision on React. It seemed the most promising and it looked like it had a bright, long future that could help kick off my career in web development. But I soon had a slightly scary realization: the React ecosystem is gigantic in itself. There were extensions and libraries and frameworks for React that made it all seem so intense.\n\nI pushed all of the React craze aside and started with the React Basics course on Treehouse. My first React environment I learned was Create React App. It was an awesome experience!! I really loved React and it actually really made sense to me. I caught on pretty quickly!\n\n\n## Converting My Website\nBy this time, I had already created my website in vanilla HTML, CSS, and (a little bit of) JS. So decided to convert it to React using Create React App.\n\nAfter lots of copying and pasting, figuring out how to style things in React (styled components ftw), and stretching my limited React skills, I did it. My first React site was on the web. Netlify made it super easy to do so (more on Netlify in a future blog post).\n\nUnfortunately, my newly developed site was oddly slow. I wasn't sure why and I tried doing things to optimize performance but it never really helped. After all, my website was not a single page app. Create React App is amazing for single page apps but I felt there were better solutions out there for my small, personal website.\n\nAfter searching through lots of solutions, I decided on one that seemed to be getting a lot more hype than other React frameworks. And that was Gatsby.\n\n\n## Refactoring to Gatsby\nGatsby looked so interesting. I loved their website, I admired how fast it was (assuming it was also built on Gatsby), and I only saw extremely positive comments on Twitter about it. People were all for it!\n\nI went to the docs and went through the tutorial.\n\nWow. It was so easy, awesomely intuitive, and surprisingly fun! I just had to go with Gatsby. It made so much sense for my site since Gatsby specializes in static sites. It had a perfect system for pages similar to how you'd have multiple pages in a normal HTML-developed site. It made so much sense.\n\nAfter lots of stumbling over myself, reading through the docs, and trying to re-do all my Create React App website, I finally converted it. And wow, my website's performance improved by a long shot. Some may say, it is blazingly fast (at least compared to my site on Create React App).\n\n\n## Adding THIS Blog\nMy site at this point only featured the home, about, and contact pages. That's a bit boring, so I wanted to add a blog. So I set my next task to figuring out how the heck I'd do that. I decided on Contentful for my CMS (definitely a blog post on this soon).\n\nI knew I wouldn't be making this blog to be perfect on the first try. It'll be a little side project to improve over time as my skills progress.\n\nI started by making the blog home page and that was pretty simple and straight forward. The more difficult part was making the pages for each blog post. The Gatsby Node API `createPages` made it super easy!\n\nI started by following along with a tutorial on Youtube explaining how to use Contentful with Gatsby. After that tutorial, I really began to understand Gatsby. This is what I finished in my `gatsby-node.js` file:\n\n![createPages-API-code](//images.ctfassets.net/oghc6wtiomc3/HD5JviJqkE2wEy2iq0IUk/05d181ca03a92823b5a1a6be7f97a3a6/createPages-API-code.png)\n\nCreating the pages is super easy with the `createPages` Gatsby API. Not to mention, Contentful can automatically generate a slug for the URL. On my project, I have the slugs set to be the title of the blog post. For example, a blog post titled \"Hello World In Javascript\" would have its own page at jacobdcastro.com/blog/hello-world-in-javascript/. These tools make it so easy!\n\nOnce the pages are created behind the scenes in Gatsby, it uses a template to generate the markup for each page. So each blog post page is based on the same template. I love reusing code.\n\n\n## Using GraphQL\nOne of the reasons Gatsby is so cool is that it seamlessly integrates GraphQL in its data layer. GraphQL was fairly easy for me to learn, perhaps because I'm so new to the game that I'm not stuck in other ways.\n\nFollowing along with more tutorials and reading the Gatsby docs, I figured out how to write queries for fetching my content from Contentful. It made it super easy.\n\nFor example, the query I wrote in my `BlogPost.js` template looks like this:\n\n![BlogPost-query](//images.ctfassets.net/oghc6wtiomc3/4bnldexWysO6s2iIyGWkYm/f16a79a5b5a18a6691b6d50da7aa6bd9/BlogPost-query.png)\n\nWhen I receive the customized object from the query, I basically just stick the content in all of the appropriate places. It's really easy to be honest. Gatsby makes GraphQL wildly effortless.\n\n\n## Final Thoughts on Gatsby\nGatsby is amazing. I've grown a lot as a React developer by using Gatsby. It's taught me a lot from developing in React and using GraphQL to other soft skills such as reading docs, working with file systems, using the CLI, and how to work quickly.\n\nI definitely plan on using Gatsby in the future, especially on client projects when it's most beneficial. Gatsby is a fantastic tool and makes it easy to integrate tools like Contentful.\n\nOn my next blog post, I will be sharing my time working with Contentful and how I integrated it with Gatsby and why I it became my first choice CMS for my blog! So stay tuned.\n\nThanks for reading!",
+        "contentDigest": "31422973b14049bda314beeadf002b4c",
+        "owner": "gatsby-source-contentful"
+      }
+    },
+    "a76370a2-f65d-53de-b298-dff213d2c700": {
+      "id": "a76370a2-f65d-53de-b298-dff213d2c700",
+      "parent": "102d1ced-96c8-5df6-bc34-d05d58a476d7",
+      "children": [
+        "3edecce5-cfae-573a-8aab-0a34e3ce80f7"
+      ],
+      "bodyContent": "I'm so excited to have finally finished my blog. I've used some of my favorite tools to build it too: Gatsby, Contentful, and Netlify. So why did I build a blog and why did I choose these tools? I'm glad you asked.\n\n## Documenting My Web Development Journey\nThis past year or so, I've really grown a lot as a beginning developer. I began learning HTML and CSS right out of high school in 2015. I would finish up my homework in the student center, head over to the student computer center, and just sit and work on the Treehouse Front-end Web Development course. Even while doing my usual college things, I would still make time to learn web development. I was discovering more and more that I really loved it.\n\nThen I took a break - a pretty long one. After completing my first and only year at community college in 2016, I moved to Redding, CA for a year to attend a ministry school. It was one of the most amazing years of my life. Then in May of 2017, I moved back home, but at this point I was really lacking short-term vision and goals for my life.\n\nNaturally, I decided to fall back to what I had already started: web development. I re-subscribed to Treehouse and went all-in. I haven't regretted that for a moment. And now I'm here, building my own blog instead of letting Wordpress do it for me!\n\nThrough my journey thus far, I've realized how valuable documenting everything would have been early-on (even though I'd say I'm still extremely early in my journey). So this is where I'm starting.\n\n## Just The Beginning\nI'll be writing about my thoughts on certain technologies, updates on my career, or cool things I've found in the web development community. But this blog will be finely balanced with some Medium posts here and there as well. I miss writing and I want to do a lot more of it (writing code doesn't count).\n\nThis is a short introduction of myself, my blog, and what's to come.\n\nSpeaking of what's to come, I will have blog posts on my experience with Gatsby, Contentful, and Netlify very soon!\n\nSpoiler: they're all amazing tools and make a great three-way marriage.\n\nHave a fantastic day, I'll talk to you soon!",
+      "internal": {
+        "type": "contentfulBlogPostBodyContentTextNode",
+        "mediaType": "text/markdown",
+        "content": "I'm so excited to have finally finished my blog. I've used some of my favorite tools to build it too: Gatsby, Contentful, and Netlify. So why did I build a blog and why did I choose these tools? I'm glad you asked.\n\n## Documenting My Web Development Journey\nThis past year or so, I've really grown a lot as a beginning developer. I began learning HTML and CSS right out of high school in 2015. I would finish up my homework in the student center, head over to the student computer center, and just sit and work on the Treehouse Front-end Web Development course. Even while doing my usual college things, I would still make time to learn web development. I was discovering more and more that I really loved it.\n\nThen I took a break - a pretty long one. After completing my first and only year at community college in 2016, I moved to Redding, CA for a year to attend a ministry school. It was one of the most amazing years of my life. Then in May of 2017, I moved back home, but at this point I was really lacking short-term vision and goals for my life.\n\nNaturally, I decided to fall back to what I had already started: web development. I re-subscribed to Treehouse and went all-in. I haven't regretted that for a moment. And now I'm here, building my own blog instead of letting Wordpress do it for me!\n\nThrough my journey thus far, I've realized how valuable documenting everything would have been early-on (even though I'd say I'm still extremely early in my journey). So this is where I'm starting.\n\n## Just The Beginning\nI'll be writing about my thoughts on certain technologies, updates on my career, or cool things I've found in the web development community. But this blog will be finely balanced with some Medium posts here and there as well. I miss writing and I want to do a lot more of it (writing code doesn't count).\n\nThis is a short introduction of myself, my blog, and what's to come.\n\nSpeaking of what's to come, I will have blog posts on my experience with Gatsby, Contentful, and Netlify very soon!\n\nSpoiler: they're all amazing tools and make a great three-way marriage.\n\nHave a fantastic day, I'll talk to you soon!",
+        "contentDigest": "cb5a69c6c3be7a48080c54928aeb6fcd",
+        "owner": "gatsby-source-contentful"
+      }
+    },
+    "729e83da-bcbd-5813-bd29-e0140ef862a2": {
+      "contentful_id": "6F6IFggffyQwImooKmIUW6",
+      "id": "729e83da-bcbd-5813-bd29-e0140ef862a2",
+      "parent": null,
+      "children": [],
+      "file": {
+        "url": "//images.ctfassets.net/oghc6wtiomc3/6F6IFggffyQwImooKmIUW6/26a4ae0e44fc3c5b14fb28cd2d67ae97/rawpixel-567018-unsplash.jpg",
+        "details": {
+          "size": 1733495,
+          "image": {
+            "width": 4784,
+            "height": 3331
+          }
+        },
+        "fileName": "rawpixel-567018-unsplash.jpg",
+        "contentType": "image/jpeg"
+      },
+      "title": "typing-on-typewriter",
+      "description": "",
+      "node_locale": "en-US",
+      "internal": {
+        "type": "ContentfulAsset",
+        "contentDigest": "726adf51adc00ab1f35e9b5923df7833",
+        "owner": "gatsby-source-contentful"
+      }
+    },
+    "75985be8-4c52-566d-ae32-e319c4a1fb30": {
+      "contentful_id": "2EF4t0NPbWgYoWsYqmUIki",
+      "id": "75985be8-4c52-566d-ae32-e319c4a1fb30",
+      "parent": null,
+      "children": [],
+      "file": {
+        "url": "//images.ctfassets.net/oghc6wtiomc3/2EF4t0NPbWgYoWsYqmUIki/3452cacb9733bce07977e2d806e9f647/render-method.png",
+        "details": {
+          "size": 57219,
+          "image": {
+            "width": 732,
+            "height": 641
+          }
+        },
+        "fileName": "render-method.png",
+        "contentType": "image/png"
+      },
+      "title": "render-method",
+      "description": "",
+      "node_locale": "en-US",
+      "internal": {
+        "type": "ContentfulAsset",
+        "contentDigest": "c8a703b6d979bea1426529e861d88aa2",
+        "owner": "gatsby-source-contentful"
+      }
+    },
+    "bb03ab44-fcc2-5642-95ff-be98d9d277c4": {
+      "contentful_id": "7zQ1wSZSjmO8A6iCSEGGU0",
+      "id": "bb03ab44-fcc2-5642-95ff-be98d9d277c4",
+      "parent": null,
+      "children": [],
+      "file": {
+        "url": "//images.ctfassets.net/oghc6wtiomc3/7zQ1wSZSjmO8A6iCSEGGU0/e82c3ba27b275adbd5726a15129edc70/sandro-katalina-457230-unsplash.jpg",
+        "details": {
+          "size": 1919527,
+          "image": {
+            "width": 4200,
+            "height": 2552
+          }
+        },
+        "fileName": "sandro-katalina-457230-unsplash.jpg",
+        "contentType": "image/jpeg"
+      },
+      "title": "Purple Triangle Neon Lights",
+      "description": "",
+      "node_locale": "en-US",
+      "internal": {
+        "type": "ContentfulAsset",
+        "contentDigest": "1cb34766c1c057a72012575aa169af19",
+        "owner": "gatsby-source-contentful"
+      }
+    },
+    "e30c5711-32af-53ad-8423-5b9209dce09a": {
+      "contentful_id": "4bnldexWysO6s2iIyGWkYm",
+      "id": "e30c5711-32af-53ad-8423-5b9209dce09a",
+      "parent": null,
+      "children": [],
+      "file": {
+        "url": "//images.ctfassets.net/oghc6wtiomc3/4bnldexWysO6s2iIyGWkYm/f16a79a5b5a18a6691b6d50da7aa6bd9/BlogPost-query.png",
+        "details": {
+          "size": 39650,
+          "image": {
+            "width": 756,
+            "height": 759
+          }
+        },
+        "fileName": "BlogPost-query.png",
+        "contentType": "image/png"
+      },
+      "title": "BlogPost-query",
+      "description": "",
+      "node_locale": "en-US",
+      "internal": {
+        "type": "ContentfulAsset",
+        "contentDigest": "296093be246f05f959bcbc9b451ed15e",
+        "owner": "gatsby-source-contentful"
+      }
+    },
+    "cb8e9df0-3007-5e7b-bb38-87cd526d2032": {
+      "contentful_id": "HD5JviJqkE2wEy2iq0IUk",
+      "id": "cb8e9df0-3007-5e7b-bb38-87cd526d2032",
+      "parent": null,
+      "children": [],
+      "file": {
+        "url": "//images.ctfassets.net/oghc6wtiomc3/HD5JviJqkE2wEy2iq0IUk/05d181ca03a92823b5a1a6be7f97a3a6/createPages-API-code.png",
+        "details": {
+          "size": 90819,
+          "image": {
+            "width": 739,
+            "height": 1314
+          }
+        },
+        "fileName": "createPages-API-code.png",
+        "contentType": "image/png"
+      },
+      "title": "createPages-API-code",
+      "description": "",
+      "node_locale": "en-US",
+      "internal": {
+        "type": "ContentfulAsset",
+        "contentDigest": "49762aea0830879afbdff341e095657e",
+        "owner": "gatsby-source-contentful"
+      }
+    },
+    "02bc2210-586f-5459-920f-81d918e3caba": {
+      "contentful_id": "1jW1gN58D4W2I8WEe6gOuY",
+      "id": "02bc2210-586f-5459-920f-81d918e3caba",
+      "parent": null,
+      "children": [],
+      "file": {
+        "url": "//images.ctfassets.net/oghc6wtiomc3/1jW1gN58D4W2I8WEe6gOuY/9a2eb00a45af575ef336bb5f1913f0ff/me-in-chicago-2017.jpg",
+        "details": {
+          "size": 932608,
+          "image": {
+            "width": 2320,
+            "height": 2320
+          }
+        },
+        "fileName": "me-in-chicago-2017.jpg",
+        "contentType": "image/jpeg"
+      },
+      "title": "Jacob In Chicago",
+      "description": "A selfie of Jacob in front of the bean in Chicago.",
+      "node_locale": "en-US",
+      "internal": {
+        "type": "ContentfulAsset",
+        "contentDigest": "e2c9351a7c3dc2ded3a4fce890c010cb",
+        "owner": "gatsby-source-contentful"
+      }
+    },
+    "3eed82f9-0037-514e-8c7b-d0213fe0d61b": {
+      "contentful_id": "5i0NEdTATSCE022YG0W8AY",
+      "id": "3eed82f9-0037-514e-8c7b-d0213fe0d61b",
+      "parent": null,
+      "children": [],
+      "file": {
+        "url": "//images.ctfassets.net/oghc6wtiomc3/5i0NEdTATSCE022YG0W8AY/7b36525e23bcfdb021ee14a9e70475b9/JDCastro_signature.png",
+        "details": {
+          "size": 34439,
+          "image": {
+            "width": 2928,
+            "height": 474
+          }
+        },
+        "fileName": "JDCastro_signature.png",
+        "contentType": "image/png"
+      },
+      "title": "Black Signature - JDCastro",
+      "description": "",
+      "node_locale": "en-US",
+      "internal": {
+        "type": "ContentfulAsset",
+        "contentDigest": "2d8c49d83554097fbcde557d1dfe0bc0",
+        "owner": "gatsby-source-contentful"
+      }
+    },
+    "fe71f04f-29ab-56d1-8c9b-2e17d6e326af": {
+      "contentful_id": "21DsNFJPgUms8sAyCWgwyA",
+      "id": "fe71f04f-29ab-56d1-8c9b-2e17d6e326af",
+      "parent": null,
+      "children": [],
+      "file": {
+        "url": "//images.ctfassets.net/oghc6wtiomc3/21DsNFJPgUms8sAyCWgwyA/6fe38399ec78feff169e6b564b60f153/olivier-collet-1165010-unsplash.jpg",
+        "details": {
+          "size": 1355974,
+          "image": {
+            "width": 4478,
+            "height": 2515
+          }
+        },
+        "fileName": "olivier-collet-1165010-unsplash.jpg",
+        "contentType": "image/jpeg"
+      },
+      "title": "Speeding Train in Subway",
+      "description": "A blue train blurred by speeding through an underground subway.",
+      "node_locale": "en-US",
+      "internal": {
+        "type": "ContentfulAsset",
+        "contentDigest": "0b9727b21b318ab2a7c2a5cc24be6307",
+        "owner": "gatsby-source-contentful"
+      }
+    },
+    "a8367f41-c9c7-5842-9762-b1f6fb884dad": {
+      "contentful_id": "6dSzflXsd2KAigqsKeKkyG",
+      "id": "a8367f41-c9c7-5842-9762-b1f6fb884dad",
+      "parent": null,
+      "children": [],
+      "file": {
+        "url": "//images.ctfassets.net/oghc6wtiomc3/6dSzflXsd2KAigqsKeKkyG/7bd341997ccdfb1f0b574b8c051ee3f1/chuttersnap-297551.jpg",
+        "details": {
+          "size": 712271,
+          "image": {
+            "width": 6016,
+            "height": 4016
+          }
+        },
+        "fileName": "chuttersnap-297551.jpg",
+        "contentType": "image/jpeg"
+      },
+      "title": "Yellow Smoke",
+      "description": "Elegant yellow smoke with a black background",
+      "node_locale": "en-US",
+      "internal": {
+        "type": "ContentfulAsset",
+        "contentDigest": "a7e04a8cdab5350eb53b9e5aef959267",
+        "owner": "gatsby-source-contentful"
+      }
+    },
+    "74f21fcb-49f3-5bad-9c8f-cde71295333b": {
+      "contentful_id": "5k06azDEM0SqQqequAKwQQ",
+      "id": "74f21fcb-49f3-5bad-9c8f-cde71295333b",
+      "parent": null,
+      "children": [],
+      "file": {
+        "url": "//images.ctfassets.net/oghc6wtiomc3/5k06azDEM0SqQqequAKwQQ/170e7c946083a04dcddfff53f6a90c5d/chicago-river.jpg",
+        "details": {
+          "size": 1913166,
+          "image": {
+            "width": 4473,
+            "height": 3576
+          }
+        },
+        "fileName": "chicago-river.jpg",
+        "contentType": "image/jpeg"
+      },
+      "title": "Chicago",
+      "description": "Cool Photo of downtown Chi-town",
+      "node_locale": "en-US",
+      "internal": {
+        "type": "ContentfulAsset",
+        "contentDigest": "702da9068448a3c30f43cff8d0cc948d",
+        "owner": "gatsby-source-contentful"
+      }
+    },
+    "d9d5d7bf-3681-5ec4-939d-c4d41c0d9d8f": {
+      "contentful_id": "1PcwXTwgZmqkeEESCskEgg",
+      "id": "d9d5d7bf-3681-5ec4-939d-c4d41c0d9d8f",
+      "parent": null,
+      "children": [],
+      "file": {
+        "url": "//images.ctfassets.net/oghc6wtiomc3/1PcwXTwgZmqkeEESCskEgg/16c7c28bef56983c9b5dbcb9da74d768/revenuehalfempty-full_0.jpg",
+        "details": {
+          "size": 18952,
+          "image": {
+            "width": 600,
+            "height": 300
+          }
+        },
+        "fileName": "revenuehalfempty-full_0.jpg",
+        "contentType": "image/jpeg"
+      },
+      "title": "Glass Half Empty and Full",
+      "description": "Taken from Google Images",
+      "node_locale": "en-US",
+      "internal": {
+        "type": "ContentfulAsset",
+        "contentDigest": "06b9623f0a3f0a438fbd433c48b8d618",
+        "owner": "gatsby-source-contentful"
+      }
+    },
+    "aaddb730-5c58-52df-b045-a9aaa3e99bd3": {
+      "id": "aaddb730-5c58-52df-b045-a9aaa3e99bd3",
+      "children": [],
+      "parent": "66e1b74f-271f-5434-ac0f-d5d5f9c8210f",
+      "internal": {
+        "content": "I love front-end web development. I also really love sports and super deep ideas! Follow me everywhere => @jacobdcastro",
+        "type": "MarkdownRemark",
+        "contentDigest": "4f3f9606e052d59a65878d94f9eba202",
+        "owner": "gatsby-transformer-remark"
+      },
+      "frontmatter": {
+        "title": "",
+        "_PARENT": "66e1b74f-271f-5434-ac0f-d5d5f9c8210f"
+      },
+      "excerpt": "",
+      "rawMarkdownBody": "I love front-end web development. I also really love sports and super deep ideas! Follow me everywhere => @jacobdcastro"
+    },
+    "5f92e2f6-9aa5-5705-9e8f-8ddee50b3dba": {
+      "id": "5f92e2f6-9aa5-5705-9e8f-8ddee50b3dba",
+      "children": [],
+      "parent": "a2dad78f-eaf4-5fb0-8507-adc0a2d3aaf6",
+      "internal": {
+        "content": "Headless content management systems have become a thing in the web development world. They make it fast and easy to pull data and content from other places to throw on your site. There's a handful of different ones out there that people love.\n\nOne of the first ones I was considering using for this blog was GraphCMS, a GraphQL-based content management system. I'm not going to lie, I love the UI they have; it's so well-designed and intuitive. But I continued to explore my options.\n\nI checked out another system made my Netlify. It's literally called Netlify CMS. I didn't spend as much time researching this one as I did GraphCMS and Contentful, but I simply decided not to choose it. Even though I've only heard amazing things about it, Netlify CMS didn't become my final solution. Contentful did.\n\n\n## Getting to Know Contentful\nContentful simply looked amazing. Their UI looked simple and easy-to-use, the way their \"spaces\" and \"content model\" worked really made sense to me at first. Clicking around the admin pages made me excited to use a tool that was so flexible and straight forward.\n\nWhile looking for my CMS of choice, there was one question I had in the back of my mind: __would I feel confident using this CMS on a client project?__\n\nThe answer to Netlify CMS was \"probably.\"\nFor GraphCMS, \"sure.\"\nBut for Contentful, my answer was, with no doubt, \"absolutely.\"\n\nContentful seemed so much more able to handle a large-scale project. There's also features to add user profiles with separate permissions per account. It can be a truly team experience when working with multiple developers and content creators.\n\nI also enjoyed reading through the Contentful docs. It was very easy to get to know and there were plenty of resources to learn Contentful such as Youtube videos and blog articles.\n\n\n## Using React\nUsing GraphQL in my Gatsby blog was extremely easy to do. GraphiQL made it even easier to find my content.\n\nGraphQL seemed too good to be true. But once copying and pasting my query in my code, placing the content from the returned JSON data into my JSX, and seeing it pop up in the browser,  I was hooked on this system. Gatsby and Contentful were made for each other, I swear.\n\nThis is what my query looks like on my `BlogPost.js` page template:\n\n![BlogPost-query](//images.ctfassets.net/oghc6wtiomc3/4bnldexWysO6s2iIyGWkYm/f16a79a5b5a18a6691b6d50da7aa6bd9/BlogPost-query.png)\n\nOnce the content is called via GraphQL, I pretty much just slap the content into the markup. Fairly simple honestly! This is what my `render()` method looks like with the injected Contentful content:\n\n![render-method](//images.ctfassets.net/oghc6wtiomc3/2EF4t0NPbWgYoWsYqmUIki/3452cacb9733bce07977e2d806e9f647/render-method.png)\n\nIt's pretty straight forward to fetch the content and place it appropriately in the site, which I am passing the data as props to all of my main components on the `BlogPost.js` template.\n\n\n## 3 Favorite Things About Contentful\nAfter getting to know the Contentful system more and integrating it into my site, there were a few specific features that really stuck out to me. They were major contributors in my ultimate decision to choose Contentful over other ones. Here are my three favorite features in Contentful:\n\n### 1. Markdown Long Text Editor\nWhen creating a content type in the content model, there are two primary entry types for text: short text and long text. Short text is literally just a string that is shorter than 256 characters unless otherwise specified. But the long text entry type is much more robust. This is because it uses markdown (.md files) to write long copy, such as the body content of a blog post. This is what the markdown long text editor looks like: \n\n[INSERT MARKDOWN EDITOR IMAGE]\n\nWhen the body content of my blog is fetched, it returns raw, minified markdown. This would be useless if it wasn't for Gatsby's plugin called gatsby-transformer-remark. This is a transformer plugin that literally transforms markdown files into HTML. It creates a query in the schema called  `childMarkdownRemark` that I use access the body content of my blog post. The query looks like this:\n\n```\nbodyContent {\n     childMarkdownRemark {\n         html\n         excerpt\n     }\n}\n```\n\nAs you can see, not only can `childMarkdownRemark` return the HTML, it can also create a snippet of 50 words or less to place as a preview, as noted by the `excerpt` query. Overall, I love the way Contentful uses markdown and how Gatsby can transform it into usable markup. It's perfect.\n\n### 2. Roles and Permissions\nI have yet to really put this to good use. But with clients, this feature is a dream. There's no need to create shared login information. Both I, the developer, and my client, the content creator, can work on things equally without stepping on each other's toes in the project.\n\nNot to mention, when content is edited and published, it labels who the author was, when it was created, edited, and published. Permissions are also easily editable to restrict or free various rights to certain accounts and editors. This holds people accountable so not everyone contributing to a project can have access to everything. That is so important when working with clients.\n\n### 3. Webhooks\nOne of my favorite things in all of web development is automation. Contentful does automation extremely well with third-party services with webhooks. The only ones I'm currently using are the Netlify and Slack webhooks.\n\nThe Netlify webhook automatically triggers a build process (more on Netlify in the next blog post) every time a new entry is published, edited, deleted, etc. This is super nice for a blog like this one because when I delete, unpublish, or add a new blog post, it automatically builds my site including that update. I never have to do anything manually. It's beautiful, really.\n\nSimilarly, the Slack webhook notifies my Slack channel whenever there's an edit to the content. It's so nice to have a stream of notifications handy rather than digging through Netlify or Contentful menus to find when, what, or where something was edited. It makes it super convenient!\n\n\n## Final Thoughts on Contentful\nI've loved my experience using Contentful. Even without Gatsby, it would be a delight to use for any website's content infrastructure. But when paired with Gatsby, Contentful is a breeze to use and every little aspect of the two technologies seem to be made for each other.\n\nI have no plans on switching to another CMS any time soon; Contentful is just too good. But, of course, I'd be happy to learn a new CMS just to have options. But since I have a good feel for Contentful, I could probably pick up any other CMS pretty easily. Contentful has been a great start to my career in working with API's.\n\nThanks for reading, and let me know if you check out Contentful or use it in your own site! I'd love to hear more about how you make it work for you.\n\nThanks for reading!",
+        "type": "MarkdownRemark",
+        "contentDigest": "1b47912c396cfef456849c3e4a6c379f",
+        "owner": "gatsby-transformer-remark"
+      },
+      "frontmatter": {
+        "title": "",
+        "_PARENT": "a2dad78f-eaf4-5fb0-8507-adc0a2d3aaf6"
+      },
+      "excerpt": "",
+      "rawMarkdownBody": "Headless content management systems have become a thing in the web development world. They make it fast and easy to pull data and content from other places to throw on your site. There's a handful of different ones out there that people love.\n\nOne of the first ones I was considering using for this blog was GraphCMS, a GraphQL-based content management system. I'm not going to lie, I love the UI they have; it's so well-designed and intuitive. But I continued to explore my options.\n\nI checked out another system made my Netlify. It's literally called Netlify CMS. I didn't spend as much time researching this one as I did GraphCMS and Contentful, but I simply decided not to choose it. Even though I've only heard amazing things about it, Netlify CMS didn't become my final solution. Contentful did.\n\n\n## Getting to Know Contentful\nContentful simply looked amazing. Their UI looked simple and easy-to-use, the way their \"spaces\" and \"content model\" worked really made sense to me at first. Clicking around the admin pages made me excited to use a tool that was so flexible and straight forward.\n\nWhile looking for my CMS of choice, there was one question I had in the back of my mind: __would I feel confident using this CMS on a client project?__\n\nThe answer to Netlify CMS was \"probably.\"\nFor GraphCMS, \"sure.\"\nBut for Contentful, my answer was, with no doubt, \"absolutely.\"\n\nContentful seemed so much more able to handle a large-scale project. There's also features to add user profiles with separate permissions per account. It can be a truly team experience when working with multiple developers and content creators.\n\nI also enjoyed reading through the Contentful docs. It was very easy to get to know and there were plenty of resources to learn Contentful such as Youtube videos and blog articles.\n\n\n## Using React\nUsing GraphQL in my Gatsby blog was extremely easy to do. GraphiQL made it even easier to find my content.\n\nGraphQL seemed too good to be true. But once copying and pasting my query in my code, placing the content from the returned JSON data into my JSX, and seeing it pop up in the browser,  I was hooked on this system. Gatsby and Contentful were made for each other, I swear.\n\nThis is what my query looks like on my `BlogPost.js` page template:\n\n![BlogPost-query](//images.ctfassets.net/oghc6wtiomc3/4bnldexWysO6s2iIyGWkYm/f16a79a5b5a18a6691b6d50da7aa6bd9/BlogPost-query.png)\n\nOnce the content is called via GraphQL, I pretty much just slap the content into the markup. Fairly simple honestly! This is what my `render()` method looks like with the injected Contentful content:\n\n![render-method](//images.ctfassets.net/oghc6wtiomc3/2EF4t0NPbWgYoWsYqmUIki/3452cacb9733bce07977e2d806e9f647/render-method.png)\n\nIt's pretty straight forward to fetch the content and place it appropriately in the site, which I am passing the data as props to all of my main components on the `BlogPost.js` template.\n\n\n## 3 Favorite Things About Contentful\nAfter getting to know the Contentful system more and integrating it into my site, there were a few specific features that really stuck out to me. They were major contributors in my ultimate decision to choose Contentful over other ones. Here are my three favorite features in Contentful:\n\n### 1. Markdown Long Text Editor\nWhen creating a content type in the content model, there are two primary entry types for text: short text and long text. Short text is literally just a string that is shorter than 256 characters unless otherwise specified. But the long text entry type is much more robust. This is because it uses markdown (.md files) to write long copy, such as the body content of a blog post. This is what the markdown long text editor looks like: \n\n[INSERT MARKDOWN EDITOR IMAGE]\n\nWhen the body content of my blog is fetched, it returns raw, minified markdown. This would be useless if it wasn't for Gatsby's plugin called gatsby-transformer-remark. This is a transformer plugin that literally transforms markdown files into HTML. It creates a query in the schema called  `childMarkdownRemark` that I use access the body content of my blog post. The query looks like this:\n\n```\nbodyContent {\n     childMarkdownRemark {\n         html\n         excerpt\n     }\n}\n```\n\nAs you can see, not only can `childMarkdownRemark` return the HTML, it can also create a snippet of 50 words or less to place as a preview, as noted by the `excerpt` query. Overall, I love the way Contentful uses markdown and how Gatsby can transform it into usable markup. It's perfect.\n\n### 2. Roles and Permissions\nI have yet to really put this to good use. But with clients, this feature is a dream. There's no need to create shared login information. Both I, the developer, and my client, the content creator, can work on things equally without stepping on each other's toes in the project.\n\nNot to mention, when content is edited and published, it labels who the author was, when it was created, edited, and published. Permissions are also easily editable to restrict or free various rights to certain accounts and editors. This holds people accountable so not everyone contributing to a project can have access to everything. That is so important when working with clients.\n\n### 3. Webhooks\nOne of my favorite things in all of web development is automation. Contentful does automation extremely well with third-party services with webhooks. The only ones I'm currently using are the Netlify and Slack webhooks.\n\nThe Netlify webhook automatically triggers a build process (more on Netlify in the next blog post) every time a new entry is published, edited, deleted, etc. This is super nice for a blog like this one because when I delete, unpublish, or add a new blog post, it automatically builds my site including that update. I never have to do anything manually. It's beautiful, really.\n\nSimilarly, the Slack webhook notifies my Slack channel whenever there's an edit to the content. It's so nice to have a stream of notifications handy rather than digging through Netlify or Contentful menus to find when, what, or where something was edited. It makes it super convenient!\n\n\n## Final Thoughts on Contentful\nI've loved my experience using Contentful. Even without Gatsby, it would be a delight to use for any website's content infrastructure. But when paired with Gatsby, Contentful is a breeze to use and every little aspect of the two technologies seem to be made for each other.\n\nI have no plans on switching to another CMS any time soon; Contentful is just too good. But, of course, I'd be happy to learn a new CMS just to have options. But since I have a good feel for Contentful, I could probably pick up any other CMS pretty easily. Contentful has been a great start to my career in working with API's.\n\nThanks for reading, and let me know if you check out Contentful or use it in your own site! I'd love to hear more about how you make it work for you.\n\nThanks for reading!"
+    },
+    "5cd5fedd-df46-5bee-87e5-e9daece42349": {
+      "id": "5cd5fedd-df46-5bee-87e5-e9daece42349",
+      "children": [],
+      "parent": "20072878-7cd7-56df-b32e-d81f88875362",
+      "internal": {
+        "content": "In the last 3-4 months, I've dedicated myself to learning React. I've been on Javascript for the last year or so and decided it was time to learn a framework/library to expand my Javascript skills. Javascript always excited me. And hearing a lot about frameworks such as Angular, React, Vue, and, formerly, Ember, made me super curious about what they were and why I would need to use one.\n\nAfter exploring the massive Javascript world, I made my decision on React. It seemed the most promising and it looked like it had a bright, long future that could help kick off my career in web development. But I soon had a slightly scary realization: the React ecosystem is gigantic in itself. There were extensions and libraries and frameworks for React that made it all seem so intense.\n\nI pushed all of the React craze aside and started with the React Basics course on Treehouse. My first React environment I learned was Create React App. It was an awesome experience!! I really loved React and it actually really made sense to me. I caught on pretty quickly!\n\n\n## Converting My Website\nBy this time, I had already created my website in vanilla HTML, CSS, and (a little bit of) JS. So decided to convert it to React using Create React App.\n\nAfter lots of copying and pasting, figuring out how to style things in React (styled components ftw), and stretching my limited React skills, I did it. My first React site was on the web. Netlify made it super easy to do so (more on Netlify in a future blog post).\n\nUnfortunately, my newly developed site was oddly slow. I wasn't sure why and I tried doing things to optimize performance but it never really helped. After all, my website was not a single page app. Create React App is amazing for single page apps but I felt there were better solutions out there for my small, personal website.\n\nAfter searching through lots of solutions, I decided on one that seemed to be getting a lot more hype than other React frameworks. And that was Gatsby.\n\n\n## Refactoring to Gatsby\nGatsby looked so interesting. I loved their website, I admired how fast it was (assuming it was also built on Gatsby), and I only saw extremely positive comments on Twitter about it. People were all for it!\n\nI went to the docs and went through the tutorial.\n\nWow. It was so easy, awesomely intuitive, and surprisingly fun! I just had to go with Gatsby. It made so much sense for my site since Gatsby specializes in static sites. It had a perfect system for pages similar to how you'd have multiple pages in a normal HTML-developed site. It made so much sense.\n\nAfter lots of stumbling over myself, reading through the docs, and trying to re-do all my Create React App website, I finally converted it. And wow, my website's performance improved by a long shot. Some may say, it is blazingly fast (at least compared to my site on Create React App).\n\n\n## Adding THIS Blog\nMy site at this point only featured the home, about, and contact pages. That's a bit boring, so I wanted to add a blog. So I set my next task to figuring out how the heck I'd do that. I decided on Contentful for my CMS (definitely a blog post on this soon).\n\nI knew I wouldn't be making this blog to be perfect on the first try. It'll be a little side project to improve over time as my skills progress.\n\nI started by making the blog home page and that was pretty simple and straight forward. The more difficult part was making the pages for each blog post. The Gatsby Node API `createPages` made it super easy!\n\nI started by following along with a tutorial on Youtube explaining how to use Contentful with Gatsby. After that tutorial, I really began to understand Gatsby. This is what I finished in my `gatsby-node.js` file:\n\n![createPages-API-code](//images.ctfassets.net/oghc6wtiomc3/HD5JviJqkE2wEy2iq0IUk/05d181ca03a92823b5a1a6be7f97a3a6/createPages-API-code.png)\n\nCreating the pages is super easy with the `createPages` Gatsby API. Not to mention, Contentful can automatically generate a slug for the URL. On my project, I have the slugs set to be the title of the blog post. For example, a blog post titled \"Hello World In Javascript\" would have its own page at jacobdcastro.com/blog/hello-world-in-javascript/. These tools make it so easy!\n\nOnce the pages are created behind the scenes in Gatsby, it uses a template to generate the markup for each page. So each blog post page is based on the same template. I love reusing code.\n\n\n## Using GraphQL\nOne of the reasons Gatsby is so cool is that it seamlessly integrates GraphQL in its data layer. GraphQL was fairly easy for me to learn, perhaps because I'm so new to the game that I'm not stuck in other ways.\n\nFollowing along with more tutorials and reading the Gatsby docs, I figured out how to write queries for fetching my content from Contentful. It made it super easy.\n\nFor example, the query I wrote in my `BlogPost.js` template looks like this:\n\n![BlogPost-query](//images.ctfassets.net/oghc6wtiomc3/4bnldexWysO6s2iIyGWkYm/f16a79a5b5a18a6691b6d50da7aa6bd9/BlogPost-query.png)\n\nWhen I receive the customized object from the query, I basically just stick the content in all of the appropriate places. It's really easy to be honest. Gatsby makes GraphQL wildly effortless.\n\n\n## Final Thoughts on Gatsby\nGatsby is amazing. I've grown a lot as a React developer by using Gatsby. It's taught me a lot from developing in React and using GraphQL to other soft skills such as reading docs, working with file systems, using the CLI, and how to work quickly.\n\nI definitely plan on using Gatsby in the future, especially on client projects when it's most beneficial. Gatsby is a fantastic tool and makes it easy to integrate tools like Contentful.\n\nOn my next blog post, I will be sharing my time working with Contentful and how I integrated it with Gatsby and why I it became my first choice CMS for my blog! So stay tuned.\n\nThanks for reading!",
+        "type": "MarkdownRemark",
+        "contentDigest": "3dc00fc914e047cc3cb7c1df55f666d4",
+        "owner": "gatsby-transformer-remark"
+      },
+      "frontmatter": {
+        "title": "",
+        "_PARENT": "20072878-7cd7-56df-b32e-d81f88875362"
+      },
+      "excerpt": "",
+      "rawMarkdownBody": "In the last 3-4 months, I've dedicated myself to learning React. I've been on Javascript for the last year or so and decided it was time to learn a framework/library to expand my Javascript skills. Javascript always excited me. And hearing a lot about frameworks such as Angular, React, Vue, and, formerly, Ember, made me super curious about what they were and why I would need to use one.\n\nAfter exploring the massive Javascript world, I made my decision on React. It seemed the most promising and it looked like it had a bright, long future that could help kick off my career in web development. But I soon had a slightly scary realization: the React ecosystem is gigantic in itself. There were extensions and libraries and frameworks for React that made it all seem so intense.\n\nI pushed all of the React craze aside and started with the React Basics course on Treehouse. My first React environment I learned was Create React App. It was an awesome experience!! I really loved React and it actually really made sense to me. I caught on pretty quickly!\n\n\n## Converting My Website\nBy this time, I had already created my website in vanilla HTML, CSS, and (a little bit of) JS. So decided to convert it to React using Create React App.\n\nAfter lots of copying and pasting, figuring out how to style things in React (styled components ftw), and stretching my limited React skills, I did it. My first React site was on the web. Netlify made it super easy to do so (more on Netlify in a future blog post).\n\nUnfortunately, my newly developed site was oddly slow. I wasn't sure why and I tried doing things to optimize performance but it never really helped. After all, my website was not a single page app. Create React App is amazing for single page apps but I felt there were better solutions out there for my small, personal website.\n\nAfter searching through lots of solutions, I decided on one that seemed to be getting a lot more hype than other React frameworks. And that was Gatsby.\n\n\n## Refactoring to Gatsby\nGatsby looked so interesting. I loved their website, I admired how fast it was (assuming it was also built on Gatsby), and I only saw extremely positive comments on Twitter about it. People were all for it!\n\nI went to the docs and went through the tutorial.\n\nWow. It was so easy, awesomely intuitive, and surprisingly fun! I just had to go with Gatsby. It made so much sense for my site since Gatsby specializes in static sites. It had a perfect system for pages similar to how you'd have multiple pages in a normal HTML-developed site. It made so much sense.\n\nAfter lots of stumbling over myself, reading through the docs, and trying to re-do all my Create React App website, I finally converted it. And wow, my website's performance improved by a long shot. Some may say, it is blazingly fast (at least compared to my site on Create React App).\n\n\n## Adding THIS Blog\nMy site at this point only featured the home, about, and contact pages. That's a bit boring, so I wanted to add a blog. So I set my next task to figuring out how the heck I'd do that. I decided on Contentful for my CMS (definitely a blog post on this soon).\n\nI knew I wouldn't be making this blog to be perfect on the first try. It'll be a little side project to improve over time as my skills progress.\n\nI started by making the blog home page and that was pretty simple and straight forward. The more difficult part was making the pages for each blog post. The Gatsby Node API `createPages` made it super easy!\n\nI started by following along with a tutorial on Youtube explaining how to use Contentful with Gatsby. After that tutorial, I really began to understand Gatsby. This is what I finished in my `gatsby-node.js` file:\n\n![createPages-API-code](//images.ctfassets.net/oghc6wtiomc3/HD5JviJqkE2wEy2iq0IUk/05d181ca03a92823b5a1a6be7f97a3a6/createPages-API-code.png)\n\nCreating the pages is super easy with the `createPages` Gatsby API. Not to mention, Contentful can automatically generate a slug for the URL. On my project, I have the slugs set to be the title of the blog post. For example, a blog post titled \"Hello World In Javascript\" would have its own page at jacobdcastro.com/blog/hello-world-in-javascript/. These tools make it so easy!\n\nOnce the pages are created behind the scenes in Gatsby, it uses a template to generate the markup for each page. So each blog post page is based on the same template. I love reusing code.\n\n\n## Using GraphQL\nOne of the reasons Gatsby is so cool is that it seamlessly integrates GraphQL in its data layer. GraphQL was fairly easy for me to learn, perhaps because I'm so new to the game that I'm not stuck in other ways.\n\nFollowing along with more tutorials and reading the Gatsby docs, I figured out how to write queries for fetching my content from Contentful. It made it super easy.\n\nFor example, the query I wrote in my `BlogPost.js` template looks like this:\n\n![BlogPost-query](//images.ctfassets.net/oghc6wtiomc3/4bnldexWysO6s2iIyGWkYm/f16a79a5b5a18a6691b6d50da7aa6bd9/BlogPost-query.png)\n\nWhen I receive the customized object from the query, I basically just stick the content in all of the appropriate places. It's really easy to be honest. Gatsby makes GraphQL wildly effortless.\n\n\n## Final Thoughts on Gatsby\nGatsby is amazing. I've grown a lot as a React developer by using Gatsby. It's taught me a lot from developing in React and using GraphQL to other soft skills such as reading docs, working with file systems, using the CLI, and how to work quickly.\n\nI definitely plan on using Gatsby in the future, especially on client projects when it's most beneficial. Gatsby is a fantastic tool and makes it easy to integrate tools like Contentful.\n\nOn my next blog post, I will be sharing my time working with Contentful and how I integrated it with Gatsby and why I it became my first choice CMS for my blog! So stay tuned.\n\nThanks for reading!"
+    },
+    "3edecce5-cfae-573a-8aab-0a34e3ce80f7": {
+      "id": "3edecce5-cfae-573a-8aab-0a34e3ce80f7",
+      "children": [],
+      "parent": "a76370a2-f65d-53de-b298-dff213d2c700",
+      "internal": {
+        "content": "I'm so excited to have finally finished my blog. I've used some of my favorite tools to build it too: Gatsby, Contentful, and Netlify. So why did I build a blog and why did I choose these tools? I'm glad you asked.\n\n## Documenting My Web Development Journey\nThis past year or so, I've really grown a lot as a beginning developer. I began learning HTML and CSS right out of high school in 2015. I would finish up my homework in the student center, head over to the student computer center, and just sit and work on the Treehouse Front-end Web Development course. Even while doing my usual college things, I would still make time to learn web development. I was discovering more and more that I really loved it.\n\nThen I took a break - a pretty long one. After completing my first and only year at community college in 2016, I moved to Redding, CA for a year to attend a ministry school. It was one of the most amazing years of my life. Then in May of 2017, I moved back home, but at this point I was really lacking short-term vision and goals for my life.\n\nNaturally, I decided to fall back to what I had already started: web development. I re-subscribed to Treehouse and went all-in. I haven't regretted that for a moment. And now I'm here, building my own blog instead of letting Wordpress do it for me!\n\nThrough my journey thus far, I've realized how valuable documenting everything would have been early-on (even though I'd say I'm still extremely early in my journey). So this is where I'm starting.\n\n## Just The Beginning\nI'll be writing about my thoughts on certain technologies, updates on my career, or cool things I've found in the web development community. But this blog will be finely balanced with some Medium posts here and there as well. I miss writing and I want to do a lot more of it (writing code doesn't count).\n\nThis is a short introduction of myself, my blog, and what's to come.\n\nSpeaking of what's to come, I will have blog posts on my experience with Gatsby, Contentful, and Netlify very soon!\n\nSpoiler: they're all amazing tools and make a great three-way marriage.\n\nHave a fantastic day, I'll talk to you soon!",
+        "type": "MarkdownRemark",
+        "contentDigest": "df6b3701204a3200205f37f05f8c0956",
+        "owner": "gatsby-transformer-remark"
+      },
+      "frontmatter": {
+        "title": "",
+        "_PARENT": "a76370a2-f65d-53de-b298-dff213d2c700"
+      },
+      "excerpt": "",
+      "rawMarkdownBody": "I'm so excited to have finally finished my blog. I've used some of my favorite tools to build it too: Gatsby, Contentful, and Netlify. So why did I build a blog and why did I choose these tools? I'm glad you asked.\n\n## Documenting My Web Development Journey\nThis past year or so, I've really grown a lot as a beginning developer. I began learning HTML and CSS right out of high school in 2015. I would finish up my homework in the student center, head over to the student computer center, and just sit and work on the Treehouse Front-end Web Development course. Even while doing my usual college things, I would still make time to learn web development. I was discovering more and more that I really loved it.\n\nThen I took a break - a pretty long one. After completing my first and only year at community college in 2016, I moved to Redding, CA for a year to attend a ministry school. It was one of the most amazing years of my life. Then in May of 2017, I moved back home, but at this point I was really lacking short-term vision and goals for my life.\n\nNaturally, I decided to fall back to what I had already started: web development. I re-subscribed to Treehouse and went all-in. I haven't regretted that for a moment. And now I'm here, building my own blog instead of letting Wordpress do it for me!\n\nThrough my journey thus far, I've realized how valuable documenting everything would have been early-on (even though I'd say I'm still extremely early in my journey). So this is where I'm starting.\n\n## Just The Beginning\nI'll be writing about my thoughts on certain technologies, updates on my career, or cool things I've found in the web development community. But this blog will be finely balanced with some Medium posts here and there as well. I miss writing and I want to do a lot more of it (writing code doesn't count).\n\nThis is a short introduction of myself, my blog, and what's to come.\n\nSpeaking of what's to come, I will have blog posts on my experience with Gatsby, Contentful, and Netlify very soon!\n\nSpoiler: they're all amazing tools and make a great three-way marriage.\n\nHave a fantastic day, I'll talk to you soon!"
+    },
+    "SitePage /blog/using-contentful-on-my-blog": {
+      "jsonName": "blog-using-contentful-on-my-blog-1b2",
+      "internalComponentName": "ComponentBlogUsingContentfulOnMyBlog",
+      "path": "/blog/using-contentful-on-my-blog",
+      "component": "C:/Users/jdcas/jdcastro-web-dd/personal-site/src/templates/BlogPost.js",
+      "componentChunkName": "component---src-templates-blog-post-js",
+      "context": {
+        "slug": "using-contentful-on-my-blog"
+      },
+      "pluginCreator___NODE": "7374ebf2-d961-52ee-92a2-c25e7cb387a9",
+      "pluginCreatorId": "7374ebf2-d961-52ee-92a2-c25e7cb387a9",
+      "componentPath": "C:/Users/jdcas/jdcastro-web-dd/personal-site/src/templates/BlogPost.js",
+      "id": "SitePage /blog/using-contentful-on-my-blog",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "52d1049ee7424fe552fb324b777e7e89",
+        "description": "7374ebf2-d961-52ee-92a2-c25e7cb387a9",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /blog/gatsby-first-thoughts": {
+      "jsonName": "blog-gatsby-first-thoughts-035",
+      "internalComponentName": "ComponentBlogGatsbyFirstThoughts",
+      "path": "/blog/gatsby-first-thoughts",
+      "component": "C:/Users/jdcas/jdcastro-web-dd/personal-site/src/templates/BlogPost.js",
+      "componentChunkName": "component---src-templates-blog-post-js",
+      "context": {
+        "slug": "gatsby-first-thoughts"
+      },
+      "pluginCreator___NODE": "7374ebf2-d961-52ee-92a2-c25e7cb387a9",
+      "pluginCreatorId": "7374ebf2-d961-52ee-92a2-c25e7cb387a9",
+      "componentPath": "C:/Users/jdcas/jdcastro-web-dd/personal-site/src/templates/BlogPost.js",
+      "id": "SitePage /blog/gatsby-first-thoughts",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "6a3c012391294c8dda6c40fd26cdde3d",
+        "description": "7374ebf2-d961-52ee-92a2-c25e7cb387a9",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /blog/welcome": {
+      "jsonName": "blog-welcome-ef4",
+      "internalComponentName": "ComponentBlogWelcome",
+      "path": "/blog/welcome",
+      "component": "C:/Users/jdcas/jdcastro-web-dd/personal-site/src/templates/BlogPost.js",
+      "componentChunkName": "component---src-templates-blog-post-js",
+      "context": {
+        "slug": "welcome"
+      },
+      "pluginCreator___NODE": "7374ebf2-d961-52ee-92a2-c25e7cb387a9",
+      "pluginCreatorId": "7374ebf2-d961-52ee-92a2-c25e7cb387a9",
+      "componentPath": "C:/Users/jdcas/jdcastro-web-dd/personal-site/src/templates/BlogPost.js",
+      "id": "SitePage /blog/welcome",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "affb529ceff083f42611d0fe511a8c73",
+        "description": "7374ebf2-d961-52ee-92a2-c25e7cb387a9",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /about/": {
+      "jsonName": "about-f34",
+      "internalComponentName": "ComponentAbout",
+      "path": "/about/",
+      "component": "C:/Users/jdcas/jdcastro-web-dd/personal-site/src/pages/about.js",
+      "componentChunkName": "component---src-pages-about-js",
+      "context": {},
+      "pluginCreator___NODE": "4b36fca3-c013-572e-abed-d9c561ce1943",
+      "pluginCreatorId": "4b36fca3-c013-572e-abed-d9c561ce1943",
+      "componentPath": "C:/Users/jdcas/jdcastro-web-dd/personal-site/src/pages/about.js",
+      "id": "SitePage /about/",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "433d2dc985f2d2ed634cdc7cb85e5efb",
+        "description": "4b36fca3-c013-572e-abed-d9c561ce1943",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /blog/": {
+      "jsonName": "blog-f7a",
+      "internalComponentName": "ComponentBlog",
+      "path": "/blog/",
+      "component": "C:/Users/jdcas/jdcastro-web-dd/personal-site/src/pages/blog.js",
+      "componentChunkName": "component---src-pages-blog-js",
+      "context": {},
+      "pluginCreator___NODE": "4b36fca3-c013-572e-abed-d9c561ce1943",
+      "pluginCreatorId": "4b36fca3-c013-572e-abed-d9c561ce1943",
+      "componentPath": "C:/Users/jdcas/jdcastro-web-dd/personal-site/src/pages/blog.js",
+      "id": "SitePage /blog/",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "0dc5126cffda65a6f12d3b5a3232af6a",
+        "description": "4b36fca3-c013-572e-abed-d9c561ce1943",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /contact/": {
+      "jsonName": "contact-26a",
+      "internalComponentName": "ComponentContact",
+      "path": "/contact/",
+      "component": "C:/Users/jdcas/jdcastro-web-dd/personal-site/src/pages/contact.js",
+      "componentChunkName": "component---src-pages-contact-js",
+      "context": {},
+      "pluginCreator___NODE": "4b36fca3-c013-572e-abed-d9c561ce1943",
+      "pluginCreatorId": "4b36fca3-c013-572e-abed-d9c561ce1943",
+      "componentPath": "C:/Users/jdcas/jdcastro-web-dd/personal-site/src/pages/contact.js",
+      "id": "SitePage /contact/",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "c2084753880eac8dcd7c1087e3a7294b",
+        "description": "4b36fca3-c013-572e-abed-d9c561ce1943",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /": {
+      "jsonName": "index",
+      "internalComponentName": "ComponentIndex",
+      "path": "/",
+      "component": "C:/Users/jdcas/jdcastro-web-dd/personal-site/src/pages/index.js",
+      "componentChunkName": "component---src-pages-index-js",
+      "context": {},
+      "pluginCreator___NODE": "4b36fca3-c013-572e-abed-d9c561ce1943",
+      "pluginCreatorId": "4b36fca3-c013-572e-abed-d9c561ce1943",
+      "componentPath": "C:/Users/jdcas/jdcastro-web-dd/personal-site/src/pages/index.js",
+      "id": "SitePage /",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "34c47f65e1d60beb7107e479201706cf",
+        "description": "4b36fca3-c013-572e-abed-d9c561ce1943",
+        "owner": "internal-data-bridge"
+      }
+    }
+  },
+  "status": {
+    "plugins": {
+      "gatsby-source-contentful": {
+        "oghc6wtiomc3-master-cdn.contentful.com": "w5ZGw6JFwqZmVcKsE8Kow4grw45QdybCkW_CoznDl1I5woJVw6kwwpwQwpVZGcO8E8KebnjCphHCiSzCscKiwpHCm8OodCvCtMKbw7rDi1FGM8Knw7ROwpzCpAJRworDkgPDtsOIVMK_ecKFwo4Nw6TCrgo9EmFZ"
+      }
+    },
+    "PLUGINS_HASH": "b2461fb49644b27e8f68009e44a7e35f"
+  },
+  "componentDataDependencies": {
+    "nodes": {
+      "55e245a5-ef4c-5af3-9b27-3cd60b06358d": [
+        "/blog/using-contentful-on-my-blog"
+      ],
+      "8aa40e42-fdff-58d2-af55-3054f76bfcad": [
+        "/blog/gatsby-first-thoughts"
+      ],
+      "102d1ced-96c8-5df6-bc34-d05d58a476d7": [
+        "/blog/welcome"
+      ],
+      "a2dad78f-eaf4-5fb0-8507-adc0a2d3aaf6": [
+        "/blog/",
+        "/blog/using-contentful-on-my-blog"
+      ],
+      "729e83da-bcbd-5813-bd29-e0140ef862a2": [
+        "/blog/",
+        "/blog/using-contentful-on-my-blog"
+      ],
+      "184c794a-b337-50ca-8b95-a4293d5c79c7": [
+        "/blog/",
+        "/blog/using-contentful-on-my-blog",
+        "/blog/gatsby-first-thoughts",
+        "/blog/welcome"
+      ],
+      "20072878-7cd7-56df-b32e-d81f88875362": [
+        "/blog/",
+        "/blog/gatsby-first-thoughts"
+      ],
+      "bb03ab44-fcc2-5642-95ff-be98d9d277c4": [
+        "/blog/",
+        "/blog/gatsby-first-thoughts"
+      ],
+      "a76370a2-f65d-53de-b298-dff213d2c700": [
+        "/blog/",
+        "/blog/welcome"
+      ],
+      "fe71f04f-29ab-56d1-8c9b-2e17d6e326af": [
+        "/blog/",
+        "/blog/welcome"
+      ],
+      "5f92e2f6-9aa5-5705-9e8f-8ddee50b3dba": [
+        "/blog/",
+        "/blog/using-contentful-on-my-blog"
+      ],
+      "66e1b74f-271f-5434-ac0f-d5d5f9c8210f": [
+        "/blog/",
+        "/blog/using-contentful-on-my-blog",
+        "/blog/gatsby-first-thoughts",
+        "/blog/welcome"
+      ],
+      "5cd5fedd-df46-5bee-87e5-e9daece42349": [
+        "/blog/",
+        "/blog/gatsby-first-thoughts"
+      ],
+      "3edecce5-cfae-573a-8aab-0a34e3ce80f7": [
+        "/blog/",
+        "/blog/welcome"
+      ],
+      "02bc2210-586f-5459-920f-81d918e3caba": [
+        "/blog/using-contentful-on-my-blog",
+        "/blog/gatsby-first-thoughts",
+        "/blog/welcome"
+      ]
+    },
+    "connections": {
+      "ContentfulBlogPost": [
+        null,
+        "/blog/"
+      ]
+    }
+  },
+  "jsonDataPaths": {
+    "blog-gatsby-first-thoughts-035": "915/path---blog-gatsby-first-thoughts-035-035-KYHYVAAisGT2FaWTvcsm4YdEDU",
+    "blog-f7a": "685/path---blog-f-7-a-05d-ovhAlqkYkJ8eCOb4bTvDbIGXZU8",
+    "blog-using-contentful-on-my-blog-1b2": "460/path---blog-using-contentful-on-my-blog-1-b-2-693-Z5ITuhHZP32YN1AtpAbsGfm3MLY",
+    "blog-welcome-ef4": "237/path---blog-welcome-ef-4-33a-pvo71vobRo1OKV2yT30InmA4aNc",
+    "contact-26a": "686/path---contact-26-a-cd9-NZuapzHg3X9TaN1iIixfv1W23E",
+    "dev-404-page-5f9": "920/path---dev-404-page-5-f-9-fab-NZuapzHg3X9TaN1iIixfv1W23E",
+    "about-f34": "125/path---about-f-34-4c2-NZuapzHg3X9TaN1iIixfv1W23E",
+    "index": "173/path---index-6a9-NZuapzHg3X9TaN1iIixfv1W23E"
+  },
+  "components": {
+    "C:/Users/jdcas/jdcastro-web-dd/personal-site/src/templates/BlogPost.js": {
+      "query": "query blogPostQuery(\n  $slug: String!\n) {\n  contentfulBlogPost(slug: {eq: $slug}) {\n    id\n    slug\n    tags\n    title\n    subtitle\n    published(formatString: \"MMMM Do, YYYY\")\n    heroImage {\n      id\n      title\n      description\n      file {\n        url\n      }\n    }\n    bodyContent {\n      childMarkdownRemark {\n        html\n      }\n    }\n    author {\n      id\n      name\n      email\n      birthday\n      twitterURL\n      instagramURL\n      githubURL\n      avatar {\n        file {\n          url\n        }\n      }\n      biography {\n        biography\n      }\n    }\n  }\n}\n",
+      "componentPath": "C:/Users/jdcas/jdcastro-web-dd/personal-site/src/templates/BlogPost.js"
+    },
+    "C:/Users/jdcas/jdcastro-web-dd/personal-site/.cache/dev-404-page.js": {
+      "query": "",
+      "componentPath": "C:/Users/jdcas/jdcastro-web-dd/personal-site/.cache/dev-404-page.js"
+    },
+    "C:/Users/jdcas/jdcastro-web-dd/personal-site/src/pages/about.js": {
+      "query": "",
+      "componentPath": "C:/Users/jdcas/jdcastro-web-dd/personal-site/src/pages/about.js"
+    },
+    "C:/Users/jdcas/jdcastro-web-dd/personal-site/src/pages/blog.js": {
+      "query": "query BlogPageQuery {\n  allContentfulBlogPost {\n    edges {\n      node {\n        id\n        title\n        slug\n        subtitle\n        published(formatString: \"MMMM Do, YYYY\")\n        bodyContent {\n          childMarkdownRemark {\n            excerpt(pruneLength: 50)\n          }\n        }\n        heroImage {\n          title\n          description\n          file {\n            url\n            fileName\n            contentType\n          }\n        }\n        author {\n          id\n          name\n          email\n          birthday\n          biography {\n            biography\n          }\n        }\n      }\n    }\n  }\n}\n",
+      "componentPath": "C:/Users/jdcas/jdcastro-web-dd/personal-site/src/pages/blog.js"
+    },
+    "C:/Users/jdcas/jdcastro-web-dd/personal-site/src/pages/contact.js": {
+      "query": "",
+      "componentPath": "C:/Users/jdcas/jdcastro-web-dd/personal-site/src/pages/contact.js"
+    },
+    "C:/Users/jdcas/jdcastro-web-dd/personal-site/src/pages/index.js": {
+      "query": "",
+      "componentPath": "C:/Users/jdcas/jdcastro-web-dd/personal-site/src/pages/index.js"
+    }
+  },
+  "staticQueryComponents": {}
+}
