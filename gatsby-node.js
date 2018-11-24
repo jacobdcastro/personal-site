@@ -14,7 +14,7 @@ exports.createPages = ({ graphql, actions }) => {
 				        title
 				        slug
 				        subtitle
-				        published
+				        published(formatString: "MMMM Do, YYYY")
 				        bodyContent {
 				          bodyContent
 				        }
@@ -27,6 +27,12 @@ exports.createPages = ({ graphql, actions }) => {
 				            contentType
 				          }
 				        }
+								bodyContent {
+						      childMarkdownRemark {
+										html
+										excerpt(pruneLength: 77)
+									}
+						    }
 				        author {
 				          id
 				          name
@@ -64,5 +70,3 @@ exports.createPages = ({ graphql, actions }) => {
 		);
 	});
 };
-
-// exports.

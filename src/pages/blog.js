@@ -125,7 +125,7 @@ export const pageQuery = graphql`
 	        published(formatString: "MMMM Do, YYYY")
 					bodyContent {
 			      childMarkdownRemark {
-							excerpt
+							excerpt(pruneLength: 50)
 						}
 			    }
 	        heroImage {

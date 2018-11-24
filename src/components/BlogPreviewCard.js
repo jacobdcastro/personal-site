@@ -32,6 +32,8 @@ const BlackLayer = styled.div`
 	background-color: rgba(0,0,0,0.5);
 	height: 100%;
 	width: auto;
+	max-height: 250px;
+	overflow: hidden;
 `;
 
 const BlogTitleSection = styled.div`
@@ -77,6 +79,7 @@ const BlogExcerpt = styled.p`
 	margin: 0px;
 	text-decoration: none;
 	color: white;
+	overflow: hidden;
 `;
 
 const DatePublished = styled.h5`
