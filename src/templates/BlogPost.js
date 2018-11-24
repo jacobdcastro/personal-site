@@ -31,6 +31,7 @@ const BlogParagraph = styled.p`
   font-family: 'Montserrat', 'Helvetica', sans-serif;
   margin: 14px auto;
   max-width: 1125px;
+	width: 100%;
   font-weight: 500;
   letter-spacing: 0.5px;
   line-height: 27px;

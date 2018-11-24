@@ -1126,12 +1126,12 @@
       "host": "localhost",
       "pathPrefix": "/blog",
       "polyfill": true,
-      "buildTime": "2018-11-24T01:46:54.486Z",
+      "buildTime": "2018-11-24T02:07:52.590Z",
       "id": "Site",
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "2f1fb7760a42399da4c68e12e38c5da5",
+        "contentDigest": "b97a69d84e2fe8e6df221c2823a8f4e9",
         "type": "Site",
         "owner": "internal-data-bridge"
       }
@@ -1911,7 +1911,8 @@
     "connections": {
       "ContentfulBlogPost": [
         null,
-        "/blog/"
+        "/blog/",
+        null
       ]
     }
   },
