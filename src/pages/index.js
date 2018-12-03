@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import { Helmet } from 'react-helmet';
 import './normalize.css';
+import Head from '../utils/Helmet.js';
 import MobileNav from '../components/MobileNav';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
@@ -139,12 +139,7 @@ class Index extends React.Component {
 	render() {
 		return (
 			<Container>
-				<Helmet>
-					<meta charSet="utf-8" />
-					<title>Jacob D. Castro</title>
-					<link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
-					<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet" />
-				</Helmet>
+				<Head title="" />
 				<MobileNav action={this.closeMobileNav} open={this.state.mobileNavIsOpen} />
 				<BlackLayer>
 					<MainContent>

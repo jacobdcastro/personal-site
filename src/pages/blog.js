@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
 import styled from 'styled-components';
-import { Helmet } from 'react-helmet';
 import './normalize.css';
+import Head from '../utils/Helmet';
 import PageIntro from '../components/PageIntro';
 import MobileNav from '../components/MobileNav';
 import BlogPreviewCard from '../components/BlogPreviewCard';
@@ -77,12 +77,7 @@ class Blog extends React.Component {
 	render() {
 		return (
 			<PageContainer>
-				<Helmet>
-					<meta charSet="utf-8" />
-					<title>Blog - Jacob D. Castro</title>
-					<link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
-					<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet" />
-				</Helmet>
+				<Head title="Blog - " />
 				<MobileNav action={this.closeMobileNav} open={this.state.mobileNavIsOpen} />
 				<PageIntro action={this.openMobileNav} headline="Blog" aboutPage={false} />
 

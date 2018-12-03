@@ -1,7 +1,7 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
 import './normalize.css';
+import Head from '../utils/Helmet.js';
 import MobileNav from '../components/MobileNav';
 import PageIntro from '../components/PageIntro';
 import GeneralForm from '../components/GeneralForm';
@@ -149,12 +149,7 @@ class Contact extends React.Component {
 
 		return (
 			<Container>
-				<Helmet>
-					<meta charSet="utf-8" />
-					<title>Contact Me - Jacob D. Castro</title>
-					<link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
-					<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet" />
-				</Helmet>
+				<Head title="Contact Me - " />
 				<MobileNav action={this.closeMobileNav} open={this.state.mobileNavIsOpen} />
 
 				<PageIntro action={this.openMobileNav} headline="Let's Chat" aboutPage={false} />

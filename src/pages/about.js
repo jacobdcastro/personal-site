@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import { Helmet } from 'react-helmet';
 import './normalize.css';
+import Head from '../utils/Helmet';
 import MobileNav from '../components/MobileNav';
 import PageIntro from '../components/PageIntro';
 import Footer from '../components/Footer';
@@ -102,12 +102,7 @@ class About extends React.Component {
 	render() {
 		return (
 			<Container>
-				<Helmet>
-					<meta charSet="utf-8" />
-					<title>About Me - Jacob D. Castro</title>
-					<link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
-					<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet" />
-				</Helmet>
+				<Head title="About Me - " />
 				<MobileNav action={this.closeMobileNav} open={this.state.mobileNavIsOpen} />
 
 				<PageIntro action={this.openMobileNav} headline="Who Am I?" aboutPage={true} />
