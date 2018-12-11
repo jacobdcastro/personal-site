@@ -2,17 +2,8 @@ import React from 'react';
 import { Link, graphql } from 'gatsby';
 import styled from 'styled-components';
 import './normalize.css';
-import Head from '../utils/Helmet';
-import PageIntro from '../components/PageIntro';
-import MobileNav from '../components/MobileNav';
+import Layout from '../templates/layout';
 import BlogPreviewCard from '../components/BlogPreviewCard';
-import Footer from '../components/Footer';
-
-//styled component
-const PageContainer = styled.div`
-	margin: 0;
-	padding: 0;
-`;
 
 const BlogListContainer = styled.div`
 	height: auto;
@@ -53,33 +44,14 @@ const BlogPostList = styled.div`
 `;
 
 class Blog extends React.Component {
-	constructor(props) {
-		super(props);
-		this.openMobileNav = this.openMobileNav.bind(this);
-		this.closeMobileNav = this.closeMobileNav.bind(this);
-
-		this.state = {
-			mobileNavIsOpen: false,
-			bgImg: '../images/cave.jpg',
-		};
-	}
-	openMobileNav() {
-		this.setState({
-			mobileNavIsOpen: true
-		});
-	}
-	closeMobileNav() {
-		this.setState({
-			mobileNavIsOpen: false
-		});
-	}
-
 	render() {
 		return (
-			<PageContainer>
-				<Head title="Blog - " />
-				<MobileNav action={this.closeMobileNav} open={this.state.mobileNavIsOpen} />
-				<PageIntro action={this.openMobileNav} headline="Blog" aboutPage={false} />
+			<Layout
+				pageTitle="Blog - "
+				headline="Blog"
+				aboutPage={true}
+				backgroundIsBlack={false}
+			>
 
 				<BlogListContainer>
 					<AboutHeadline>RECENT POSTS</AboutHeadline>
@@ -100,8 +72,7 @@ class Blog extends React.Component {
 					</BlogPostList>
 				</BlogListContainer>
 
-				<Footer backgroundIsBlack={false} />
-			</PageContainer>
+			</Layout>
 		);
 	}
 }

@@ -1,12 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import './normalize.css';
-import Head from '../utils/Helmet.js';
-import MobileNav from '../components/MobileNav';
-import PageIntro from '../components/PageIntro';
+import Layout from '../templates/layout';
 import GeneralForm from '../components/GeneralForm';
 import ProjectForm from '../components/ProjectForm';
-import Footer from '../components/Footer';
 
 const Container = styled.div`
   height: 100%;
@@ -74,41 +71,25 @@ const FormButton = styled.button`
   padding: 10px;
   border: none;
   box-shadow: 0px 0px 8px #444;
-  transition: 225ms;
+  transition: 400ms;
   &:hover {
     cursor: pointer;
-    transform: scale(1.14, 1.14);
+    transform: scale(1.08, 1.08);
   }
 `;
 
 class Contact extends React.Component {
 	constructor(props) {
 		super(props);
-		this.openMobileNav = this.openMobileNav.bind(this);
-		this.closeMobileNav = this.closeMobileNav.bind(this);
 		this.showGenForm = this.showGenForm.bind(this);
 		this.hideGenForm = this.hideGenForm.bind(this);
 		this.showProjectForm = this.showProjectForm.bind(this);
 		this.hideProjectForm = this.hideProjectForm.bind(this);
 
 		this.state = {
-			mobileNavIsOpen: false,
-			bgImg: '../images/yellow-telephone.jpg',
 			genFormOpen: false,
 			proFormOpen: false
 		};
-	}
-
-	openMobileNav() {
-		this.setState({
-			mobileNavIsOpen: true
-		});
-	}
-
-	closeMobileNav() {
-		this.setState({
-			mobileNavIsOpen: false
-		});
 	}
 
 
@@ -146,36 +127,30 @@ class Contact extends React.Component {
 	}
 
 	render() {
-
 		return (
-			<Container>
-				<Head title="Contact Me - " />
-				<MobileNav action={this.closeMobileNav} open={this.state.mobileNavIsOpen} />
+			<Layout
+				pageTitle="Contact - "
+				headline="Let's chat"
+				aboutPage={false}
+				backgroundIsBlack={false}
+			>
+				<Body>
+					<FormsHeader>
+						<FormH2>I can't wait to hear from you!</FormH2>
+						<FormH3>So, what do you need?</FormH3>
+						<FormBtnContainer>
+							<FormButton id="genBtn" onClick={this.state.genFormOpen ? this.hideGenForm : this.showGenForm}>Question or Comment</FormButton>
+							<FormButton id="protBtn" onClick={this.state.proFormOpen ? this.hideProjectForm : this.showProjectForm} >I need a website built!</FormButton>
+						</FormBtnContainer>
+					</FormsHeader>
 
-				<PageIntro action={this.openMobileNav} headline="Let's Chat" aboutPage={false} />
+					<GeneralForm open={this.state.genFormOpen} />
 
-				<MainContent>
+					<ProjectForm open={this.state.proFormOpen} />
+				
+				</Body>
+			</Layout>
 
-					<Body>
-						<FormsHeader>
-							<FormH2>I can't wait to hear from you!</FormH2>
-							<FormH3>So, what do you need?</FormH3>
-							<FormBtnContainer>
-								<FormButton id="genBtn" onClick={this.state.genFormOpen ? this.hideGenForm : this.showGenForm}>Question or Comment</FormButton>
-								<FormButton id="protBtn" onClick={this.state.proFormOpen ? this.hideProjectForm : this.showProjectForm} >I need a website built!</FormButton>
-							</FormBtnContainer>
-						</FormsHeader>
-
-						<GeneralForm open={this.state.genFormOpen} />
-
-						<ProjectForm open={this.state.proFormOpen} />
-
-					</Body>
-
-					<Footer backgroundIsBlack={false} />
-
-				</MainContent>
-			</Container>
 		);
 	}
 }
