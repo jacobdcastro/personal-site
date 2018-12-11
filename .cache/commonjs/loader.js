@@ -9,8 +9,6 @@ var _findPage = _interopRequireDefault(require("./find-page"));
 
 var _emitter = _interopRequireDefault(require("./emitter"));
 
-var _stripPrefix = _interopRequireDefault(require("./strip-prefix"));
-
 var _prefetch = _interopRequireDefault(require("./prefetch"));
 
 const preferDefault = m => m && m.default || m;
@@ -26,7 +24,6 @@ let fetchingPageResourceMapPromise = null;
 let fetchedPageResourceMap = false;
 let apiRunner;
 const failedPaths = {};
-const failedResources = {};
 const MAX_HISTORY = 5;
 const jsonPromiseStore = {};
 
@@ -86,6 +83,7 @@ const fetchResource = resourceName => {
               if (req.status === 200) {
                 resolve(JSON.parse(req.responseText));
               } else {
+                delete jsonPromiseStore[resourceName];
                 reject();
               }
             }
@@ -104,18 +102,14 @@ const fetchResource = resourceName => {
   return new Promise(resolve => {
     const fetchPromise = resourceFunction();
     let failed = false;
-    return fetchPromise.catch(() => {
+    return fetchPromise.catch(e => {
+      console.error(e);
       failed = true;
     }).then(component => {
       fetchHistory.push({
         resource: resourceName,
         succeeded: !failed
       });
-
-      if (!failedResources[resourceName]) {
-        failedResources[resourceName] = failed;
-      }
-
       fetchHistory = fetchHistory.slice(-MAX_HISTORY);
       resolve(component);
     });
@@ -124,10 +118,10 @@ const fetchResource = resourceName => {
 
 const prefetchResource = resourceName => {
   if (resourceName.slice(0, 12) === `component---`) {
-    createComponentUrls(resourceName).forEach(url => (0, _prefetch.default)(url));
+    return Promise.all(createComponentUrls(resourceName).map(url => (0, _prefetch.default)(url)));
   } else {
     const url = createJsonURL(jsonDataPaths[resourceName]);
-    (0, _prefetch.default)(url);
+    return (0, _prefetch.default)(url);
   }
 };
 
@@ -158,7 +152,7 @@ const handleResourceLoadError = (path, message) => {
 const onPrefetchPathname = pathname => {
   if (!prefetchTriggered[pathname]) {
     apiRunner(`onPrefetchPathname`, {
-      pathname: pathname
+      pathname
     });
     prefetchTriggered[pathname] = true;
   }
@@ -167,7 +161,7 @@ const onPrefetchPathname = pathname => {
 const onPostPrefetchPathname = pathname => {
   if (!prefetchCompleted[pathname]) {
     apiRunner(`onPostPrefetchPathname`, {
-      pathname: pathname
+      pathname
     });
     prefetchCompleted[pathname] = true;
   }
@@ -199,12 +193,10 @@ const queue = {
   // Hovering on a link is a very strong indication the user is going to
   // click on it soon so let's start prefetching resources for this
   // pathname.
-  hovering: rawPath => {
-    const path = (0, _stripPrefix.default)(rawPath, __PATH_PREFIX__);
+  hovering: path => {
     queue.getResourcesForPathname(path);
   },
-  enqueue: rawPath => {
-    const path = (0, _stripPrefix.default)(rawPath, __PATH_PREFIX__);
+  enqueue: path => {
     if (!apiRunner) console.error(`Run setApiRunnerForLoader() before enqueing paths`); // Tell plugins with custom prefetching logic that they should start
     // prefetching this path.
 
@@ -221,7 +213,7 @@ const queue = {
     if (process.env.NODE_ENV === `production` && !page && !fetchedPageResourceMap) {
       // If page wasn't found check and we didn't fetch resources map for
       // all pages, wait for fetch to complete and try find page again
-      return fetchPageResourceMap().then(() => queue.enqueue(rawPath));
+      return fetchPageResourceMap().then(() => queue.enqueue(path));
     }
 
     if (!page) {
@@ -234,12 +226,12 @@ const queue = {
 
 
     if (process.env.NODE_ENV === `production`) {
-      prefetchResource(page.jsonName);
-      prefetchResource(page.componentChunkName);
-    } // Tell plugins the path has been successfully prefetched
+      Promise.all([prefetchResource(page.jsonName), prefetchResource(page.componentChunkName)]).then(() => {
+        // Tell plugins the path has been successfully prefetched
+        onPostPrefetchPathname(path);
+      });
+    }
 
-
-    onPostPrefetchPathname(path);
     return true;
   },
   getPage: pathname => findPage(pathname),
@@ -330,8 +322,10 @@ const queue = {
         _emitter.default.emit(`onPostLoadPageResources`, {
           page,
           pageResources
-        });
+        }); // Tell plugins the path has been successfully prefetched
 
+
+        onPostPrefetchPathname(path);
         resolve(pageResources);
       });
     } else {
@@ -353,7 +347,10 @@ const queue = {
         _emitter.default.emit(`onPostLoadPageResources`, {
           page,
           pageResources
-        });
+        }); // Tell plugins the path has been successfully prefetched
+
+
+        onPostPrefetchPathname(path);
 
         if (doingInitialRender) {
           // We got all resources needed for first mount,
@@ -361,10 +358,7 @@ const queue = {
           fetchPageResourceMap();
         }
       });
-    } // Tell plugins the path has been successfully prefetched
-
-
-    onPostPrefetchPathname(path);
+    }
   })
 };
 

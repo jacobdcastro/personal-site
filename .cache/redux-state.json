@@ -196,11 +196,46 @@
         "owner": "internal-data-bridge"
       }
     },
+    "6f4b2fa9-66b5-5205-a03f-140005a2cfe5": {
+      "resolve": "C:/Users/jdcas/jdcastro-web-dd/personal-site/node_modules/gatsby/dist/internal-plugins/webpack-theme-component-shadowing",
+      "id": "6f4b2fa9-66b5-5205-a03f-140005a2cfe5",
+      "name": "webpack-theme-component-shadowing",
+      "version": "1.0.0",
+      "pluginOptions": {
+        "plugins": []
+      },
+      "nodeAPIs": [
+        "onCreateWebpackConfig"
+      ],
+      "browserAPIs": [],
+      "ssrAPIs": [],
+      "pluginFilepath": "C:/Users/jdcas/jdcastro-web-dd/personal-site/node_modules/gatsby/dist/internal-plugins/webpack-theme-component-shadowing",
+      "packageJson": {
+        "name": "webpack-theme-component-shadowing",
+        "description": "An internal Gatsby plugin which handles configuring webpack to ensure theme components fall back from the user's site to theme modules.",
+        "version": "1.0.0",
+        "main": "index.js",
+        "author": "Chris Biscardi <chris@christopherbiscardi.com>",
+        "license": "MIT",
+        "dependencies": [],
+        "devDependencies": [],
+        "peerDependencies": [],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "contentDigest": "5dfe6bb7a4d21af84fa468f2e440f7cb",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
     "d5c18d83-6ae2-52f0-a3bf-a892203bde4f": {
       "resolve": "C:/Users/jdcas/jdcastro-web-dd/personal-site/node_modules/gatsby-plugin-styled-components",
       "id": "d5c18d83-6ae2-52f0-a3bf-a892203bde4f",
       "name": "gatsby-plugin-styled-components",
-      "version": "3.0.2",
+      "version": "3.0.4",
       "pluginOptions": {
         "plugins": []
       },
@@ -216,7 +251,7 @@
       "packageJson": {
         "name": "gatsby-plugin-styled-components",
         "description": "Gatsby plugin to add support for styled components",
-        "version": "3.0.2",
+        "version": "3.0.4",
         "main": "index.js",
         "keywords": [
           "gatsby",
@@ -245,7 +280,7 @@
           },
           {
             "name": "babel-preset-gatsby-package",
-            "version": "^0.1.2"
+            "version": "^0.1.3"
           }
         ],
         "peerDependencies": [
@@ -255,7 +290,7 @@
           },
           {
             "name": "gatsby",
-            "version": ">2.0.0-alpha"
+            "version": ">=2.0.32"
           },
           {
             "name": "styled-components",
@@ -268,7 +303,7 @@
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "fd6fec94444f62902233d651b0c64eab",
+        "contentDigest": "f06f4630fa700d4a40a757f84732ad0b",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
@@ -277,7 +312,7 @@
       "resolve": "C:/Users/jdcas/jdcastro-web-dd/personal-site/node_modules/gatsby-source-contentful",
       "id": "39113146-9e4b-589c-88fe-942a67232640",
       "name": "gatsby-source-contentful",
-      "version": "2.0.14",
+      "version": "2.0.18",
       "pluginOptions": {
         "plugins": [],
         "spaceId": "oghc6wtiomc3",
@@ -296,7 +331,7 @@
       "packageJson": {
         "name": "gatsby-source-contentful",
         "description": "Gatsby source plugin for building websites using the Contentful CMS as a data source",
-        "version": "2.0.14",
+        "version": "2.0.18",
         "keywords": [
           "gatsby",
           "gatsby-plugin",
@@ -339,7 +374,7 @@
           },
           {
             "name": "gatsby-plugin-sharp",
-            "version": "^2.0.12"
+            "version": "^2.0.14"
           },
           {
             "name": "is-online",
@@ -369,7 +404,7 @@
           },
           {
             "name": "babel-preset-gatsby-package",
-            "version": "^0.1.2"
+            "version": "^0.1.3"
           },
           {
             "name": "cross-env",
@@ -388,7 +423,7 @@
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "072008044be8e060ed3764d61d3e59db",
+        "contentDigest": "d3957946f9102ed7e607250f59020999",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
@@ -397,7 +432,7 @@
       "resolve": "C:/Users/jdcas/jdcastro-web-dd/personal-site/node_modules/gatsby-plugin-manifest",
       "id": "a067d27b-5a51-505c-b0be-3ad27b125b98",
       "name": "gatsby-plugin-manifest",
-      "version": "2.0.9",
+      "version": "2.0.11",
       "pluginOptions": {
         "plugins": [],
         "name": "Jacob D. Castro Personal Website",
@@ -416,7 +451,7 @@
       "packageJson": {
         "name": "gatsby-plugin-manifest",
         "description": "Gatsby plugin which adds a manifest.webmanifest to make sites progressive web apps",
-        "version": "2.0.9",
+        "version": "2.0.11",
         "main": "index.js",
         "keywords": [
           "gatsby",
@@ -457,7 +492,7 @@
           },
           {
             "name": "babel-preset-gatsby-package",
-            "version": "^0.1.2"
+            "version": "^0.1.3"
           },
           {
             "name": "cross-env",
@@ -476,7 +511,7 @@
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "395eaef5df0801ea5c850b76657b4a3f",
+        "contentDigest": "788928ce77d6623c57ff00eb95a2b4c6",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
@@ -485,7 +520,7 @@
       "resolve": "C:/Users/jdcas/jdcastro-web-dd/personal-site/node_modules/gatsby-transformer-remark",
       "id": "9f28d07a-37b6-51d1-b2d0-5071b57d6dd2",
       "name": "gatsby-transformer-remark",
-      "version": "2.1.12",
+      "version": "2.1.15",
       "pluginOptions": {
         "plugins": []
       },
@@ -499,7 +534,7 @@
       "packageJson": {
         "name": "gatsby-transformer-remark",
         "description": "Gatsby transformer plugin for Markdown using the Remark library and ecosystem",
-        "version": "2.1.12",
+        "version": "2.1.15",
         "keywords": [
           "gatsby",
           "gatsby-plugin",
@@ -600,7 +635,7 @@
           },
           {
             "name": "babel-preset-gatsby-package",
-            "version": "^0.1.2"
+            "version": "^0.1.3"
           },
           {
             "name": "cross-env",
@@ -619,7 +654,7 @@
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "89bc7a97dc4cbf11f0f35da15484dad4",
+        "contentDigest": "65ebb6401748365fcf0cea40c241bb2a",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
@@ -628,7 +663,7 @@
       "resolve": "C:/Users/jdcas/jdcastro-web-dd/personal-site/node_modules/gatsby-plugin-react-helmet",
       "id": "1943ff2f-9c0c-558d-8d0c-006603e8106a",
       "name": "gatsby-plugin-react-helmet",
-      "version": "3.0.2",
+      "version": "3.0.4",
       "pluginOptions": {
         "plugins": []
       },
@@ -641,7 +676,7 @@
       "packageJson": {
         "name": "gatsby-plugin-react-helmet",
         "description": "Manage document head data with react-helmet. Provides drop-in server rendering support for Gatsby.",
-        "version": "3.0.2",
+        "version": "3.0.4",
         "main": "index.js",
         "keywords": [
           "gatsby",
@@ -681,7 +716,7 @@
           },
           {
             "name": "babel-preset-gatsby-package",
-            "version": "^0.1.2"
+            "version": "^0.1.3"
           },
           {
             "name": "cross-env",
@@ -704,7 +739,7 @@
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "edb53544a0890e711dc915627d7751c0",
+        "contentDigest": "58160fe5e0bd0487e7b4f1a9f13485c5",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
@@ -713,7 +748,7 @@
       "resolve": "C:/Users/jdcas/jdcastro-web-dd/personal-site/node_modules/gatsby-plugin-offline",
       "id": "63e5f7ff-e5f1-58f7-8e2c-55872ac42281",
       "name": "gatsby-plugin-offline",
-      "version": "2.0.15",
+      "version": "2.0.18",
       "pluginOptions": {
         "plugins": []
       },
@@ -723,15 +758,15 @@
       ],
       "browserAPIs": [
         "registerServiceWorker",
-        "onPostPrefetchPathname",
-        "onServiceWorkerActive"
+        "onServiceWorkerActive",
+        "onPostPrefetchPathname"
       ],
       "ssrAPIs": [],
       "pluginFilepath": "C:/Users/jdcas/jdcastro-web-dd/personal-site/node_modules/gatsby-plugin-offline",
       "packageJson": {
         "name": "gatsby-plugin-offline",
         "description": "Gatsby plugin which sets up a site to be able to run offline",
-        "version": "2.0.15",
+        "version": "2.0.18",
         "main": "index.js",
         "keywords": [
           "gatsby",
@@ -755,6 +790,10 @@
             "version": "^1.0.0-rc.2"
           },
           {
+            "name": "idb-keyval",
+            "version": "^3.1.0"
+          },
+          {
             "name": "lodash",
             "version": "^4.17.10"
           },
@@ -774,7 +813,7 @@
           },
           {
             "name": "babel-preset-gatsby-package",
-            "version": "^0.1.2"
+            "version": "^0.1.3"
           },
           {
             "name": "cross-env",
@@ -784,7 +823,7 @@
         "peerDependencies": [
           {
             "name": "gatsby",
-            "version": ">=2.0.20"
+            "version": ">=2.0.53"
           }
         ],
         "optionalDependecies": [],
@@ -793,7 +832,7 @@
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "c87959ea7b6b84b5c24fca60408a812b",
+        "contentDigest": "e8d4cc746778704e20b266080d4884fe",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
@@ -802,7 +841,7 @@
       "resolve": "C:/Users/jdcas/jdcastro-web-dd/personal-site/node_modules/gatsby-plugin-lodash",
       "id": "0c7688ef-0ff5-529a-ab7c-7edcaf5c8ea2",
       "name": "gatsby-plugin-lodash",
-      "version": "3.0.2",
+      "version": "3.0.3",
       "pluginOptions": {
         "plugins": []
       },
@@ -816,7 +855,7 @@
       "packageJson": {
         "name": "gatsby-plugin-lodash",
         "description": "Easy modular Lodash builds. Adds the Lodash webpack & Babel plugins to your Gatsby build",
-        "version": "3.0.2",
+        "version": "3.0.3",
         "main": "index.js",
         "keywords": [
           "gatsby",
@@ -852,7 +891,7 @@
           },
           {
             "name": "babel-preset-gatsby-package",
-            "version": "^0.1.2"
+            "version": "^0.1.3"
           },
           {
             "name": "cross-env",
@@ -871,7 +910,7 @@
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "7a2e2c9f58df77c7704518af97b036cb",
+        "contentDigest": "32c802b6e5ca664862b7280efa6232a0",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
@@ -913,7 +952,7 @@
           },
           {
             "name": "gatsby",
-            "version": "^2.0.0"
+            "version": "^2.0.33"
           },
           {
             "name": "gatsby-image",
@@ -937,7 +976,7 @@
           },
           {
             "name": "gatsby-plugin-sharp",
-            "version": "^2.0.12"
+            "version": "^2.0.14"
           },
           {
             "name": "gatsby-plugin-styled-components",
@@ -949,7 +988,7 @@
           },
           {
             "name": "gatsby-source-contentful",
-            "version": "^2.0.4"
+            "version": "^2.0.18"
           },
           {
             "name": "gatsby-transformer-remark",
@@ -1018,7 +1057,7 @@
       "resolve": "C:/Users/jdcas/jdcastro-web-dd/personal-site/node_modules/gatsby-plugin-page-creator",
       "id": "4b36fca3-c013-572e-abed-d9c561ce1943",
       "name": "gatsby-plugin-page-creator",
-      "version": "2.0.4",
+      "version": "2.0.5",
       "pluginOptions": {
         "plugins": [],
         "path": "C:/Users/jdcas/jdcastro-web-dd/personal-site/src/pages",
@@ -1033,7 +1072,7 @@
       "packageJson": {
         "name": "gatsby-plugin-page-creator",
         "description": "Gatsby plugin that automatically creates pages from React components in specified directories",
-        "version": "2.0.4",
+        "version": "2.0.5",
         "main": "index.js",
         "keywords": [
           "gatsby",
@@ -1093,7 +1132,7 @@
           },
           {
             "name": "babel-preset-gatsby-package",
-            "version": "^0.1.2"
+            "version": "^0.1.3"
           },
           {
             "name": "cross-env",
@@ -1112,7 +1151,7 @@
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "13a4d959c328a38a9878c7030630bbd7",
+        "contentDigest": "9629dffeb37d5e43257fab9371d21b21",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
@@ -1126,12 +1165,12 @@
       "host": "localhost",
       "pathPrefix": "/blog",
       "polyfill": true,
-      "buildTime": "2018-12-02T04:44:35.716Z",
+      "buildTime": "2018-12-07T01:12:43.280Z",
       "id": "Site",
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "d2c04be5654d7eb6ec0ed57c9c3a0b5f",
+        "contentDigest": "5d287e0c1bea6c1f9b4164bdef372a91",
         "type": "Site",
         "owner": "internal-data-bridge"
       }
@@ -1815,7 +1854,7 @@
         "oghc6wtiomc3-master-cdn.contentful.com": "w5ZGw6JFwqZmVcKsE8Kow4grw45QdyYEZ3_CpBQuwrlAw6IjeF_Ch8KNwox9wpbDph19wr9FG0kfwoDCmWEdw7jCo8KTBXrDocOOw6dYPGU9wp7CsyvDigJnwqEnw7rCnjfDtSrCicOdXlPDhTjDj8KCwqkY"
       }
     },
-    "PLUGINS_HASH": "b2461fb49644b27e8f68009e44a7e35f"
+    "PLUGINS_HASH": "2d18b0147d3f5a9333b83c3421ab86ea"
   },
   "componentDataDependencies": {
     "nodes": {
@@ -1885,19 +1924,18 @@
     "connections": {
       "ContentfulBlogPost": [
         null,
-        "/blog/",
-        null
+        "/blog/"
       ]
     }
   },
   "jsonDataPaths": {
-    "blog-welcome-ef4": "237/path---blog-welcome-ef-4-33a-pvo71vobRo1OKV2yT30InmA4aNc",
-    "blog-f7a": "685/path---blog-f-7-a-05d-ovhAlqkYkJ8eCOb4bTvDbIGXZU8",
     "blog-using-contentful-on-my-blog-1b2": "240/path---blog-using-contentful-on-my-blog-1-b-2-693-GJgQOAiNOvkKC9VUztOh22lmz4",
     "blog-gatsby-first-thoughts-035": "915/path---blog-gatsby-first-thoughts-035-035-KYHYVAAisGT2FaWTvcsm4YdEDU",
-    "dev-404-page-5f9": "920/path---dev-404-page-5-f-9-fab-NZuapzHg3X9TaN1iIixfv1W23E",
-    "about-f34": "125/path---about-f-34-4c2-NZuapzHg3X9TaN1iIixfv1W23E",
+    "blog-f7a": "685/path---blog-f-7-a-05d-ovhAlqkYkJ8eCOb4bTvDbIGXZU8",
+    "blog-welcome-ef4": "237/path---blog-welcome-ef-4-33a-pvo71vobRo1OKV2yT30InmA4aNc",
     "contact-26a": "686/path---contact-26-a-cd9-NZuapzHg3X9TaN1iIixfv1W23E",
+    "about-f34": "125/path---about-f-34-4c2-NZuapzHg3X9TaN1iIixfv1W23E",
+    "dev-404-page-5f9": "920/path---dev-404-page-5-f-9-fab-NZuapzHg3X9TaN1iIixfv1W23E",
     "index": "173/path---index-6a9-NZuapzHg3X9TaN1iIixfv1W23E"
   },
   "components": {

@@ -13,8 +13,6 @@ var _loader = _interopRequireDefault(require("./loader"));
 
 var _shallowCompare = _interopRequireDefault(require("shallow-compare"));
 
-var _loadDirectlyOr = require("./load-directly-or-404");
-
 // Pass pathname in as prop.
 // component will try fetching resources. If they exist,
 // will just render, else will render null.
@@ -95,19 +93,52 @@ class EnsureResources extends _react.default.Component {
     return (0, _shallowCompare.default)(this, nextProps, nextState);
   }
 
-  render() {
-    if (process.env.NODE_ENV === `production` && !(this.state.pageResources && this.state.pageResources.json)) {
-      // This should only occur if there's no custom 404 page
-      const url = (0, _loadDirectlyOr.getRedirectUrl)(this.state.location.href);
+  shouldRenderStaticHTML() {
+    const _window = window,
+          localStorage = _window.localStorage;
+    const _window$location = window.location,
+          href = _window$location.href,
+          pathname = _window$location.pathname; // This should only occur if the network is offline, or if the
+    // path is nonexistent and there's no custom 404 page.
 
-      if (url) {
-        window.location.replace(url);
+    if (process.env.NODE_ENV === `production` && !(this.state.pageResources && this.state.pageResources.json)) {
+      if (localStorage.getItem(`___failedResources`) === pathname) {
+        // Maybe it will work again in the future, so remove the flag
+        localStorage.removeItem(`___failedResources`);
+        console.error(`WARNING: Resources cannot be loaded for the pathname ${pathname} - ` + `falling back to static HTML instead.\n` + `This is likely due to a bug in Gatsby, or misconfiguration in your project.`);
+      } else {
+        // Mark the pathname as failed
+        localStorage.setItem(`___failedResources`, pathname); // Reload the page.
+        // Do this, rather than simply `window.location.reload()`, so that
+        // pressing the back/forward buttons work - otherwise when pressing
+        // back, the browser will just change the URL and expect JS to handle
+        // the change, which won't always work since it might not be a Gatsby
+        // page.
+
+        const originalUrl = new URL(href);
+        window.history.replaceState({}, `404`, `${pathname}?gatsby-404`);
+        window.location.replace(originalUrl);
       }
 
-      return null;
+      return true;
+    } else {
+      localStorage.removeItem(`___failedResources`);
+      return false;
     }
+  }
 
-    return this.props.children(this.state);
+  render() {
+    // TODO: find a nicer way to do this (e.g. React Suspense)
+    if (this.shouldRenderStaticHTML()) {
+      const __html = document.getElementById(`___gatsby`).innerHTML;
+      return _react.default.createElement("div", {
+        dangerouslySetInnerHTML: {
+          __html
+        }
+      });
+    } else {
+      return this.props.children(this.state);
+    }
   }
 
 }

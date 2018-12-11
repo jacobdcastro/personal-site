@@ -23,8 +23,6 @@ var _router = require("@reach/router");
 
 var _parsePath2 = _interopRequireDefault(require("./parse-path"));
 
-var _loadDirectlyOr = _interopRequireDefault(require("./load-directly-or-404"));
-
 // Convert to a map for faster lookup in maybeRedirect()
 const redirectMap = _redirects.default.reduce((map, redirect) => {
   map[redirect.fromPath] = redirect;
@@ -84,10 +82,15 @@ const navigate = (to, options = {}) => {
   if (redirect) {
     to = redirect.toPath;
     pathname = (0, _parsePath2.default)(to).pathname;
-  } // If we had a service worker update, no matter the path, reload window
+  } // If we had a service worker update, no matter the path, reload window and
+  // reset the pathname whitelist
 
 
   if (window.GATSBY_SW_UPDATED) {
+    const controller = navigator.serviceWorker.controller;
+    controller.postMessage({
+      gatsbyApi: `resetWhitelist`
+    });
     window.location = pathname;
     return;
   } // Start a timer to wait for a second before transitioning and showing a
@@ -105,13 +108,8 @@ const navigate = (to, options = {}) => {
   }, 1000);
 
   _loader.default.getResourcesForPathname(pathname).then(pageResources => {
-    if ((!pageResources || pageResources.page.path === `/404.html`) && process.env.NODE_ENV === `production`) {
-      clearTimeout(timeoutId);
-      (0, _loadDirectlyOr.default)(pageResources, to).then(() => (0, _router.navigate)(to, options));
-    } else {
-      (0, _router.navigate)(to, options);
-      clearTimeout(timeoutId);
-    }
+    (0, _router.navigate)(to, options);
+    clearTimeout(timeoutId);
   });
 };
 

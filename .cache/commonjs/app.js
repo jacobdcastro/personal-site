@@ -25,7 +25,12 @@ var _syncRequires = _interopRequireDefault(require("./sync-requires"));
 var _pages = _interopRequireDefault(require("./pages.json"));
 
 window.___emitter = _emitter.default;
-(0, _loader.setApiRunnerForLoader)(_apiRunnerBrowser.apiRunner); // Let the site/plugins run code very early.
+(0, _loader.setApiRunnerForLoader)(_apiRunnerBrowser.apiRunner); // necessary for hot-reloading of react hooks
+
+(0, _reactHotLoader.setConfig)({
+  ignoreSFC: true,
+  pureRender: true
+}); // Let the site/plugins run code very early.
 
 (0, _apiRunnerBrowser.apiRunnerAsync)(`onClientEntry`).then(() => {
   // Hook up the client to socket.io on server
