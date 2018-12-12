@@ -3,7 +3,22 @@ import styled from 'styled-components';
 import Navbar from './Navbar';
 import aboutImg from '../images/cave.jpg';
 import contactImg from '../images/yellow-telephone.jpg';
+import blogImg from '../images/laptop-desk.jpg';
 import img from '../images/icons/angle-arrow-down.svg';
+
+const HeaderContainer = styled.div`
+  margin: 0;
+  padding: 0;
+  .aboutPage {
+    background-image: url(${aboutImg});
+  }
+  .contactPage {
+    background-image: url(${contactImg});
+  }
+  .blogPage {
+    background-image: url(${blogImg});
+  }
+`;
 
 const Header = styled.div`
   display: flex;
@@ -11,7 +26,6 @@ const Header = styled.div`
   flex-direction: column;
   height: 500px;
   width: 100%;
-  background-image: url(${props => props.about ? aboutImg : contactImg });
   background-size: cover;
   background-position: center;
   margin: 0;
@@ -65,15 +79,17 @@ const DownArrow = styled.img`
 class PageIntro extends React.Component {
 	render() {
 		return (
-			<Header about={this.props.aboutPage}>
-				<BlackLayer>
+      <HeaderContainer>
+        <Header className={this.props.className}>
+          <BlackLayer>
 
-					<Navbar action={this.props.action} />
+            <Navbar action={this.props.action} />
 
-					<Headline>{this.props.headline}</Headline>
-					<DownArrow src={img} alt="down arrow icon" />
-				</BlackLayer>
-			</Header>
+            <Headline>{this.props.headline}</Headline>
+            <DownArrow src={img} alt="down arrow icon" />
+          </BlackLayer>
+        </Header>
+      </HeaderContainer>
 		);
 	}
 }

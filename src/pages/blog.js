@@ -49,7 +49,7 @@ class Blog extends React.Component {
 			<Layout
 				pageTitle="Blog - "
 				headline="Blog"
-				aboutPage={true}
+				className="blogPage"
 				backgroundIsBlack={false}
 			>
 

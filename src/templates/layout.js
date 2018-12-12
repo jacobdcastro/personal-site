@@ -54,7 +54,7 @@ class Layout extends React.Component {
          <PageContainer>
             <Head title={this.props.pageTitle} />
             <MobileNav action={this.closeMobileNav} open={this.state.mobileNavIsOpen} />
-            <PageIntro action={this.openMobileNav} headline={this.props.headline} aboutPage={this.props.aboutPage} />
+            <PageIntro action={this.openMobileNav} className={this.props.className} headline={this.props.headline} />
             
             <MainContent>
                {this.props.children}

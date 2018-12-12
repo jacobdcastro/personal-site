@@ -131,7 +131,7 @@ class Contact extends React.Component {
 			<Layout
 				pageTitle="Contact - "
 				headline="Let's chat"
-				aboutPage={false}
+				className="contactPage"
 				backgroundIsBlack={false}
 			>
 				<Body>
