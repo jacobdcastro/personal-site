@@ -52,16 +52,12 @@ const linkStyles = {
 };
 
 class About extends React.Component {
-
-  // RUNNING LIST OF PROPS => LAYOUT.JS
-  // pageTitle, headline, aboutPage, backgroundIsBlack
-
 	render() {
 		return (
         <Layout
           pageTitle="About Me - "
           headline="Who am I?"
-          aboutPage={true}
+          className="aboutPage"
           backgroundIsBlack={false}
         >
 					<Body>

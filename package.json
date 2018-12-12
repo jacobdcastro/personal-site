@@ -8,6 +8,7 @@
     "contentful": "^7.0.4",
     "gatsby": "^2.0.33",
     "gatsby-image": "^2.0.20",
+    "gatsby-plugin-google-analytics": "^2.0.8",
     "gatsby-plugin-lodash": "^3.0.1",
     "gatsby-plugin-manifest": "^2.0.5",
     "gatsby-plugin-offline": "^2.0.5",

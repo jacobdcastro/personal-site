@@ -40,6 +40,24 @@ module.exports = {
 				icon: 'src/images/jdc-favicon.png', // This path is relative to the root of the site.
 			},
 		},
+		{
+			resolve: `gatsby-plugin-google-analytics`,
+			options: {
+				trackingId: "UA-130258530-1",
+				head: false,
+				anonymize: true,
+				respectDNT: true,
+				// Avoids sending pageview hits from custom paths
+				exclude: [],
+				// Enables Google Optimize using your container Id
+				// optimizeId: "YOUR_GOOGLE_OPTIMIZE_TRACKING_ID",
+
+				// Any additional create only fields (optional)
+				sampleRate: 5,
+				siteSpeedSampleRate: 10,
+				// cookieDomain: "jacobdcastro.com",
+			},
+		},
 		'gatsby-transformer-remark',
 		'gatsby-plugin-react-helmet',
 		'gatsby-plugin-offline',
