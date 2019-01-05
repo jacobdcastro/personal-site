@@ -34,7 +34,7 @@ const Icon = styled.img`
 
 const Copyright = styled.p`
   font-family: 'Montserrat', 'Helvetica', sans-serif;
-  {/* // color defined inline */}
+  /* color defined inline */
   text-align: center;
   font-weight: 400;
   font-size: 14px;
@@ -75,5 +75,7 @@ class Footer extends React.Component {
 		);
 	}
 }
+
+// create a stateless functional component for footer to import images via gatsby-image and <StaticQuery>
 
 export default Footer;

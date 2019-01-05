@@ -2,7 +2,6 @@
 
 # dependencies
 /node_modules
-/.cache/
 
 # testing
 /coverage
@@ -11,6 +10,9 @@
 /build
 
 # misc
+/.cache/
+/.netlify/
+/.vscode/
 .DS_Store
 .env.local
 .env.development.local
