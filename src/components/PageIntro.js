@@ -4,7 +4,7 @@ import Navbar from './Navbar';
 import aboutImg from '../images/cave.jpg';
 import contactImg from '../images/yellow-telephone.jpg';
 import blogImg from '../images/laptop-desk.jpg';
-import img from '../images/icons/angle-arrow-down.svg';
+import downArrowImg from '../images/icons/angle-arrow-down.svg';
 
 const HeaderContainer = styled.div`
   margin: 0;
@@ -82,11 +82,9 @@ class PageIntro extends React.Component {
       <HeaderContainer>
         <Header className={this.props.className}>
           <BlackLayer>
-
             <Navbar action={this.props.action} />
-
             <Headline>{this.props.headline}</Headline>
-            <DownArrow src={img} alt="down arrow icon" />
+            <DownArrow src={downArrowImg} alt="down arrow icon" />
           </BlackLayer>
         </Header>
       </HeaderContainer>

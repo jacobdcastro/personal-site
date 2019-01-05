@@ -1,6 +1,7 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import { Link, graphql, StaticQuery } from 'gatsby';
 import styled from 'styled-components';
+import Img from 'gatsby-image';
 
 const Header = styled.header`
   display: flex;
@@ -113,3 +114,17 @@ class Navbar extends React.Component {
 }
 
 export default Navbar;
+
+// export const query = graphql`
+//   query {
+//     file(relativePath: { eq: "../images/Jacob-D-Castro.png" }) {
+//       childImageSharp {
+//         # Specify the image processing specifications right in the query.
+//         # Makes it trivial to update as your page's design changes.
+//         fixed(width: 125, height: 125) {
+//           ...GatsbyImageSharpFixed
+//         }
+//       }
+//     }
+//   }
+// `

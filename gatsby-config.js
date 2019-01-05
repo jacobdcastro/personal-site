@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
 	siteMetadata: {
 		title: 'Jacob D. Castro',
@@ -12,11 +14,18 @@ module.exports = {
 			},
 		},
 		{
+			resolve: 'gatsby-source-filesystem',
+			options: {
+				name: 'images',
+				path: path.join(__dirname, 'src', 'images'),
+			},
+		},
+		{
 			resolve: 'gatsby-source-contentful',
 			options: {
-				//SPACE_ID build environment variable from Netlify
+				//SPACE_ID build environment variable from Netlify or Gatsby?
 				spaceId: 'oghc6wtiomc3',
-				//DELIVERY_API_TOKEN build environment variable from Netlify
+				//DELIVERY_API_TOKEN build environment variable from Netlify or Gatsby?
 				accessToken: '9f37d0ec8416ebe8c9c11b5db58b1a85d39c0f369f15fcc863b47f53c32179e7',
 			},
 		},
@@ -58,6 +67,8 @@ module.exports = {
 				// cookieDomain: "jacobdcastro.com",
 			},
 		},
+		'gatsby-transformer-sharp',
+		'gatsby-plugin-sharp',
 		'gatsby-transformer-remark',
 		'gatsby-plugin-react-helmet',
 		'gatsby-plugin-offline',
