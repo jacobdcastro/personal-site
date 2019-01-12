@@ -32,13 +32,14 @@ const Icon = styled.img`
   }
 `;
 
-const Copyright = styled.p`
-  font-family: 'Montserrat', 'Helvetica', sans-serif;
+const Copyright = styled.h5`
   /* color defined inline */
+	font-family: 'Montserrat', 'Helvetica', sans-serif;
   text-align: center;
   font-weight: 400;
   font-size: 14px;
   letter-spacing: 2px;
+	margin: 14px auto;
 `;
 
 const linkStyles = {
@@ -47,6 +48,8 @@ const linkStyles = {
 	padding: '0',
 	margin: '0'
 };
+
+
 
 class Footer extends React.Component {
 	render() {
