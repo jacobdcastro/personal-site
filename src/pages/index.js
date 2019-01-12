@@ -44,13 +44,13 @@ const MainContent = styled.div`
 
 const TextContainer = styled.div`
   @media (min-width: 820px) {
-    font-size: 1.18em;
+    font-size: 1.18rem;
   }
   @media (min-width: 1080px) {
-    font-size: 1.29em;
+    font-size: 1.29rem;
   }
   @media (min-width: 1400px) {
-    font-size: 1.58em;
+    font-size: 1.58rem;
   }
 `;
 
@@ -64,12 +64,15 @@ const Text1 = styled.h1`
 
   @media (min-width: 820px) {
     letter-spacing: 14px;
+    /* font-size: 2.42rem; */
   }
   @media (min-width: 1080px) {
     letter-spacing: 16px;
+    /* font-size: 2.58em; */
   }
   @media (min-width: 1400px) {
     letter-spacing: 18px;
+    /* font-size: 2.58em; */
   }
 `;
 
@@ -95,14 +98,17 @@ const Text2 = styled.h4`
   @media (min-width: 820px) {
     padding: 13px 4px;
     letter-spacing: 5px;
+    /* font-size: 1.18rem; */
   }
   @media (min-width: 1080px) {
     padding: 13px 3px;
     letter-spacing: 6px;
+    /* font-size: 1.29rem; */
   }
   @media (min-width: 1400px) {
     padding: 13.75px 4px;
     letter-spacing: 7.5px;
+    /* font-size: 1.58rem; */
   }
 `;
 
