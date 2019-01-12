@@ -11,12 +11,15 @@ const HeaderContainer = styled.div`
   padding: 0;
   .aboutPage {
     background-image: url(${aboutImg});
+    background-position: center;
   }
   .contactPage {
     background-image: url(${contactImg});
+    background-position: center;
   }
   .blogPage {
     background-image: url(${blogImg});
+    background-position: right;
   }
 `;
 
@@ -27,7 +30,6 @@ const Header = styled.div`
   height: 500px;
   width: 100%;
   background-size: cover;
-  background-position: center;
   margin: 0;
   padding: 0;
 
