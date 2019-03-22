@@ -34,7 +34,8 @@
     "gatsby",
     "portfolio",
     "react",
-    "static"
+    "static",
+    "blog"
   ],
   "license": "MIT",
   "scripts": {

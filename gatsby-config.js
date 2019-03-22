@@ -1,30 +1,26 @@
 const path = require('path');
-require("dotenv").config({
-	path: `.env.${process.env.NODE_ENV}`,
-});
 
 module.exports = {
 	siteMetadata: {
 		title: 'Jacob D. Castro',
-		desc: 'A personal, informational website and design/development playground for Jacob D. Castro',
+		description: 'A personal, informational website and design/development playground for Jacob D. Castro',
 	},
 	pathPrefix: '/blog',
 	plugins: [
 		{
-			resolve: `gatsby-plugin-manifest`,
+			resolve: 'gatsby-plugin-manifest',
 			options: {
-				name: `Jacob D. Castro Personal website`,
-				short_name: `JDCastro`,
-				start_url: `/`,
-				background_color: `#fafafa`,
-				theme_color: `#353535`,
+				name: 'Jacob D. Castro Personal website',
+				short_name: 'JDCastro',
+				start_url: '/',
+				background_color: '#fafafa',
+				theme_color: '#353535',
 				// Enables "Add to Homescreen" prompt and disables browser UI (including back button)
 				// see https://developers.google.com/web/fundamentals/web-app-manifest/#display
-				display: `standalone`,
-				icon: `src/images/favicon.png`, // This path is relative to the root of the site.
+				display: 'minimal-ui',
+				icon: 'src/images/favicon.png', // This path is relative to the root of the site.
 			},
 		},
-		`gatsby-plugin-offline`,
 		{
 			resolve: 'gatsby-plugin-styled-components',
 			options: {
@@ -47,17 +43,7 @@ module.exports = {
 				accessToken: '9f37d0ec8416ebe8c9c11b5db58b1a85d39c0f369f15fcc863b47f53c32179e7',
 			},
 		},
-		// {
-		// 	resolve: 'gatsby-plugin-eslint',
-		// 	options: {
-		// 		test: /\.js$|\.jsx$/,
-		// 		exclude: /(node_modules|cache|public)/,
-		// 		options: {
-		// 			emitWarning: true,
-		// 			failOnError: false
-		// 		}
-		// 	}
-		// },
+
 		{
 			resolve: 'gatsby-plugin-manifest',
 			options: {
@@ -68,29 +54,23 @@ module.exports = {
 			},
 		},
 		{
-			resolve: `gatsby-plugin-google-analytics`,
+			resolve: 'gatsby-plugin-google-analytics',
 			options: {
-				trackingId: "UA-130258530-1",
+				trackingId: 'UA-130258530-1',
 				head: false,
 				anonymize: true,
 				respectDNT: true,
 				// Avoids sending pageview hits from custom paths
 				exclude: [],
 				// Enables Google Optimize using your container Id
-				// optimizeId: "YOUR_GOOGLE_OPTIMIZE_TRACKING_ID",
-
+				// optimizeId: 'YOUR_GOOGLE_OPTIMIZE_TRACKING_ID',
+				
 				// Any additional create only fields (optional)
 				sampleRate: 5,
 				siteSpeedSampleRate: 10,
-				// cookieDomain: "jacobdcastro.com",
+				// cookieDomain: 'jacobdcastro.com',
 			},
 		},
-		// {
-		// 	resolve: `gatsby-plugin-typography`,
-		// 	options: {
-		// 		pathToConfigModule: 'src/utils/typography',
-		// 	}
-		// },
 		'gatsby-transformer-sharp',
 		'gatsby-plugin-sharp',
 		'gatsby-transformer-remark',
@@ -99,3 +79,4 @@ module.exports = {
 		'gatsby-plugin-lodash',
 	],
 };
+					

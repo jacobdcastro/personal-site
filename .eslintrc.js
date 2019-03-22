@@ -32,6 +32,6 @@ module.exports = {
             "error",
             "always"
         ],
-				"styled-components/rule-name": 2
+        "styled-components/rule-name": 2
     }
 };
