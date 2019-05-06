@@ -1,8 +1,8 @@
-import React from 'react';
-import FormLine from './FormLine';
-import CheckboxItem from './Checkbox';
-import TextArea from './TextArea';
-import styled from 'styled-components';
+import React from "react";
+import FormLine from "./FormLine";
+import CheckboxItem from "./Checkbox";
+import TextArea from "./TextArea";
+import styled from "styled-components";
 
 const Form = styled.form`
   display: flex;
@@ -21,7 +21,7 @@ const Form = styled.form`
 `;
 
 const Legend = styled.legend`
-  font-family: 'Montserrat', 'Helvetica', sans-serif;
+  font-family: "Montserrat", "Helvetica", sans-serif;
   font-weight: 700;
   letter-spacing: 1px;
   font-size: 1.1em;
@@ -29,7 +29,7 @@ const Legend = styled.legend`
 `;
 
 const ReqText = styled.p`
-  font-family: 'Montserrat', 'Helvetica', sans-serif;
+  font-family: "Montserrat", "Helvetica", sans-serif;
 `;
 
 const NameSection = styled.div`
@@ -59,7 +59,7 @@ const Recaptcha = styled.div`
 `;
 
 const SubmitBtn = styled.button`
-  font-family: 'Montserrat', 'Helvetica', sans-serif;
+  font-family: "Montserrat", "Helvetica", sans-serif;
   font-weight: 700;
   font-size: 1.05em;
   letter-spacing: 1px;
@@ -69,7 +69,9 @@ const SubmitBtn = styled.button`
   margin: 7px auto;
   box-shadow: none;
   border: none;
-  &:hover { cursor:pointer; }
+  &:hover {
+    cursor: pointer;
+  }
 
   @media (min-width: 820px) {
     padding: 15px;
@@ -82,98 +84,98 @@ class ProjectForm extends React.Component {
     super(props);
     this.state = {
       first_name: {
-        label_text: 'First Name:*',
-        label_for: 'genFirstName',
-        input_type: 'text',
-        name: 'firstName',
-        id: 'genFirstName',
+        label_text: "First Name:*",
+        label_for: "genFirstName",
+        input_type: "text",
+        name: "firstName",
+        id: "genFirstName",
         required: true
       },
       last_name: {
-        label_text: 'Last Name:',
-        label_for: 'genLastName',
-        input_type: 'text',
-        name: 'lastName',
-        id: 'genLastName',
+        label_text: "Last Name:",
+        label_for: "genLastName",
+        input_type: "text",
+        name: "lastName",
+        id: "genLastName",
         required: false
       },
       email: {
-        label_text: 'Email:*',
-        label_for: 'genEmail',
-        input_type: 'email',
-        name: 'email',
-        id: 'genEmail',
+        label_text: "Email:*",
+        label_for: "genEmail",
+        input_type: "email",
+        name: "email",
+        id: "genEmail",
         required: true
       },
       company: {
-        label_text: 'Company:',
-        label_for: 'proCompany',
-        input_type: 'text',
-        name: 'company',
-        id: 'proCompany',
+        label_text: "Company:",
+        label_for: "proCompany",
+        input_type: "text",
+        name: "company",
+        id: "proCompany",
         required: false
       },
       textarea: {
-        label_text: 'Message:*',
-        label_for: 'genMessage',
-        input_type: 'text',
-        name: 'message',
-        id: 'genMessage',
+        label_text: "Message:*",
+        label_for: "genMessage",
+        input_type: "text",
+        name: "message",
+        id: "genMessage",
         required: true
       },
       checkbox: {
-        new_site:{
-          label_text: 'New Website',
-          label_for: 'newSite',
-          input_type: 'checkbox',
-          id: 'newSite',
-          name: 'new_site'
+        new_site: {
+          label_text: "New Website",
+          label_for: "newSite",
+          input_type: "checkbox",
+          id: "newSite",
+          name: "new_site"
         },
         current_site: {
-          label_text: 'Work Done on Current Website',
-          label_for: 'currentSite',
-          input_type: 'checkbox',
-          id: 'currentSite',
-          name: 'current_site'
+          label_text: "Work Done on Current Website",
+          label_for: "currentSite",
+          input_type: "checkbox",
+          id: "currentSite",
+          name: "current_site"
         },
         blog: {
-          label_text: 'Blog',
-          label_for: 'blog',
-          input_type: 'checkbox',
-          id: 'blog',
-          name: 'blog'
+          label_text: "Blog",
+          label_for: "blog",
+          input_type: "checkbox",
+          id: "blog",
+          name: "blog"
         },
         portfolio: {
-          label_text: 'Portfolio',
-          label_for: 'portfolio',
-          input_type: 'checkbox',
-          id: 'portfolio',
-          name: 'portfolio'
+          label_text: "Portfolio",
+          label_for: "portfolio",
+          input_type: "checkbox",
+          id: "portfolio",
+          name: "portfolio"
         },
         ecommerce: {
-          label_text: 'Online Store',
-          label_for: 'ecommerce',
-          input_type: 'checkbox',
-          id: 'ecommerce',
-          name: 'ecommerce'
+          label_text: "Online Store",
+          label_for: "ecommerce",
+          input_type: "checkbox",
+          id: "ecommerce",
+          name: "ecommerce"
         },
         not_sure: {
           label_text: "I'm not sure!",
-          label_for: 'notSure',
-          input_type: 'checkbox',
-          id: 'notSure',
-          name: 'unknown'
+          label_for: "notSure",
+          input_type: "checkbox",
+          id: "notSure",
+          name: "unknown"
         }
       }
-    }
+    };
   }
 
   render() {
     return (
       <Form
-        height={this.props.open ? 'auto' : '0px'}
-        padding={this.props.open ? '20px' : '0px'}
-        margin={this.props.open ? '22px' : '0px'}
+        height={this.props.open ? "auto" : "0px"}
+        padding={this.props.open ? "20px" : "0px"}
+        margin={this.props.open ? "22px" : "0px"}
         id="projectForm"
         name="projectForm"
         method="POST"
@@ -206,7 +208,7 @@ class ProjectForm extends React.Component {
 
         <TextArea info={this.state.textarea} />
 
-        <Recaptcha data-netlify-recaptcha></Recaptcha>
+        <Recaptcha data-netlify-recaptcha />
         <SubmitBtn type="submit">Submit</SubmitBtn>
       </Form>
     );

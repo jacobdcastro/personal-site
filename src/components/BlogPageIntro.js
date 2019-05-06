@@ -1,9 +1,9 @@
-import React from 'react';
-import styled from 'styled-components';
-import Navbar from './Navbar';
-import aboutImg from '../images/cave.jpg';
-import contactImg from '../images/yellow-telephone.jpg';
-import img from '../images/icons/angle-arrow-down.svg';
+import React from "react";
+import styled from "styled-components";
+import Navbar from "./Navbar";
+import aboutImg from "../images/cave.jpg";
+import contactImg from "../images/yellow-telephone.jpg";
+import img from "../images/icons/angle-arrow-down.svg";
 
 const Header = styled.div`
   display: flex;
@@ -35,13 +35,13 @@ const BlackLayer = styled.div`
 `;
 
 const TitleContainer = styled.div`
-	text-align: center;
-	margin: 5px 14rem;
-	width: 90%;
+  text-align: center;
+  margin: 5px 14rem;
+  width: 90%;
 `;
 
 const Headline = styled.h1`
-  font-family: 'Montserrat', 'Helvetica', sans-serif;
+  font-family: "Montserrat", "Helvetica", sans-serif;
   color: #fff;
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -69,21 +69,21 @@ const DownArrow = styled.img`
 `;
 
 class BlogPageIntro extends React.Component {
-	render() {
-		return (
-			<Header bgImg={this.props.bgImg}>
-				<BlackLayer>
-					<Navbar action={this.props.action} />
+  render() {
+    return (
+      <Header bgImg={this.props.bgImg}>
+        <BlackLayer>
+          <Navbar action={this.props.action} />
 
-					<TitleContainer>
-						<Headline>{this.props.headline}</Headline>
-					</TitleContainer>
+          <TitleContainer>
+            <Headline>{this.props.headline}</Headline>
+          </TitleContainer>
 
-					<DownArrow src={img} alt="down arrow icon" />
-				</BlackLayer>
-			</Header>
-		);
-	}
+          <DownArrow src={img} alt="down arrow icon" />
+        </BlackLayer>
+      </Header>
+    );
+  }
 }
 
 export default BlogPageIntro;

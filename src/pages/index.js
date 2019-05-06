@@ -1,12 +1,12 @@
-import React from 'react';
-import { Link } from 'gatsby';
-import './normalize.css';
-import Head from '../utils/Helmet.js';
-import MobileNav from '../components/MobileNav';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
-import styled from 'styled-components';
-import img from '../images/chicago-river.jpg';
+import React from "react";
+import { Link } from "gatsby";
+import "./normalize.css";
+import Head from "../utils/Helmet.js";
+import MobileNav from "../components/MobileNav";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import styled from "styled-components";
+import img from "../images/chicago-river.jpg";
 
 const Container = styled.div`
   height: 100vh;
@@ -55,7 +55,7 @@ const TextContainer = styled.div`
 `;
 
 const Text1 = styled.h1`
-  font-family: 'Montserrat', 'Helvetica', sans-serif;
+  font-family: "Montserrat", "Helvetica", sans-serif;
   text-align: center;
   text-transform: uppercase;
   font-weight: 800;
@@ -77,7 +77,7 @@ const Text1 = styled.h1`
 `;
 
 const Text2 = styled.h4`
-  font-family: 'Montserrat', 'Helvetica', sans-serif;
+  font-family: "Montserrat", "Helvetica", sans-serif;
   text-align: center;
   color: #ffffff;
   text-transform: uppercase;
@@ -113,61 +113,71 @@ const Text2 = styled.h4`
 `;
 
 const linkStyles = {
-	textDecoration: 'none',
-	margin: 0,
-	outline: 0
+  textDecoration: "none",
+  margin: 0,
+  outline: 0
 };
 
 class Index extends React.Component {
-	constructor(props) {
-		super(props);
+  constructor(props) {
+    super(props);
 
-		this.openMobileNav = this.openMobileNav.bind(this);
-		this.closeMobileNav = this.closeMobileNav.bind(this);
+    this.openMobileNav = this.openMobileNav.bind(this);
+    this.closeMobileNav = this.closeMobileNav.bind(this);
 
-		this.state = {
-			mobileNavIsOpen: false
-		};
-	}
+    this.state = {
+      mobileNavIsOpen: false
+    };
+  }
 
-	openMobileNav() {
-		this.setState({
-			mobileNavIsOpen: true
-		});
-	}
+  openMobileNav() {
+    this.setState({
+      mobileNavIsOpen: true
+    });
+  }
 
-	closeMobileNav() {
-		this.setState({
-			mobileNavIsOpen: false
-		});
-	}
+  closeMobileNav() {
+    this.setState({
+      mobileNavIsOpen: false
+    });
+  }
 
-	render() {
-		return (
-			<Container>
-				<Head title="" />
-				<MobileNav action={this.closeMobileNav} open={this.state.mobileNavIsOpen} />
-				<BlackLayer>
-					<MainContent>
+  render() {
+    return (
+      <Container>
+        <Head title="" />
+        <MobileNav
+          action={this.closeMobileNav}
+          open={this.state.mobileNavIsOpen}
+        />
+        <BlackLayer>
+          <MainContent>
+            {/* normal header menu */}
+            <Navbar action={this.openMobileNav} />
 
-						{/* normal header menu */}
-						<Navbar action={this.openMobileNav} />
+            <TextContainer>
+              <Text1>
+                I Design &amp; develop
+                <br />
+                Modern Websites.
+                <br />
+                For You.
+              </Text1>
+              <Link to="/contact/" style={linkStyles}>
+                <Text2>
+                  Let's work
+                  <br />
+                  Together
+                </Text2>
+              </Link>
+            </TextContainer>
 
-						<TextContainer>
-							<Text1>I Design &amp; develop<br />
-                  Modern Websites.<br />
-                  For You.</Text1>
-							<Link to="/contact/" style={linkStyles}><Text2>Let's work<br />
-                  Together</Text2></Link>
-						</TextContainer>
-
-						<Footer backgroundIsBlack={true} />
-
-					</MainContent>
-				</BlackLayer>
-			</Container>
-		);
-	}
+            <Footer backgroundIsBlack={true} />
+          </MainContent>
+        </BlackLayer>
+      </Container>
+    );
+  }
 }
 
 export default Index;

@@ -1,10 +1,10 @@
-import React from 'react';
-import styled from 'styled-components';
-import Navbar from './Navbar';
-import aboutImg from '../images/cave.jpg';
-import contactImg from '../images/yellow-telephone.jpg';
-import blogImg from '../images/laptop-desk.jpg';
-import downArrowImg from '../images/icons/angle-arrow-down.svg';
+import React from "react";
+import styled from "styled-components";
+import Navbar from "./Navbar";
+import aboutImg from "../images/cave.jpg";
+import contactImg from "../images/yellow-telephone.jpg";
+import blogImg from "../images/laptop-desk.jpg";
+import downArrowImg from "../images/icons/angle-arrow-down.svg";
 
 const HeaderContainer = styled.div`
   margin: 0;
@@ -51,7 +51,7 @@ const BlackLayer = styled.div`
 `;
 
 const Headline = styled.h1`
-  font-family: 'Montserrat', 'Helvetica', sans-serif;
+  font-family: "Montserrat", "Helvetica", sans-serif;
   color: #fff;
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -79,8 +79,8 @@ const DownArrow = styled.img`
 `;
 
 class PageIntro extends React.Component {
-	render() {
-		return (
+  render() {
+    return (
       <HeaderContainer>
         <Header className={this.props.className}>
           <BlackLayer>
@@ -90,8 +90,8 @@ class PageIntro extends React.Component {
           </BlackLayer>
         </Header>
       </HeaderContainer>
-		);
-	}
+    );
+  }
 }
 
 export default PageIntro;

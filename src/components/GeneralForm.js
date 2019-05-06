@@ -1,7 +1,7 @@
-import React from 'react';
-import FormLine from './FormLine';
-import TextArea from './TextArea';
-import styled from 'styled-components';
+import React from "react";
+import FormLine from "./FormLine";
+import TextArea from "./TextArea";
+import styled from "styled-components";
 
 const Form = styled.form`
   display: flex;
@@ -19,7 +19,7 @@ const Form = styled.form`
 `;
 
 const Legend = styled.legend`
-  font-family: 'Montserrat', 'Helvetica', sans-serif;
+  font-family: "Montserrat", "Helvetica", sans-serif;
   font-weight: 700;
   letter-spacing: 1px;
   font-size: 1.1em;
@@ -27,7 +27,7 @@ const Legend = styled.legend`
 `;
 
 const ReqText = styled.p`
-  font-family: 'Montserrat', 'Helvetica', sans-serif;
+  font-family: "Montserrat", "Helvetica", sans-serif;
 `;
 
 const NameSection = styled.div`
@@ -50,7 +50,7 @@ const Recaptcha = styled.div`
 `;
 
 const SubmitBtn = styled.button`
-  font-family: 'Montserrat', 'Helvetica', sans-serif;
+  font-family: "Montserrat", "Helvetica", sans-serif;
   font-weight: 700;
   font-size: 1.05em;
   letter-spacing: 1px;
@@ -60,7 +60,9 @@ const SubmitBtn = styled.button`
   margin: 7px auto;
   box-shadow: none;
   border: none;
-  &:hover { cursor:pointer; }
+  &:hover {
+    cursor: pointer;
+  }
 
   @media (min-width: 820px) {
     padding: 15px;
@@ -74,46 +76,46 @@ class GeneralForm extends React.Component {
 
     this.state = {
       first_name: {
-        label_text: 'First Name:*',
-        label_for: 'genFirstName',
-        input_type: 'text',
-        name: 'firstName',
-        id: 'genFirstName',
+        label_text: "First Name:*",
+        label_for: "genFirstName",
+        input_type: "text",
+        name: "firstName",
+        id: "genFirstName",
         required: true
       },
       last_name: {
-        label_text: 'Last Name:',
-        label_for: 'genLastName',
-        input_type: 'text',
-        name: 'lastName',
-        id: 'genLastName',
+        label_text: "Last Name:",
+        label_for: "genLastName",
+        input_type: "text",
+        name: "lastName",
+        id: "genLastName",
         required: false
       },
       email: {
-        label_text: 'Email:*',
-        label_for: 'genEmail',
-        input_type: 'email',
-        name: 'email',
-        id: 'genEmail',
+        label_text: "Email:*",
+        label_for: "genEmail",
+        input_type: "email",
+        name: "email",
+        id: "genEmail",
         required: true
       },
       textarea: {
-        label_text: 'Message:*',
-        label_for: 'genMessage',
-        input_type: 'text',
-        name: 'message',
-        id: 'genMessage',
+        label_text: "Message:*",
+        label_for: "genMessage",
+        input_type: "text",
+        name: "message",
+        id: "genMessage",
         required: true
       }
-    }
+    };
   }
 
   render() {
     return (
       <Form
-        height={this.props.open ? 'auto' : '0px'}
-        padding={this.props.open ? '20px' : '0px'}
-        margin={this.props.open ? '22px' : '0px'}
+        height={this.props.open ? "auto" : "0px"}
+        padding={this.props.open ? "20px" : "0px"}
+        margin={this.props.open ? "22px" : "0px"}
         id="genForm"
         name="genForm"
         method="POST"
@@ -121,7 +123,9 @@ class GeneralForm extends React.Component {
         data-netlify-honeypot="bot-field"
       >
         <input type="hidden" name="form-name" value="genForm" />
-        <Legend>Have any questions or comments? Or just wanna say hi? Hit me up!</Legend>
+        <Legend>
+          Have any questions or comments? Or just wanna say hi? Hit me up!
+        </Legend>
         <ReqText>* indicates required field</ReqText>
         <NameSection>
           <NameLine>
@@ -133,7 +137,7 @@ class GeneralForm extends React.Component {
         </NameSection>
         <FormLine info={this.state.email} />
         <TextArea info={this.state.textarea} />
-        <Recaptcha netlify-recaptcha></Recaptcha>
+        <Recaptcha netlify-recaptcha />
         <SubmitBtn type="submit">Submit</SubmitBtn>
       </Form>
     );
