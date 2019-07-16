@@ -1,30 +1,11 @@
-import React from "react";
-import styled from "styled-components";
-import Head from "../utils/Helmet";
-import MobileNav from "../components/MobileNav";
-import PageIntro from "../components/PageIntro";
-import Footer from "../components/Footer";
+import React from 'react';
+import styled from 'styled-components';
+import Head from '../utils/Helmet';
+import MobileNav from '../components/MobileNav';
+import PageIntro from '../components/PageIntro';
+import Footer from '../components/Footer';
 
-const PageContainer = styled.div`
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  padding: auto 18%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top;
-`;
-
-const MainContent = styled.div`
-  background-color: #fafafa;
-  width: 100%;
-  padding: 12px 0px 24px;
-  margin: 2px auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-`;
+import { Container } from '../styles/LayoutStyles';
 
 class Layout extends React.Component {
   constructor(props) {
@@ -51,7 +32,7 @@ class Layout extends React.Component {
 
   render() {
     return (
-      <PageContainer>
+      <Container>
         <Head title={this.props.pageTitle} />
         <MobileNav
           action={this.closeMobileNav}
@@ -63,10 +44,10 @@ class Layout extends React.Component {
           headline={this.props.headline}
         />
 
-        <MainContent>{this.props.children}</MainContent>
+        <div className="mainContent">{this.props.children}</div>
 
         <Footer backgroundIsBlack={this.props.backgroundIsBlack} />
-      </PageContainer>
+      </Container>
     );
   }
 }
