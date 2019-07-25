@@ -2,29 +2,36 @@ import styled from 'styled-components';
 import img from '../images/chicago-river.jpg';
 
 const Container = styled.div`
+  position: relative;
   height: 100vh;
-  width: 100%;
+  width: 100vw;
   margin: 0;
   padding: auto 18%;
-  background-image: url(${img});
+  /* background-image: url(${img}); */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   transition: background-color 0.5s;
   transition: margin-left 0.5s;
+  overflow: hidden;
 
   #bgImg {
     position: absolute;
+    object-fit: cover;
     z-index: 1;
     top: 60px;
+    /* height: 50vw; */
+    /* width: auto; */
   }
 
   .blackLayer {
     position: absolute;
+    /* position: relative; */
     z-index: 2;
+    top: 0px;
     background-color: rgba(0, 0, 0, 0.5);
-    height: 100%;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
     margin: 0;
     padding: 0;
     display: flex;
@@ -32,6 +39,7 @@ const Container = styled.div`
     justify-content: space-around;
 
     .mainContent {
+      z-index: 3;
       height: 100%;
       margin: 0;
       padding: 0;

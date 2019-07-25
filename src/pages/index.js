@@ -42,7 +42,10 @@ class Index extends React.Component {
           open={this.state.mobileNavIsOpen}
         />
 
-        <Img id="bgImg" fluid={this.props.data.file.childImageSharp.fluid} />
+        <Img
+          id="bgImg"
+          fluid={this.props.data.file.childImageSharp.fluid}
+        />
 
         <div className="blackLayer">
           <div className="mainContent">
