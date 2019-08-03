@@ -15,25 +15,23 @@ class Index extends React.Component {
     this.closeMobileNav = this.closeMobileNav.bind(this);
 
     this.state = {
-      mobileNavIsOpen: false
+      mobileNavIsOpen: false,
     };
   }
 
   openMobileNav() {
     this.setState({
-      mobileNavIsOpen: true
+      mobileNavIsOpen: true,
     });
   }
 
   closeMobileNav() {
     this.setState({
-      mobileNavIsOpen: false
+      mobileNavIsOpen: false,
     });
   }
 
   render() {
-    console.log(this.props.data);
-
     return (
       <Container>
         <Head title="" />
@@ -45,6 +43,9 @@ class Index extends React.Component {
         <Img
           id="bgImg"
           fluid={this.props.data.file.childImageSharp.fluid}
+          style={{
+            height: '100vh',
+          }}
         />
 
         <div className="blackLayer">
@@ -80,7 +81,7 @@ class Index extends React.Component {
 export default Index;
 
 export const INDEX_QUERY = graphql`
-  query {
+  query INDEX_QUERY {
     file(relativePath: { eq: "chicago-river.jpg" }) {
       childImageSharp {
         fluid(quality: 100) {
