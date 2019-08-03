@@ -143,6 +143,7 @@ class Index extends React.Component {
   }
 
   render() {
+    console.log(this.state.mobileNavIsOpen);
     return (
       <Container>
         <Head title="" />
