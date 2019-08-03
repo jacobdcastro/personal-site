@@ -1,5 +1,7 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
+
+// TODO create a stateless functional component for footer to import images via gatsby-image and <StaticQuery>
 
 const FooterContainer = styled.footer`
   text-align: center;
@@ -34,7 +36,7 @@ const Icon = styled.img`
 
 const Copyright = styled.h5`
   /* color defined inline */
-  font-family: "Montserrat", "Helvetica", sans-serif;
+  font-family: 'Montserrat', 'Helvetica', sans-serif;
   text-align: center;
   font-weight: 400;
   font-size: 14px;
@@ -43,10 +45,10 @@ const Copyright = styled.h5`
 `;
 
 const linkStyles = {
-  height: "33px",
-  width: "33px",
-  padding: "0",
-  margin: "0"
+  height: '33px',
+  width: '33px',
+  padding: '0',
+  margin: '0',
 };
 
 class Footer extends React.Component {
@@ -63,8 +65,8 @@ class Footer extends React.Component {
               style={linkStyles}
               src={
                 this.props.backgroundIsBlack
-                  ? require("../images/icons/twitter-white.svg")
-                  : require("../images/icons/twitter-black.svg")
+                  ? require('../images/icons/twitter-white.svg')
+                  : require('../images/icons/twitter-black.svg')
               }
               alt="Twitter"
             />
@@ -78,8 +80,8 @@ class Footer extends React.Component {
               style={linkStyles}
               src={
                 this.props.backgroundIsBlack
-                  ? require("../images/icons/instagram-logo-white.svg")
-                  : require("../images/icons/instagram-logo-black.svg")
+                  ? require('../images/icons/instagram-logo-white.svg')
+                  : require('../images/icons/instagram-logo-black.svg')
               }
               alt="Intstagram"
             />
@@ -93,8 +95,8 @@ class Footer extends React.Component {
               style={linkStyles}
               src={
                 this.props.backgroundIsBlack
-                  ? require("../images/icons/facebook-letter-logo-white.svg")
-                  : require("../images/icons/facebook-letter-logo-black.svg")
+                  ? require('../images/icons/facebook-letter-logo-white.svg')
+                  : require('../images/icons/facebook-letter-logo-black.svg')
               }
               alt="Facebook"
             />
@@ -108,8 +110,8 @@ class Footer extends React.Component {
               style={linkStyles}
               src={
                 this.props.backgroundIsBlack
-                  ? require("../images/icons/github-logo-white.svg")
-                  : require("../images/icons/github-logo-black.svg")
+                  ? require('../images/icons/github-logo-white.svg')
+                  : require('../images/icons/github-logo-black.svg')
               }
               alt="Github"
             />
@@ -123,8 +125,8 @@ class Footer extends React.Component {
               style={linkStyles}
               src={
                 this.props.backgroundIsBlack
-                  ? require("../images/icons/linkedin-logo-white.svg")
-                  : require("../images/icons/linkedin-logo-black.svg")
+                  ? require('../images/icons/linkedin-logo-white.svg')
+                  : require('../images/icons/linkedin-logo-black.svg')
               }
               alt="Linkedin"
             />
@@ -134,17 +136,15 @@ class Footer extends React.Component {
         <Copyright
           style={
             this.props.backgroundIsBlack
-              ? { color: "white" }
-              : { color: "black" }
+              ? { color: 'white' }
+              : { color: 'black' }
           }
         >
-          &copy; Jacob D. Castro - 2018
+          &copy;2019 - JDCastro Digital
         </Copyright>
       </FooterContainer>
     );
   }
 }
-
-// create a stateless functional component for footer to import images via gatsby-image and <StaticQuery>
 
 export default Footer;

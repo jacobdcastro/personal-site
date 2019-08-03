@@ -1,14 +1,14 @@
-import React from "react";
-import PropTypes from "prop-types";
-import styled from "styled-components";
-import "../pages/normalize.css";
-import { graphql } from "gatsby";
-import { Helmet } from "react-helmet";
-import MobileNav from "../components/MobileNav";
-import BlogPageIntro from "../components/BlogPageIntro";
-import BlogSubheader from "../components/BlogSubheader";
-import Signature from "../components/Signature";
-import Footer from "../components/Footer";
+import React from 'react';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
+import '../pages/normalize.css';
+import { graphql } from 'gatsby';
+import { Helmet } from 'react-helmet';
+import MobileNav from '../components/MobileNav';
+import BlogPageIntro from '../components/BlogPageIntro';
+import BlogSubheader from '../components/BlogSubheader';
+import Signature from '../components/Signature';
+import Footer from '../components/Footer';
 
 const Container = styled.div`
   display: flex;
@@ -28,7 +28,7 @@ const ContentWrapper = styled.div`
 `;
 
 const BlogParagraph = styled.p`
-  font-family: "Montserrat", "Helvetica", sans-serif;
+  font-family: 'Montserrat', 'Helvetica', sans-serif;
   margin: 14px auto;
   max-width: 1125px;
   width: 100%;
@@ -66,26 +66,24 @@ class BlogPost extends React.Component {
     this.closeMobileNav = this.closeMobileNav.bind(this);
 
     this.state = {
-      mobileNavIsOpen: false
+      mobileNavIsOpen: false,
     };
   }
 
   openMobileNav() {
     this.setState({
-      mobileNavIsOpen: true
+      mobileNavIsOpen: true,
     });
   }
 
   closeMobileNav() {
     this.setState({
-      mobileNavIsOpen: false
+      mobileNavIsOpen: false,
     });
   }
 
   render() {
     const data = this.props.data.contentfulBlogPost;
-    console.log(this.props.data.contentfulBlogPost);
-    console.log(data.bodyContent.childMarkdownRemark.html);
     return (
       <Container>
         <Helmet>
@@ -113,7 +111,7 @@ class BlogPost extends React.Component {
           <BlogSubheader data={data} />
           <BlogParagraph
             dangerouslySetInnerHTML={{
-              __html: data.bodyContent.childMarkdownRemark.html
+              __html: data.bodyContent.childMarkdownRemark.html,
             }}
           />
           <Signature />
@@ -126,7 +124,7 @@ class BlogPost extends React.Component {
 }
 
 BlogPost.propTypes = {
-  data: PropTypes.object.isRequired
+  data: PropTypes.object.isRequired,
 };
 
 export default BlogPost;
