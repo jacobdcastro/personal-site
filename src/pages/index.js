@@ -1,12 +1,12 @@
-import React from "react";
-import { Link } from "gatsby";
-import "./normalize.css";
-import Head from "../utils/Helmet.js";
-import MobileNav from "../components/MobileNav";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
-import styled from "styled-components";
-import img from "../images/chicago-river.jpg";
+import React from 'react';
+import { Link } from 'gatsby';
+import './normalize.css';
+import Head from '../utils/Helmet.js';
+import MobileNav from '../components/MobileNav';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+import styled from 'styled-components';
+import img from '../images/chicago-river.jpg';
 
 const Container = styled.div`
   height: 100vh;
@@ -42,7 +42,7 @@ const MainContent = styled.div`
   align-items: center;
 `;
 
-const TextContainer = styled.div`                                                                                                                                       
+const TextContainer = styled.div`
   @media (min-width: 820px) {
     font-size: 1.18rem;
   }
@@ -55,7 +55,7 @@ const TextContainer = styled.div`
 `;
 
 const Text1 = styled.h1`
-  font-family: "Montserrat", "Helvetica", sans-serif;
+  font-family: 'Montserrat', 'Helvetica', sans-serif;
   text-align: center;
   text-transform: uppercase;
   font-weight: 800;
@@ -77,7 +77,7 @@ const Text1 = styled.h1`
 `;
 
 const Text2 = styled.h4`
-  font-family: "Montserrat", "Helvetica", sans-serif;
+  font-family: 'Montserrat', 'Helvetica', sans-serif;
   text-align: center;
   color: #ffffff;
   text-transform: uppercase;
@@ -113,9 +113,9 @@ const Text2 = styled.h4`
 `;
 
 const linkStyles = {
-  textDecoration: "none",
+  textDecoration: 'none',
   margin: 0,
-  outline: 0
+  outline: 0,
 };
 
 class Index extends React.Component {
@@ -126,19 +126,19 @@ class Index extends React.Component {
     this.closeMobileNav = this.closeMobileNav.bind(this);
 
     this.state = {
-      mobileNavIsOpen: false
+      mobileNavIsOpen: false,
     };
   }
 
   openMobileNav() {
     this.setState({
-      mobileNavIsOpen: true
+      mobileNavIsOpen: true,
     });
   }
 
   closeMobileNav() {
     this.setState({
-      mobileNavIsOpen: false
+      mobileNavIsOpen: false,
     });
   }
 
@@ -150,8 +150,17 @@ class Index extends React.Component {
           action={this.closeMobileNav}
           open={this.state.mobileNavIsOpen}
         />
-        <BlackLayer>
-          <MainContent>
+
+        <Img
+          id="bgImg"
+          fluid={this.props.data.file.childImageSharp.fluid}
+          style={{
+            height: '100vh',
+          }}
+        />
+
+        <div className="blackLayer">
+          <div className="mainContent">
             {/* normal header menu */}
             <Navbar action={this.openMobileNav} />
 
@@ -173,11 +182,23 @@ class Index extends React.Component {
             </TextContainer>
 
             <Footer backgroundIsBlack={true} />
-          </MainContent>
-        </BlackLayer>
+          </div>
+        </div>
       </Container>
     );
   }
 }
 
 export default Index;
+
+export const INDEX_QUERY = graphql`
+  query INDEX_QUERY {
+    file(relativePath: { eq: "chicago-river.jpg" }) {
+      childImageSharp {
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+  }
+`;

@@ -1,7 +1,7 @@
-import React from "react";
-import { Link, graphql, StaticQuery } from "gatsby";
-import styled from "styled-components";
-import Img from "gatsby-image";
+import React from 'react';
+import { Link, graphql, StaticQuery } from 'gatsby';
+import styled from 'styled-components';
+import Img from 'gatsby-image';
 
 const Header = styled.header`
   display: flex;
@@ -63,7 +63,7 @@ const HamButton = styled.img`
 `;
 
 const MenuItem = styled.li`
-  font-family: "Montserrat", "Helvetica", sans-serif;
+  font-family: 'Montserrat', 'Helvetica', sans-serif;
   display: none;
   font-weight: 400;
   transition: 320ms;
@@ -88,9 +88,9 @@ const MenuItem = styled.li`
 `;
 
 const linkStyles = {
-  textDecoration: "none",
+  textDecoration: 'none',
   margin: 0,
-  outline: 0
+  outline: 0,
 };
 
 class Navbar extends React.Component {
@@ -100,7 +100,7 @@ class Navbar extends React.Component {
         <HeaderContainer>
           <Link to="/" style={linkStyles}>
             <HeadLogo
-              src={require("../images/Jacob-D-Castro.png")}
+              src={require('../images/Jacob-D-Castro.png')}
               alt="logo"
             />
           </Link>
@@ -120,7 +120,7 @@ class Navbar extends React.Component {
             {/* <a href="#">Portfolio</a> */}
             <HamButton
               onClick={this.props.action}
-              src={require("../images/icons/menu-options.svg")}
+              src={require('../images/icons/menu-options.svg')}
               alt="menu button"
             />
           </HeadMenu>

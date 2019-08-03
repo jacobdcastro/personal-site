@@ -7,7 +7,7 @@
     "babel-plugin-styled-components": "^1.8.0",
     "contentful": "^7.0.4",
     "dotenv": "^6.2.0",
-    "gatsby": "^2.0.33",
+    "gatsby": "^2.13.50",
     "gatsby-image": "^2.0.23",
     "gatsby-plugin-google-analytics": "^2.0.8",
     "gatsby-plugin-lodash": "^3.0.1",
@@ -22,8 +22,8 @@
     "gatsby-transformer-remark": "^2.1.12",
     "gatsby-transformer-sharp": "^2.1.9",
     "lodash": "^4.17.11",
-    "react": "^16.5.1",
-    "react-dom": "^16.5.1",
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0",
     "react-helmet": "^5.2.0",
     "react-typography": "^0.16.18",
     "styled-components": "^3.4.10",
@@ -40,6 +40,7 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
+    "dev": "rm -rf .cache && gatsby develop",
     "develop": "gatsby develop",
     "format": "prettier --write '**/*.js'",
     "test": "echo \"Error: no test specified\" && exit 1"

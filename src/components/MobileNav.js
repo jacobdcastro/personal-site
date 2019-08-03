@@ -1,6 +1,6 @@
-import React from "react";
-import { Link } from "gatsby";
-import styled from "styled-components";
+import React from 'react';
+import { Link } from 'gatsby';
+import styled from 'styled-components';
 
 const SideNav = styled.div`
   height: 100%;
@@ -19,7 +19,7 @@ const SideNav = styled.div`
 `;
 
 const MobileLink = styled.span`
-  font-family: "Montserrat", "Helvetica", sans-serif;
+  font-family: 'Montserrat', 'Helvetica', sans-serif;
   text-transform: uppercase;
   color: #353535;
   font-size: 1.4em;
@@ -45,26 +45,26 @@ const BlackLogo = styled.img`
 `;
 
 const linkStyles = {
-  textDecoration: "none",
-  margin: "9px",
-  outline: 0
+  textDecoration: 'none',
+  margin: '9px',
+  outline: 0,
 };
 
 class MobileNav extends React.Component {
   render() {
     return (
       <SideNav
-        style={this.props.open ? { width: 100 + "%" } : { width: 0 + "px" }}
+        style={this.props.open ? { width: 100 + '%' } : { width: 0 + 'px' }}
       >
         <CloseButton
           onClick={this.props.action}
           id="closeButton"
-          src={require("../images/icons/delete-button.svg")}
+          src={require('../images/icons/delete-button.svg')}
           href="javascript:void(0)"
         />
         <Link to="/" style={linkStyles}>
           <BlackLogo
-            src={require("../images/JacobDCastro-black.png")}
+            src={require('../images/JacobDCastro-black.png')}
             alt="logo"
           />
         </Link>
