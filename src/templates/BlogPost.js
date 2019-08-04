@@ -59,6 +59,8 @@ const BlogParagraph = styled.p`
   }
 `;
 
+// TODO convert to function component and use Hooks
+
 class BlogPost extends React.Component {
   constructor(props) {
     super(props);
