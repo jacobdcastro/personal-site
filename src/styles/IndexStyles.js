@@ -109,7 +109,7 @@ const Container = styled.div`
       font-size: 1.29rem;
       h1 {
         letter-spacing: 16px;
-        font-size: 2.58rem;
+        font-size: 2.88rem;
       }
       h4 {
         padding: 13px 3px;
@@ -125,7 +125,7 @@ const Container = styled.div`
     }
     h1 {
       letter-spacing: 18px;
-      font-size: 2.58em;
+      font-size: 3.05em;
     }
     h4 {
       padding: 13.75px 4px;
@@ -148,6 +148,15 @@ const Container = styled.div`
   @keyframes slideInFromLeft {
     from {
       transform: translateX(-80px);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slideInFromRight {
+    from {
+      transform: translateX(80px);
     }
     to {
       transform: translateX(0);
