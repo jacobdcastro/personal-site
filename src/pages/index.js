@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import Head from '../utils/Helmet.js';
@@ -8,75 +8,58 @@ import Footer from '../components/Footer';
 import { Container } from '../styles/IndexStyles';
 import './normalize.css';
 
-class Index extends React.Component {
-  constructor(props) {
-    super(props);
-    this.openMobileNav = this.openMobileNav.bind(this);
-    this.closeMobileNav = this.closeMobileNav.bind(this);
+const Index = ({ data }) => {
+  const [mobileNavIsOpen, toggleMobileNav] = useState(false);
 
-    this.state = {
-      mobileNavIsOpen: false,
-    };
-  }
+  const openMobileNav = () => {
+    toggleMobileNav((mobileNavIsOpen = true));
+  };
 
-  openMobileNav() {
-    this.setState({
-      mobileNavIsOpen: true,
-    });
-  }
+  const closeMobileNav = () => {
+    toggleMobileNav((mobeilNavIsOpen = false));
+  };
 
-  closeMobileNav() {
-    this.setState({
-      mobileNavIsOpen: false,
-    });
-  }
+  return (
+    <Container>
+      <Head title="" />
+      <MobileNav action={closeMobileNav} open={mobileNavIsOpen} />
 
-  render() {
-    return (
-      <Container>
-        <Head title="" />
-        <MobileNav
-          action={this.closeMobileNav}
-          open={this.state.mobileNavIsOpen}
-        />
+      <Img
+        id="bgImg"
+        fluid={data.file.childImageSharp.fluid}
+        style={{
+          height: '100vh',
+        }}
+      />
 
-        <Img
-          id="bgImg"
-          fluid={this.props.data.file.childImageSharp.fluid}
-          style={{
-            height: '100vh',
-          }}
-        />
+      <div className="blackLayer">
+        <div className="mainContent">
+          {/* normal header menu */}
+          <Navbar action={openMobileNav} />
 
-        <div className="blackLayer">
-          <div className="mainContent">
-            {/* normal header menu */}
-            <Navbar action={this.openMobileNav} />
-
-            <div className="textContainer">
-              <h1>
-                I Design &amp; develop
+          <div className="textContainer">
+            <h1>
+              I Design &amp; develop
+              <br />
+              Modern Websites.
+              <br />
+              For You.
+            </h1>
+            <Link to="/contact/">
+              <h4>
+                Let's work
                 <br />
-                Modern Websites.
-                <br />
-                For You.
-              </h1>
-              <Link to="/contact/">
-                <h4>
-                  Let's work
-                  <br />
-                  Together
-                </h4>
-              </Link>
-            </div>
-
-            <Footer backgroundIsBlack={true} />
+                Together
+              </h4>
+            </Link>
           </div>
+
+          <Footer backgroundIsBlack={true} />
         </div>
-      </Container>
-    );
-  }
-}
+      </div>
+    </Container>
+  );
+};
 
 export default Index;
 
