@@ -8,7 +8,7 @@ module.exports = {
   },
 
   plugins: [
-    {
+    {    
       resolve: 'gatsby-plugin-manifest',
       options: {
         name: 'Jacob D. Castro Personal website',
