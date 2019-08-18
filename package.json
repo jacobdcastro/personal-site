@@ -5,7 +5,6 @@
   "author": "Jacob D. Castro <jdcastro.business@gmail.com>",
   "dependencies": {
     "babel-plugin-styled-components": "^1.8.0",
-    "contentful": "^7.0.4",
     "dotenv": "^6.2.0",
     "gatsby": "^2.13.62",
     "gatsby-image": "^2.0.23",
@@ -17,7 +16,6 @@
     "gatsby-plugin-sharp": "^2.0.17",
     "gatsby-plugin-styled-components": "^3.0.0",
     "gatsby-plugin-typography": "^2.2.5",
-    "gatsby-source-contentful": "^2.0.18",
     "gatsby-source-filesystem": "^2.0.12",
     "gatsby-transformer-remark": "^2.1.12",
     "gatsby-transformer-sharp": "^2.1.9",

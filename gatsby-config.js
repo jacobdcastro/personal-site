@@ -8,14 +8,15 @@ module.exports = {
   },
 
   plugins: [
-    {    
+    {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'Jacob D. Castro Personal website',
+        name: 'Jacob D. Castro',
         short_name: 'JDCastro',
         start_url: '/',
         background_color: '#fafafa',
         theme_color: '#353535',
+        lang: 'en',
         // Enables "Add to Homescreen" prompt and disables browser UI (including back button)
         // see https://developers.google.com/web/fundamentals/web-app-manifest/#display
         display: 'minimal-ui',

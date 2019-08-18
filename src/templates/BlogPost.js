@@ -10,55 +10,6 @@ import BlogSubheader from '../components/BlogSubheader';
 import Signature from '../components/Signature';
 import Footer from '../components/Footer';
 
-const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0;
-  padding: 0;
-`;
-
-const ContentWrapper = styled.div`
-  padding: 15px;
-  width: 88%;
-  max-width: 1125px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;
-
-const BlogParagraph = styled.p`
-  font-family: 'Montserrat', 'Helvetica', sans-serif;
-  margin: 14px auto;
-  max-width: 1125px;
-  width: 100%;
-  font-weight: 500;
-  letter-spacing: 0.5px;
-  line-height: 27px;
-  color: #353535;
-
-  img {
-    width: 100%;
-    height: auto;
-    max-width: 650px;
-  }
-  pre code {
-    display: block;
-    padding: 8px 18px;
-  }
-  code {
-    padding: auto 8px;
-    background-color: #e9e9e9;
-    border: 1px solid #888;
-    border-radius: 5px;
-  }
-
-  @media (min-width: 820px) {
-    width: 80%;
-    font-size: 1.1em;
-  }
-`;
-
 // TODO convert to function component and use Hooks
 
 class BlogPost extends React.Component {
@@ -85,10 +36,9 @@ class BlogPost extends React.Component {
   }
 
   render() {
-    const data = this.props.data.contentfulBlogPost;
     return (
       <Container>
-        <Helmet>
+        {/* <Helmet>
           <meta charSet="utf-8" />
           <title>{data.title} - Jacob D. Castro</title>
           <link
@@ -119,7 +69,7 @@ class BlogPost extends React.Component {
           <Signature />
         </ContentWrapper>
 
-        <Footer backgroundIsBlack={false} />
+        <Footer backgroundIsBlack={false} /> */}
       </Container>
     );
   }
@@ -131,45 +81,45 @@ BlogPost.propTypes = {
 
 export default BlogPost;
 
-export const pageQuery = graphql`
-  query blogPostQuery($slug: String!) {
-    contentfulBlogPost(slug: { eq: $slug }) {
-      id
-      slug
-      tags
-      title
-      subtitle
-      published(formatString: "MMMM Do, YYYY")
-      heroImage {
-        id
-        title
-        description
-        file {
-          url
-        }
-      }
-      bodyContent {
-        childMarkdownRemark {
-          html
-        }
-      }
-      author {
-        id
-        name
-        email
-        birthday
-        twitterURL
-        instagramURL
-        githubURL
-        avatar {
-          file {
-            url
-          }
-        }
-        biography {
-          biography
-        }
-      }
-    }
-  }
-`;
+// export const pageQuery = graphql`
+//   query blogPostQuery($slug: String!) {
+//     contentfulBlogPost(slug: { eq: $slug }) {
+//       id
+//       slug
+//       tags
+//       title
+//       subtitle
+//       published(formatString: "MMMM Do, YYYY")
+//       heroImage {
+//         id
+//         title
+//         description
+//         file {
+//           url
+//         }
+//       }
+//       bodyContent {
+//         childMarkdownRemark {
+//           html
+//         }
+//       }
+//       author {
+//         id
+//         name
+//         email
+//         birthday
+//         twitterURL
+//         instagramURL
+//         githubURL
+//         avatar {
+//           file {
+//             url
+//           }
+//         }
+//         biography {
+//           biography
+//         }
+//       }
+//     }
+//   }
+// `;
