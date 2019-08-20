@@ -12,7 +12,7 @@ const Container = styled.div`
   transition: background-color 0.5s;
   transition: margin-left 0.5s;
   overflow: hidden;
-  background-color: #fff;
+  background-color: #7519e6;
 
   .mainContent {
     z-index: 3;
