@@ -2,7 +2,6 @@ import React from 'react';
 import Layout from '../templates/layout';
 import GeneralForm from '../components/GeneralForm';
 import ProjectForm from '../components/ProjectForm';
-import './normalize.css';
 
 import { Container } from '../styles/ContactStyles';
 

@@ -6,7 +6,6 @@ import MobileNav from '../components/MobileNav';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { Container } from '../styles/IndexStyles';
-import './normalize.css';
 
 const Index = ({ data }) => {
   const [mobileNavIsOpen, toggleMobileNav] = useState(false);
@@ -24,38 +23,28 @@ const Index = ({ data }) => {
       <Head title="" />
       <MobileNav action={closeMobileNav} open={mobileNavIsOpen} />
 
-      <Img
-        id="bgImg"
-        fluid={data.file.childImageSharp.fluid}
-        style={{
-          height: '100vh',
-        }}
-      />
+      <div className="mainContent">
+        {/* normal header menu */}
+        <Navbar action={openMobileNav} />
 
-      <div className="blackLayer">
-        <div className="mainContent">
-          {/* normal header menu */}
-          <Navbar action={openMobileNav} />
-
-          <div className="textContainer">
-            <h1>
-              I Design &amp; develop
+        <div className="textContainer">
+          <h1>
+            I Design &amp; develop
+            <br />
+            Modern Websites.
+            <br />
+            For You.
+          </h1>
+          <Link to="/contact/">
+            <h4>
+              Let's work
               <br />
-              Modern Websites.
-              <br />
-              For You.
-            </h1>
-            <Link to="/contact/">
-              <h4>
-                Let's work
-                <br />
-                Together
-              </h4>
-            </Link>
-          </div>
-
-          <Footer backgroundIsBlack={true} />
+              Together
+            </h4>
+          </Link>
         </div>
+
+        <Footer backgroundIsBlack={true} />
       </div>
     </Container>
   );

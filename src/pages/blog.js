@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
-import './normalize.css';
 import { Container } from '../styles/BlogStyles';
 import Layout from '../templates/layout';
 import BlogPreviewCard from '../components/BlogPreviewCard';

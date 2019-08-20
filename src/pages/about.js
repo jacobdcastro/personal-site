@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'gatsby';
 import Layout from '../templates/layout';
 import { Container } from '../styles/AboutStyles';
-import './normalize.css';
 
 const About = () => {
   return (
