@@ -3,56 +3,43 @@ import Head from '../utils/Helmet';
 import MobileNav from '../components/MobileNav';
 import PageIntro from '../components/PageIntro';
 import Footer from '../components/Footer';
+import { Container } from '../styles/LayoutStyles';
 import '../utils/normalize.css';
 
-import { Container } from '../styles/LayoutStyles';
+import { darkTheme, lightTheme } from '../styles/themes';
 import { ThemeProvider } from 'styled-components';
 
-class Layout extends React.Component {
-  constructor(props) {
-    super(props);
-    this.openMobileNav = this.openMobileNav.bind(this);
-    this.closeMobileNav = this.closeMobileNav.bind(this);
+const Layout = () => {
+  const [mobileNavIsOpen, toggleMobileNav] = useState(false);
 
-    this.state = {
-      mobileNavIsOpen: false,
-    };
-  }
+  const openMobileNav = () => {
+    toggleMobileNav((mobileNavIsOpen = true));
+  };
 
-  openMobileNav() {
-    this.setState({
-      mobileNavIsOpen: true,
-    });
-  }
+  const closeMobileNav = () => {
+    toggleMobileNav((mobeilNavIsOpen = false));
+  };
 
-  closeMobileNav() {
-    this.setState({
-      mobileNavIsOpen: false,
-    });
-  }
+  return (
+    <ThemeProvider>
+      <Container>
+        <Head title={this.props.pageTitle} />
+        <MobileNav
+          action={this.closeMobileNav}
+          open={this.state.mobileNavIsOpen}
+        />
+        <PageIntro
+          action={this.openMobileNav}
+          className={this.props.className}
+          headline={this.props.headline}
+        />
 
-  render() {
-    return (
-      <ThemeProvider>
-        <Container>
-          <Head title={this.props.pageTitle} />
-          <MobileNav
-            action={this.closeMobileNav}
-            open={this.state.mobileNavIsOpen}
-          />
-          <PageIntro
-            action={this.openMobileNav}
-            className={this.props.className}
-            headline={this.props.headline}
-          />
+        <main className="mainContent">{this.props.children}</main>
 
-          <div className="mainContent">{this.props.children}</div>
-
-          <Footer backgroundIsBlack={this.props.backgroundIsBlack} />
-        </Container>
-      </ThemeProvider>
-    );
-  }
-}
+        <Footer backgroundIsBlack={this.props.backgroundIsBlack} />
+      </Container>
+    </ThemeProvider>
+  );
+};
 
 export default Layout;

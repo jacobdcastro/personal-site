@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import '../pages/normalize.css';
+import '../utils/normalize.css';
 import { graphql } from 'gatsby';
-import Helmet from '..utils/Helmet'
+import Helmet from '../utils/Helmet';
 import MobileNav from '../components/MobileNav';
 import BlogPageIntro from '../components/BlogPageIntro';
 import BlogSubheader from '../components/BlogSubheader';
@@ -10,42 +10,39 @@ import Signature from '../components/Signature';
 import Footer from '../components/Footer';
 
 const BlogPost = () => {
-  const [mobileNavIsOpen, toggleMobileNav] = useState(false)
+  const [mobileNavIsOpen, toggleMobileNav] = useState(false);
 
-  const openMobileNav =() => {
-    toggleMobileNav(mobileNavIsOpen = true);
-  }
+  const openMobileNav = () => {
+    toggleMobileNav((mobileNavIsOpen = true));
+  };
 
-  closeMobileNav() {
-    toggleMobileNav(mobileNavIsOpen = false);
-  }
+  const closeMobileNav = () => {
+    toggleMobileNav((mobileNavIsOpen = false));
+  };
 
-    return (
-      <Container>
-        <Helmet title="blog title from query" />
-        <MobileNav
-          action={closeMobileNav}
-          open={mobileNavIsOpen}
+  return (
+    <Container>
+      <Helmet title="blog title from query" />
+      <MobileNav action={closeMobileNav} open={mobileNavIsOpen} />
+      <BlogPageIntro
+        action={openMobileNav}
+        headline={data.title}
+        bgImg={data.heroImage.file.url}
+      />
+      <ContentWrapper>
+        <BlogSubheader data={data} />
+        <BlogParagraph
+          dangerouslySetInnerHTML={{
+            __html: data.bodyContent.childMarkdownRemark.html,
+          }}
         />
-        <BlogPageIntro
-          action={openMobileNav}
-          headline={data.title}
-          bgImg={data.heroImage.file.url}
-        />
-        <ContentWrapper>
-          <BlogSubheader data={data} />
-          <BlogParagraph
-            dangerouslySetInnerHTML={{
-              __html: data.bodyContent.childMarkdownRemark.html,
-            }}
-          />
-          <Signature />
-        </ContentWrapper>
+        <Signature />
+      </ContentWrapper>
 
-        <Footer backgroundIsBlack={false} />
-      </Container>
-    );
-}
+      <Footer backgroundIsBlack={false} />
+    </Container>
+  );
+};
 
 BlogPost.propTypes = {
   data: PropTypes.object.isRequired,
@@ -94,4 +91,4 @@ export default BlogPost;
 //       }
 //     }
 //   }
-`;
+// `;

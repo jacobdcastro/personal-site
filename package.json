@@ -2,7 +2,7 @@
   "name": "jdcastro-personal-site",
   "description": "The personal site of Jacob D. Castro",
   "version": "2.2.1",
-  "author": "Jacob D. Castro <jdcastro.business@gmail.com>",
+  "author": "Jacob D. Castro",
   "dependencies": {
     "babel-plugin-styled-components": "^1.8.0",
     "dotenv": "^6.2.0",

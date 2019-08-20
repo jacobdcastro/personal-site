@@ -51,15 +51,3 @@ const Index = ({ data }) => {
 };
 
 export default Index;
-
-export const INDEX_QUERY = graphql`
-  query INDEX_QUERY {
-    file(relativePath: { eq: "chicago-river.jpg" }) {
-      childImageSharp {
-        fluid(quality: 100) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
-  }
-`;

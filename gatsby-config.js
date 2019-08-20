@@ -45,15 +45,6 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-manifest',
-      options: {
-        name: 'Jacob D. Castro Personal Website',
-        short_name: 'personal',
-        start_url: '/',
-        icon: 'src/images/jdc-favicon.png', // This path is relative to the root of the site.
-      },
-    },
-    {
       resolve: 'gatsby-plugin-google-analytics',
       options: {
         trackingId: 'UA-130258530-1',
@@ -69,6 +60,12 @@ module.exports = {
         sampleRate: 5,
         siteSpeedSampleRate: 10,
         // cookieDomain: 'jacobdcastro.com',
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-typography',
+      options: {
+        pathToConfigModule: path.join(__dirname, 'src', 'utils', 'typography'),
       },
     },
     'gatsby-transformer-sharp',
