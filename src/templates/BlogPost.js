@@ -1,61 +1,34 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
 import '../pages/normalize.css';
 import { graphql } from 'gatsby';
-import { Helmet } from 'react-helmet';
+import Helmet from '..utils/Helmet'
 import MobileNav from '../components/MobileNav';
 import BlogPageIntro from '../components/BlogPageIntro';
 import BlogSubheader from '../components/BlogSubheader';
 import Signature from '../components/Signature';
 import Footer from '../components/Footer';
 
-// TODO convert to function component and use Hooks
+const BlogPost = () => {
+  const [mobileNavIsOpen, toggleMobileNav] = useState(false)
 
-class BlogPost extends React.Component {
-  constructor(props) {
-    super(props);
-    this.openMobileNav = this.openMobileNav.bind(this);
-    this.closeMobileNav = this.closeMobileNav.bind(this);
-
-    this.state = {
-      mobileNavIsOpen: false,
-    };
-  }
-
-  openMobileNav() {
-    this.setState({
-      mobileNavIsOpen: true,
-    });
+  const openMobileNav =() => {
+    toggleMobileNav(mobileNavIsOpen = true);
   }
 
   closeMobileNav() {
-    this.setState({
-      mobileNavIsOpen: false,
-    });
+    toggleMobileNav(mobileNavIsOpen = false);
   }
 
-  render() {
     return (
       <Container>
-        {/* <Helmet>
-          <meta charSet="utf-8" />
-          <title>{data.title} - Jacob D. Castro</title>
-          <link
-            rel="stylesheet"
-            src="//normalize-css.googlecode.com/svn/trunk/normalize.css"
-          />
-          <link
-            href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700"
-            rel="stylesheet"
-          />
-        </Helmet>
+        <Helmet title="blog title from query" />
         <MobileNav
-          action={this.closeMobileNav}
-          open={this.state.mobileNavIsOpen}
+          action={closeMobileNav}
+          open={mobileNavIsOpen}
         />
         <BlogPageIntro
-          action={this.openMobileNav}
+          action={openMobileNav}
           headline={data.title}
           bgImg={data.heroImage.file.url}
         />
@@ -69,10 +42,9 @@ class BlogPost extends React.Component {
           <Signature />
         </ContentWrapper>
 
-        <Footer backgroundIsBlack={false} /> */}
+        <Footer backgroundIsBlack={false} />
       </Container>
     );
-  }
 }
 
 BlogPost.propTypes = {
@@ -122,4 +94,4 @@ export default BlogPost;
 //       }
 //     }
 //   }
-// `;
+`;
