@@ -11,6 +11,7 @@ import { ThemeProvider } from 'styled-components';
 
 const Layout = () => {
   const [mobileNavIsOpen, toggleMobileNav] = useState(false);
+  const [isLightTheme, toggleTheme] = useState(true);
 
   const openMobileNav = () => {
     toggleMobileNav((mobileNavIsOpen = true));
@@ -23,20 +24,13 @@ const Layout = () => {
   return (
     <ThemeProvider>
       <Container>
-        <Head title={this.props.pageTitle} />
-        <MobileNav
-          action={this.closeMobileNav}
-          open={this.state.mobileNavIsOpen}
-        />
-        <PageIntro
-          action={this.openMobileNav}
-          className={this.props.className}
-          headline={this.props.headline}
-        />
+        <Head title={props.pageTitle} />
 
-        <main className="mainContent">{this.props.children}</main>
+        <main className="mainContent">{props.children}</main>
 
-        <Footer backgroundIsBlack={this.props.backgroundIsBlack} />
+        <Footer />
+
+        <ThemeButton toggleTheme={toggleTheme} />
       </Container>
     </ThemeProvider>
   );

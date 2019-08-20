@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, graphql } from 'gatsby';
+import { Link } from 'gatsby';
 import Img from 'gatsby-image';
 import Head from '../utils/Helmet.js';
 import MobileNav from '../components/MobileNav';
@@ -29,11 +29,8 @@ const Index = ({ data }) => {
 
         <div className="textContainer">
           <h1>
-            I Design &amp; develop
-            <br />
-            Modern Websites.
-            <br />
-            For You.
+            I'm Jacob Daniel Castro <br /> and I'm a <br /> frontend web
+            developer.
           </h1>
           <Link to="/contact/">
             <h4>
