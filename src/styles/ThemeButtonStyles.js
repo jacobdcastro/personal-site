@@ -7,7 +7,7 @@ const Wrapper = styled.button`
   height: 50px;
   width: 50px;
   border-radius: 100%;
-  background-color: #7519e6;
+  background-color: #824ee1;
   z-index: 10;
 
   &:hover {
