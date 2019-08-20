@@ -14,7 +14,7 @@ module.exports = {
         name: 'Jacob D. Castro',
         short_name: 'JDCastro',
         start_url: '/',
-        background_color: '#fafafa',
+        background_color: '#000',
         theme_color: '#353535',
         lang: 'en',
         // Enables "Add to Homescreen" prompt and disables browser UI (including back button)
