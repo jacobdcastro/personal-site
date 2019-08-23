@@ -1,13 +1,8 @@
 import styled from 'styled-components';
 
-const Container = styled.div`
-  height: 100%;
-  width: 100%;
+const Wrapper = styled.div`
   margin: 0;
-  padding: auto 18%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top;
+  padding: 45px;
 
   .mainContent {
     background-color: #fafafa;
@@ -21,4 +16,4 @@ const Container = styled.div`
   }
 `;
 
-export { Container };
+export { Wrapper };
