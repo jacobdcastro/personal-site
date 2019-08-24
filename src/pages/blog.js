@@ -28,7 +28,7 @@ class Blog extends React.Component {
                   style={{
                     textDecoration: 'none',
                     margin: '0',
-                    padding: '0'
+                    padding: '0',
                   }}
                 >
                   <BlogPreviewCard key={node.id} postData={node} />
@@ -46,7 +46,7 @@ export default Blog;
 
 export const pageQuery = graphql`
   query BlogPageQuery {
-    allContentfulBlogPost {
+    allContentfulBlogPost(sort: { order: DESC, fields: createdAt }) {
       edges {
         node {
           id
