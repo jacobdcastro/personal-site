@@ -42,7 +42,7 @@ const BlogParagraph = styled.p`
     height: auto;
     max-width: 650px;
   }
-  pre code {
+  /* pre code {
     display: block;
     padding: 8px 18px;
   }
@@ -51,7 +51,7 @@ const BlogParagraph = styled.p`
     background-color: #e9e9e9;
     border: 1px solid #888;
     border-radius: 5px;
-  }
+  } */
 
   @media (min-width: 820px) {
     width: 80%;
