@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 const AuthorWrapper = styled.div`
   display: flex;
@@ -8,6 +8,7 @@ const AuthorWrapper = styled.div`
   align-items: center;
   padding: 3px;
   margin: 8px auto;
+  width: 95%;
   max-width: 555px;
 `;
 
@@ -31,7 +32,7 @@ const NameSection = styled.div`
 `;
 
 const Name = styled.h4`
-  font-family: "Montserrat", "Helvetica", sans-serif;
+  font-family: 'Montserrat', 'Helvetica', sans-serif;
   text-align: center;
   letter-spacing: 1px;
   color: #353535;
@@ -40,7 +41,7 @@ const Name = styled.h4`
 `;
 
 const Bio = styled.p`
-  font-family: "Montserrat", "Helvetica", sans-serif;
+  font-family: 'Montserrat', 'Helvetica', sans-serif;
   letter-spacing: 1px;
   text-align: left;
   font-size: 12px;

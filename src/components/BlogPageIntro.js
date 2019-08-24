@@ -1,9 +1,9 @@
-import React from "react";
-import styled from "styled-components";
-import Navbar from "./Navbar";
-import aboutImg from "../images/cave.jpg";
-import contactImg from "../images/yellow-telephone.jpg";
-import img from "../images/icons/angle-arrow-down.svg";
+import React from 'react';
+import styled from 'styled-components';
+import Navbar from './Navbar';
+import aboutImg from '../images/cave.jpg';
+import contactImg from '../images/yellow-telephone.jpg';
+import img from '../images/icons/angle-arrow-down.svg';
 
 const Header = styled.div`
   display: flex;
@@ -41,7 +41,7 @@ const TitleContainer = styled.div`
 `;
 
 const Headline = styled.h1`
-  font-family: "Montserrat", "Helvetica", sans-serif;
+  font-family: 'Montserrat', 'Helvetica', sans-serif;
   color: #fff;
   text-transform: uppercase;
   letter-spacing: 4px;

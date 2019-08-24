@@ -1,7 +1,7 @@
-import React from "react";
-import styled from "styled-components";
-import BlogAuthor from "./BlogAuthor";
-import BlogTagIcon from "./BlogTagIcon";
+import React from 'react';
+import styled from 'styled-components';
+import BlogAuthor from './BlogAuthor';
+import BlogTagIcon from './BlogTagIcon';
 
 const Container = styled.div`
   display: flex;
@@ -10,21 +10,24 @@ const Container = styled.div`
   align-items: center;
   padding: 5px;
   margin: 5px auto;
+  width: 90%;
 `;
 
 const Subtitle = styled.h3`
-  font-family: "Montserrat", "Helvetica", sans-serif;
+  font-family: 'Montserrat', 'Helvetica', sans-serif;
   text-align: center;
   color: #353535;
   letter-spacing: 3px;
   text-transform: uppercase;
   padding: 0;
   margin: auto;
+  width: 90%;
 `;
 
 const TagSection = styled.div`
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
 `;

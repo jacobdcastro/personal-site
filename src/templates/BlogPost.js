@@ -37,6 +37,10 @@ const BlogParagraph = styled.p`
   line-height: 27px;
   color: #353535;
 
+  h1 {
+    line-height: 2.1rem;
+  }
+
   img {
     width: 100%;
     height: auto;
