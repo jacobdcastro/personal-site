@@ -1,7 +1,9 @@
-/**
- * Implement Gatsby's Browser APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/browser-apis/
- */
+import React from 'react';
+import { ThemeProvider } from 'styled-components';
+import { themes } from './src/styles/__themes';
 
-// You can delete this file if you're not using it
+export const wrapRootElement = ({ element }) => (
+  <ThemeProvider theme={themes.dark}>{element}</ThemeProvider>
+);
+
+// ? import primsjs stuff here

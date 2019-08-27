@@ -1,17 +1,16 @@
-// These objects are imported in templates/Layout.js to be
-// loaded to <ThemeProvider> in styled-components.
+// These objects are imported in ______________.js to be
+// loaded to <ThemeProvider> in gatsby-browser.js via styled-components.
 
-// Theme is determined via state in <Layout> and
+// Theme is determined via state in ____________ and
 // switched via a butotn on every page in site.
 
-const darkTheme = {
-  bgColor: `black`,
-  textColor: `white`,
+export const themes = {
+  dark: {
+    bgColor: `black`,
+    textColor: `white`,
+  },
+  light: {
+    bgColor: `white`,
+    textColor: `black`,
+  },
 };
-
-const lightTheme = {
-  bgColor: `white`,
-  textColor: `black`,
-};
-
-export { darkTheme, lightTheme };

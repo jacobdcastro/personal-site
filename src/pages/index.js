@@ -1,14 +1,17 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Layout from '../templates/layout';
-import { Wrapper } from '../styles/IndexStyles';
+import { Wrapper } from '../styles/index/IndexStyles';
+import { ThemeContext } from 'styled-components';
 
 const Index = () => {
+  const themeContext = useContext(ThemeContext);
+  console.log(themeContext);
   return (
-    <ThemeProvider>
-      <Layout>
+    <Layout>
+      <Wrapper>
         <h1>Hello there</h1>
-      </Layout>
-    </ThemeProvider>
+      </Wrapper>
+    </Layout>
   );
 };
 
