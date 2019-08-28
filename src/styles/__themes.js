@@ -8,9 +8,11 @@ export const themes = {
   dark: {
     bgColor: `black`,
     textColor: `white`,
+    accentColor: `purple`
   },
   light: {
     bgColor: `white`,
     textColor: `black`,
+    accentColor: `purple`
   },
 };
