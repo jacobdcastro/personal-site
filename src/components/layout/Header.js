@@ -25,7 +25,7 @@ const Header = () => {
 
   return (
     <Wrapper>
-      <Img src={data.signatureWhite.fluid} />
+      <Img src={data.signatureBlack.fluid} title="Signature Logo" alt="Jacob's Hand-drawn signature logo" />
       <button class="hamburger hamburger--arrowalt" type="button">
         <span class="hamburger-box">
           <span class="hamburger-inner"></span>
