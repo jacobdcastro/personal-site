@@ -28,14 +28,16 @@ const Header = () => {
 
   return (
     <Wrapper>
-      <Img
-        src={data.signatureBlack.fluid}
-        title="Signature Logo"
-        alt="Jacob's Hand-drawn signature logo"
-      />
-      <button class="hamburger hamburger--arrowalt" type="button">
-        <span class="hamburger-box">
-          <span class="hamburger-inner"></span>
+      <div id="logo">
+        <Img
+          fluid={data.signatureBlack.fluid}
+          title="Signature Logo"
+          alt="Jacob's Hand-drawn signature logo"
+        />
+      </div>
+      <button className="hamburger hamburger--arrowalt" type="button">
+        <span className="hamburger-box">
+          <span className="hamburger-inner"></span>
         </span>
       </button>
     </Wrapper>
