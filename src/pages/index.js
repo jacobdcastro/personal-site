@@ -6,6 +6,7 @@ import { ThemeContext } from 'styled-components';
 const Index = () => {
   const themeContext = useContext(ThemeContext);
   console.log(themeContext);
+
   return (
     <Layout>
       <Wrapper>

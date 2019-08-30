@@ -1,9 +1,8 @@
 import React from 'react';
-import { themes } from '../styles/__themes';
-import { ThemeProvider } from 'styled-components';
+import { lightTheme, darkTheme } from '../styles/__themes';
 
-const ThemeContext = () => {
-  return <ThemeProvider theme={themes.light} />;
-};
+const ThemeContext = React.createContext(
+  lightTheme // default theme
+);
 
 export default ThemeContext;
