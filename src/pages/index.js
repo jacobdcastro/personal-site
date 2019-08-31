@@ -1,7 +1,6 @@
 import React from 'react';
 import Layout from '../templates/layout';
 import { Wrapper } from '../styles/index/IndexStyles';
-import { ThemeContext } from '../utils/ThemeContext';
 
 const Index = () => {
   return (
