@@ -10,7 +10,7 @@ import { ThemeContext } from '../../utils/ThemeContext';
 
 const Header = () => {
   const { currentTheme } = useContext(ThemeContext);
-  const data = useStaticQuery(graphql`
+  const { signatureBlack, signatureWhite } = useStaticQuery(graphql`
     query HEADER_LOGOS_QUERY {
       signatureBlack: imageSharp(
         id: { eq: "3bafda5b-ec40-5605-82b1-9516726148ed" }
@@ -30,8 +30,6 @@ const Header = () => {
       }
     }
   `);
-
-  const { signatureBlack, signatureWhite } = data;
 
   return (
     <Wrapper>
