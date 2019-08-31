@@ -11,8 +11,8 @@ node_modules/
 /public
 
 # misc
-/.cache/
-/.netlify/
+.cache
+.netlify
 /.vscode/
 .DS_Store
 .env.local
