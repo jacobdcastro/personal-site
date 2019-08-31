@@ -3,6 +3,7 @@ import styled from 'styled-components';
 const Wrapper = styled.div`
   margin: 0;
   padding: 45px;
+  transition: ${props => props.theme.transition};
   background-color: ${props => props.theme.bgColor};
 
   .mainContent {

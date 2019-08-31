@@ -3,6 +3,7 @@ import { lightTheme, darkTheme } from '../styles/__themes';
 
 const ThemeContext = React.createContext({
   lightTheme,
+  transition: '0.5s',
   toggleTheme: () => {},
 });
 
@@ -16,11 +17,11 @@ class ThemeContextWrapper extends React.Component {
         currentTheme:
           this.state.currentTheme === lightTheme ? darkTheme : lightTheme,
       });
-      console.log(this.state.currentTheme);
     };
 
     this.state = {
       currentTheme: lightTheme,
+      transition: '0.5s',
       toggleTheme: this.toggleTheme,
     };
   }
