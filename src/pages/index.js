@@ -1,20 +1,20 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
 import Layout from '../templates/layout';
-import { IndexPagWrapper } from '../styles/index/IndexStyles';
+import { IndexPageWrapper } from '../styles/index/IndexStyles';
 import BlogListing from '../components/index/BlogListing';
 
 const Index = props => {
   return (
     <Layout>
-      <IndexPagWrapper>
+      <IndexPageWrapper>
         <h1>Hello there</h1>
-        <Link to="/about">To About Page</Link>
+        {/* <Link to="about">To About Page</Link> */}
 
         {props.data.allMarkdownRemark.edges.map(({ node }) => (
           <BlogListing key={node.id} data={node} />
         ))}
-      </IndexPagWrapper>
+      </IndexPageWrapper>
     </Layout>
   );
 };

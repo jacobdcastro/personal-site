@@ -1,15 +1,15 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import Layout from '../templates/layout';
-import { IndexPagWrapper } from '../styles/index/IndexStyles';
+import { AboutPageWrapper } from '../styles/about/AboutStyles';
 
 const About = () => {
   return (
     <Layout>
-      <IndexPagWrapper>
+      <AboutPageWrapper>
         <h1>About Me!</h1>
         <Link to="/">To Home Page</Link>
-      </IndexPagWrapper>
+      </AboutPageWrapper>
     </Layout>
   );
 };
