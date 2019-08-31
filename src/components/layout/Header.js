@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Img from 'gatsby-image';
 import { useStaticQuery, graphql } from 'gatsby';
 import { Wrapper } from '../../styles/HeaderStyles';
 import '../../styles/hamburgers.css';
+import { ThemeContext } from '../../utils/ThemeContext';
+
+// TODO : add inline SVG's for logo and
+// TODO : change background color w/ transition
 
 const Header = () => {
+  const { currentTheme } = useContext(ThemeContext);
   const data = useStaticQuery(graphql`
     query HEADER_LOGOS_QUERY {
       signatureBlack: imageSharp(
@@ -26,11 +31,20 @@ const Header = () => {
     }
   `);
 
+  const { signatureBlack, signatureWhite } = data;
+
   return (
     <Wrapper>
       <div id="logo">
         <Img
-          fluid={data.signatureBlack.fluid}
+          style={{
+            transition: '0.5s',
+          }}
+          fluid={
+            currentTheme.bgColor === 'white'
+              ? signatureBlack.fluid
+              : signatureWhite.fluid
+          }
           title="Signature Logo"
           alt="Jacob's Hand-drawn signature logo"
         />
