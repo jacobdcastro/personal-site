@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 import Layout from '../templates/layout';
 import { IndexPagWrapper } from '../styles/index/IndexStyles';
 
-const Index = () => {
+const About = () => {
   return (
     <Layout>
       <IndexPagWrapper>
@@ -14,4 +14,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default About;
