@@ -7,14 +7,14 @@ const lightTheme = {
   transition: '0.37s',
   bgColor: `white`,
   textColor: `black`,
-  accentColor: `purple`,
+  accentColor: `#7e12d1`,
 };
 
 const darkTheme = {
   transition: '0.37s',
   bgColor: `black`,
   textColor: `white`,
-  accentColor: `purple`,
+  accentColor: `#7e12d1`,
 };
 
 export { darkTheme, lightTheme };
