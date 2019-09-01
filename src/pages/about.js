@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import { Link, graphql } from 'gatsby';
 import Layout from '../templates/layout';
 import { AboutPageWrapper } from '../styles/about/AboutStyles';
 
@@ -37,6 +37,7 @@ export const ABOUT_PAGE_QUERY = graphql`
         facebookURL
         snapchat
         linkedinURL
+        tags
       }
     }
   }

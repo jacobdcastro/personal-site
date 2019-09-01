@@ -6,6 +6,7 @@ const IndexPageWrapper = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
+
     h1 {
       color: ${props => props.theme.textColor};
     }
@@ -39,6 +40,21 @@ const IndexPageWrapper = styled.div`
     width: auto;
     /* padding-top: 60px; */
     margin: 15px auto;
+  }
+
+  .indexBlogListing {
+    border-bottom: 4px solid ${props => props.theme.textColor};
+    margin: 40px 0;
+    h1 {
+      margin: 20px 0 10px;
+    }
+    h3 {
+      font-size: 1rem;
+      font-weight: 300;
+      margin: 5px 0;
+    }
+    p {
+    }
   }
 `;
 

@@ -1,12 +1,18 @@
 import React from 'react';
+import { Link } from 'gatsby';
 
 const BlogListing = ({ data }) => {
-  const { frontmatter, excerpt } = data;
+  const { frontmatter, excerpt, tags } = data;
+  console.log(tags);
   return (
     <div className="indexBlogListing">
       <h1>{frontmatter.title}</h1>
-      <p>{frontmatter.date}</p>
+      <h3>{frontmatter.date}</h3>
+      {/* <ul>
+        <li></li>
+      </ul> */}
       <p>{excerpt}</p>
+      <Link to={`blog/${frontmatter.slug}`}>Read More</Link>
     </div>
   );
 };
