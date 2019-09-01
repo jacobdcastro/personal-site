@@ -16,7 +16,7 @@ snapchat: '@jacobd.castro'
 linkedinURL: 'https://www.linkedin.com/in/jacob-c-5b6257a4/'
 ---
 
-## About Me
+# About Me
 
 My name is Jacob Daniel Castro. I am a front-end web developer. I love to code websites and stuff like that.
 
