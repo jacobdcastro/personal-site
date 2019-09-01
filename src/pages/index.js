@@ -6,6 +6,10 @@ import BlogListing from '../components/index/BlogListing';
 
 import Twitter from '../images/svg/TwitterSVG';
 import Instagram from '../images/svg/InstagramSVG';
+import Facebook from '../images/svg/FacebookSVG';
+import Linkedin from '../images/svg/LinkedinSVG';
+import Snapchat from '../images/svg/SnapchatSVG'
+import Github from '../images/svg/GithubSVG'
 
 const Index = props => {
   const {
@@ -27,22 +31,39 @@ const Index = props => {
           </h1>
           <ul className="introSocialLinks">
             <li>
-              <a>
+              <a href={twitterURL}>
                 <Twitter />
               </a>
             </li>
             <li>
-              <a><Instagram /></a>
+              <a href={instagramURL}>
+                <Instagram />
+              </a>
             </li>
             <li>
-              <a></a>
+              <a href={facebookURL}>
+                <Facebook />
+              </a>
             </li>
             <li>
-              <a></a>
+              <a href={linkedinURL}>
+                <Linkedin />
+              </a>
+            </li>
+            <li>
+              <a href={snapchat}>
+                <Snapchat />
+              </a>
+            </li>
+            <li>
+              <a href={githubURL}>
+                <Github />
+              </a>
             </li>
           </ul>
         </div>
 
+        {/* Blog posts */}
         {props.data.allMarkdownRemark.edges.map(({ node }) => (
           <BlogListing key={node.id} data={node} />
         ))}
