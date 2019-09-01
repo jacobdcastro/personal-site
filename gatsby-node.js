@@ -13,7 +13,6 @@ exports.createPages = async ({ graphql, actions }) => {
             id
             frontmatter {
               slug
-              blogPost
             }
           }
         }
