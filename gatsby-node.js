@@ -24,7 +24,7 @@ exports.createPages = async ({ graphql, actions }) => {
     reject(result.errors);
   }
 
-  const blogPostTemplate = path.resolve('src/templates/blogPost.js');
+  const blogPostTemplate = path.resolve('./src/templates/blogPost.js');
 
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
     createPage({
@@ -32,6 +32,7 @@ exports.createPages = async ({ graphql, actions }) => {
       component: blogPostTemplate,
       context: {
         id: node.id,
+        slug: node.frontmatter.slug,
       },
     });
   });

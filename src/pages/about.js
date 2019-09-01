@@ -9,7 +9,9 @@ const About = props => {
     <Layout>
       <AboutPageWrapper>
         <Link to="/">To Home Page</Link>
-        {/* <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} /> */}
+        <div
+          dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }}
+        />
       </AboutPageWrapper>
     </Layout>
   );
@@ -38,7 +40,6 @@ export const ABOUT_PAGE_QUERY = graphql`
         facebookURL
         snapchat
         linkedinURL
-        tags
       }
     }
   }

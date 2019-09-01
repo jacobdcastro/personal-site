@@ -2,15 +2,14 @@ import React from 'react';
 import Layout from './layout';
 import { Link, graphql } from 'gatsby';
 
-const blogPost = props => {
-  const data = props.data.markdownRemark;
-
+const blogPost = ({ data }) => {
+  console.log(data);
   return (
     <Layout>
-      <h1>{data.frontmatter.title}</h1>
-      <h4>{data.frontmatter.subtitle}</h4>
+      <h1>{data.markdownRemark.frontmatter.title}</h1>
+      <h4>{data.markdownRemark.frontmatter.subtitle}</h4>
 
-      <main dangerouslySetInnerHTML={{ __html: data.html }} />
+      <main dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
     </Layout>
   );
 };
@@ -18,8 +17,8 @@ const blogPost = props => {
 export default blogPost;
 
 export const BLOG_POST_QUERY = graphql`
-  query($id: String!) {
-    markdownRemark(id: { eq: $id }) {
+  query($slug: String!) {
+    markdownRemark(frontmatter: { slug: { eq: $slug } }) {
       id
       html
       frontmatter {
@@ -27,9 +26,6 @@ export const BLOG_POST_QUERY = graphql`
         slug
         subtitle
         date(formatString: "MM-DD-YYYY")
-        image
-        imageAlt
-        imageTitle
         tags
         blogPost
       }
