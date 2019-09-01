@@ -8,8 +8,9 @@ import Twitter from '../images/svg/TwitterSVG';
 import Instagram from '../images/svg/InstagramSVG';
 import Facebook from '../images/svg/FacebookSVG';
 import Linkedin from '../images/svg/LinkedinSVG';
-import Snapchat from '../images/svg/SnapchatSVG'
-import Github from '../images/svg/GithubSVG'
+import Snapchat from '../images/svg/SnapchatSVG';
+import Github from '../images/svg/GithubSVG';
+import Arrow from '../images/svg/DownArrowSVG';
 
 const Index = props => {
   const {
@@ -62,6 +63,10 @@ const Index = props => {
             </li>
           </ul>
         </div>
+
+        <a href="#downArrow">
+          <Arrow />
+        </a>
 
         {/* Blog posts */}
         {props.data.allMarkdownRemark.edges.map(({ node }) => (

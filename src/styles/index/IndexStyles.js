@@ -5,7 +5,6 @@ const IndexPageWrapper = styled.div`
     height: 80vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
     h1 {
       color: ${props => props.theme.textColor};
@@ -15,7 +14,8 @@ const IndexPageWrapper = styled.div`
       display: flex;
       flex-direction: row;
       justify-content: space-around;
-      width: 300px;
+      width: 400px;
+      margin: 0;
       li {
         list-style-type: none;
         height: 45px;
@@ -32,6 +32,13 @@ const IndexPageWrapper = styled.div`
         fill: ${props => props.theme.textColor};
       }
     }
+  }
+
+  #downArrow {
+    height: 50px;
+    width: auto;
+    /* padding-top: 60px; */
+    margin: 15px auto;
   }
 `;
 

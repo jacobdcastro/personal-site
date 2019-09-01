@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import { ThemeContext } from '../utils/ThemeContext';
 import { ThemeProvider } from 'styled-components';
 import { useStaticQuery, graphql } from 'gatsby';
@@ -19,6 +19,14 @@ const Layout = ({ children }) => {
       mobileNavIsOpen ? (mobileNavIsOpen = false) : (mobileNavIsOpen = true)
     );
   };
+
+  // adds smooth scrolling
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      // eslint-disable-next-line global-require
+      require('smooth-scroll')('a[href*="#"]');
+    }
+  });
 
   return (
     <ThemeProvider theme={theme.currentTheme}>
