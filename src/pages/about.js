@@ -4,11 +4,12 @@ import Layout from '../templates/layout';
 import { AboutPageWrapper } from '../styles/about/AboutStyles';
 
 const About = ({ data }) => {
+  console.log(data);
   return (
     <Layout>
       <AboutPageWrapper>
         <Link to="/">To Home Page</Link>
-        <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
+        {/* <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} /> */}
       </AboutPageWrapper>
     </Layout>
   );
