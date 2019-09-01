@@ -1,7 +1,8 @@
 import React from 'react';
-import LogoSVG from './SignatureLogoSVG'; // inline svg component
+import LogoSVG from '../../images/svg/SignatureLogoSVG'; // inline svg component
 import { HeaderWrapper } from '../../styles/HeaderStyles';
 import '../../styles/hamburgers.css';
+import { Link } from 'gatsby';
 
 const Header = props => {
   const { mobileNavIsOpen, action } = props;
@@ -10,8 +11,10 @@ const Header = props => {
     <HeaderWrapper>
       <div className="navContainer">
         <div id="logo">
-          <LogoSVG />
-          <h1>JACOB D. CASTRO</h1>
+          <Link to="/">
+            <LogoSVG />
+            <h2>JACOB D. CASTRO</h2>
+          </Link>
         </div>
 
         <button

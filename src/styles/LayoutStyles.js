@@ -2,9 +2,9 @@ import styled from 'styled-components';
 
 const LayoutWrapper = styled.div`
   margin: 0;
-  padding: 20px;
   transition: ${props => props.theme.transition};
   background-color: ${props => props.theme.bgColor};
+  padding: 15px;
 
   h1,
   h2,
