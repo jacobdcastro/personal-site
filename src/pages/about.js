@@ -3,8 +3,8 @@ import { Link, graphql } from 'gatsby';
 import Layout from '../templates/layout';
 import { AboutPageWrapper } from '../styles/about/AboutStyles';
 
-const About = ({ data }) => {
-  console.log(data);
+const About = props => {
+  console.log(props);
   return (
     <Layout>
       <AboutPageWrapper>
