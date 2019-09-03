@@ -1,6 +1,6 @@
 ---
 lastUpdated: '2019-08-13'
-title: 'My Biography'
+title: 'Biography'
 name: 'Jacob D. Castro'
 email: 'jdcastro.business@gmail.com'
 phone: '+1 (805) 878-5378'

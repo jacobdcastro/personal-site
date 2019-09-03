@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 
 const BlogListing = ({ data }) => {
   const { frontmatter, excerpt } = data;
-  console.log(frontmatter.tags);
+
   return (
     <div className="indexBlogListing">
       <h1>{frontmatter.title}</h1>

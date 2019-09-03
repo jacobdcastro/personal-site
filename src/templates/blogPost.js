@@ -3,7 +3,6 @@ import Layout from './layout';
 import { Link, graphql } from 'gatsby';
 
 const blogPost = ({ data }) => {
-  console.log(data);
   return (
     <Layout>
       <h1>{data.markdownRemark.frontmatter.title}</h1>
