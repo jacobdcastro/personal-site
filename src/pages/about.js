@@ -4,7 +4,6 @@ import Layout from '../templates/layout';
 import { AboutPageWrapper } from '../styles/about/AboutStyles';
 
 const About = props => {
-  console.log(props.data.file.childMarkdownRemark);
   return (
     <Layout>
       <AboutPageWrapper>
