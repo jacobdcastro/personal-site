@@ -41,21 +41,6 @@ const IndexPageWrapper = styled.div`
     /* padding-top: 60px; */
     margin: 15px auto;
   }
-
-  .indexBlogListing {
-    border-bottom: 4px solid ${props => props.theme.textColor};
-    margin: 40px 0;
-    h1 {
-      margin: 20px 0 10px;
-    }
-    h3 {
-      font-size: 1rem;
-      font-weight: 300;
-      margin: 5px 0;
-    }
-    p {
-    }
-  }
 `;
 
 export { IndexPageWrapper };
