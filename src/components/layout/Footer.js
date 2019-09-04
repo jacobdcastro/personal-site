@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <div>
+    <div style={{textAlign: 'center'}}>
       <p>
         <a>Sitemap</a>
       </p>

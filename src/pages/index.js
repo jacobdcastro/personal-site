@@ -69,9 +69,11 @@ const Index = props => {
         </a>
 
         {/* Blog posts */}
-        {props.data.allMarkdownRemark.edges.map(({ node }) => (
-          <BlogListing key={node.id} data={node} />
-        ))}
+        <div>
+          {props.data.allMarkdownRemark.edges.map(({ node }) => (
+            <BlogListing key={node.id} data={node} />
+          ))}
+        </div>
       </IndexPageWrapper>
     </Layout>
   );
@@ -81,6 +83,7 @@ export default Index;
 
 export const INDEX_POSTS_QUERY = graphql`
   query INDEX_POSTS_QUERY {
+    # all blog posts, sorted by most recent
     allMarkdownRemark(
       filter: { frontmatter: { blogPost: { eq: "blogPost" } } }
       sort: { fields: frontmatter___date, order: DESC }
@@ -100,6 +103,7 @@ export const INDEX_POSTS_QUERY = graphql`
       }
     }
 
+    # social links from about markdown file
     file(relativePath: { eq: "me.md" }) {
       childMarkdownRemark {
         id
