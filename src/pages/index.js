@@ -20,7 +20,7 @@ const Index = props => {
     facebookURL,
     snapchat,
     linkedinURL,
-  } = props.data.markdownRemark.frontmatter;
+  } = props.data.file.childMarkdownRemark.frontmatter;
 
   return (
     <Layout>
@@ -100,20 +100,21 @@ export const INDEX_POSTS_QUERY = graphql`
       }
     }
 
-    markdownRemark(id: { eq: "d21e791e-6fd7-5ccc-aa43-ea0a780039e5" }) {
-      id
-      html
-      frontmatter {
-        email
-        phone
-        handle
-        username
-        twitterURL
-        instagramURL
-        githubURL
-        facebookURL
-        snapchat
-        linkedinURL
+    file(relativePath: { eq: "me.md" }) {
+      childMarkdownRemark {
+        id
+        frontmatter {
+          email
+          phone
+          handle
+          username
+          twitterURL
+          instagramURL
+          githubURL
+          facebookURL
+          snapchat
+          linkedinURL
+        }
       }
     }
   }
