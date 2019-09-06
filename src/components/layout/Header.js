@@ -7,11 +7,11 @@ import Hamburger from './Hamburger';
 
 const Header = props => {
   const { mobileNavIsOpen, action } = props;
-  const [isScrolled, setIsScrolled] = useState(false);
+  // const [isScrolled, setIsScrolled] = useState(false);
 
-  useEffect(() => {
-    window.addEventListener('scroll', e => {
-  });
+  // useEffect(() => {
+  //   window.addEventListener('scroll', e => {
+  // });
 
   return (
     <HeaderWrapper>
