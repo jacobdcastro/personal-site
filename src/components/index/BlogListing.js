@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import Moment from 'react-moment';
 import BlogListWrapper from '../../styles/index/BlogListingStyles';
 import RightArrow from '../../images/svg/RightArrowSVG';
 
@@ -8,19 +9,24 @@ const BlogListing = ({ data }) => {
 
   return (
     <BlogListWrapper>
-      <h1>{frontmatter.title}</h1>
-      <ul>
-        {frontmatter.tags.map((tag, i) => (
-          <li className="listingTag" key={i}>
-            {tag}
-          </li>
-        ))}
-      </ul>
-      <h3>Published: {frontmatter.date}</h3>
-      <p>{excerpt}</p>
-      <Link className="readMore" to={`/blog/${frontmatter.slug}`}>
-        <p>Read More</p>
-        <RightArrow />
+      <Link to={`/blog/${frontmatter.slug}`}>
+        <h2>{frontmatter.title}</h2>
+        <ul>
+          {frontmatter.tags.map((tag, i) => (
+            <li className="listingTag" key={i}>
+              <h5>{tag}</h5>
+            </li>
+          ))}
+        </ul>
+        <h3>
+          Published:{' '}
+          <Moment dateToFormat={frontmatter.date} format="MMMM DD, YYYY" />
+        </h3>
+        <p>{excerpt}</p>
+        <div className="readMore">
+          <p>Read More</p>
+          <RightArrow />
+        </div>
       </Link>
     </BlogListWrapper>
   );

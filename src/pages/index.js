@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, graphql, useStaticQuery } from 'gatsby';
+import { Link, graphql } from 'gatsby';
 import Layout from '../templates/layout';
 import { IndexPageWrapper } from '../styles/index/IndexStyles';
 import BlogListing from '../components/index/BlogListing';
@@ -18,7 +18,7 @@ const Index = props => {
     instagramURL,
     githubURL,
     facebookURL,
-    snapchat,
+    snapchat, // I may use snap?
     linkedinURL,
   } = props.data.file.childMarkdownRemark.frontmatter;
 
@@ -51,11 +51,11 @@ const Index = props => {
                 <Linkedin />
               </a>
             </li>
-            <li>
+            {/* <li>
               <a href={snapchat}>
                 <Snapchat />
               </a>
-            </li>
+            </li> */}
             <li>
               <a href={githubURL}>
                 <Github />
@@ -64,14 +64,18 @@ const Index = props => {
           </ul>
         </div>
 
-        <a href="#downArrow">
-          <Arrow />
-        </a>
+        <div className="downArrowLink">
+          <a href="#blogPosts">
+            <Arrow />
+          </a>
+        </div>
 
         {/* Blog posts */}
-        <div>
+        <div id="blogPosts">
+          <h1>Recent Posts</h1>
+
           {props.data.allMarkdownRemark.edges.map(({ node }) => (
-            <BlogListing key={node.id} data={node} />
+            <BlogListing data={node} />
           ))}
         </div>
       </IndexPageWrapper>

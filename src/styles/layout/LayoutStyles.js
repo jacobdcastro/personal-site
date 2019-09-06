@@ -34,6 +34,7 @@ const LayoutWrapper = styled.div`
     color: ${props => props.theme.bgColor};
     box-shadow: 2px 2px 8px #3d3d3d;
     z-index: 5;
+    outline: none;
 
     img {
       height: 30px;

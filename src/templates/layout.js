@@ -1,12 +1,12 @@
 import React, { useContext, useState, useEffect } from 'react';
 import { ThemeContext } from '../utils/ThemeContext';
 import { ThemeProvider } from 'styled-components';
-import { useStaticQuery, graphql } from 'gatsby';
 
-import { LayoutWrapper } from '../styles/LayoutStyles';
+import { LayoutWrapper } from '../styles/layout/LayoutStyles';
 import Header from '../components/layout/Header';
 import ThemeToggleBtn from '../components/layout/ThemeToggleBtn';
 import Footer from '../components/layout/Footer';
+import MobileNav from '../components/layout/MobileNav';
 
 const Layout = ({ children }) => {
   // subscribes to value from ../utils/ThemeContext.js and
@@ -32,10 +32,11 @@ const Layout = ({ children }) => {
     <ThemeProvider theme={theme.currentTheme}>
       <LayoutWrapper>
         <Header mobileNavIsOpen={mobileNavIsOpen} action={mobileNavAction} />
-        <ThemeToggleBtn />
+        <MobileNav mobileNavIsOpen={mobileNavIsOpen} />
 
         <main>{children}</main>
 
+        <ThemeToggleBtn />
         <Footer />
       </LayoutWrapper>
     </ThemeProvider>

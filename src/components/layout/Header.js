@@ -1,11 +1,17 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import LogoSVG from '../../images/svg/SignatureLogoSVG'; // inline svg component
-import { HeaderWrapper } from '../../styles/HeaderStyles';
-import '../../styles/hamburgers.css';
+import { HeaderWrapper } from '../../styles/layout/HeaderStyles';
+import '../../styles/layout/hamburgers.css';
 import { Link } from 'gatsby';
+import Hamburger from './Hamburger';
 
 const Header = props => {
   const { mobileNavIsOpen, action } = props;
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener('scroll', e => {
+  });
 
   return (
     <HeaderWrapper>
@@ -17,16 +23,7 @@ const Header = props => {
           </Link>
         </div>
 
-        <button
-          className={`hamburger hamburger--arrowalt ${mobileNavIsOpen &&
-            'is-active'}`}
-          onClick={action}
-          type="button"
-        >
-          <span className="hamburger-box">
-            <span className="hamburger-inner"></span>
-          </span>
-        </button>
+        <Hamburger mobileNavIsOpen={mobileNavIsOpen} action={action} />
       </div>
     </HeaderWrapper>
   );

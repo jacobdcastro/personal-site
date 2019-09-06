@@ -2,14 +2,20 @@ import styled from 'styled-components';
 
 const BlogListWrapper = styled.div`
   border-bottom: 4px solid ${props => props.theme.textColor};
-  margin: 40px 0;
-  h1 {
-    margin: 20px 0 10px;
+  margin: 40px 0 25px;
+
+  a {
+    color: ${props => props.theme.textColor};
+    text-decoration: none;
+  }
+
+  h2 {
+    margin: 10px 0 10px;
   }
   h3 {
     font-size: 1rem;
     font-weight: 300;
-    margin: 5px 0;
+    margin: 8px 0 15px;
   }
 
   ul {
@@ -37,11 +43,23 @@ const BlogListWrapper = styled.div`
     height: 50px;
     margin: -10px 0 15px;
     justify-content: space-between;
-    text-decoration: none;
+
+    ul {
+      .listingTag {
+        font-weight: 400;
+        h5 {
+          color: ${props => props.theme.accentColor};
+        }
+      }
+    }
+
+    h3 {
+      margin-bottom: 10px;
+    }
+
     p {
       margin: 0;
       color: ${props => props.theme.textColor};
-      text-decoration: none;
     }
     .rightArrow {
       transition: 0.3s;

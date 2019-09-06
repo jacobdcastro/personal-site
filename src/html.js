@@ -1,5 +1,5 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
 export default class HTML extends React.Component {
   render() {
@@ -14,18 +14,18 @@ export default class HTML extends React.Component {
           />
           {this.props.headComponents}
         </head>
-        <body {...this.props.bodyAttributes}>
+        <body {...this.props.bodyAttributes} style={{ overflowX: 'hidden' }}>
           {this.props.preBodyComponents}
           <div
-            key={"body"}
+            key={'body'}
             id="___gatsby"
             dangerouslySetInnerHTML={{ __html: this.props.body }}
           />
           {this.props.postBodyComponents}
           <noscript>
             Umm, sorry. But my website works best when you have Javascript
-            turned on. You've got it turned off! Flip the switch for the
-            best experience. - Jacob D. Castro
+            turned on. You've got it turned off! Flip the switch for the best
+            experience. - Jacob D. Castro
           </noscript>
         </body>
       </html>
@@ -39,5 +39,5 @@ HTML.propTypes = {
   bodyAttributes: PropTypes.object,
   preBodyComponents: PropTypes.array,
   body: PropTypes.string,
-  postBodyComponents: PropTypes.array
+  postBodyComponents: PropTypes.array,
 };

@@ -7,7 +7,6 @@ const About = props => {
   return (
     <Layout>
       <AboutPageWrapper>
-        <Link to="/">To Home Page</Link>
         <div
           dangerouslySetInnerHTML={{
             __html: props.data.file.childMarkdownRemark.html,

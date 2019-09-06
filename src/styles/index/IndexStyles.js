@@ -14,8 +14,8 @@ const IndexPageWrapper = styled.div`
     .introSocialLinks {
       display: flex;
       flex-direction: row;
-      justify-content: space-around;
-      width: 400px;
+      justify-content: space-between;
+      width: 350px;
       margin: 0;
       li {
         list-style-type: none;
@@ -35,11 +35,28 @@ const IndexPageWrapper = styled.div`
     }
   }
 
-  #downArrow {
-    height: 50px;
-    width: auto;
-    /* padding-top: 60px; */
-    margin: 15px auto;
+  .downArrowLink {
+    width: 80%;
+    margin: 0 auto 0;
+    text-align: center;
+
+    svg {
+      height: 50px;
+      width: auto;
+      margin: 0 0;
+      .icon {
+        transition: ${props => props.theme.transition};
+        fill: ${props => props.theme.textColor};
+      }
+    }
+  }
+
+  #blogPosts {
+    padding-top: 60px;
+    margin-top: -40px;
+    h1 {
+      margin: 30px 0 0;
+    }
   }
 `;
 

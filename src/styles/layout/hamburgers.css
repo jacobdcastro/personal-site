@@ -23,7 +23,7 @@
   overflow: visible;
 }
 
-/* background color set in ./HeaderStyles.js */
+/* ? background color set in ./HeaderStyles.js */
 /* .hamburger.is-active .hamburger-inner,
 .hamburger.is-active .hamburger-inner::before,
 .hamburger.is-active .hamburger-inner::after {
@@ -50,9 +50,6 @@
   /* background-color: #000; */
   border-radius: 4px;
   position: absolute;
-  transition-property: transform;
-  transition-duration: 0.15s;
-  transition-timing-function: ease;
 }
 .hamburger-inner::before,
 .hamburger-inner::after {

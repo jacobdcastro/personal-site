@@ -2,43 +2,47 @@ import styled from 'styled-components';
 
 const HeaderWrapper = styled.header`
   width: 100%;
-  height: 70px;
   margin-left: -15px;
+  height: 70px;
 
   .navContainer {
-    height: 70px;
-    padding: 15px;
-    background-color: ${props => props.theme.bgColor};
-    box-shadow: 5px 0px 8px #4d4d4d;
-    position: fixed;
-    top: 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    top: 0;
+    height: 70px;
+    padding: 15px;
     width: 100%;
+    background-color: ${props => props.theme.bgColor};
+    transition: ${props => props.theme.transition};
+    box-shadow: 5px 0px 8px #4d4d4d;
+    z-index: 6;
 
     #logo {
-      width: 40vw;
+      position: absolute;
+      z-index: 10;
+      width: 165px;
+      height: auto;
       .headerLogoSVG {
         transition: ${props => props.theme.transition};
         fill: ${props => props.theme.textColor};
-        width: 80vw;
+        width: 100%;
+      }
+
+      a {
+        text-decoration: none;
+        outline: none;
       }
 
       h2 {
         color: ${props => props.theme.textColor};
-        font-size: 2vw;
+        font-size: 0.563rem;
         text-align: center;
-        letter-spacing: 1vw;
+        letter-spacing: 4.4px;
         margin: 0;
       }
-    }
-
-    .hamburger-inner,
-    .hamburger-inner::before,
-    .hamburger-inner::after {
-      background-color: ${props => props.theme.textColor};
     }
   }
 `;
