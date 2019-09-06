@@ -32,7 +32,7 @@ const Layout = ({ children }) => {
     <ThemeProvider theme={theme.currentTheme}>
       <LayoutWrapper>
         <Header mobileNavIsOpen={mobileNavIsOpen} action={mobileNavAction} />
-        <MobileNav mobileNavIsOpen={mobileNavIsOpen} />
+        <MobileNav mobileNavIsOpen={mobileNavIsOpen} action={mobileNavAction} />
 
         <main>{children}</main>
 

@@ -6,6 +6,7 @@ const IndexPageWrapper = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-top: 15px;
 
     h1 {
       color: ${props => props.theme.textColor};
@@ -15,7 +16,9 @@ const IndexPageWrapper = styled.div`
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      width: 350px;
+      flex-wrap: wrap;
+      width: 90vw;
+      max-width: 350px;
       margin: 0;
       li {
         list-style-type: none;
@@ -37,7 +40,7 @@ const IndexPageWrapper = styled.div`
 
   .downArrowLink {
     width: 80%;
-    margin: 0 auto 0;
+    margin: -20px auto 0;
     text-align: center;
 
     svg {

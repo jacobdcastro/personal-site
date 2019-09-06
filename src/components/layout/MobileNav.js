@@ -2,10 +2,10 @@ import React from 'react';
 import { Link } from 'gatsby';
 import MobileNavWrapper from '../../styles/layout/MobileNavStyles';
 
-const MobileNav = ({ mobileNavIsOpen }) => {
+const MobileNav = ({ mobileNavIsOpen, action }) => {
   return (
     <MobileNavWrapper isOpen={mobileNavIsOpen}>
-      <div className="darkLayer" />
+      <div className="darkLayer" onClick={action} />
       <div id="mobileMenu">
         <nav>
           <ul>

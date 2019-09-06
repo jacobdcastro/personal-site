@@ -8,6 +8,7 @@ const HamburgerButton = styled.button`
   z-index: 10;
 
   .hamburger {
+    outline: none;
     display: inline-block;
     cursor: pointer;
     transition-property: opacity, filter;
@@ -29,6 +30,7 @@ const HamburgerButton = styled.button`
     height: 24px;
     display: inline-block;
     position: relative;
+    outline: none;
   }
 
   .hamburger-inner {

@@ -10,10 +10,11 @@ const MobileNavWrapper = styled.div`
   opacity: ${props => (props.isOpen ? '100' : '0')};
   transition: ${props => props.theme.transition};
   background-color: transparent;
+  overflow-x: hidden;
   z-index: 5;
 
   .darkLayer {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     height: 100vh;
@@ -25,18 +26,33 @@ const MobileNavWrapper = styled.div`
   }
 
   #mobileMenu {
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
+    display: flex;
+    align-items: center;
     height: 100vh;
     width: 250px;
     transition: ${props => props.theme.transition};
     transform: translateX(${props => (props.isOpen ? '0' : '250px')});
+    margin-bottom: 20px;
     background-color: ${props => props.theme.bgColor};
-    z-index: 7;
+    z-index: 6;
     nav {
-      a {
-        color: ${props => props.theme.textColor};
+      ul {
+        list-style-type: none;
+        margin: 0px 10px 60px 25px;
+
+        li {
+          list-style-type: none;
+          a {
+            color: ${props => props.theme.textColor};
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 1.8rem;
+          }
+        }
       }
     }
   }

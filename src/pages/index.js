@@ -17,7 +17,7 @@ const Index = props => {
     twitterURL,
     instagramURL,
     githubURL,
-    facebookURL,
+    facebookURL, // soon to be launched
     snapchat, // I may use snap?
     linkedinURL,
   } = props.data.file.childMarkdownRemark.frontmatter;
@@ -41,11 +41,11 @@ const Index = props => {
                 <Instagram />
               </a>
             </li>
-            <li>
+            {/* <li>
               <a href={facebookURL}>
                 <Facebook />
               </a>
-            </li>
+            </li> */}
             <li>
               <a href={linkedinURL}>
                 <Linkedin />

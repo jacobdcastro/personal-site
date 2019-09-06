@@ -33,7 +33,7 @@ const LayoutWrapper = styled.div`
     background-color: ${props => props.theme.accentColor};
     color: ${props => props.theme.bgColor};
     box-shadow: 2px 2px 8px #3d3d3d;
-    z-index: 5;
+    z-index: 4;
     outline: none;
 
     img {

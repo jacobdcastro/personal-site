@@ -1,24 +1,29 @@
 import styled from 'styled-components';
 
 const HeaderWrapper = styled.header`
-  width: 100%;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100vw;
   margin-left: -15px;
+  margin-top: -15px;
+
   height: 70px;
 
   .navContainer {
+    position: fixed;
+    top: 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    position: fixed;
-    top: 0;
     height: 70px;
     padding: 15px;
     width: 100%;
     background-color: ${props => props.theme.bgColor};
     transition: ${props => props.theme.transition};
-    box-shadow: 5px 0px 8px #4d4d4d;
-    z-index: 6;
+    box-shadow: 0px 0px 8px #4d4d4d;
+    z-index: 9;
 
     #logo {
       position: absolute;
