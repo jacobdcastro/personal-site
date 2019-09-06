@@ -44,7 +44,7 @@ const LayoutWrapper = styled.div`
   }
   #themeToggleBtn:hover {
     cursor: pointer;
-    transform: scale(1.08);
+    /* transform: scale(1.08); */
   }
 
   .mainContent {
