@@ -35,6 +35,16 @@ const MobileNavWrapper = styled.div`
     width: 250px;
     transition: ${props => props.theme.transition};
     transform: translateX(${props => (props.isOpen ? '0' : '250px')});
+    -webkit-transform: translateX(
+      ${props => (props.isOpen ? '0' : '250px')}
+    ); /* WebKit */
+    -moz-transform: translateX(
+      ${props => (props.isOpen ? '0' : '250px')}
+    ); /* Mozilla */
+    -o-transform: translateX(
+      ${props => (props.isOpen ? '0' : '250px')}
+    ); /* Opera */
+    -ms-transform: translateX(${props => (props.isOpen ? '0' : '250px')});
     margin-bottom: 20px;
     background-color: ${props => props.theme.bgColor};
     z-index: 6;
