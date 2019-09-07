@@ -55,6 +55,8 @@ const IndexPageWrapper = styled.div`
   }
 
   #blogPosts {
+    position: relative;
+    z-index: 1;
     padding-top: 60px;
     margin-top: -40px;
     h1 {
