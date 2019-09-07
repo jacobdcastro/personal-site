@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const MobileNavWrapper = styled.div`
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   height: 100vh;
@@ -9,7 +9,7 @@ const MobileNavWrapper = styled.div`
   pointer-events: ${props => (props.isOpen ? 'auto' : 'none')};
   opacity: ${props => (props.isOpen ? '100' : '0')};
   transition: ${props => props.theme.transition};
-  /* background-color: transparent; */
+  background-color: transparent;
   overflow-x: hidden;
   z-index: 5;
 
