@@ -20,8 +20,8 @@ const MobileNavWrapper = styled.div`
     height: 100vh;
     width: 100vw;
     transition: ${props => props.theme.transition};
-    opacity: ${props => (props.isOpen ? '42' : '0')};
-    background-color: #000;
+    opacity: ${props => (props.isOpen ? '100' : '0')};
+    background-color: rgba(0, 0, 0, 0.4);
     z-index: 6;
   }
 
@@ -33,7 +33,7 @@ const MobileNavWrapper = styled.div`
     align-items: center;
     height: 100vh;
     width: 250px;
-    box-shadow: -7px 0 18px #000;
+    box-shadow: -2px 0 22px #000;
     transition: ${props => props.theme.transition};
     transform: translateX(${props => (props.isOpen ? '0' : '250px')});
     -webkit-transform: translateX(
