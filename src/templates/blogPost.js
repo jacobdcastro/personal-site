@@ -4,11 +4,11 @@ import { Link, graphql } from 'gatsby';
 
 const blogPost = ({ data }) => {
   return (
-    <Layout>
+    <Layout style={{ textAlign: 'left' }}>
       <h1>{data.markdownRemark.frontmatter.title}</h1>
       <h4>{data.markdownRemark.frontmatter.subtitle}</h4>
 
-      <main dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
+      <article dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
     </Layout>
   );
 };
@@ -24,9 +24,9 @@ export const BLOG_POST_QUERY = graphql`
         title
         slug
         subtitle
-        date(formatString: "MM-DD-YYYY")
+        date
         tags
-        blogPost
+        type
       }
     }
   }

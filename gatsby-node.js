@@ -2,10 +2,10 @@ const path = require('path');
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
-  const result = await graphql(`
+  const blogRes = await graphql(`
     {
       allMarkdownRemark(
-        filter: { frontmatter: { blogPost: { eq: "blogPost" } } }
+        filter: { frontmatter: { type: { eq: "blogPost" } } }
         sort: { fields: [frontmatter___date], order: DESC }
       ) {
         edges {
@@ -20,15 +20,53 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `);
 
-  if (result.errors) {
-    reject(result.errors);
+  if (blogRes.errors) {
+    reject(blogRes.errors);
   }
 
   const blogPostTemplate = path.resolve('./src/templates/blogPost.js');
 
-  result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+  blogRes.data.allMarkdownRemark.edges.forEach(({ node }) => {
     createPage({
       path: `blog/${node.frontmatter.slug}`,
+      component: blogPostTemplate,
+      context: {
+        id: node.id,
+        slug: node.frontmatter.slug,
+      },
+    });
+  });
+
+  // ============================================================
+
+  const tutorialRes = await graphql(`
+    {
+      allMarkdownRemark(
+        filter: { frontmatter: { type: { eq: "tutorial" } } }
+        sort: { fields: [frontmatter___date], order: DESC }
+      ) {
+        edges {
+          node {
+            id
+            frontmatter {
+              slug
+            }
+          }
+        }
+      }
+    }
+  `);
+
+  if (tutorialRes.errors) {
+    reject(tutorialRes.errors);
+  }
+
+  // reuse blogPostTemplate from above
+  // const blogPostTemplate = path.resolve('./src/templates/blogPost.js');
+
+  tutorialRes.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    createPage({
+      path: `tutorials/${node.frontmatter.slug}`,
       component: blogPostTemplate,
       context: {
         id: node.id,

@@ -7,20 +7,28 @@ import RightArrow from '../../images/svg/RightArrowSVG';
 const BlogListing = ({ data }) => {
   const { frontmatter, excerpt } = data;
 
+  const setSlug = type => {
+    if (type === 'blogPost') {
+      return `blog/${frontmatter.slug}`;
+    } else if (type === 'tutorial') {
+      return `tutorials/${frontmatter.slug}`;
+    }
+  };
+
   return (
     <BlogListWrapper>
-      <Link to={`/blog/${frontmatter.slug}`}>
+      <Link to={setSlug(frontmatter.type)}>
         <h2>{frontmatter.title}</h2>
         <ul>
-          {frontmatter.tags.map((tag, i) => (
-            <li className="listingTag" key={i}>
-              <h5>{tag}</h5>
-            </li>
-          ))}
+          {frontmatter.tags &&
+            frontmatter.tags.map((tag, i) => (
+              <li className="listingTag" key={i}>
+                <h5>{tag}</h5>
+              </li>
+            ))}
         </ul>
         <h3>
-          Published:{' '}
-          <Moment dateToFormat={frontmatter.date} format="MMMM DD, YYYY" />
+          Published: <Moment date={frontmatter.date} format="MMMM DD, YYYY" />
         </h3>
         <p>{excerpt}</p>
         <div className="readMore">

@@ -47,7 +47,7 @@ const LayoutWrapper = styled.div`
     /* transform: scale(1.08); */
   }
 
-  .mainContent {
+  main {
     background-color: #fafafa;
     width: 100%;
     padding: 12px 0px 24px;
@@ -56,6 +56,7 @@ const LayoutWrapper = styled.div`
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    max-width: 1000px;
   }
 `;
 

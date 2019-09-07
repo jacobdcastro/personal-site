@@ -2,14 +2,16 @@ import styled from 'styled-components';
 
 const IndexPageWrapper = styled.div`
   .indexIntro {
-    height: 80vh;
+    height: 85vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-top: 15px;
+    margin: 15px auto 0;
+    max-width: 1000px;
 
     h1 {
       color: ${props => props.theme.textColor};
+      letter-spacing: 0.5px;
     }
 
     .introSocialLinks {
@@ -61,6 +63,26 @@ const IndexPageWrapper = styled.div`
     margin-top: -40px;
     h1 {
       margin: 30px 0 0;
+    }
+  }
+
+  @media (min-width: 850px) {
+    .indexIntro {
+      /* margin-left: 5vw; */
+
+      h1 {
+        font-size: 3rem;
+      }
+
+      .introSocialLinks {
+        li {
+          height: 55px;
+          width: 55px;
+        }
+        .icon {
+          height: 25px;
+        }
+      }
     }
   }
 `;

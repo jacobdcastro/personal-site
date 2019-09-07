@@ -14,11 +14,11 @@ const MobileNav = ({ mobileNavIsOpen, action }) => {
                 About Me
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link activeClassName="activePage" to="/blog">
                 Blog
               </Link>
-            </li>
+            </li> */}
             <li>
               <Link activeClassName="activePage" to="/tutorials">
                 Tutorials

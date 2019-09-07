@@ -6,13 +6,11 @@ import { AboutPageWrapper } from '../styles/about/AboutStyles';
 const About = props => {
   return (
     <Layout>
-      <AboutPageWrapper>
-        <div
-          dangerouslySetInnerHTML={{
-            __html: props.data.file.childMarkdownRemark.html,
-          }}
-        />
-      </AboutPageWrapper>
+      <AboutPageWrapper
+        dangerouslySetInnerHTML={{
+          __html: props.data.file.childMarkdownRemark.html,
+        }}
+      />
     </Layout>
   );
 };

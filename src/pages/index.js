@@ -28,36 +28,37 @@ const Index = props => {
         <div className="indexIntro">
           <h1>
             I'm Jacob Daniel Castro,
-            <br />a frontend Javascript developer.
+            <br />a frontend Javascript
+            <br /> developer.
           </h1>
           <ul className="introSocialLinks">
             <li>
-              <a href={twitterURL}>
+              <a target="_blank" href={twitterURL}>
                 <Twitter />
               </a>
             </li>
             <li>
-              <a href={instagramURL}>
+              <a target="_blank" href={instagramURL}>
                 <Instagram />
               </a>
             </li>
             {/* <li>
-              <a href={facebookURL}>
+              <a target="_blank" href={facebookURL}>
                 <Facebook />
               </a>
             </li> */}
             <li>
-              <a href={linkedinURL}>
+              <a target="_blank" href={linkedinURL}>
                 <Linkedin />
               </a>
             </li>
             {/* <li>
-              <a href={snapchat}>
+              <a target="_blank" href={snapchat}>
                 <Snapchat />
               </a>
             </li> */}
             <li>
-              <a href={githubURL}>
+              <a target="_blank" href={githubURL}>
                 <Github />
               </a>
             </li>
@@ -89,7 +90,7 @@ export const INDEX_POSTS_QUERY = graphql`
   query INDEX_POSTS_QUERY {
     # all blog posts, sorted by most recent
     allMarkdownRemark(
-      filter: { frontmatter: { blogPost: { eq: "blogPost" } } }
+      filter: { frontmatter: { type: { eq: "blogPost" } } }
       sort: { fields: frontmatter___date, order: DESC }
     ) {
       edges {
@@ -101,6 +102,7 @@ export const INDEX_POSTS_QUERY = graphql`
             slug
             subtitle
             tags
+            type
           }
           excerpt
         }
