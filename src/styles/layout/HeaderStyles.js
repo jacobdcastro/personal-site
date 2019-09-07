@@ -7,7 +7,6 @@ const HeaderWrapper = styled.header`
   width: 100vw;
   margin-left: -15px;
   margin-top: -15px;
-
   height: 70px;
 
   .navContainer {
