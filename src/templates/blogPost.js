@@ -2,6 +2,8 @@ import React from 'react';
 import Layout from './layout';
 import { Link, graphql } from 'gatsby';
 
+// TODO add next and previous post links
+
 const blogPost = ({ data }) => {
   return (
     <Layout style={{ textAlign: 'left' }}>

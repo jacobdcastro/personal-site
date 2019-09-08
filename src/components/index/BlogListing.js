@@ -31,6 +31,7 @@ const BlogListing = ({ data }) => {
           Published: <Moment date={frontmatter.date} format="MMMM DD, YYYY" />
         </h3>
         <p>{excerpt}</p>
+        {data.timeToRead && <h4>{data.timeToRead} minute read</h4>}
         <div className="readMore">
           <p>Read More</p>
           <RightArrow />

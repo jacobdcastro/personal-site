@@ -6,4 +6,5 @@ export const wrapRootElement = ({ element }) => (
   <ThemeContextWrapper>{element}</ThemeContextWrapper>
 );
 
-// ? import primsjs stuff here
+// ? primsjs stuff
+require('prismjs/themes/prism-tomorrow.css');

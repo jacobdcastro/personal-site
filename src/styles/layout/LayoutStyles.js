@@ -15,6 +15,7 @@ const LayoutWrapper = styled.div`
   p {
     transition: ${props => props.theme.transition};
     color: ${props => props.theme.textColor};
+    background-color: ${props => props.theme.bgColor};
   }
 
   #themeToggleBtn {
@@ -48,7 +49,7 @@ const LayoutWrapper = styled.div`
   }
 
   main {
-    background-color: #fafafa;
+    background-color: ${props => props.theme.bgColor};
     width: 100%;
     padding: 12px 0px 24px;
     margin: 2px auto;

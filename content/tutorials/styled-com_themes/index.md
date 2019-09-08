@@ -1,7 +1,7 @@
 ---
 title: 'How To Use Themes with styled-components'
 slug: 'how-to-use-themes-with-styled-components'
-date: '2019-8-23T00:00:00-07:00'
+date: '2019-08-23T00:00:00-07:00'
 repo: 'https://github.com/jacobdcastro/styled-components-theme-tutorial'
 liveLink: 'https://nostalgic-perlman-000288.netlify.com/'
 type: 'tutorial'

@@ -5,6 +5,9 @@ import Layout from '../templates/layout';
 import TutorialsPageStyles from '../styles/tutorials/TutorialsPageStyles';
 import BlogListing from '../components/index/BlogListing';
 
+// TODO add `time to complete`
+// <h4>{timeToRead + 10} minutes to complete</h4>
+
 const Tutorials = ({ data }) => {
   return (
     <Layout>
@@ -31,8 +34,9 @@ export const TUTORIALS_PAGE_QUERY = graphql`
       edges {
         node {
           id
-          excerpt
+          excerpt(pruneLength: 400)
           html
+          # timeToRead
           frontmatter {
             slug
             title

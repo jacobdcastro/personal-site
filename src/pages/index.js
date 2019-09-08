@@ -73,7 +73,7 @@ const Index = props => {
 
         {/* Blog posts */}
         <div id="blogPosts">
-          <h1>Recent Posts</h1>
+          <h1>Recent Blog Posts</h1>
 
           {props.data.allMarkdownRemark.edges.map(({ node }) => (
             <BlogListing data={node} />
@@ -104,7 +104,8 @@ export const INDEX_POSTS_QUERY = graphql`
             tags
             type
           }
-          excerpt
+          excerpt(pruneLength: 370)
+          timeToRead
         }
       }
     }

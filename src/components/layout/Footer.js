@@ -1,36 +1,33 @@
 import React from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
+import FooterWrapper from '../../styles/layout/FooterStyles';
 
 const Footer = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      file(relativePath: { eq: "me.md" }) {
+        childMarkdownRemark {
+          frontmatter {
+            email
+            handle
+            username
+          }
+        }
+      }
+    }
+  `);
+  const { email, handle, username } = data.file.childMarkdownRemark.frontmatter;
+
   return (
-    <div style={{textAlign: 'center'}}>
+    <FooterWrapper>
       <p>
         <a>Sitemap</a>
       </p>
-      <div>
-        Icons made by{' '}
-        <a
-          href="https://www.flaticon.com/authors/bogdan-rosu"
-          title="Bogdan Rosu"
-        >
-          Bogdan Rosu
-        </a>{' '}
-        from{' '}
-        <a href="https://www.flaticon.com/" title="Flaticon">
-          www.flaticon.com
-        </a>
-      </div>
-      <div>
-        Icons made by{' '}
-        <a href="https://www.flaticon.com/authors/freepik" title="Freepik">
-          Freepik
-        </a>{' '}
-        from{' '}
-        <a href="https://www.flaticon.com/" title="Flaticon">
-          www.flaticon.com
-        </a>
-      </div>
-      <p>&copy;2019 - JDCastro Digital</p>
-    </div>
+      <span>
+        <a href="mailto:jdcastro.business@gmail.com">{email}</a>
+      </span>
+      <span>&copy;2019 - JDCastro Digital</span>
+    </FooterWrapper>
   );
 };
 
