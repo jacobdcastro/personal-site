@@ -1,16 +1,24 @@
 import React from 'react';
 import Layout from './layout';
 import { Link, graphql } from 'gatsby';
+import BlogAuthor from '../components/blog/BlogAuthor';
+import BlogPostPageWrapper from '../styles/blog/BlogPostStyles';
 
 // TODO add next and previous post links
 
 const blogPost = ({ data }) => {
   return (
     <Layout style={{ textAlign: 'left' }}>
-      <h1>{data.markdownRemark.frontmatter.title}</h1>
-      <h4>{data.markdownRemark.frontmatter.subtitle}</h4>
+      <BlogPostPageWrapper>
+        <h1>{data.markdownRemark.frontmatter.title}</h1>
+        <h4>{data.markdownRemark.frontmatter.subtitle}</h4>
 
-      <article dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
+        <BlogAuthor />
+
+        <article
+          dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
+        />
+      </BlogPostPageWrapper>
     </Layout>
   );
 };
