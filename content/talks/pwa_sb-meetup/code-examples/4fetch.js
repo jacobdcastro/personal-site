@@ -1,3 +1,5 @@
+// intercepting a fetch request
+
 self.addEventListener('fetch', event => {
   const url = new URL(event.request.url);
 
