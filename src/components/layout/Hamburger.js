@@ -54,6 +54,7 @@ const HamburgerButton = styled.button`
   .hamburger-inner::after {
     content: '';
     display: block;
+    transition: ${props => props.theme.transition};
   }
   .hamburger-inner::before {
     top: -10px;

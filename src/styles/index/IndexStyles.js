@@ -29,6 +29,8 @@ const IndexPageWrapper = styled.div`
         height: 45px;
         width: 45px;
         transition: 0.2s;
+        background-color: ${props => props.theme.bgColor};
+        transition: ${props => props.theme.transition};
       }
       li:hover {
         transform: translateY(-10px);
@@ -37,6 +39,7 @@ const IndexPageWrapper = styled.div`
         transition: ${props => props.theme.transition};
         height: 15px;
         width: auto;
+        background-color: ${props => props.theme.bgColor};
         fill: ${props => props.theme.textColor};
       }
     }
@@ -51,7 +54,10 @@ const IndexPageWrapper = styled.div`
       height: 50px;
       width: auto;
       margin: 0 0;
+      background-color: ${props => props.theme.bgColor};
+      transition: ${props => props.theme.transition};
       .icon {
+        background-color: ${props => props.theme.bgColor};
         transition: ${props => props.theme.transition};
         fill: ${props => props.theme.textColor};
       }

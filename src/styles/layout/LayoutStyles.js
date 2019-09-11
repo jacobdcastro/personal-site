@@ -13,7 +13,8 @@ const LayoutWrapper = styled.div`
   h5,
   h6,
   p,
-  li {
+  li,
+  a {
     transition: ${props => props.theme.transition};
     color: ${props => props.theme.textColor};
     background-color: ${props => props.theme.bgColor};
