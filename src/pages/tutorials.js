@@ -1,8 +1,8 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import Moment from 'react-moment';
+// import Moment from 'react-moment';
 import Layout from '../templates/layout';
-import TutorialsPageStyles from '../styles/tutorials/TutorialsPageStyles';
+import TutorialsPageWrapper from '../styles/tutorials/TutorialsPageStyles';
 import BlogListing from '../components/index/BlogListing';
 
 // TODO add `time to complete`
@@ -11,14 +11,14 @@ import BlogListing from '../components/index/BlogListing';
 const Tutorials = ({ data }) => {
   return (
     <Layout>
-      <TutorialsPageStyles>
+      <TutorialsPageWrapper>
         <h1>Tutorials</h1>
         <div className="tutorialsList">
           {data.allMarkdownRemark.edges.map(({ node }) => (
             <BlogListing data={node} />
           ))}
         </div>
-      </TutorialsPageStyles>
+      </TutorialsPageWrapper>
     </Layout>
   );
 };

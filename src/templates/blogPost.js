@@ -13,7 +13,7 @@ const blogPost = ({ data }) => {
         <h1>{data.markdownRemark.frontmatter.title}</h1>
         <h4>{data.markdownRemark.frontmatter.subtitle}</h4>
 
-        <BlogAuthor />
+        {/* <BlogAuthor /> */}
 
         <article
           dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}

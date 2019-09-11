@@ -4,7 +4,6 @@ const LayoutWrapper = styled.div`
   margin: 0;
   transition: ${props => props.theme.transition};
   background-color: ${props => props.theme.bgColor};
-  /* background-color: burlywood; */
   padding: 15px;
 
   h1,
@@ -13,7 +12,8 @@ const LayoutWrapper = styled.div`
   h4,
   h5,
   h6,
-  p {
+  p,
+  li {
     transition: ${props => props.theme.transition};
     color: ${props => props.theme.textColor};
     background-color: ${props => props.theme.bgColor};
@@ -50,6 +50,7 @@ const LayoutWrapper = styled.div`
   }
 
   main {
+    transition: ${props => props.theme.transition};
     background-color: ${props => props.theme.bgColor};
     width: 100%;
     padding: 12px 0px 24px;

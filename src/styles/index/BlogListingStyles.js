@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 const BlogListWrapper = styled.div`
   border-bottom: 4px solid ${props => props.theme.textColor};
+  transition: ${props => props.theme.transition};
   margin: 40px 0 25px;
 
   a {
@@ -66,7 +67,7 @@ const BlogListWrapper = styled.div`
       height: 18px;
     }
   }
-  .readMore:hover {
+  &:hover {
     .rightArrow {
       transform: translateX(8px);
     }

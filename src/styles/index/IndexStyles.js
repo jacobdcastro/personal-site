@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
 const IndexPageWrapper = styled.div`
+  transition: ${props => props.theme.transition};
+
   .indexIntro {
     height: 85vh;
     display: flex;

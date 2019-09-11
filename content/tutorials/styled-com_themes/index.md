@@ -1,13 +1,16 @@
 ---
 title: 'How To Use Themes with styled-components'
+subtitle: 'A tutorial on React and CSS-in-JS'
 slug: 'how-to-use-themes-with-styled-components'
 date: '2019-08-23T00:00:00-07:00'
 repo: 'https://github.com/jacobdcastro/styled-components-theme-tutorial'
 liveLink: 'https://nostalgic-perlman-000288.netlify.com/'
+tags:
+  - how-to
+  - css
+  - react
 type: 'tutorial'
 ---
-
-# Creating a dark and light theme switch with styled-components themes
 
 I've been rewriting my website recently. And if you read my [last blog post], you'll see why.
 
