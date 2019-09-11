@@ -69,6 +69,7 @@ const BlogListWrapper = styled.div`
         transition: ${props => props.theme.transition};
         fill: ${props => props.theme.textColor};
       }
+    }
   }
   &:hover {
     .rightArrow {
