@@ -1,7 +1,7 @@
 {
   "name": "jdcastro-personal-site",
   "description": "The personal site of Jacob D. Castro",
-  "version": "2.2.1",
+  "version": "1.12.21",
   "author": "Jacob D. Castro",
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.6",
