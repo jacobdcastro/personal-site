@@ -17,7 +17,10 @@ const BlogListing = ({ data }) => {
 
   return (
     <BlogListWrapper>
-      <Link to={setSlug(frontmatter.type)}>
+      <Link
+        to={setSlug(frontmatter.type)}
+        aria-label={`Read Blog post: ${frontmatter.title}`}
+      >
         <h2>{frontmatter.title}</h2>
         <ul>
           {frontmatter.tags &&

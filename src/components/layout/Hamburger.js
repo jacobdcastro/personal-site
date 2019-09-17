@@ -98,7 +98,7 @@ const Hamburger = ({ mobileNavIsOpen, action }) => {
         'is-active'}`}
       onClick={action}
       type="button"
-      ariaLabel="open mobile navigation menu"
+      aria-label="open mobile navigation menu"
     >
       <span className="hamburger-box">
         <span className="hamburger-inner"></span>
