@@ -4,8 +4,20 @@ import Layout from '../templates/layout';
 import { AboutPageWrapper } from '../styles/about/AboutStyles';
 
 const About = props => {
+  const seo = {
+    page: `about`,
+    title: 'About Me',
+    description: `${props.data.file.childMarkdownRemark.excerpt}`,
+    breadcrumbs: [
+      {
+        name: `About`,
+        path: `/about`,
+      },
+    ],
+  };
+
   return (
-    <Layout>
+    <Layout seo={seo}>
       <AboutPageWrapper
         dangerouslySetInnerHTML={{
           __html: props.data.file.childMarkdownRemark.html,
@@ -22,6 +34,7 @@ export const ABOUT_PAGE_QUERY = graphql`
     file(relativePath: { eq: "me.md" }) {
       childMarkdownRemark {
         id
+        excerpt(pruneLength: 370)
         frontmatter {
           title
           lastUpdated

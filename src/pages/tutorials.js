@@ -9,8 +9,20 @@ import BlogListing from '../components/index/BlogListing';
 // <h4>{timeToRead + 10} minutes to complete</h4>
 
 const Tutorials = ({ data }) => {
+  const seo = {
+    page: `tutorials`,
+    title: `Tutorials`,
+    description: `I love learning things!! These are me restating what I've learned to you peeps, in hopes of solidifying my learning and lending a hand along the way.`,
+    breadcrumbs: [
+      {
+        name: `Tutorials`,
+        path: `/tutorials`,
+      },
+    ],
+  };
+
   return (
-    <Layout>
+    <Layout seo={seo}>
       <TutorialsPageWrapper>
         <h1>Tutorials</h1>
         <div className="tutorialsList">

@@ -2,9 +2,11 @@ const path = require(`path`);
 
 module.exports = {
   pathPrefix: `/blog`,
+  pathPrefix: `/tutorials`,
 
   siteMetadata: {
     title: `Jacob D. Castro`,
+    siteURL: `https://jacobdcastro.com`,
   },
 
   plugins: [
@@ -104,6 +106,15 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://jacobdcastro.com',
+        sitemap: 'https://jacobdcastro.com/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }],
+      },
+    },
+    `gatsby-plugin-sitemap`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-react-helmet`,

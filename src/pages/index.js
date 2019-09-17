@@ -14,6 +14,7 @@ import Arrow from '../images/svg/DownArrowSVG';
 
 const Index = props => {
   const {
+    miniBio,
     twitterURL,
     instagramURL,
     githubURL,
@@ -22,8 +23,15 @@ const Index = props => {
     linkedinURL,
   } = props.data.file.childMarkdownRemark.frontmatter;
 
+  const seo = {
+    page: `index`,
+    title: '',
+    description: `${miniBio}`,
+    breadcrumbs: [],
+  };
+
   return (
-    <Layout>
+    <Layout seo={seo}>
       <IndexPageWrapper>
         <div className="indexIntro">
           <h1>
@@ -63,12 +71,12 @@ const Index = props => {
               </a>
             </li>
           </ul>
-        </div>
 
-        <div className="downArrowLink">
-          <a href="#blogPosts">
-            <Arrow />
-          </a>
+          <div className="downArrowLink">
+            <a href="#blogPosts">
+              <Arrow />
+            </a>
+          </div>
         </div>
 
         {/* Blog posts */}
@@ -76,7 +84,7 @@ const Index = props => {
           <h1>Recent Blog Posts</h1>
 
           {props.data.allMarkdownRemark.edges.map(({ node }) => (
-            <BlogListing data={node} />
+            <BlogListing key={node.id} data={node} />
           ))}
         </div>
       </IndexPageWrapper>
@@ -118,6 +126,7 @@ export const INDEX_POSTS_QUERY = graphql`
           email
           phone
           handle
+          miniBio
           username
           twitterURL
           instagramURL

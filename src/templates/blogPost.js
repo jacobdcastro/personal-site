@@ -7,11 +7,49 @@ import BlogPostPageWrapper from '../styles/blog/BlogPostStyles';
 // TODO add next and previous post links
 
 const blogPost = ({ data }) => {
+  const { title, subtitle, slug, type } = data.markdownRemark.frontmatter;
+
+  // ? set SEO meta data depending on post type
+  let seo;
+  if (type === 'blogPost') {
+    seo = {
+      page: `${type}`,
+      title: `${title}`,
+      description: `${data.markdownRemark.excerpt}`,
+      breadcrumbs: [
+        {
+          name: `Blog`,
+          path: `/blog`,
+        },
+        {
+          name: `${title}`,
+          path: `/blog/${slug}`,
+        },
+      ],
+    };
+  } else if (type === 'tutorial') {
+    seo = {
+      page: `${type}`,
+      title: `${title}`,
+      description: `${data.markdownRemark.excerpt}`,
+      breadcrumbs: [
+        {
+          name: `Tutorials`,
+          path: `/tutorials`,
+        },
+        {
+          name: `${title}`,
+          path: `/tutorials/${slug}`,
+        },
+      ],
+    };
+  }
+
   return (
-    <Layout style={{ textAlign: 'left' }}>
+    <Layout seo={seo} style={{ textAlign: 'left' }}>
       <BlogPostPageWrapper>
-        <h1>{data.markdownRemark.frontmatter.title}</h1>
-        <h4>{data.markdownRemark.frontmatter.subtitle}</h4>
+        <h1>{title}</h1>
+        <h4>{subtitle}</h4>
 
         {/* <BlogAuthor /> */}
 
@@ -30,6 +68,7 @@ export const BLOG_POST_QUERY = graphql`
     markdownRemark(frontmatter: { slug: { eq: $slug } }) {
       id
       html
+      excerpt(pruneLength: 370)
       frontmatter {
         title
         slug
