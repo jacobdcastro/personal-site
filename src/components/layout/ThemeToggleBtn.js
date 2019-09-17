@@ -6,8 +6,12 @@ const ThemeToggleBtn = () => {
   const themeData = useContext(ThemeContext);
 
   return (
-    <button id="themeToggleBtn" onClick={themeData.toggleTheme}>
-      <img src={lightbulbIcon} />
+    <button
+      id="themeToggleBtn"
+      onClick={themeData.toggleTheme}
+      ariaLabel="toggle dark and light theme"
+    >
+      <img src={lightbulbIcon} alt="lightbulb icon" />
     </button>
   );
 };

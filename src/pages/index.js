@@ -41,32 +41,61 @@ const Index = props => {
           </h1>
           <ul className="introSocialLinks">
             <li>
-              <a target="_blank" href={twitterURL}>
+              <a
+                target="_blank"
+                href={twitterURL}
+                rel="noopener"
+                ariaLabel="visit Jacob's twitter profile"
+              >
                 <Twitter />
               </a>
             </li>
             <li>
-              <a target="_blank" href={instagramURL}>
+              <a
+                target="_blank"
+                href={instagramURL}
+                rel="noopener"
+                ariaLabel="visit Jacob's Instagram page"
+              >
                 <Instagram />
               </a>
             </li>
             {/* <li>
-              <a target="_blank" href={facebookURL}>
+              <a
+                target="_blank"
+                href={facebookURL}
+                rel="noopener"
+                ariaLabel="visit Jacob's Facebook page"
+              >
                 <Facebook />
               </a>
             </li> */}
             <li>
-              <a target="_blank" href={linkedinURL}>
+              <a
+                target="_blank"
+                href={linkedinURL}
+                rel="noopener"
+                ariaLabel="visit Jacob's linkedin profile"
+              >
                 <Linkedin />
               </a>
             </li>
             {/* <li>
-              <a target="_blank" href={snapchat}>
+              <a
+                target="_blank"
+                href={snapchat}
+                rel="noopener"
+                ariaLabel="visit jacob's snapchat account"
+              >
                 <Snapchat />
               </a>
             </li> */}
             <li>
-              <a target="_blank" href={githubURL}>
+              <a
+                target="_blank"
+                href={githubURL}
+                ariaLabel="visit Jacob's Github page"
+              >
                 <Github />
               </a>
             </li>

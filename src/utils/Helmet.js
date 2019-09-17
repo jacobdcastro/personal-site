@@ -51,6 +51,7 @@ const Head = ({ seo }) => {
   return (
     <Helmet>
       <title>{seo.title && `${seo.title} | `}Jacob D. Castro</title>
+      <meta property="Description" content={seo.description} />
       <meta
         name="google-site-verification"
         content="XxzBu338e5a9ZGebqx3Z0cDepD0hAZLEmUkyNEmBf9Q"
