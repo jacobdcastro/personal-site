@@ -81,7 +81,7 @@ const Index = props => {
 
         {/* Blog posts */}
         <div id="blogPosts">
-          <h1>Recent Blog Posts</h1>
+          <h1>All Recent Publications</h1>
 
           {props.data.allMarkdownRemark.edges.map(({ node }) => (
             <BlogListing key={node.id} data={node} />
@@ -97,10 +97,7 @@ export default Index;
 export const INDEX_POSTS_QUERY = graphql`
   query INDEX_POSTS_QUERY {
     # all blog posts, sorted by most recent
-    allMarkdownRemark(
-      filter: { frontmatter: { type: { eq: "blogPost" } } }
-      sort: { fields: frontmatter___date, order: DESC }
-    ) {
+    allMarkdownRemark(sort: { fields: frontmatter___date, order: DESC }) {
       edges {
         node {
           id

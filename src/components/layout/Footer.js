@@ -21,7 +21,7 @@ const Footer = () => {
 
   return (
     <FooterWrapper>
-      <a href="">Sitemap</a>
+      <a href={`${url}/sitemap.xml`}>Sitemap</a>
       <span>
         <a href="mailto:jdcastro.business@gmail.com">{email}</a>
       </span>
