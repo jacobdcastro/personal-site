@@ -103,14 +103,17 @@ const Index = props => {
           </ul>
 
           <div className="downArrowLink">
-            <a href="#blogPosts">
+            <a
+              href="#recentPublications"
+              aria-label="scroll down to recent publications section"
+            >
               <Arrow />
             </a>
           </div>
         </div>
 
         {/* Blog posts */}
-        <div id="blogPosts">
+        <div id="recentPublications">
           <h1>All Recent Publications</h1>
 
           {props.data.allMarkdownRemark.edges.map(({ node }) => (

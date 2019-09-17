@@ -65,7 +65,7 @@ const IndexPageWrapper = styled.div`
     }
   }
 
-  #blogPosts {
+  #recentPublications {
     /* position: relative; */
     /* z-index: 0; */
     padding-top: 60px;
