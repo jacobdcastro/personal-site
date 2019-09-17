@@ -94,6 +94,7 @@ const Index = props => {
               <a
                 target="_blank"
                 href={githubURL}
+                rel="noopener"
                 aria-label="visit Jacob's Github page"
               >
                 <Github />
