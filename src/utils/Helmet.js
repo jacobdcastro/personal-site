@@ -38,7 +38,6 @@ const Head = ({ seo }) => {
     snapchat,
     linkedinURL,
   } = data.file.childMarkdownRemark.frontmatter;
-  console.log(data.file.childMarkdownRemark);
 
   const breadcrumbs = seo.breadcrumbs.map((item, index) => {
     return {
