@@ -17,7 +17,7 @@ const Footer = () => {
       }
     }
   `);
-  const { email, handle } = data.file.childMarkdownRemark.frontmatter;
+  const { email, handle, url } = data.file.childMarkdownRemark.frontmatter;
 
   return (
     <FooterWrapper>
