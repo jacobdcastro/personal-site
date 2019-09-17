@@ -127,7 +127,10 @@ export default Index;
 export const INDEX_POSTS_QUERY = graphql`
   query INDEX_POSTS_QUERY {
     # all blog posts, sorted by most recent
-    allMarkdownRemark(sort: { fields: frontmatter___date, order: DESC }) {
+    allMarkdownRemark(
+      sort: { fields: frontmatter___date, order: DESC }
+      filter: { frontmatter: { type: { in: ["blogPost", "tutorial"] } } }
+    ) {
       edges {
         node {
           id
