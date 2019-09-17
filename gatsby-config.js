@@ -6,7 +6,8 @@ module.exports = {
 
   siteMetadata: {
     title: `Jacob D. Castro`,
-    siteURL: `https://jacobdcastro.com`,
+    siteUrl: `https://jacobdcastro.com`,
+    // siteURL: `https://jacobdcastro.com`,
   },
 
   plugins: [
