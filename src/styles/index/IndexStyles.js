@@ -4,7 +4,7 @@ const IndexPageWrapper = styled.div`
   transition: ${props => props.theme.transition};
 
   .indexIntro {
-    height: 85vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -47,8 +47,9 @@ const IndexPageWrapper = styled.div`
 
   .downArrowLink {
     width: 80%;
-    margin: -20px auto 0;
+    margin: 0 auto 0;
     text-align: center;
+    align-self: flex-end;
 
     svg {
       height: 50px;

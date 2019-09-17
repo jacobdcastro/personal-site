@@ -8,6 +8,7 @@ const Footer = () => {
       file(relativePath: { eq: "me.md" }) {
         childMarkdownRemark {
           frontmatter {
+            url
             email
             handle
             username
@@ -16,16 +17,15 @@ const Footer = () => {
       }
     }
   `);
-  const { email, handle, username } = data.file.childMarkdownRemark.frontmatter;
+  const { email, handle } = data.file.childMarkdownRemark.frontmatter;
 
   return (
     <FooterWrapper>
-      <p>
-        <a>Sitemap</a>
-      </p>
+      <a href="">Sitemap</a>
       <span>
         <a href="mailto:jdcastro.business@gmail.com">{email}</a>
       </span>
+      <span>{`Follow me everywhere: ${handle}`}</span>
       <span>&copy;2019 - JDCastro Digital</span>
     </FooterWrapper>
   );
