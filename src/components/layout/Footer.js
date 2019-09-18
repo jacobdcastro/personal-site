@@ -1,6 +1,7 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import FooterWrapper from '../../styles/layout/FooterStyles';
+import EmailSubForm from './EmailSubForm';
 
 const Footer = () => {
   const data = useStaticQuery(graphql`
@@ -25,6 +26,7 @@ const Footer = () => {
       <span>
         <a href="mailto:jdcastro.business@gmail.com">{email}</a>
       </span>
+      <EmailSubForm />
       <span>{`Follow me everywhere: ${handle}`}</span>
       <span>&copy;2019 - JDCastro Digital</span>
     </FooterWrapper>
