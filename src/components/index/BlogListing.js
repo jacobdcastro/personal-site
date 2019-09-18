@@ -9,9 +9,9 @@ const BlogListing = ({ data }) => {
 
   const setSlug = type => {
     if (type === 'blogPost') {
-      return `blog/${frontmatter.slug}`;
+      return `/blog/${frontmatter.slug}`;
     } else if (type === 'tutorial') {
-      return `tutorials/${frontmatter.slug}`;
+      return `/tutorials/${frontmatter.slug}`;
     }
   };
 
