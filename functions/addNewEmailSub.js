@@ -4,8 +4,8 @@ const md5 = require('blueimp-md5');
 // TODO finish all steps for new subscribers
 
 exports.handler = (event, context, callback) => {
-  const data = JSON.parse(event.body);
-  const hash = md5(data.email);
+  const formData = JSON.parse(event.body);
+  const hash = md5(event.body.email);
 
   // 1. check to see if user is already subscribed
   //    to Jacob D. Castro Newsletter list
@@ -23,26 +23,26 @@ exports.handler = (event, context, callback) => {
       // 2. if user is already subbed, respond w/ 'already subbed' message
       callback(null, {
         statusCode: 200,
-        body: JSON.stringify(data.response),
+        body: JSON.stringify(data),
       });
     })
     .catch(err => {
       // 3. if user is not subscribed, add email, then respond with 'success' message
       if (err.response.data.status === 404) {
-        addNewSub(data);
+        addNewSub(formData);
       } else {
         console.log(err);
       }
     });
 
   const addNewSub = ({ firstName, email }) => {
-    const data = JSON.stringify({
+    const reqBody = {
       email_address: email,
-      status: 'subscribed',
+      status: 'pending',
       merge_fields: {
         FNAME: firstName,
       },
-    });
+    };
 
     axios({
       method: 'POST',
@@ -53,24 +53,27 @@ exports.handler = (event, context, callback) => {
         Authorization: `apikey ${process.env.MC_API_KEY}`,
         'Access-Control-Allow-Origin': '*',
       },
-      body: data,
+      // body: JSON.stringify(reqBody),
+      data: JSON.stringify(reqBody),
+      // response: JSON.stringify(reqBody),
     })
       .then(({ data }) => {
-        console.log(data.response);
-        // callback(null, {
-        //   statusCode: 200,
-        //   body: JSON.stringify(data.response),
-        // });
+        console.log(data);
+        callback(null, {
+          statusCode: 200,
+          body: JSON.stringify(data),
+        });
       })
       .catch(err => {
-        console.log('Welp! : ' + err.response.status);
+        console.log(err);
         callback(null, {
           statusCode: err.response.status,
-          body: 'hello ugh',
+          body: 'JSON.stringify(err.response)',
         });
       });
   };
 
+  // TODO
   // 4. catch error, reply with 'sorry, can you please try again?'
   // 5. if user tries 3 times with error, say 'please come back tomorrow!'
 };

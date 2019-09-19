@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 
 const testEmail1 = 'jdcastro97@gmail.com';
-const testEmail2 = 'jdcastro.business@gmail.com';
+const testEmail2 = 'jdcastro287.business@gmail.com';
 
 const EmailSubForm = () => {
   const [formData, setFormData] = useState({
@@ -11,8 +11,16 @@ const EmailSubForm = () => {
   });
   const [formIsSubmitted, toggleIsSubmitted] = useState(false);
 
+  const updateFormState = e => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+    console.log(formData);
+  };
+
   // subscribe an email to list
-  const sendFormData = () => {
+  const sendFormData = e => {
+    e.preventDefault();
+    // console.log('Form data sent! Sike!');
     axios
       .post('/.netlify/functions/addNewEmailSub', {
         ...formData,
@@ -23,25 +31,41 @@ const EmailSubForm = () => {
       .catch(err => console.log(err));
   };
 
-  // get general info on Newsletter sub list
-  const getListData = () => {
-    axios
-      .get(`/.netlify/functions/getMailchimpList`)
-      .then(res => {
-        console.log(res);
-      })
-      .catch(err => {
-        console.log(err);
-      });
-  };
-
   return (
     <div className="emailSubForm">
-      <h3>Subscribe!</h3>
-      <p>I won't spam.</p>
-      {/* assign field values to state */}
-      <form></form>
-      <button onClick={() => sendFormData()}>Get things!</button>
+      <form id="newsletterSignup">
+        <h3>Subscribe to my email newsletter!</h3>
+        <p>
+          A fun, every-other-tuesday newsletter featuring my new blog posts and
+          tutorials, plus other useful, inspiring, or interesting content I've
+          come across.
+        </p>
+
+        {/* <div>
+          <label htmlFor="firstName">First Name</label>
+          <input
+            name="firstName"
+            id="firstName"
+            placeholder="First name"
+            value={formData.firstName}
+            onChange={updateFormState}
+          />
+        </div>
+
+        <div>
+          <label htmlFor="email">Email</label>
+          <input
+            name="email"
+            id="email"
+            placeholder="Email"
+            value={formData.email}
+            onChange={updateFormState}
+          />
+        </div> */}
+
+        <span>No spam here, I promise.</span>
+        <button onClick={sendFormData}>Subscribe!</button>
+      </form>
     </div>
   );
 };
