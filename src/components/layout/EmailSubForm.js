@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
+const testEmail1 = 'jdcastro97@gmail.com';
+const testEmail2 = 'jdcastro.business@gmail.com';
+
 const EmailSubForm = () => {
   const [formData, setFormData] = useState({
     firstName: 'Jacob',
-    email: 'jdcastro97@gmail.com',
+    email: testEmail2,
   });
   const [formIsSubmitted, toggleIsSubmitted] = useState(false);
 
