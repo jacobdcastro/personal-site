@@ -1,17 +1,18 @@
 const axios = require('axios');
-const md5 = require('blueimp-md5');
+const md5 = require('md5');
 
 // TODO finish all steps for new subscribers
 
 exports.handler = (event, context, callback) => {
   const formData = JSON.parse(event.body);
-  const hash = md5(event.body.email);
 
   // 1. check to see if user is already subscribed
   //    to Jacob D. Castro Newsletter list
   axios({
     method: 'GET',
-    url: `https://us3.api.mailchimp.com/3.0/lists/346f10540c/members/${hash}`,
+    url: `https://us3.api.mailchimp.com/3.0/lists/346f10540c/members/${md5(
+      formData.email
+    )}`,
     user: `jdc:${process.env.MC_API_KEY}`,
     crossdomain: true,
     headers: {
@@ -22,8 +23,8 @@ exports.handler = (event, context, callback) => {
     .then(({ data }) => {
       // 2. if user is already subbed, respond w/ 'already subbed' message
       callback(null, {
-        statusCode: 200,
-        body: JSON.stringify(data),
+        statusCode: 204,
+        body: 'Email already subscribed',
       });
     })
     .catch(err => {
@@ -53,22 +54,19 @@ exports.handler = (event, context, callback) => {
         Authorization: `apikey ${process.env.MC_API_KEY}`,
         'Access-Control-Allow-Origin': '*',
       },
-      // body: JSON.stringify(reqBody),
       data: JSON.stringify(reqBody),
-      // response: JSON.stringify(reqBody),
     })
       .then(({ data }) => {
-        console.log(data);
         callback(null, {
-          statusCode: 200,
-          body: JSON.stringify(data),
+          statusCode: 201,
+          body: 'Subscribe success',
         });
       })
       .catch(err => {
         console.log(err);
         callback(null, {
           statusCode: err.response.status,
-          body: 'JSON.stringify(err.response)',
+          body: JSON.stringify(err.response),
         });
       });
   };
