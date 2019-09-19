@@ -1,13 +1,10 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-const testEmail1 = 'jdcastro97@gmail.com';
-const testEmail2 = 'jdcastro287.business@gmail.com';
-
 const EmailSubForm = () => {
   const [formData, setFormData] = useState({
-    firstName: 'Jacob',
-    email: testEmail2,
+    firstName: '',
+    email: '',
   });
   const [formIsSubmitted, toggleIsSubmitted] = useState(false);
 
@@ -26,6 +23,8 @@ const EmailSubForm = () => {
         ...formData,
       })
       .then(res => {
+        // 204 === nothing happened, already subbed
+        // 201 === new subscribe success
         console.log(res);
       })
       .catch(err => console.log(err));
@@ -41,7 +40,7 @@ const EmailSubForm = () => {
           come across.
         </p>
 
-        {/* <div>
+        <div>
           <label htmlFor="firstName">First Name</label>
           <input
             name="firstName"
@@ -61,7 +60,7 @@ const EmailSubForm = () => {
             value={formData.email}
             onChange={updateFormState}
           />
-        </div> */}
+        </div>
 
         <span>No spam here, I promise.</span>
         <button onClick={sendFormData}>Subscribe!</button>
