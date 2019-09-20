@@ -50,6 +50,7 @@ const IndexPageWrapper = styled.div`
     margin: -14vh auto 0;
     text-align: center;
     align-self: flex-end;
+    transition: ${props => props.theme.transition};
 
     svg {
       height: 50px;

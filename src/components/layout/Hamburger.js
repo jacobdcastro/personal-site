@@ -16,9 +16,11 @@ const HamburgerButton = styled.button`
     outline: none;
     display: inline-block;
     cursor: pointer;
-    transition-property: opacity, filter;
-    transition-duration: 0.2s;
-    transition-timing-function: linear;
+
+    transition: opacity 0.2s linear, filter 0.2s linear;
+    -webkit-transition: opacity 0.2s linear, filter 0.2s linear;
+    -moz-transition: opacity 0.2s linear, filter 0.2s linear;
+    -o-transition: opacity 0.2s linear, filter 0.2s linear;
     font: inherit;
     color: inherit;
     text-transform: none;
@@ -54,6 +56,12 @@ const HamburgerButton = styled.button`
     position: absolute;
     transition: background-color ${props => props.theme.transition},
       transform 0.15s ease 0.15s;
+    -webkit-transition: opacbackground-color ${props => props.theme.transition},
+      transform 0.15s ease 0.15s;
+    -moz-transition: opacbackground-color ${props => props.theme.transition},
+      transform 0.15s ease 0.15s;
+    -o-transition: opacbackground-color ${props => props.theme.transition},
+      transform 0.15s ease 0.15s;
     background-color: ${props => props.theme.textColor};
   }
   .hamburger-inner::before,
@@ -61,6 +69,9 @@ const HamburgerButton = styled.button`
     content: '';
     display: block;
     transition: background-color ${props => props.theme.transition};
+    -webkit-transition: background-color ${props => props.theme.transition};
+    -moz-transition: background-color ${props => props.theme.transition};
+    -o-transition: background-color ${props => props.theme.transition};
   }
   .hamburger-inner::before {
     top: -10px;
@@ -71,6 +82,11 @@ const HamburgerButton = styled.button`
 
   /*
      * Spin Reverse
+
+  -webkit-transition:
+  -moz-transition:
+  -o-transition:
+
      */
   .hamburger--spin-r .hamburger-inner {
     transition-duration: 0.22s;
@@ -78,9 +94,18 @@ const HamburgerButton = styled.button`
   }
   .hamburger--spin-r .hamburger-inner::before {
     transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
+    -webkit-transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
+    -moz-transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
+    -o-transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
   }
   .hamburger--spin-r .hamburger-inner::after {
     transition: bottom 0.1s 0.25s ease-in,
+      transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    -webkit-transition: bottom 0.1s 0.25s ease-in,
+      transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    -moz-transition: bottom 0.1s 0.25s ease-in,
+      transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    -o-transition: bottom 0.1s 0.25s ease-in,
       transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
   }
 
@@ -93,11 +118,20 @@ const HamburgerButton = styled.button`
     top: 0;
     opacity: 0;
     transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
+    -webkit-transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
+    -moz-transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
+    -o-transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
   }
   .hamburger--spin-r.is-active .hamburger-inner::after {
     bottom: 0;
     transform: rotate(90deg);
     transition: bottom 0.1s ease-out,
+      transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+    -webkit-transition: bottom 0.1s ease-out,
+      transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+    -moz-transition: bottom 0.1s ease-out,
+      transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+    -o-transition: bottom 0.1s ease-out,
       transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
   }
 `;
