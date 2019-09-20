@@ -13,6 +13,7 @@ exports.createPages = async ({ graphql, actions }) => {
             id
             frontmatter {
               slug
+              image
             }
           }
         }
@@ -33,6 +34,7 @@ exports.createPages = async ({ graphql, actions }) => {
       context: {
         id: node.id,
         slug: node.frontmatter.slug,
+        imgUrl: `content/blog-posts/${image}`,
       },
     });
   });
@@ -50,6 +52,7 @@ exports.createPages = async ({ graphql, actions }) => {
             id
             frontmatter {
               slug
+              image
             }
           }
         }
@@ -71,6 +74,7 @@ exports.createPages = async ({ graphql, actions }) => {
       context: {
         id: node.id,
         slug: node.frontmatter.slug,
+        imgUrl: `content/tutorials/${image}`,
       },
     });
   });
