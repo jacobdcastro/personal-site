@@ -8,7 +8,7 @@ const IndexPageWrapper = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 15px auto 0;
+    margin: 0 auto 0;
     max-width: 1000px;
 
     h1 {
@@ -47,7 +47,7 @@ const IndexPageWrapper = styled.div`
 
   .downArrowLink {
     width: 80%;
-    margin: 0 auto 0;
+    margin: -14vh auto 0;
     text-align: center;
     align-self: flex-end;
 
@@ -66,9 +66,7 @@ const IndexPageWrapper = styled.div`
   }
 
   #recentPublications {
-    /* position: relative; */
-    /* z-index: 0; */
-    padding-top: 60px;
+    padding-top: 72px;
     margin-top: -40px;
     h1 {
       margin: 30px 0 0;

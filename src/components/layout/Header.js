@@ -17,13 +17,34 @@ const Header = props => {
     <HeaderWrapper>
       <div className="navContainer">
         <div id="logo">
-          <Link to="/">
+          <Link to="/" tabIndex="1" aria-label="to home page">
             <LogoSVG />
             <h2>JACOB D. CASTRO</h2>
           </Link>
         </div>
 
-        <Hamburger mobileNavIsOpen={mobileNavIsOpen} action={action} />
+        <div className="headerMenuSection">
+          {/* <Hamburger mobileNavIsOpen={mobileNavIsOpen} action={action} /> */}
+          <nav style={{ display: 'none' }}>
+            <ul>
+              <li>
+                <Link activeClassName="activePage" to="/blog">
+                  Blog
+                </Link>
+              </li>
+              <li>
+                <Link activeClassName="activePage" to="/tutorials">
+                  Tutorials
+                </Link>
+              </li>
+              <li>
+                <Link activeClassName="activePage" to="/about">
+                  About Me
+                </Link>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </div>
     </HeaderWrapper>
   );

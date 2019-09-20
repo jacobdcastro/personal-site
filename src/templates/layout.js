@@ -33,8 +33,13 @@ const Layout = ({ children, seo }) => {
     <ThemeProvider theme={theme.currentTheme}>
       <LayoutWrapper>
         <Head seo={seo} />
-        <Header mobileNavIsOpen={mobileNavIsOpen} action={mobileNavAction} />
-        <MobileNav mobileNavIsOpen={mobileNavIsOpen} action={mobileNavAction} />
+        <div style={{ position: 'absolute', top: '0', zIndex: '1' }}>
+          <Header mobileNavIsOpen={mobileNavIsOpen} action={mobileNavAction} />
+          <MobileNav
+            mobileNavIsOpen={mobileNavIsOpen}
+            action={mobileNavAction}
+          />
+        </div>
 
         <main>{children}</main>
 

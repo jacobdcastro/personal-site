@@ -2,7 +2,7 @@ import React from 'react';
 import { graphql } from 'gatsby';
 // import Moment from 'react-moment';
 import Layout from '../templates/layout';
-import BlogPageWrapper from '../styles/tutorials/TutorialsPageStyles';
+import BlogPageWrapper from '../styles/blog/BlogPageStyles';
 import BlogListing from '../components/index/BlogListing';
 
 // TODO add `time to complete`
@@ -27,7 +27,7 @@ const Tutorials = ({ data }) => {
         <h1>Blog Posts</h1>
         <div className="blogPostList">
           {data.allMarkdownRemark.edges.map(({ node }) => (
-            <BlogListing data={node} />
+            <BlogListing key={node.id} data={node} />
           ))}
         </div>
       </BlogPageWrapper>
@@ -46,7 +46,7 @@ export const BLOG_PAGE_QUERY = graphql`
       edges {
         node {
           id
-          excerpt(pruneLength: 400)
+          excerpt(pruneLength: 300)
           html
           timeToRead
           frontmatter {

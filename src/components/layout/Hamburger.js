@@ -3,9 +3,14 @@ import styled from 'styled-components';
 
 const HamburgerButton = styled.button`
   outline: none;
-  position: absolute;
+  position: fixed;
+  top: 19px;
   right: 15px;
-  z-index: 10;
+  z-index: 100;
+
+  &::selection {
+    outline: none;
+  }
 
   .hamburger {
     outline: none;
@@ -26,6 +31,7 @@ const HamburgerButton = styled.button`
   }
 
   .hamburger-box {
+    outline: none;
     width: 40px;
     height: 24px;
     display: inline-block;
@@ -54,7 +60,7 @@ const HamburgerButton = styled.button`
   .hamburger-inner::after {
     content: '';
     display: block;
-    transition: ${props => props.theme.transition};
+    transition: background-color ${props => props.theme.transition};
   }
   .hamburger-inner::before {
     top: -10px;
@@ -64,37 +70,42 @@ const HamburgerButton = styled.button`
   }
 
   /*
-   * Arrow Alt
-   */
-  .hamburger--arrowalt .hamburger-inner::before {
-    transition: top 0.1s 0.1s ease,
-      transform 0.1s cubic-bezier(0.165, 0.84, 0.44, 1);
+     * Spin Reverse
+     */
+  .hamburger--spin-r .hamburger-inner {
+    transition-duration: 0.22s;
+    transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  .hamburger--spin-r .hamburger-inner::before {
+    transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
+  }
+  .hamburger--spin-r .hamburger-inner::after {
+    transition: bottom 0.1s 0.25s ease-in,
+      transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
   }
 
-  .hamburger--arrowalt .hamburger-inner::after {
-    transition: bottom 0.1s 0.1s ease,
-      transform 0.1s cubic-bezier(0.165, 0.84, 0.44, 1);
+  .hamburger--spin-r.is-active .hamburger-inner {
+    transform: rotate(-225deg);
+    transition-delay: 0.12s;
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
   }
-
-  .hamburger--arrowalt.is-active .hamburger-inner::before {
+  .hamburger--spin-r.is-active .hamburger-inner::before {
     top: 0;
-    transform: translate3d(-8px, -10px, 0) rotate(-45deg) scale(0.7, 1);
-    transition: top 0.1s ease,
-      transform 0.1s 0.1s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+    opacity: 0;
+    transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
   }
-
-  .hamburger--arrowalt.is-active .hamburger-inner::after {
+  .hamburger--spin-r.is-active .hamburger-inner::after {
     bottom: 0;
-    transform: translate3d(-8px, 10px, 0) rotate(45deg) scale(0.7, 1);
-    transition: bottom 0.1s ease,
-      transform 0.1s 0.1s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+    transform: rotate(90deg);
+    transition: bottom 0.1s ease-out,
+      transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
   }
 `;
 
 const Hamburger = ({ mobileNavIsOpen, action }) => {
   return (
     <HamburgerButton
-      className={`hamburger hamburger--arrowalt ${mobileNavIsOpen &&
+      className={`hamburger hamburger--spin-r ${mobileNavIsOpen &&
         'is-active'}`}
       onClick={action}
       type="button"

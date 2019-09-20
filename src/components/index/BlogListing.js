@@ -21,7 +21,10 @@ const BlogListing = ({ data }) => {
         to={setSlug(frontmatter.type)}
         aria-label={`Read Blog post: ${frontmatter.title}`}
       >
-        <h2>{frontmatter.title}</h2>
+        <h2>
+          {frontmatter.type === 'tutorial' && '[Tutorial]: '}
+          {frontmatter.title}
+        </h2>
         <ul>
           {frontmatter.tags &&
             frontmatter.tags.map((tag, i) => (
@@ -34,7 +37,12 @@ const BlogListing = ({ data }) => {
           Published: <Moment date={frontmatter.date} format="MMMM DD, YYYY" />
         </h3>
         <p>{excerpt}</p>
-        {data.timeToRead && <h4>{data.timeToRead} minute read</h4>}
+        {data.timeToRead &&
+          (frontmatter.type === 'tutorial' ? (
+            <h4>Approx. {data.timeToRead + 5} minutes to complete</h4>
+          ) : (
+            <h4>{data.timeToRead} minute read</h4>
+          ))}
         <div className="readMore">
           <p>Read More</p>
           <RightArrow />
