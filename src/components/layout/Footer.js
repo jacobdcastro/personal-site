@@ -26,7 +26,7 @@ const Footer = () => {
       <span>
         <a href="mailto:jdcastro.business@gmail.com">{email}</a>
       </span>
-      <EmailSubForm />
+      {/* <EmailSubForm /> */}
       <span>{`Follow me everywhere: ${handle}`}</span>
       <span>&copy;2019 - JDCastro Digital</span>
     </FooterWrapper>

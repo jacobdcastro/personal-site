@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 const HeaderWrapper = styled.header`
   position: fixed;
+  z-index: 5;
   top: 0;
   left: 0;
   width: 100vw;
@@ -22,7 +23,6 @@ const HeaderWrapper = styled.header`
     height: 70px;
     padding: 15px;
     width: 100%;
-    z-index: 9;
     max-width: 1000px;
     margin: 0 auto;
 

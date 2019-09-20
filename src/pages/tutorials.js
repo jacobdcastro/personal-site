@@ -27,7 +27,7 @@ const Tutorials = ({ data }) => {
         <h1>Tutorials</h1>
         <div className="tutorialsList">
           {data.allMarkdownRemark.edges.map(({ node }) => (
-            <BlogListing data={node} />
+            <BlogListing key={node.id} data={node} />
           ))}
         </div>
       </TutorialsPageWrapper>

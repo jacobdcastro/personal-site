@@ -101,15 +101,15 @@ const Index = props => {
               </a>
             </li>
           </ul>
+        </div>
 
-          <div className="downArrowLink">
-            <a
-              href="#recentPublications"
-              aria-label="scroll down to recent publications section"
-            >
-              <Arrow />
-            </a>
-          </div>
+        <div className="downArrowLink">
+          <a
+            href="#recentPublications"
+            aria-label="scroll down to recent publications section"
+          >
+            <Arrow />
+          </a>
         </div>
 
         {/* Blog posts */}
@@ -145,7 +145,7 @@ export const INDEX_POSTS_QUERY = graphql`
             tags
             type
           }
-          excerpt(pruneLength: 370)
+          excerpt(pruneLength: 300)
           timeToRead
         }
       }

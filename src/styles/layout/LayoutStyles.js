@@ -5,6 +5,7 @@ const LayoutWrapper = styled.div`
   transition: ${props => props.theme.transition};
   background-color: ${props => props.theme.bgColor};
   padding: 15px;
+  min-height: 100vh;
 
   h1,
   h2,
