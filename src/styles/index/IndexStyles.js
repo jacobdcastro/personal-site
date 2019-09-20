@@ -74,6 +74,14 @@ const IndexPageWrapper = styled.div`
     }
   }
 
+  @media (min-width: 550px) {
+    .indexIntro {
+      h1 {
+        font-size: 2.6rem;
+      }
+    }
+  }
+
   @media (min-width: 850px) {
     .indexIntro {
       /* margin-left: 5vw; */

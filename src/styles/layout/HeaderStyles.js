@@ -8,7 +8,7 @@ const HeaderWrapper = styled.header`
   width: 100vw;
   height: 70px;
   background-color: ${props => props.theme.bgColor};
-  transition: ${props => props.theme.transition};
+  transition: background-color ${props => props.theme.transition};
   box-shadow: 0px 0px 10px #4d4d4d;
   display: flex;
   justify-content: center;
