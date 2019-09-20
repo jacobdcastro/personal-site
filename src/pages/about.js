@@ -8,6 +8,7 @@ const About = props => {
     page: `about`,
     title: 'About Me',
     description: `${props.data.file.childMarkdownRemark.excerpt}`,
+    url: `https://jacobdcastro.com/about`,
     breadcrumbs: [
       {
         name: `About`,

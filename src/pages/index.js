@@ -27,6 +27,7 @@ const Index = props => {
     page: `index`,
     title: '',
     description: `${miniBio}`,
+    url: `https://jacobdcastro.com`,
     breadcrumbs: [],
   };
 
@@ -36,7 +37,7 @@ const Index = props => {
         <div className="indexIntro">
           <h1>
             I'm Jacob Daniel Castro,
-            <br />a frontend Javascript
+            <br />a fullstack Javascript
             <br /> developer.
           </h1>
           <ul className="introSocialLinks">

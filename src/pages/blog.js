@@ -13,6 +13,7 @@ const Tutorials = ({ data }) => {
     page: `blog`,
     title: `Blog`,
     description: `I like writing about things. Life updates, random epiphanies, cool lessons, etc. Find 'em here!`,
+    url: `https://jacobdcastro.com/blog`,
     breadcrumbs: [
       {
         name: `Blog`,

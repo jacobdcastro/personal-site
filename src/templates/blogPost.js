@@ -16,6 +16,7 @@ const blogPost = ({ data }) => {
       page: `${type}`,
       title: `${title}`,
       description: `${data.markdownRemark.excerpt}`,
+      url: `https://jacobdcastro.com/${slug}`,
       breadcrumbs: [
         {
           name: `Blog`,
@@ -32,6 +33,7 @@ const blogPost = ({ data }) => {
       page: `${type}`,
       title: `${title}`,
       description: `${data.markdownRemark.excerpt}`,
+      url: `https://jacobdcastro.com/${slug}`,
       breadcrumbs: [
         {
           name: `Tutorials`,

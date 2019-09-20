@@ -60,13 +60,32 @@ const Head = ({ seo }) => {
         name="google-site-verification"
         content="XxzBu338e5a9ZGebqx3Z0cDepD0hAZLEmUkyNEmBf9Q"
       />
+
+      {/* Open Graph meta tags */}
       <meta
         property="og:title"
         content={`${seo.title && seo.title + ' | '}Jacob D. Castro`}
       />
       <meta property="og:description" content={seo.description} />
+      <meta property="og:url" content={seo.url} />
+      <meta property="og:image" content={seo.url} />
       <meta
         property="og:type"
+        content={
+          seo.page === 'blogPost' || seo.page === 'tutorial'
+            ? 'article'
+            : 'website'
+        }
+      />
+
+      {/* Twitter meta tags */}
+      <meta
+        property="twitter:title"
+        content={`${seo.title && seo.title + ' | '}Jacob D. Castro`}
+      />
+      <meta property="twitter:description" content={seo.description} />
+      <meta
+        property="twitter:type"
         content={
           seo.page === 'blogPost' || seo.page === 'tutorial'
             ? 'article'
