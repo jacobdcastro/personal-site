@@ -68,7 +68,10 @@ const Head = ({ seo }) => {
       />
       <meta property="og:description" content={seo.description} />
       <meta property="og:url" content={seo.url} />
-      <meta property="og:image" content={seo.url} />
+      <meta
+        property="og:image"
+        content={`https://jacobdcastro.com${seo.img}`}
+      />
       <meta
         property="og:type"
         content={

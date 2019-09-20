@@ -3,11 +3,18 @@ import Layout from './layout';
 import { Link, graphql } from 'gatsby';
 import BlogAuthor from '../components/blog/BlogAuthor';
 import BlogPostPageWrapper from '../styles/blog/BlogPostStyles';
+import seoImg from '../images/olivier-collet-1165010-unsplash.jpg';
 
 // TODO add next and previous post links
 
 const blogPost = ({ data }) => {
-  const { title, subtitle, slug, type } = data.markdownRemark.frontmatter;
+  const {
+    title,
+    subtitle,
+    slug,
+    type,
+    image,
+  } = data.markdownRemark.frontmatter;
 
   // ? set SEO meta data depending on post type
   let seo;
@@ -17,6 +24,7 @@ const blogPost = ({ data }) => {
       title: `${title}`,
       description: `${data.markdownRemark.excerpt}`,
       url: `https://jacobdcastro.com/${slug}`,
+      img: `${seoImg}`,
       breadcrumbs: [
         {
           name: `Blog`,
@@ -34,6 +42,7 @@ const blogPost = ({ data }) => {
       title: `${title}`,
       description: `${data.markdownRemark.excerpt}`,
       url: `https://jacobdcastro.com/${slug}`,
+      img: `https://jacobdcastro.com/images/tutorials/${image}`,
       breadcrumbs: [
         {
           name: `Tutorials`,
@@ -72,12 +81,15 @@ export const BLOG_POST_QUERY = graphql`
       html
       excerpt(pruneLength: 370)
       frontmatter {
+        type
         title
         slug
         subtitle
+        image
+        imageTitle
+        imageAlt
         date
         tags
-        type
       }
     }
   }

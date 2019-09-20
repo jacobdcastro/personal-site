@@ -28,6 +28,7 @@ const Index = props => {
     title: '',
     description: `${miniBio}`,
     url: `https://jacobdcastro.com`,
+    imgUrl: `https://jacobdcastro.com/images/page-meta-img.jpg`,
     breadcrumbs: [],
   };
 
