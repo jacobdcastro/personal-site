@@ -17,7 +17,7 @@ const Header = props => {
     <HeaderWrapper>
       <div className="navContainer">
         <div id="logo">
-          <Link to="/" tabIndex="1" aria-label="to home page">
+          <Link to="/" aria-label="to home page">
             <LogoSVG />
             <h2>JACOB D. CASTRO</h2>
           </Link>
