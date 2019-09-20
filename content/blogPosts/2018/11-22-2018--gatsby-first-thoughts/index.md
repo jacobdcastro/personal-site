@@ -48,9 +48,46 @@ I started by making the blog home page and that was pretty simple and straight f
 
 I started by following along with a tutorial on Youtube explaining how to use Contentful with Gatsby. After that tutorial, I really began to understand Gatsby. This is what I finished in my `gatsby-node.js` file:
 
-<!-- TODO Rewrite code chunk with Prism.js -->
-<!-- ![createPages-API-code](//images.ctfassets.net/oghc6wtiomc3/HD5JviJqkE2wEy2iq0IUk/05d181ca03a92823b5a1a6be7f97a3a6/createPages-API-code.png) -->
-<!-- TODO ================================ -->
+```javascript
+const path = require('path');
+
+exports.createPages = ({ graphql, actions }) => {
+  const { createPage } = actions;
+  return new Promise((resolve, reject) => {
+    const blogPostTemplate = path.resolve('src/templates/BlogPost.js');
+    resolve(
+      graphql(`
+        {
+          allContentfulBlogPost(limit: 100) {
+            edges {
+              node {
+                id
+                slug
+              }
+            }
+          }
+        }
+      `).then(result => {
+        if (result.errors) {
+          reject(result.errors);
+        }
+
+        result.data.allContentfulBlogPost.edges.forEach(edge => {
+          createPage({
+            path: `blog/${edge.node.slug}`,
+            component: blogPostTemplate,
+            context: {
+              slug: edge.node.slug,
+            },
+          });
+        });
+
+        return;
+      })
+    );
+  });
+};
+```
 
 Creating the pages is super easy with the `createPages` Gatsby API. Not to mention, Contentful can automatically generate a slug for the URL. On my project, I have the slugs set to be the title of the blog post. For example, a blog post titled "Hello World In Javascript" would have its own page at jacobdcastro.com/blog/hello-world-in-javascript/. These tools make it so easy!
 
@@ -64,9 +101,50 @@ Following along with more tutorials and reading the Gatsby docs, I figured out h
 
 For example, the query I wrote in my `BlogPost.js` template looks like this:
 
-<!-- TODO Rewrite code chunk with Prism.js -->
-<!-- ![BlogPost-query](//images.ctfassets.net/oghc6wtiomc3/4bnldexWysO6s2iIyGWkYm/f16a79a5b5a18a6691b6d50da7aa6bd9/BlogPost-query.png) -->
-<!-- TODO ================================ -->
+```javascript
+export const pageQuery = graphql`
+  query blogPostQuery($slug: String!) {
+    contentfulBlogPost(slug: { eq: $slug }) {
+      id
+      slug
+      tags
+      title
+      subtitle
+      published(formatString: "MMMM Do, YYYY")
+      heroImage {
+        id
+        title
+        description
+        file {
+          url
+        }
+      }
+      bodyContent {
+        childMarkdownRemark {
+          html
+        }
+      }
+      author {
+        id
+        name
+        email
+        birthday
+        twitterURL
+        instagramURL
+        githubURL
+        avatar {
+          file {
+            url
+          }
+        }
+        biography {
+          biography
+        }
+      }
+    }
+  }
+`;
+```
 
 When I receive the customized object from the query, I basically just stick the content in all of the appropriate places. It's really easy to be honest. Gatsby makes GraphQL wildly effortless.
 

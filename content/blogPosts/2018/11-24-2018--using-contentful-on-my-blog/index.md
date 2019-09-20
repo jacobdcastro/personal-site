@@ -42,13 +42,17 @@ GraphQL seemed too good to be true. But once copying and pasting my query in my 
 This is what my query looks like on my `BlogPost.js` page template:
 
 <!-- TODO Rewrite code chunk with Prism.js -->
-<!-- ![BlogPost-query](//images.ctfassets.net/oghc6wtiomc3/5UQK82AswwskoSWgSG6kai/0a450eaa92ec8f230f96d9ac03a0ba0f/BlogPost-query.png) -->
+
+![BlogPost-query](//images.ctfassets.net/oghc6wtiomc3/5UQK82AswwskoSWgSG6kai/0a450eaa92ec8f230f96d9ac03a0ba0f/BlogPost-query.png)
+
 <!-- TODO ================================ -->
 
 Once the content is called via GraphQL, I pretty much just slap the content into the markup. Fairly simple honestly! This is what my `render()` method looks like with the injected Contentful content:
 
 <!-- TODO Rewrite code chunk with Prism.js -->
-<!-- ![render-method](//images.ctfassets.net/oghc6wtiomc3/2EF4t0NPbWgYoWsYqmUIki/3452cacb9733bce07977e2d806e9f647/render-method.png) -->
+
+![render-method](//images.ctfassets.net/oghc6wtiomc3/2EF4t0NPbWgYoWsYqmUIki/3452cacb9733bce07977e2d806e9f647/render-method.png)
+
 <!-- TODO ================================ -->
 
 It's pretty straight forward to fetch the content and place it appropriately in the site, which I am passing the data as props to all of my main components on the `BlogPost.js` template.
@@ -62,7 +66,9 @@ After getting to know the Contentful system more and integrating it into my site
 When creating a content type in the content model, there are two primary entry types for text: short text and long text. Short text is literally just a string that is shorter than 256 characters unless otherwise specified. But the long text entry type is much more robust. This is because it uses markdown (.md files) to write long copy, such as the body content of a blog post. This is what the markdown long text editor looks like:
 
 <!-- TODO Rewrite code chunk with Prism.js -->
-<!-- ![contentful-md-editor](//images.ctfassets.net/oghc6wtiomc3/eNNUKFEUaAoEsyqc6aKIQ/2f4a55c817c255652612ad26bb16264c/contentful-md-editor.PNG) -->
+
+![contentful-md-editor](//images.ctfassets.net/oghc6wtiomc3/eNNUKFEUaAoEsyqc6aKIQ/2f4a55c817c255652612ad26bb16264c/contentful-md-editor.PNG)
+
 <!-- TODO ================================ -->
 
 When the body content of my blog is fetched, it returns raw, minified markdown. This would be useless if it wasn't for Gatsby's plugin called gatsby-transformer-remark. This is a transformer plugin that literally transforms markdown files into HTML. It creates a query in the schema called `childMarkdownRemark` that I use access the body content of my blog post. The query looks like this:

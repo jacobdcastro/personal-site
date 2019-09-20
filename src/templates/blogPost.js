@@ -1,6 +1,7 @@
 import React from 'react';
 import Layout from './layout';
 import { Link, graphql } from 'gatsby';
+import Img from 'gatsby-image';
 import BlogAuthor from '../components/blog/BlogAuthor';
 import BlogPostPageWrapper from '../styles/blog/BlogPostStyles';
 
@@ -13,6 +14,8 @@ const blogPost = ({ data }) => {
     slug,
     type,
     image,
+    imageTitle,
+    imageAlt,
   } = data.markdownRemark.frontmatter;
 
   // ? set SEO meta data depending on post type
@@ -63,6 +66,8 @@ const blogPost = ({ data }) => {
 
         {/* <BlogAuthor /> */}
 
+        <Img src={data.file.childImageSharp.fluid} />
+
         <article
           dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
         />
@@ -84,7 +89,6 @@ export const BLOG_POST_QUERY = graphql`
         title
         slug
         subtitle
-        image
         imageTitle
         imageAlt
         date
@@ -93,7 +97,12 @@ export const BLOG_POST_QUERY = graphql`
     }
 
     file(relativePath: { eq: $imgUrl }) {
-      publicURL
+      publicURL # used for SEO
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
     }
   }
 `;
