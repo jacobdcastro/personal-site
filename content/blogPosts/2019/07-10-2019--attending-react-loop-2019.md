@@ -1,7 +1,7 @@
 ---
 slug: 'attending-react-loop-2019'
 title: 'Attending React Loop 2019'
-subtitle: "My first React conference was also Chicago's first React conference."
+subtitle: 'My first React conference was also Chicagos first React conference.'
 image: 'IMG_1552.jpg'
 imageTitle: 'Chicago React Loop'
 imageAlt: 'Chicago city street outside of React Loop venue'

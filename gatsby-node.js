@@ -1,7 +1,7 @@
 const path = require('path');
 
 exports.createPages = async ({ graphql, actions }) => {
-  const { createPage } = actions;
+  const { createPage, reject } = actions;
   const blogRes = await graphql(`
     {
       allMarkdownRemark(
@@ -34,6 +34,7 @@ exports.createPages = async ({ graphql, actions }) => {
       context: {
         id: node.id,
         slug: node.frontmatter.slug,
+        // relative filepath for blogPost.js query
         imgUrl: `content/blog-posts/${node.frontmatter.image}`,
       },
     });
@@ -74,6 +75,8 @@ exports.createPages = async ({ graphql, actions }) => {
       context: {
         id: node.id,
         slug: node.frontmatter.slug,
+        // relative filepath for blogPost.js query
+
         imgUrl: `content/tutorials/${node.frontmatter.image}`,
       },
     });

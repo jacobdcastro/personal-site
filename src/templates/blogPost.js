@@ -8,12 +8,13 @@ import BlogPostPageWrapper from '../styles/blog/BlogPostStyles';
 // TODO add next and previous post links
 
 const blogPost = ({ data }) => {
+  console.log(data);
+
   const {
     title,
     subtitle,
     slug,
     type,
-    image,
     imageTitle,
     imageAlt,
   } = data.markdownRemark.frontmatter;
@@ -66,7 +67,14 @@ const blogPost = ({ data }) => {
 
         {/* <BlogAuthor /> */}
 
-        <Img src={data.file.childImageSharp.fluid} />
+        <Img
+          style={{
+            marginBottom: '25px',
+          }}
+          fluid={data.file.childImageSharp.fluid}
+          alt={imageAlt}
+          title={imageTitle}
+        />
 
         <article
           dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
@@ -89,6 +97,7 @@ export const BLOG_POST_QUERY = graphql`
         title
         slug
         subtitle
+        image
         imageTitle
         imageAlt
         date
