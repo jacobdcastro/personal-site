@@ -1,13 +1,13 @@
 ---
+slug: 'how-to-use-themes-with-styled-components'
 title: 'How To Use Themes with styled-components'
 subtitle: 'A tutorial on React and CSS-in-JS'
-slug: 'how-to-use-themes-with-styled-components'
-date: '2019-08-23T00:00:00-07:00'
-image: 'kaleidico-26MJGnCM0Wc-unsplash.jpg'
-imageTitle: 'Whiteboard'
-imageAlt: 'Two designers writing on whiteboard. Photo by Kaleidico on Unsplash'
+image: 'cover-photo.png'
+imageTitle: 'create-react-app page'
+imageAlt: 'create-react-app page with theme toggle button'
 repo: 'https://github.com/jacobdcastro/styled-components-theme-tutorial'
 liveLink: 'https://nostalgic-perlman-000288.netlify.com/'
+date: '2019-08-23T00:00:00-07:00'
 tags:
   - how-to
   - css

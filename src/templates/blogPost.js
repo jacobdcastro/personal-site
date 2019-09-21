@@ -8,8 +8,6 @@ import BlogPostPageWrapper from '../styles/blog/BlogPostStyles';
 // TODO add next and previous post links
 
 const blogPost = ({ data }) => {
-  console.log(data);
-
   const {
     title,
     subtitle,
@@ -18,6 +16,8 @@ const blogPost = ({ data }) => {
     imageTitle,
     imageAlt,
   } = data.markdownRemark.frontmatter;
+
+  if (slug === 'attending-react-loop-2019') console.log(data.file);
 
   // ? set SEO meta data depending on post type
   let seo;
