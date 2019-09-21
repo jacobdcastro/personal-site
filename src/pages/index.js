@@ -21,17 +21,17 @@ const Index = props => {
     facebookURL, // soon to be launched
     snapchat, // I may use snap?
     linkedinURL,
-  } = props.data.file.childMarkdownRemark.frontmatter;
+  } = props.data.me.childMarkdownRemark.frontmatter;
 
   const seo = {
     page: `index`,
-    title: '',
+    title: 'Home',
     description: `${miniBio}`,
     url: `https://jacobdcastro.com`,
-    imgUrl: `https://jacobdcastro.com/images/page-meta-img.jpg`,
+    imgUrl: `${props.data.pageImg.publicURL}`,
     breadcrumbs: [],
   };
-
+  console.log(seo);
   return (
     <Layout seo={seo}>
       <IndexPageWrapper>
@@ -154,7 +154,7 @@ export const INDEX_POSTS_QUERY = graphql`
     }
 
     # social links from about markdown file
-    file(relativePath: { eq: "me.md" }) {
+    me: file(relativePath: { eq: "me.md" }) {
       childMarkdownRemark {
         id
         frontmatter {
@@ -171,6 +171,10 @@ export const INDEX_POSTS_QUERY = graphql`
           linkedinURL
         }
       }
+    }
+
+    pageImg: file(relativePath: { eq: "page-meta-img.jpg" }) {
+      publicURL # used for SEO
     }
   }
 `;

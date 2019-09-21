@@ -3,7 +3,6 @@ import LogoSVG from '../../images/svg/SignatureLogoSVG'; // inline svg component
 import { HeaderWrapper } from '../../styles/layout/HeaderStyles';
 import '../../styles/layout/hamburgers.css';
 import { Link } from 'gatsby';
-import Hamburger from './Hamburger';
 
 const Header = props => {
   const { mobileNavIsOpen, action } = props;
@@ -23,28 +22,25 @@ const Header = props => {
           </Link>
         </div>
 
-        <div className="headerMenuSection">
-          {/* <Hamburger mobileNavIsOpen={mobileNavIsOpen} action={action} /> */}
-          <nav style={{ display: 'none' }}>
-            <ul>
-              <li>
-                <Link activeClassName="activePage" to="/blog">
-                  Blog
-                </Link>
-              </li>
-              <li>
-                <Link activeClassName="activePage" to="/tutorials">
-                  Tutorials
-                </Link>
-              </li>
-              <li>
-                <Link activeClassName="activePage" to="/about">
-                  About Me
-                </Link>
-              </li>
-            </ul>
-          </nav>
-        </div>
+        <nav>
+          <ul>
+            <li>
+              <Link activeClassName="activePage" to="/blog">
+                Blog
+              </Link>
+            </li>
+            <li>
+              <Link activeClassName="activePage" to="/tutorials">
+                Tutorials
+              </Link>
+            </li>
+            <li>
+              <Link activeClassName="activePage" to="/about">
+                About Me
+              </Link>
+            </li>
+          </ul>
+        </nav>
       </div>
     </HeaderWrapper>
   );

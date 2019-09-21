@@ -14,6 +14,7 @@ const Tutorials = ({ data }) => {
     title: `Blog`,
     description: `I like writing about things. Life updates, random epiphanies, cool lessons, etc. Find 'em here!`,
     url: `https://jacobdcastro.com/blog`,
+    imgUrl: `${data.pageImg.publicURL}`,
     breadcrumbs: [
       {
         name: `Blog`,
@@ -60,6 +61,10 @@ export const BLOG_PAGE_QUERY = graphql`
           }
         }
       }
+    }
+
+    pageImg: file(relativePath: { eq: "page-meta-img.jpg" }) {
+      publicURL # used for SEO
     }
   }
 `;

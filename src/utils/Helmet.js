@@ -70,7 +70,7 @@ const Head = ({ seo }) => {
       <meta property="og:url" content={seo.url} />
       <meta
         property="og:image"
-        content={`https://jacobdcastro.com${seo.img}`}
+        content={`https://jacobdcastro.com${seo.imgUrl}`}
       />
       <meta
         property="og:type"

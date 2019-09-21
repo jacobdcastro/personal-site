@@ -50,6 +50,25 @@ const HeaderWrapper = styled.header`
         margin: 0;
       }
     }
+    nav {
+      ul {
+        display: flex;
+        flex-direction: row;
+        list-style-type: none;
+
+        li {
+          list-style-type: none;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 980px) {
+    .navContainer {
+      nav {
+        display: none;
+      }
+    }
   }
 `;
 

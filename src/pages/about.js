@@ -7,8 +7,9 @@ const About = props => {
   const seo = {
     page: `about`,
     title: 'About Me',
-    description: `${props.data.file.childMarkdownRemark.excerpt}`,
+    description: `${props.data.me.childMarkdownRemark.excerpt}`,
     url: `https://jacobdcastro.com/about`,
+    imgUrl: `${props.data.pageImg.publicURL}`,
     breadcrumbs: [
       {
         name: `About`,
@@ -21,7 +22,7 @@ const About = props => {
     <Layout seo={seo}>
       <AboutPageWrapper
         dangerouslySetInnerHTML={{
-          __html: props.data.file.childMarkdownRemark.html,
+          __html: props.data.me.childMarkdownRemark.html,
         }}
       />
     </Layout>
@@ -32,7 +33,7 @@ export default About;
 
 export const ABOUT_PAGE_QUERY = graphql`
   query ABOUT_PAGE_QUERY {
-    file(relativePath: { eq: "me.md" }) {
+    me: file(relativePath: { eq: "me.md" }) {
       childMarkdownRemark {
         id
         excerpt(pruneLength: 370)
@@ -55,6 +56,10 @@ export const ABOUT_PAGE_QUERY = graphql`
         }
         html
       }
+    }
+
+    pageImg: file(relativePath: { eq: "page-meta-img.jpg" }) {
+      publicURL # used for SEO
     }
   }
 `;

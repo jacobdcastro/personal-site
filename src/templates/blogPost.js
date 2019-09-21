@@ -27,7 +27,7 @@ const blogPost = ({ data }) => {
       title: `${title}`,
       description: `${data.markdownRemark.excerpt}`,
       url: `https://jacobdcastro.com/${slug}`,
-      img: `${data.file.publicURL}`,
+      imgUrl: `${data.file.publicURL}`,
       breadcrumbs: [
         {
           name: `Blog`,

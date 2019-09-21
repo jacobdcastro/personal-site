@@ -76,7 +76,6 @@ exports.createPages = async ({ graphql, actions }) => {
         id: node.id,
         slug: node.frontmatter.slug,
         // relative filepath for blogPost.js query
-
         imgUrl: `content/tutorials/${node.frontmatter.image}`,
       },
     });

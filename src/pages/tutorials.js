@@ -13,6 +13,7 @@ const Tutorials = ({ data }) => {
     page: `tutorials`,
     title: `Tutorials`,
     description: `I love learning things!! These are me restating what I've learned to you peeps, in hopes of solidifying my learning and lending a hand along the way.`,
+    imgUrl: `${data.pageImg.publicURL}`,
     breadcrumbs: [
       {
         name: `Tutorials`,
@@ -59,6 +60,10 @@ export const TUTORIALS_PAGE_QUERY = graphql`
           }
         }
       }
+    }
+
+    pageImg: file(relativePath: { eq: "page-meta-img.jpg" }) {
+      publicURL # used for SEO
     }
   }
 `;

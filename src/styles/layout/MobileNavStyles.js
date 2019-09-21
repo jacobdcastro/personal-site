@@ -69,6 +69,11 @@ const MobileNavWrapper = styled.div`
       }
     }
   }
+  @media (min-width: 980px) {
+    .hamburger {
+      display: none;
+    }
+  }
 `;
 
 export default MobileNavWrapper;
