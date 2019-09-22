@@ -6,7 +6,7 @@ email: 'jdcastro.business@gmail.com'
 phone: '+1 (805) 878-5378'
 url: 'https://jacobdcastro.com'
 miniBio: "I'm a full-stack web developer and I love creating modern digital experiences. Some tech I enjoy include HTML + CSS, Javascipt, React, GraphQL, and Node.js."
-portrait: ''
+portrait: 'portrait.png'
 handle: '@jacobdcastro'
 username: 'jacobdcastro'
 twitterURL: 'https://twitter.com/jacobdcastro'

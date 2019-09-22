@@ -1,37 +1,53 @@
-import React from "react";
-import styled from "styled-components";
-import Link from "gatsby-link";
+import React from 'react';
+import { Link } from 'gatsby';
+import styled from 'styled-components';
+import Layout from '../templates/layout';
 
-const Container = styled.div`
-  margin: 75px auto;
-  padding: 0;
-  background-color: #e1e1e1;
-  max-width: 500px;
-  h1,
-  p {
-    font-family: "Montserrat", "Helvetica", sans-serif;
-  }
+const NotFoundWrapper = styled.div`
+  /* text-align: center; */
+  height: 80vh;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  width: 100vw;
+  max-width: 700px;
+  padding: 15px;
 
-  button {
-    padding: 8px;
-    margin: 12px;
-    background-color: #353535;
+  div {
+    width: 100%;
+    margin-top: 80px;
+
+    h1 {
+      font-size: 3.4rem;
+    }
   }
 `;
 
-class ErrorPage extends React.Component {
-  render() {
-    return (
-      <Container>
-        <h1>Big oops. Much sorry.</h1>
-        <p>You've hit a route that doesn't exist.</p>
-        <p>Go back to the home page here!</p>
-        <Link to="/">
-          <button>To Home Page</button>
-        </Link>
-      </Container>
-    );
-  }
-}
+const NotFound = props => {
+  const seo = {
+    page: `404`,
+    title: 'Page Not Found',
+    description: `Big oops, much sorry. You've hit a route that doesn't exist!`,
+    url: `https://jacobdcastro.com`,
+    imgUrl: ``,
+    breadcrumbs: [],
+  };
 
-export default ErrorPage;
+  return (
+    <Layout seo={seo}>
+      <NotFoundWrapper>
+        <div>
+          <h1>
+            Big oops,
+            <br />
+            much sorry.
+          </h1>
+          <h3>You've hit a route that doesn't exist!</h3>
+          <Link to="/">Go back to Home page</Link>
+        </div>
+      </NotFoundWrapper>
+    </Layout>
+  );
+};
+
+export default NotFound;

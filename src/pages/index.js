@@ -33,7 +33,7 @@ const Index = props => {
   };
 
   return (
-    <Layout seo={seo}>
+    <Layout seo={seo} path={props.path}>
       <IndexPageWrapper>
         <div className="indexIntro">
           <h1>
