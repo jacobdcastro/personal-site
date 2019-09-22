@@ -19,7 +19,7 @@ const About = props => {
   };
 
   return (
-    <Layout seo={seo}>
+    <Layout seo={seo} path={props.path}>
       <AboutPageWrapper
         dangerouslySetInnerHTML={{
           __html: props.data.me.childMarkdownRemark.html,

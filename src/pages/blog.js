@@ -8,13 +8,13 @@ import BlogListing from '../components/index/BlogListing';
 // TODO add `time to complete`
 // <h4>{timeToRead + 10} minutes to complete</h4>
 
-const Tutorials = ({ data }) => {
+const Tutorials = props => {
   const seo = {
     page: `blog`,
     title: `Blog`,
     description: `I like writing about things. Life updates, random epiphanies, cool lessons, etc. Find 'em here!`,
     url: `https://jacobdcastro.com/blog`,
-    imgUrl: `${data.pageImg.publicURL}`,
+    imgUrl: `${props.data.pageImg.publicURL}`,
     breadcrumbs: [
       {
         name: `Blog`,
@@ -24,11 +24,11 @@ const Tutorials = ({ data }) => {
   };
 
   return (
-    <Layout seo={seo}>
+    <Layout seo={seo} path={props.path}>
       <BlogPageWrapper>
         <h1>Blog Posts</h1>
         <div className="blogPostList">
-          {data.allMarkdownRemark.edges.map(({ node }) => (
+          {props.data.allMarkdownRemark.edges.map(({ node }) => (
             <BlogListing key={node.id} data={node} />
           ))}
         </div>

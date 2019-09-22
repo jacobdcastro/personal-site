@@ -8,12 +8,12 @@ import BlogListing from '../components/index/BlogListing';
 // TODO add `time to complete`
 // <h4>{timeToRead + 10} minutes to complete</h4>
 
-const Tutorials = ({ data }) => {
+const Tutorials = props => {
   const seo = {
     page: `tutorials`,
     title: `Tutorials`,
     description: `I love learning things!! These are me restating what I've learned to you peeps, in hopes of solidifying my learning and lending a hand along the way.`,
-    imgUrl: `${data.pageImg.publicURL}`,
+    imgUrl: `${props.data.pageImg.publicURL}`,
     breadcrumbs: [
       {
         name: `Tutorials`,
@@ -23,11 +23,11 @@ const Tutorials = ({ data }) => {
   };
 
   return (
-    <Layout seo={seo}>
+    <Layout seo={seo} path={props.path}>
       <TutorialsPageWrapper>
         <h1>Tutorials</h1>
         <div className="tutorialsList">
-          {data.allMarkdownRemark.edges.map(({ node }) => (
+          {props.data.allMarkdownRemark.edges.map(({ node }) => (
             <BlogListing key={node.id} data={node} />
           ))}
         </div>

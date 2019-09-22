@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const FooterWrapper = styled.footer`
   text-align: center;
-  margin: 0 auto 15px;
+  margin: 0 auto;
   width: auto;
   display: flex;
   flex-direction: column;
@@ -13,11 +13,12 @@ const FooterWrapper = styled.footer`
     display: block;
     transition: ${props => props.theme.transition};
     color: ${props => props.theme.textColor};
+    margin-bottom: 5px;
   }
 
   .stackIcons {
-    margin-top: 25px;
-    width: 100vw;
+    padding: 25px 15px 15px;
+    width: 100%;
     max-width: 400px;
     ul {
       margin: 0;

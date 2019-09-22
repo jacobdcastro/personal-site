@@ -4,10 +4,11 @@ import { Link, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import BlogAuthor from '../components/blog/BlogAuthor';
 import BlogPostPageWrapper from '../styles/blog/BlogPostStyles';
+import JDCLogo from '../images/svg/SignatureLogoSVG';
 
 // TODO add next and previous post links
 
-const blogPost = ({ data }) => {
+const blogPost = props => {
   const {
     title,
     subtitle,
@@ -15,7 +16,7 @@ const blogPost = ({ data }) => {
     type,
     imageTitle,
     imageAlt,
-  } = data.markdownRemark.frontmatter;
+  } = props.data.markdownRemark.frontmatter;
 
   // ? set SEO meta data depending on post type
   let seo;
@@ -23,9 +24,9 @@ const blogPost = ({ data }) => {
     seo = {
       page: `${type}`,
       title: `${title}`,
-      description: `${data.markdownRemark.excerpt}`,
+      description: `${props.data.markdownRemark.excerpt}`,
       url: `https://jacobdcastro.com/${slug}`,
-      imgUrl: `${data.file.publicURL}`,
+      imgUrl: `${props.data.file.publicURL}`,
       breadcrumbs: [
         {
           name: `Blog`,
@@ -41,9 +42,9 @@ const blogPost = ({ data }) => {
     seo = {
       page: `${type}`,
       title: `${title}`,
-      description: `${data.markdownRemark.excerpt}`,
+      description: `${props.data.markdownRemark.excerpt}`,
       url: `https://jacobdcastro.com/${slug}`,
-      img: `${data.file.publicURL}`,
+      img: `${props.data.file.publicURL}`,
       breadcrumbs: [
         {
           name: `Tutorials`,
@@ -58,7 +59,7 @@ const blogPost = ({ data }) => {
   }
 
   return (
-    <Layout seo={seo} style={{ textAlign: 'left' }}>
+    <Layout seo={seo} path={props.path} style={{ textAlign: 'left' }}>
       <BlogPostPageWrapper>
         <h1>{title}</h1>
         <h4>{subtitle}</h4>
@@ -69,14 +70,19 @@ const blogPost = ({ data }) => {
           style={{
             marginBottom: '25px',
           }}
-          fluid={data.file.childImageSharp.fluid}
+          fluid={props.data.file.childImageSharp.fluid}
           alt={imageAlt}
           title={imageTitle}
         />
 
         <article
-          dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
+          dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }}
         />
+
+        <div className="closing">
+          <JDCLogo />
+          <h3>- Jacob D. Castro</h3>
+        </div>
       </BlogPostPageWrapper>
     </Layout>
   );

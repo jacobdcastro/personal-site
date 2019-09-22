@@ -10,7 +10,7 @@ import mdImg from '../../images/tech-icons/markdown.svg';
 import netlifyImg from '../../images/tech-icons/netlify.svg';
 import reactImg from '../../images/tech-icons/react.svg';
 
-const Footer = () => {
+const Footer = ({ path }) => {
   const data = useStaticQuery(graphql`
     query {
       me: file(relativePath: { eq: "me.md" }) {
@@ -74,6 +74,7 @@ const Footer = () => {
       alt: 'netlify logo',
     },
   ];
+  console.log(path);
 
   return (
     <FooterWrapper>
@@ -82,6 +83,20 @@ const Footer = () => {
       <span>
         Let's connect! Email me:{' '}
         <a href="mailto:jdcastro.business@gmail.com">{email}</a>
+      </span>
+      <span>
+        See typo or want to contribute?{' '}
+        <a
+          class="twitter-share-button"
+          href="https://twitter.com/intent/tweet?text=Hey,%20@jacobdcastro"
+        >
+          Tweet Me
+        </a>{' '}
+        or submit a PR on{' '}
+        <a href="https://github.com/jacobdcastro/personal-site/">
+          the Gtihub repo
+        </a>
+        !
       </span>
       <div className="stackIcons">
         <h4>This website built with:</h4>
