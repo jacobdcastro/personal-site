@@ -53,17 +53,28 @@ const MobileNavWrapper = styled.div`
       nav {
         ul {
           list-style-type: none;
-          margin: 0px 10px 60px 25px;
+          margin: 0px 10px 60px 20px;
 
           li {
             list-style-type: none;
             a {
+              transition: ${props => props.theme.transition};
+              border-bottom: 4px solid transparent;
               color: ${props => props.theme.textColor};
               font-family: 'Montserrat', sans-serif;
               font-weight: 600;
               text-decoration: none;
               font-size: 1.8rem;
+              padding: 5px 4px 8px;
+              margin-bottom: 8px;
             }
+          }
+          a:hover {
+            border-bottom: 4px solid ${props => props.theme.textColor};
+          }
+
+          .activePage {
+            border-bottom: 4px solid ${props => props.theme.textColor};
           }
         }
       }

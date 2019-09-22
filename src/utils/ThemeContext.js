@@ -12,6 +12,18 @@ class ThemeContextWrapper extends React.Component {
   constructor(props) {
     super(props);
 
+    // set initial theme based on time of day
+    this.setTheme = () => {
+      const now = new Date();
+      const time = now.getHours();
+
+      if (time >= 19 || time <= 6) {
+        return darkTheme;
+      } else if (time > 6 && time < 19) {
+        return lightTheme;
+      }
+    };
+
     this.toggleTheme = () => {
       this.setState({
         currentTheme:
@@ -20,7 +32,7 @@ class ThemeContextWrapper extends React.Component {
     };
 
     this.state = {
-      currentTheme: lightTheme,
+      currentTheme: this.setTheme(),
       transition: '0.5s',
       toggleTheme: this.toggleTheme,
     };
