@@ -89,6 +89,7 @@ const Footer = ({ path }) => {
         <a
           class="twitter-share-button"
           href="https://twitter.com/intent/tweet?text=Hey,%20@jacobdcastro"
+          target="_blank"
         >
           Tweet Me
         </a>{' '}
@@ -105,7 +106,7 @@ const Footer = ({ path }) => {
             const { img, url, title, alt } = m;
             return (
               <li key={i}>
-                <a href={url} aria-label={title}>
+                <a href={url} target="_blank" aria-label={title}>
                   {title === 'styled-components' ? (
                     <Img
                       fluid={img}
