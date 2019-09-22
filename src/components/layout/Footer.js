@@ -90,11 +90,12 @@ const Footer = ({ path }) => {
           class="twitter-share-button"
           href="https://twitter.com/intent/tweet?text=Hey,%20@jacobdcastro"
           target="_blank"
+          rel="noopener"
         >
           Tweet Me
         </a>{' '}
         or submit a PR on{' '}
-        <a href="https://github.com/jacobdcastro/personal-site/">
+        <a href="https://github.com/jacobdcastro/personal-site/" rel="noopener">
           the Gtihub repo
         </a>
         !
