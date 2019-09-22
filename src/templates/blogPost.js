@@ -17,8 +17,6 @@ const blogPost = ({ data }) => {
     imageAlt,
   } = data.markdownRemark.frontmatter;
 
-  if (slug === 'attending-react-loop-2019') console.log(data.file.publicURL);
-
   // ? set SEO meta data depending on post type
   let seo;
   if (type === 'blogPost') {

@@ -15,10 +15,8 @@ const Header = () => {
         document.documentElement.scrollTop > 30
       ) {
         setIsScrolled((isScrolled = true));
-        console.log(`isScrolled set to ${isScrolled}`);
       } else {
         setIsScrolled((isScrolled = false));
-        console.log(`isScrolled set to ${isScrolled}`);
       }
     });
   }, []);
