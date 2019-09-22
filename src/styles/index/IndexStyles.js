@@ -9,7 +9,6 @@ const IndexPageWrapper = styled.div`
     flex-direction: column;
     justify-content: center;
     margin: 0 auto 0;
-    max-width: 1000px;
 
     h1 {
       color: ${props => props.theme.textColor};
@@ -82,15 +81,19 @@ const IndexPageWrapper = styled.div`
     }
   }
 
-  @media (min-width: 850px) {
+  @media (min-width: 880px) {
     .indexIntro {
-      /* margin-left: 5vw; */
+      /* margin-left: -10vw; */
+      position: relative;
+      left: 0px;
+      max-width: 1000px;
 
       h1 {
         font-size: 3rem;
       }
 
       .introSocialLinks {
+        margin-bottom: 25px;
         li {
           height: 55px;
           width: 55px;

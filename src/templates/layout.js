@@ -34,7 +34,7 @@ const Layout = ({ children, seo }) => {
       <LayoutWrapper>
         <Head seo={seo} />
         <div style={{ position: 'absolute', top: '0', zIndex: '1' }}>
-          <Header mobileNavIsOpen={mobileNavIsOpen} action={mobileNavAction} />
+          <Header />
           <MobileNav
             mobileNavIsOpen={mobileNavIsOpen}
             action={mobileNavAction}

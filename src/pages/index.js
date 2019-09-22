@@ -31,7 +31,7 @@ const Index = props => {
     imgUrl: `${props.data.pageImg.publicURL}`,
     breadcrumbs: [],
   };
-  console.log(seo);
+
   return (
     <Layout seo={seo}>
       <IndexPageWrapper>
@@ -47,7 +47,7 @@ const Index = props => {
                 target="_blank"
                 href={twitterURL}
                 rel="noopener"
-                aria-label="visit Jacob's twitter profile"
+                aria-label="Jacob's twitter profile"
               >
                 <Twitter />
               </a>
@@ -57,7 +57,7 @@ const Index = props => {
                 target="_blank"
                 href={instagramURL}
                 rel="noopener"
-                aria-label="visit Jacob's Instagram page"
+                aria-label="Jacob's Instagram page"
               >
                 <Instagram />
               </a>
@@ -67,7 +67,7 @@ const Index = props => {
                 target="_blank"
                 href={facebookURL}
                 rel="noopener"
-                aria-label="visit Jacob's Facebook page"
+                aria-label="Jacob's Facebook page"
               >
                 <Facebook />
               </a>
@@ -77,7 +77,7 @@ const Index = props => {
                 target="_blank"
                 href={linkedinURL}
                 rel="noopener"
-                aria-label="visit Jacob's linkedin profile"
+                aria-label="Jacob's linkedin profile"
               >
                 <Linkedin />
               </a>
@@ -87,7 +87,7 @@ const Index = props => {
                 target="_blank"
                 href={snapchat}
                 rel="noopener"
-                aria-label="visit jacob's snapchat account"
+                aria-label="jacob's snapchat account"
               >
                 <Snapchat />
               </a>
@@ -97,7 +97,7 @@ const Index = props => {
                 target="_blank"
                 href={githubURL}
                 rel="noopener"
-                aria-label="visit Jacob's Github page"
+                aria-label="Jacob's Github page"
               >
                 <Github />
               </a>

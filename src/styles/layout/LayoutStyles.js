@@ -61,7 +61,7 @@ const LayoutWrapper = styled.div`
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    max-width: 1000px;
+    max-width: 880px;
   }
 `;
 

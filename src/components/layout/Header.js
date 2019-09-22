@@ -4,16 +4,27 @@ import { HeaderWrapper } from '../../styles/layout/HeaderStyles';
 import '../../styles/layout/hamburgers.css';
 import { Link } from 'gatsby';
 
-const Header = props => {
-  const { mobileNavIsOpen, action } = props;
-  // const [isScrolled, setIsScrolled] = useState(false);
-
-  // useEffect(() => {
-  //   window.addEventListener('scroll', e => {
-  // });
+const Header = () => {
+  // set boolean state and listen for scroll events
+  // isScrolled value sent to <HeaderWrapper> styled component
+  let [isScrolled, setIsScrolled] = useState(false);
+  useEffect(() => {
+    window.addEventListener('scroll', e => {
+      if (
+        document.body.scrollTop > 30 ||
+        document.documentElement.scrollTop > 30
+      ) {
+        setIsScrolled((isScrolled = true));
+        console.log(`isScrolled set to ${isScrolled}`);
+      } else {
+        setIsScrolled((isScrolled = false));
+        console.log(`isScrolled set to ${isScrolled}`);
+      }
+    });
+  }, []);
 
   return (
-    <HeaderWrapper>
+    <HeaderWrapper isScrolled={isScrolled}>
       <div className="navContainer">
         <div id="logo">
           <Link to="/" aria-label="to home page">
