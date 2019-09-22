@@ -1,9 +1,10 @@
-/**
- * Implement Gatsby's Browser APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/browser-apis/
- */
+import React from 'react';
+import ThemeContextWrapper from './src/utils/ThemeContext';
 
-// You can delete this file if you're not using it
+// provide theme state to entire app
+export const wrapRootElement = ({ element }) => (
+  <ThemeContextWrapper>{element}</ThemeContextWrapper>
+);
+
+// ? primsjs stuff
 require('prismjs/themes/prism-tomorrow.css');
-// require('prismjs/plugins/command-line/prism-command-line.css');
