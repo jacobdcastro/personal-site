@@ -65,9 +65,16 @@ const blogPost = props => {
       <BlogPostPageWrapper>
         <h1>{title}</h1>
         <h2>{subtitle}</h2>
-        <p>
+        <p className="published">
           Published: <Moment date={date} format="MMM DD, YYYY" />
         </p>
+        
+        {props.data.markdownRemark.timeToRead &&
+          (type === 'tutorial' ? (
+            <p>Approx. {props.data.markdownRemark.timeToRead + 5} minutes to complete</p>
+          ) : (
+            <p>{props.data.markdownRemark.timeToRead} minute read</p>
+          ))}
 
         <BlogAuthor />
 
@@ -101,6 +108,7 @@ export const BLOG_POST_QUERY = graphql`
       id
       html
       excerpt(pruneLength: 370)
+      timeToRead
       frontmatter {
         type
         title

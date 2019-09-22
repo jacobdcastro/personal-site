@@ -13,6 +13,9 @@ const BlogPostPageWrapper = styled.div`
     font-size: 1.7rem;
     margin: 10px 0;
   }
+  .published {
+    margin-bottom: 3px;
+  }
 
   .author {
     display: flex;
