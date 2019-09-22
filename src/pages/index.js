@@ -25,7 +25,7 @@ const Index = props => {
 
   const seo = {
     page: `index`,
-    title: 'Home',
+    title: '',
     description: `${miniBio}`,
     url: `https://jacobdcastro.com`,
     imgUrl:
