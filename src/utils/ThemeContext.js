@@ -12,7 +12,8 @@ class ThemeContextWrapper extends React.Component {
   constructor(props) {
     super(props);
 
-    // set initial theme based on time of day
+    // TODO set initial theme based on time of day
+    // ? bug in header background color on scroll when code isn't commented
     // this.setTheme = () => {
     //   const now = new Date();
     //   const time = now.getHours();
