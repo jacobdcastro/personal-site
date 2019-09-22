@@ -106,7 +106,7 @@ const Footer = ({ path }) => {
             const { img, url, title, alt } = m;
             return (
               <li key={i}>
-                <a href={url} target="_blank" aria-label={title}>
+                <a href={url} target="_blank" rel="noopener" aria-label={title}>
                   {title === 'styled-components' ? (
                     <Img
                       fluid={img}
