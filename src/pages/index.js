@@ -25,12 +25,10 @@ const Index = props => {
 
   const seo = {
     page: `index`,
-    title: '',
+    title: 'Home',
     description: `${miniBio}`,
     url: `https://jacobdcastro.com`,
-    imgUrl:
-      'https://beta.jacobdcastro.com/static/page-meta-img-ca7ff0a77ee741c7df36a680e89e6406.jpg',
-    // imgUrl: `${props.data.pageImg.publicURL}`,
+    imgUrl: `${props.data.pageImg.publicURL}`,
     breadcrumbs: [],
   };
 

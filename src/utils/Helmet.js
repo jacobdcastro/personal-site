@@ -68,7 +68,7 @@ const Head = ({ seo }) => {
       />
       <meta property="og:description" content={seo.description} />
       <meta property="og:url" content={seo.url} />
-      <meta property="og:image" content={`${seo.imgUrl}`} />
+      <meta property="og:image" content={`${url}${seo.imgUrl}`} />
       <meta
         property="og:type"
         content={
@@ -84,7 +84,7 @@ const Head = ({ seo }) => {
         content={`${seo.title && seo.title + ' | '}Jacob D. Castro`}
       />
       <meta property="twitter:description" content={seo.description} />
-      <meta property="twitter:image" content={seo.imgUrl} />
+      <meta property="twitter:image" content={`${url}${seo.imgUrl}`} />
       <meta property="twitter:site" content={handle} />
       <meta property="twitter:creator" content={handle} />
       <meta
