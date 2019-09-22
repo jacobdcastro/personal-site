@@ -33,8 +33,6 @@ const NotFound = props => {
     breadcrumbs: [],
   };
 
-  console.log(props);
-
   return (
     <Layout seo={seo}>
       <NotFoundWrapper>
