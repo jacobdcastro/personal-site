@@ -50,19 +50,25 @@ const IndexPageWrapper = styled.div`
     text-align: center;
     align-self: flex-end;
     transition: ${props => props.theme.transition};
-
-    svg {
+      
+    a {
       height: 50px;
-      width: auto;
-      margin: 0 0;
-      background-color: ${props => props.theme.bgColor};
-      transition: ${props => props.theme.transition};
-      .icon {
+      width: 50px;
+      
+      svg {
+        height: 50px;
+        width: auto;
+        margin: 0 0;
         background-color: ${props => props.theme.bgColor};
         transition: ${props => props.theme.transition};
-        fill: ${props => props.theme.textColor};
+        .icon {
+          background-color: ${props => props.theme.bgColor};
+          transition: ${props => props.theme.transition};
+          fill: ${props => props.theme.textColor};
+        }
       }
     }
+
   }
 
   #recentPublications {
