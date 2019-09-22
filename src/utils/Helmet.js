@@ -88,7 +88,7 @@ const Head = ({ seo }) => {
       <meta property="twitter:site" content={handle} />
       <meta property="twitter:creator" content={handle} />
       <meta
-        property="twitter:type"
+        property="twitter:card"
         content={
           seo.page === 'blogPost' || seo.page === 'tutorial'
             ? 'article'
