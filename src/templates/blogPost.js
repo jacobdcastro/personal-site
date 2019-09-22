@@ -2,6 +2,7 @@ import React from 'react';
 import Layout from './layout';
 import { Link, graphql } from 'gatsby';
 import Img from 'gatsby-image';
+import Moment from 'react-moment';
 import BlogAuthor from '../components/blog/BlogAuthor';
 import BlogPostPageWrapper from '../styles/blog/BlogPostStyles';
 import JDCLogo from '../images/svg/SignatureLogoSVG';
@@ -16,6 +17,7 @@ const blogPost = props => {
     type,
     imageTitle,
     imageAlt,
+    date,
   } = props.data.markdownRemark.frontmatter;
 
   // ? set SEO meta data depending on post type
@@ -62,9 +64,12 @@ const blogPost = props => {
     <Layout seo={seo} path={props.path} style={{ textAlign: 'left' }}>
       <BlogPostPageWrapper>
         <h1>{title}</h1>
-        <h4>{subtitle}</h4>
+        <h2>{subtitle}</h2>
+        <p>
+          Published: <Moment date={date} format="MMM DD, YYYY" />
+        </p>
 
-        {/* <BlogAuthor /> */}
+        <BlogAuthor />
 
         <Img
           style={{
