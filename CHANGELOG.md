@@ -22,6 +22,7 @@ Blog posts edits (typos, code snippets, content embeds, etc.) will be included i
 
 ### Changed
 
+- Fix "portrait" bug
 - Rewrite mini biography in third person
 - Title meta tag to include job description
 - Fixed typo in footer
