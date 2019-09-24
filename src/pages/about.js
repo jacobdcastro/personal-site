@@ -10,6 +10,8 @@ const About = props => {
     description: `${props.data.me.childMarkdownRemark.excerpt}`,
     url: `https://jacobdcastro.com/about`,
     imgUrl: `${props.data.pageImg.publicURL}`,
+    imgAlt:
+      'jdcastro logo, twitter, instagram, facebook, github icons with @jacobdcastro username',
     breadcrumbs: [
       {
         name: `About`,

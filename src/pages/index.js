@@ -29,6 +29,8 @@ const Index = props => {
     description: `${miniBio}`,
     url: `https://jacobdcastro.com`,
     imgUrl: `${props.data.pageImg.publicURL}`,
+    imgAlt:
+      'jdcastro logo, twitter, instagram, facebook, github icons with @jacobdcastro username',
     breadcrumbs: [],
   };
 
@@ -109,6 +111,7 @@ const Index = props => {
           <a
             href="#recentPublications"
             aria-label="scroll down to recent publications section"
+            style={{ height: '50px', width: '50px' }}
           >
             <Arrow />
           </a>

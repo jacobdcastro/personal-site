@@ -14,6 +14,8 @@ const Tutorials = props => {
     title: `Tutorials`,
     description: `I love learning things!! These are me restating what I've learned to you peeps, in hopes of solidifying my learning and lending a hand along the way.`,
     imgUrl: `${props.data.pageImg.publicURL}`,
+    imgAlt:
+      'jdcastro logo, twitter, instagram, facebook, github icons with @jacobdcastro username',
     breadcrumbs: [
       {
         name: `Tutorials`,

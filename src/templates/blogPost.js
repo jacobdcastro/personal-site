@@ -29,6 +29,7 @@ const blogPost = props => {
       description: `${props.data.markdownRemark.excerpt}`,
       url: `https://jacobdcastro.com/${slug}`,
       imgUrl: `${props.data.file.publicURL}`,
+      imgAlt: `${props.data.file.imageAlt}`,
       breadcrumbs: [
         {
           name: `Blog`,
@@ -46,7 +47,8 @@ const blogPost = props => {
       title: `${title}`,
       description: `${props.data.markdownRemark.excerpt}`,
       url: `https://jacobdcastro.com/${slug}`,
-      img: `${props.data.file.publicURL}`,
+      imgUrl: `${props.data.file.publicURL}`,
+      imgAlt: `${props.data.file.imageAlt}`,
       breadcrumbs: [
         {
           name: `Tutorials`,
@@ -68,10 +70,13 @@ const blogPost = props => {
         <p className="published">
           Published: <Moment date={date} format="MMM DD, YYYY" />
         </p>
-        
+
         {props.data.markdownRemark.timeToRead &&
           (type === 'tutorial' ? (
-            <p>Approx. {props.data.markdownRemark.timeToRead + 5} minutes to complete</p>
+            <p>
+              Approx. {props.data.markdownRemark.timeToRead + 5} minutes to
+              complete
+            </p>
           ) : (
             <p>{props.data.markdownRemark.timeToRead} minute read</p>
           ))}
