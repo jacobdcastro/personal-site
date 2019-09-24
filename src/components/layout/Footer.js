@@ -78,14 +78,8 @@ const Footer = ({ path }) => {
 
   return (
     <FooterWrapper>
-      {/* <EmailSubForm /> */}
-      <span>{`Follow me everywhere: ${handle}`}</span>
       <span>
-        Let's connect! Email me:{' '}
-        <a href="mailto:jdcastro.business@gmail.com">{email}</a>
-      </span>
-      <span>
-        See typo or want to contribute?{' '}
+        See a typo or want to contribute?{' '}
         <a
           class="twitter-share-button"
           href="https://twitter.com/intent/tweet?text=Hey,%20@jacobdcastro"
@@ -94,11 +88,27 @@ const Footer = ({ path }) => {
         >
           Tweet Me
         </a>{' '}
-        or submit a PR on{' '}
+        or submit a PR or issue on{' '}
         <a href="https://github.com/jacobdcastro/personal-site/" rel="noopener">
           the Gtihub repo
         </a>
         !
+      </span>
+
+      {/* <EmailSubForm /> */}
+
+      <span>{`Follow me everywhere: ${handle}`}</span>
+      <span>
+        Let's connect! Email me:{' '}
+        <a href="mailto:jdcastro.business@gmail.com">{email}</a>
+      </span>
+      <span>
+        <a
+          href="https://github.com/jacobdcastro/personal-site/releases"
+          rel="noopener"
+        >
+          v2.0.1
+        </a>
       </span>
       <div className="stackIcons">
         <h4>This website built with:</h4>
