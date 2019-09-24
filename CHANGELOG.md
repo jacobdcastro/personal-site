@@ -2,6 +2,7 @@
 
 All notable changes will be documented right here.
 _Commits featuring only new blog posts will not be documented and will not affect verion number._
+Blog posts edits (typos, code snippets, content embeds, etc.) will be included in patch releases.
 
 ## [Unreleased]
 
@@ -9,6 +10,21 @@ _Commits featuring only new blog posts will not be documented and will not affec
 - Netlify functions to use with Mailchimp API.
 - Blog post drafts
 - "Talks" page featuring public speaking gigs
+
+## [2.0.1] - 2019-09-23
+
+### Added
+
+- Image alt data in SEO objects for each page
+- Twitter card meta data
+- Person schema.org markup items
+- Version of site with link to releases page in footer
+
+### Changed
+
+- Rewrite mini biography in third person
+- Title meta tag to include job description
+- Fixed typo in footer
 
 ## [2.0.0] - 2019-09-22
 
