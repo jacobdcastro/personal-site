@@ -74,7 +74,6 @@ const Footer = ({ path }) => {
       alt: 'netlify logo',
     },
   ];
-  console.log(path);
 
   return (
     <FooterWrapper>

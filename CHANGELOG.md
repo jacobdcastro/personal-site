@@ -27,6 +27,10 @@ Blog posts edits (typos, code snippets, content embeds, etc.) will be included i
 - Title meta tag to include job description
 - Fixed typo in footer
 
+### Removed
+
+- All console.log() from main build files
+
 ## [2.0.0] - 2019-09-22
 
 ### Added
