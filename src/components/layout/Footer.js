@@ -102,14 +102,6 @@ const Footer = ({ path }) => {
         Let's connect! Email me:{' '}
         <a href="mailto:jdcastro.business@gmail.com">{email}</a>
       </span>
-      <span>
-        <a
-          href="https://github.com/jacobdcastro/personal-site/releases"
-          rel="noopener"
-        >
-          v2.0.1
-        </a>
-      </span>
       <div className="stackIcons">
         <h4>This website built with:</h4>
         <ul>
@@ -134,6 +126,12 @@ const Footer = ({ path }) => {
           })}
         </ul>
       </div>
+      <a
+        href="https://github.com/jacobdcastro/personal-site/releases"
+        rel="noopener"
+      >
+        v2.0.1
+      </a>
       <a href={`${url}/sitemap.xml`}>Sitemap</a>
       <span>&copy;2019 - JDCastro Digital</span>
     </FooterWrapper>
