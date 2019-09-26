@@ -11,6 +11,16 @@ Blog posts edits (typos, code snippets, content embeds, etc.) will be included i
 - Blog post drafts
 - "Talks" page featuring public speaking gigs
 
+## [2.0.2] - 2019-09-26
+
+### Added
+
+- Prettier config file
+
+### Changed
+
+- Format all .md blog posts
+
 ## [2.0.1] - 2019-09-23
 
 ### Added
