@@ -1,21 +1,21 @@
 ---
-slug: 'using-netlify-to-launch-my-blog'
-title: 'Using Netlify to Launch My Blog'
-subtitle: 'I found the best tool of 2018, hands down.'
-image: 'jason-leung-479251-unsplash.jpg'
-imageTitle: 'Confetti Falling'
-imageAlt: 'Colorful confetti falling with bright background'
-date: '2019-01-05T00:00:00-07:00'
+slug: "using-netlify-to-launch-my-blog"
+title: "Using Netlify to Launch My Blog"
+subtitle: "I found the best tool of 2018, hands down."
+image: "jason-leung-479251-unsplash.jpg"
+imageTitle: "Confetti Falling"
+imageAlt: "Colorful confetti falling with bright background"
+date: "2019-01-05T00:00:00-07:00"
 tags:
-  - 'deployment'
-  - 'netlify'
-  - 'website'
-type: 'blogPost'
+  - "deployment"
+  - "netlify"
+  - "website"
+type: "blogPost"
 ---
 
 This year, there were a few breakout technologies that shook up the web development world a little bit. One of which was Gatsby.js. I wrote a blog post about my (incredible) experience using it on this blog. Check it out here!
 
-Another breakout technology company was none other than Netlify. I read a [tweet](https://twitter.com/chancethedev/status/1069992618543775747 'Netlify Tweet') today by @chancethedev that read "What is your favorite dev tool in 2018 and why is it @Netlify?"
+Another breakout technology company was none other than Netlify. I read a [tweet](https://twitter.com/chancethedev/status/1069992618543775747 "Netlify Tweet") today by @chancethedev that read "What is your favorite dev tool in 2018 and why is it @Netlify?"
 
 To be honest, that couldn't be truer. As a new developer of less than two years, Netlify improved my development experience ten fold. Simply using it helped me to understand how websites are built and pushed live to the web. And I found it on a little podcast called Syntax, hosted by Scott Tolinski and Wes Bos. I guess sponsorships do work. Especially when you make a killer product/service like Netlify.
 

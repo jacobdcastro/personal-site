@@ -1,22 +1,22 @@
 ---
-slug: 'time-to-change-up-my-blog'
-title: 'Time to Change Up My Blog'
+slug: "time-to-change-up-my-blog"
+title: "Time to Change Up My Blog"
 subtitle: "The first stack was great to learn, but I've realized something."
-image: 'kaleidico-26MJGnCM0Wc-unsplash.jpg'
-imageTitle: 'Whiteboard'
-imageAlt: 'Two designers writing on whiteboard. Photo by Kaleidico on Unsplash'
-date: '2019-08-14T00:00:00-07:00'
+image: "kaleidico-26MJGnCM0Wc-unsplash.jpg"
+imageTitle: "Whiteboard"
+imageAlt: "Two designers writing on whiteboard. Photo by Kaleidico on Unsplash"
+date: "2019-08-14T00:00:00-07:00"
 tags:
-  - 'gatsby'
-  - 'react'
-  - 'ui'
-  - 'design'
-type: 'blogPost'
+  - "gatsby"
+  - "react"
+  - "ui"
+  - "design"
+type: "blogPost"
 ---
 
 ## Small Sites Don't Need Much
 
-When I first made my website, I was hearing a lot about various headless content management systems (CMS's) such as [Netlify CMS](https://www.netlifycms.org/ 'Netlify CMS'), [GraphCMS](https://graphcms.com/ 'Graph CMS'), and even headless Wordpress. The CMS I ended up choosing was [Contenful](https://contentful.com 'Contentful').
+When I first made my website, I was hearing a lot about various headless content management systems (CMS's) such as [Netlify CMS](https://www.netlifycms.org/ "Netlify CMS"), [GraphCMS](https://graphcms.com/ "Graph CMS"), and even headless Wordpress. The CMS I ended up choosing was [Contenful](https://contentful.com "Contentful").
 
 I actually really love Contentful to this day. It's extremely versatile, reliable, and easy to use. I couldn't recommend it more for large projects. In fact, a few of my clients decided on Contentful for their CMS. It's not hard to sell a good product.\
 
@@ -40,7 +40,7 @@ Other people are often better at catching bugs in your code than you are. I writ
 
 Plus, I'd love for anyone who has ideas and would like to contribute, to do so. If my blog grows, it would also be cool to feature guest writers via pull requests.
 
-So if _you_ have an idea or blog post, shoot me an email (jdcastro.business@gmail.com) or just check out the [repo](https://github.com/jacobdcastro/personal-site 'Website Github Repository').
+So if _you_ have an idea or blog post, shoot me an email (jdcastro.business@gmail.com) or just check out the [repo](https://github.com/jacobdcastro/personal-site "Website Github Repository").
 
 ### 3. MDX is really cool.
 
@@ -84,7 +84,7 @@ It's so cool to observe my own progress. Now time to enjoy the adventure of pers
 
 If you'd like to follow my progress, stay tuned to this blog! I'll share new posts on my social media. You can follow me anywhere at @jacobdcastro. Or click the icons below for your preferred social network.
 
-Please check out the [Github repo](https://github.com/jacobdcastro/personal-site 'Website Repository') too! I'm super open to feedback and pull requests are always welcome!
+Please check out the [Github repo](https://github.com/jacobdcastro/personal-site "Website Repository") too! I'm super open to feedback and pull requests are always welcome!
 
 Thanks so much for reading this update! I'm excited to start writing and posting more here. See you soon for another progress update on 2.0!
 

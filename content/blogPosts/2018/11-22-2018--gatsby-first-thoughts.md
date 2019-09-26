@@ -1,15 +1,15 @@
 ---
-slug: 'gatsby-first-thoughts'
-title: 'Gatsby First Thoughts'
+slug: "gatsby-first-thoughts"
+title: "Gatsby First Thoughts"
 subtitle: "I built my website in Gatsby and I'm in love"
-image: 'sandro-katalina-457230-unsplash.jpg'
-imageTitle: 'Purple Triangle Neon Lights'
-imageAlt: 'Purple neon lights in dark, triangle hallway'
-date: '2018-11-22T00:00:00-07:00'
+image: "sandro-katalina-457230-unsplash.jpg"
+imageTitle: "Purple Triangle Neon Lights"
+imageAlt: "Purple neon lights in dark, triangle hallway"
+date: "2018-11-22T00:00:00-07:00"
 tags:
-  - 'life'
-  - 'website'
-type: 'blogPost'
+  - "life"
+  - "website"
+type: "blogPost"
 ---
 
 In the last 3-4 months, I've dedicated myself to learning React. I've been on Javascript for the last year or so and decided it was time to learn a framework/library to expand my Javascript skills. Javascript always excited me. And hearing a lot about frameworks such as Angular, React, Vue, and, formerly, Ember, made me super curious about what they were and why I would need to use one.
@@ -49,12 +49,12 @@ I started by making the blog home page and that was pretty simple and straight f
 I started by following along with a tutorial on Youtube explaining how to use Contentful with Gatsby. After that tutorial, I really began to understand Gatsby. This is what I finished in my `gatsby-node.js` file:
 
 ```javascript
-const path = require('path');
+const path = require("path");
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
   return new Promise((resolve, reject) => {
-    const blogPostTemplate = path.resolve('src/templates/BlogPost.js');
+    const blogPostTemplate = path.resolve("src/templates/BlogPost.js");
     resolve(
       graphql(`
         {

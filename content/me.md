@@ -1,20 +1,20 @@
 ---
-lastUpdated: '2019-08-13'
-title: 'Biography'
-name: 'Jacob D. Castro'
-email: 'jdcastro.business@gmail.com'
-phone: '+1 (805) 878-5378'
-url: 'https://jacobdcastro.com'
-miniBio: 'A full-stack web developer. Works with technologies including HTML + CSS, Javascipt, React, GraphQL, and Node.js.'
-portrait: ''
-handle: '@jacobdcastro'
-username: 'jacobdcastro'
-twitterURL: 'https://twitter.com/jacobdcastro'
-instagramURL: 'https://instagram.com/jacobdcastro'
-githubURL: 'https://github.com/jacobdcastro'
-facebookURL: 'https://www.facebook.com/jacobdcastro/'
-snapchat: '@jacobd.castro'
-linkedinURL: 'https://www.linkedin.com/in/jacob-c-5b6257a4/'
+lastUpdated: "2019-08-13"
+title: "Biography"
+name: "Jacob D. Castro"
+email: "jdcastro.business@gmail.com"
+phone: "+1 (805) 878-5378"
+url: "https://jacobdcastro.com"
+miniBio: "A full-stack web developer. Works with technologies including HTML + CSS, Javascipt, React, GraphQL, and Node.js."
+portrait: ""
+handle: "@jacobdcastro"
+username: "jacobdcastro"
+twitterURL: "https://twitter.com/jacobdcastro"
+instagramURL: "https://instagram.com/jacobdcastro"
+githubURL: "https://github.com/jacobdcastro"
+facebookURL: "https://www.facebook.com/jacobdcastro/"
+snapchat: "@jacobd.castro"
+linkedinURL: "https://www.linkedin.com/in/jacob-c-5b6257a4/"
 ---
 
 # About Me
