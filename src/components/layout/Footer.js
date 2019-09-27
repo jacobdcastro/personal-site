@@ -89,7 +89,7 @@ const Footer = ({ path }) => {
         </a>{' '}
         or submit a PR or issue on{' '}
         <a href="https://github.com/jacobdcastro/personal-site/" rel="noopener">
-          the Gtihub repo
+          the Github repo
         </a>
         !
       </span>
