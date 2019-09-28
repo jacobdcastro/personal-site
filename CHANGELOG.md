@@ -16,6 +16,7 @@ Blog posts edits (typos, code snippets, content embeds, etc.) will be included i
 ### Added
 
 - Prettier config file
+- eslint-config-prettier package
 
 ### Changed
 
