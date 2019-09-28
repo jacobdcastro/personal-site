@@ -21,6 +21,7 @@ Blog posts edits (typos, code snippets, content embeds, etc.) will be included i
 
 - Format all .md blog posts
 - Eslint config adjustments
+- "blogPosts" folder in /static renamed to "images"
 
 ## [2.0.1] - 2019-09-23
 
