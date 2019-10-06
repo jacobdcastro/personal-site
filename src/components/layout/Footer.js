@@ -79,27 +79,24 @@ const Footer = ({ path }) => {
     <FooterWrapper>
       <span>
         See a typo or want to contribute?{' '}
-        <a
-          class="twitter-share-button"
-          href="https://twitter.com/intent/tweet?text=Hey,%20@jacobdcastro"
-          target="_blank"
-          rel="noopener"
-        >
-          Tweet Me
-        </a>{' '}
-        or submit a PR or issue on{' '}
+        <a href="mailto:jdcastro.business@gmail.com">Email me</a> or submit a PR
+        or issue on{' '}
         <a href="https://github.com/jacobdcastro/personal-site/" rel="noopener">
-          the Gtihub repo
+          the Github repo
         </a>
         !
       </span>
 
       {/* <EmailSubForm /> */}
 
-      <span>{`Follow me everywhere: ${handle}`}</span>
       <span>
-        Let's connect! Email me:{' '}
-        <a href="mailto:jdcastro.business@gmail.com">{email}</a>
+        Let's connect! <br />
+        Email me: <a href="mailto:jdcastro.business@gmail.com">{email}</a>
+        <br />
+        or{' '}
+        <span>
+          Follow me everywhere: <strong>{handle}</strong>
+        </span>
       </span>
       <div className="stackIcons">
         <h4>This website built with:</h4>
