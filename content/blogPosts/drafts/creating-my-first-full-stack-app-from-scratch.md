@@ -50,7 +50,7 @@ So I installed all of the initial NPM packages I knew I'd needed to build the se
 
 I began creating the document models for MongoDB and the structure for which the game data would be stored. It included the main 'Game' document, with 'Player' and 'Round' subdocuments. Those had basic game data such the game title and password, the arrays of rounds and players, player data like name and round scores, and lots more (details to this will be covered in-depth in a future blog post).
 
-I knew I'd probably be adding more data as I began to develop this app, but once the models were at a good starting point, I began writing all the API endpoints for functions I knew the app would need. Such as creating a game, joining a game, starting a new round, submitting a score, etc.
+I knew I'd probably be adding more data as I began to develop this app, but once the models were at a good starting point, I began writing all the API endpoints for functions I knew the app would need. Such as creating a game, joining a game, starting a new round, submitting a player's score, etc.
 
 I was so hopeful, excited, and ready to step foot into some new concepts!
 
@@ -64,4 +64,10 @@ I know that's a good thing. But at first, I was so overwhelmed. I realized I had
 
 Despite feeling absolutely overwhelmed by all of these unexpected issues, I was having weird feelings... Conflicting feelings... One could describe them as.... Exhilirating. Adrenaline-inducing. Possibly even... **Fun**.
 
-<!-- I enjoyed every second of the setbacks. I was determined beyond explanation. I did what I had to do. I soon saw broken lines of code finally work, MongoDB -->
+I honestly enjoyed every second of the setbacks. I was determined beyond explanation. I did what I had to do. I soon saw broken lines of code finally work, and MongoDB was being populated with proper data! It was finally working out well, even though I had to rewrite a lot of code.
+
+By far the biggest obstacle was trying to clean up a lack of planning the server. I wouldn't have even known how to "plan" the development of this server before just... doing it. But I got over it. And it was finally time to whip up the frontend!
+
+In the next blog post, I'll tell my story of developing the React app and some of the hardships I faced there.
+
+Feel free to follow me on Twitter ([@jacobdcastro](https://twitter.com/jacobdcastro/)) and look out for the announcement of the next blog posts!
