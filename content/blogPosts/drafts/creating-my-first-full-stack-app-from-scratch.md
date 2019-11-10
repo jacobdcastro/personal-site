@@ -2,10 +2,10 @@
 slug: "creating-my-first-full-stack-app-from-scratch-part-1"
 title: "Creating My First Full Stack App From Scratch (Part 1)"
 subtitle: "Moving from primarily-frontend to building an API alongside a single-page React app opened up my world."
-# image: "prateek-katyal-xv7-GlvBLFw-unsplash.jpg"
-# imageTitle: "Getting My Deactivated Instagram Account Back"
-# imageAlt: "Instagram 'likes' notification with 0 new likes"
-date: "2019-11-01T00:00:00-07:00"
+image: "gamenightscore-screenshot.png"
+imageTitle: "GamenightScore Lobby"
+imageAlt: "screenshot of gamenightscore app with player's scores"
+date: "2019-11-09T00:00:00-07:00"
 tags:
   - "react"
   - "nodejs"
@@ -13,7 +13,7 @@ tags:
   - "mongodb"
   - "fullstack"
   - "mern"
-# type: "blogPost"
+type: "blogPost"
 ---
 
 Early on in my web development journey, I decided I wanted to get into full-stack development. I didn't really know any ways of practicing full-stack development though. It's easy to replicate a static site and practice frontend dev. But as soon as I felt ready to start learning backend, I felt a little lost on where to begin.So I pretty much stuck to frontend dev with a very (very) basic understanding of Nodejs/Express thanks to some Treehouse courses.
@@ -68,6 +68,8 @@ I honestly enjoyed every second of the setbacks. I was determined beyond explana
 
 By far the biggest obstacle was trying to clean up a lack of planning the server. I wouldn't have even known how to "plan" the development of this server before just... doing it. But I got over it. And it was finally time to whip up the frontend!
 
-In the next blog post, I'll tell my story of developing the React app and some of the hardships I faced there.
+Feel free to check out the live project at this [randomly generated Heroku URL](https://howling-nightmare-39429.herokuapp.com/) or peek into the [repo on Github](https://github.com/jacobdcastro/gamenightscore)!
 
-Feel free to follow me on Twitter ([@jacobdcastro](https://twitter.com/jacobdcastro/)) and look out for the announcement of the next blog posts!
+In the next blog post, I'll tell my story of developing the React app and some of the hardships I faced there. Follow me on Twitter ([@jacobdcastro](https://twitter.com/jacobdcastro/)) and look out for the announcement of the next blog posts! In the next two parts to this, I'll be talking about my journey on the frontend, and then a more in-depth look into the code base and how the app works technically.
+
+Thanks for reading!!!
