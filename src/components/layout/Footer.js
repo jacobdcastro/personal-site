@@ -10,7 +10,7 @@ import mdImg from '../../images/tech-icons/markdown.svg';
 import netlifyImg from '../../images/tech-icons/netlify.svg';
 import reactImg from '../../images/tech-icons/react.svg';
 
-const Footer = ({ path }) => {
+const Footer = () => {
   const data = useStaticQuery(graphql`
     query {
       me: file(relativePath: { eq: "me.md" }) {
@@ -126,7 +126,7 @@ const Footer = ({ path }) => {
         href="https://github.com/jacobdcastro/personal-site/releases"
         rel="noopener"
       >
-        v2.0.2
+        v2.1.0
       </a>
       <a href={`${url}/sitemap.xml`}>Sitemap</a>
       <span>&copy;2019 - JDCastro Digital</span>
