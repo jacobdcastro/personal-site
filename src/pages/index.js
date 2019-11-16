@@ -40,7 +40,7 @@ const Index = props => {
         <div className="indexIntro">
           <h1>
             I'm Jacob Daniel Castro,
-            <br />a fullstack Javascript
+            <br />a fullstack JavaScript
             <br /> developer.
           </h1>
           <ul className="introSocialLinks">
