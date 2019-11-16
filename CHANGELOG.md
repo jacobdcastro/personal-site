@@ -11,6 +11,34 @@ Blog posts edits (typos, code snippets, content embeds, etc.) will be included i
 - Blog post drafts
 - "Talks" page featuring public speaking gigs
 
+## [2.1.0] - 2019-11-15
+
+### Changed
+
+- Updated all outdated packages
+  - gatsby-plugin-lodash@3.1.15
+  - gatsby-plugin-sitemap@2.2.21
+  - gatsby-plugin-react-helmet@3.1.15
+  - gatsby-plugin-eslint@2.0.8
+  - gatsby-plugin-google-analytics@2.1.27
+  - gatsby-image@2.2.33
+  - eslint-config-prettier@6.5.0
+  - gatsby-plugin-typography@2.3.17
+  - gatsby-remark-prismjs@3.3.23
+  - gatsby-plugin-sharp@2.3.0
+  - gatsby-plugin-manifest@2.2.28
+  - gatsby-transformer-sharp@2.3.5
+  - gatsby-plugin-styled-components@3.1.13
+  - gatsby-transformer-remark@2.6.35
+  - prettier@1.19.1
+  - gatsby@2.17.15
+  - react@16.12.0
+  - gatsby-source-filesystem@2.1.37
+  - webpack-dev-server@3.9.0
+  - react-moment@0.9.6
+  - react-dom@16.12.0
+  - styled-components@4.4.1
+
 ## [2.0.2] - 2019-09-26
 
 ### Added
