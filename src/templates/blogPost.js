@@ -1,6 +1,7 @@
 import React from 'react';
 import Layout from './layout';
-import { Link, graphql } from 'gatsby';
+import { graphql } from 'gatsby';
+import PropTypes from 'prop-types';
 import Img from 'gatsby-image';
 import Moment from 'react-moment';
 import BlogAuthor from '../components/blog/BlogAuthor';
@@ -9,7 +10,7 @@ import JDCLogo from '../images/svg/SignatureLogoSVG';
 
 // TODO add next and previous post links
 
-const blogPost = props => {
+const blogPost = ({ path, data }) => {
   const {
     title,
     subtitle,
@@ -18,7 +19,7 @@ const blogPost = props => {
     imageTitle,
     imageAlt,
     date,
-  } = props.data.markdownRemark.frontmatter;
+  } = data.markdownRemark.frontmatter;
 
   // ? set SEO meta data depending on post type
   let seo;
@@ -26,10 +27,10 @@ const blogPost = props => {
     seo = {
       page: `${type}`,
       title: `${title}`,
-      description: `${props.data.markdownRemark.excerpt}`,
+      description: `${data.markdownRemark.excerpt}`,
       url: `https://jacobdcastro.com/${slug}`,
-      imgUrl: `${props.data.file.publicURL}`,
-      imgAlt: `${props.data.file.imageAlt}`,
+      imgUrl: `${data.file.publicURL}`,
+      imgAlt: `${data.file.imageAlt}`,
       breadcrumbs: [
         {
           name: `Blog`,
@@ -45,10 +46,10 @@ const blogPost = props => {
     seo = {
       page: `${type}`,
       title: `${title}`,
-      description: `${props.data.markdownRemark.excerpt}`,
+      description: `${data.markdownRemark.excerpt}`,
       url: `https://jacobdcastro.com/${slug}`,
-      imgUrl: `${props.data.file.publicURL}`,
-      imgAlt: `${props.data.file.imageAlt}`,
+      imgUrl: `${data.file.publicURL}`,
+      imgAlt: `${data.file.imageAlt}`,
       breadcrumbs: [
         {
           name: `Tutorials`,
@@ -63,7 +64,7 @@ const blogPost = props => {
   }
 
   return (
-    <Layout seo={seo} path={props.path} style={{ textAlign: 'left' }}>
+    <Layout seo={seo} path={path} style={{ textAlign: 'left' }}>
       <BlogPostPageWrapper>
         <h1>{title}</h1>
         <h2>{subtitle}</h2>
@@ -71,14 +72,13 @@ const blogPost = props => {
           Published: <Moment date={date} format="MMM DD, YYYY" />
         </p>
 
-        {props.data.markdownRemark.timeToRead &&
+        {data.markdownRemark.timeToRead &&
           (type === 'tutorial' ? (
             <p>
-              Approx. {props.data.markdownRemark.timeToRead + 5} minutes to
-              complete
+              Approx. {data.markdownRemark.timeToRead + 5} minutes to complete
             </p>
           ) : (
-            <p>{props.data.markdownRemark.timeToRead} minute read</p>
+            <p>{data.markdownRemark.timeToRead} minute read</p>
           ))}
 
         <BlogAuthor />
@@ -87,13 +87,13 @@ const blogPost = props => {
           style={{
             marginBottom: '25px',
           }}
-          fluid={props.data.file.childImageSharp.fluid}
+          fluid={data.file.childImageSharp.fluid}
           alt={imageAlt}
           title={imageTitle}
         />
 
         <article
-          dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }}
+          dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
         />
 
         <div className="closing">
@@ -103,6 +103,11 @@ const blogPost = props => {
       </BlogPostPageWrapper>
     </Layout>
   );
+};
+
+blogPost.propTypes = {
+  path: PropTypes.string.isRequired,
+  data: PropTypes.object.isRequired,
 };
 
 export default blogPost;

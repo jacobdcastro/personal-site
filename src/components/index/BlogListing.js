@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import PropTypes from 'prop-types';
 import Moment from 'react-moment';
 import BlogListWrapper from '../../styles/index/BlogListingStyles';
 import RightArrow from '../../images/svg/RightArrowSVG';
@@ -50,6 +51,10 @@ const BlogListing = ({ data }) => {
       </Link>
     </BlogListWrapper>
   );
+};
+
+BlogListing.propTypes = {
+  data: PropTypes.object.isRequired,
 };
 
 export default BlogListing;

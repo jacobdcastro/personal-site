@@ -23,7 +23,7 @@ const NotFoundWrapper = styled.div`
   }
 `;
 
-const NotFound = props => {
+const NotFound = () => {
   const seo = {
     page: `404`,
     title: 'Page Not Found',

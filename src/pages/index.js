@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
+import PropTypes from 'prop-types';
 import Layout from '../templates/layout';
 import { IndexPageWrapper } from '../styles/index/IndexStyles';
 import BlogListing from '../components/index/BlogListing';
@@ -12,7 +13,7 @@ import Snapchat from '../images/svg/SnapchatSVG';
 import Github from '../images/svg/GithubSVG';
 import Arrow from '../images/svg/DownArrowSVG';
 
-const Index = props => {
+const Index = ({ path, data }) => {
   const {
     miniBio,
     twitterURL,
@@ -21,21 +22,21 @@ const Index = props => {
     facebookURL, // soon to be launched
     snapchat, // I may use snap?
     linkedinURL,
-  } = props.data.me.childMarkdownRemark.frontmatter;
+  } = data.me.childMarkdownRemark.frontmatter;
 
   const seo = {
     page: `index`,
     title: '',
     description: `${miniBio}`,
     url: `https://jacobdcastro.com`,
-    imgUrl: `${props.data.pageImg.publicURL}`,
+    imgUrl: `${data.pageImg.publicURL}`,
     imgAlt:
       'jdcastro logo, twitter, instagram, facebook, github icons with @jacobdcastro username',
     breadcrumbs: [],
   };
 
   return (
-    <Layout seo={seo} path={props.path}>
+    <Layout seo={seo} path={path}>
       <IndexPageWrapper>
         <div className="indexIntro">
           <h1>
@@ -121,13 +122,18 @@ const Index = props => {
         <div id="recentPublications">
           <h1>All Recent Publications</h1>
 
-          {props.data.allMarkdownRemark.edges.map(({ node }) => (
+          {data.allMarkdownRemark.edges.map(({ node }) => (
             <BlogListing key={node.id} data={node} />
           ))}
         </div>
       </IndexPageWrapper>
     </Layout>
   );
+};
+
+Index.propTypes = {
+  path: PropTypes.string.isRequired,
+  data: PropTypes.object.isRequired,
 };
 
 export default Index;

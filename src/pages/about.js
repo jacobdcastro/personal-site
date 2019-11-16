@@ -1,15 +1,16 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
+import PropTypes from 'prop-types';
 import Layout from '../templates/layout';
 import { AboutPageWrapper } from '../styles/about/AboutStyles';
 
-const About = props => {
+const About = ({ path, data }) => {
   const seo = {
     page: `about`,
     title: 'About Me',
-    description: `${props.data.me.childMarkdownRemark.excerpt}`,
+    description: `${data.me.childMarkdownRemark.excerpt}`,
     url: `https://jacobdcastro.com/about`,
-    imgUrl: `${props.data.pageImg.publicURL}`,
+    imgUrl: `${data.pageImg.publicURL}`,
     imgAlt:
       'jdcastro logo, twitter, instagram, facebook, github icons with @jacobdcastro username',
     breadcrumbs: [
@@ -21,14 +22,19 @@ const About = props => {
   };
 
   return (
-    <Layout seo={seo} path={props.path}>
+    <Layout seo={seo} path={path}>
       <AboutPageWrapper
         dangerouslySetInnerHTML={{
-          __html: props.data.me.childMarkdownRemark.html,
+          __html: data.me.childMarkdownRemark.html,
         }}
       />
     </Layout>
   );
+};
+
+About.propTypes = {
+  path: PropTypes.string.isRequired,
+  data: PropTypes.object.isRequired,
 };
 
 export default About;

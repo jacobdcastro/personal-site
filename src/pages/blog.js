@@ -1,5 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
+import PropTypes from 'prop-types';
 // import Moment from 'react-moment';
 import Layout from '../templates/layout';
 import BlogPageWrapper from '../styles/blog/BlogPageStyles';
@@ -8,13 +9,13 @@ import BlogListing from '../components/index/BlogListing';
 // TODO add `time to complete`
 // <h4>{timeToRead + 10} minutes to complete</h4>
 
-const Tutorials = props => {
+const Blog = ({ path, data }) => {
   const seo = {
     page: `blog`,
     title: `Blog`,
     description: `I like writing about things. Life updates, random epiphanies, cool lessons, etc. Find 'em here!`,
     url: `https://jacobdcastro.com/blog`,
-    imgUrl: `${props.data.pageImg.publicURL}`,
+    imgUrl: `${data.pageImg.publicURL}`,
     imgAlt:
       'jdcastro logo, twitter, instagram, facebook, github icons with @jacobdcastro username',
     breadcrumbs: [
@@ -26,11 +27,11 @@ const Tutorials = props => {
   };
 
   return (
-    <Layout seo={seo} path={props.path}>
+    <Layout seo={seo} path={path}>
       <BlogPageWrapper>
         <h1>Blog Posts</h1>
         <div className="blogPostList">
-          {props.data.allMarkdownRemark.edges.map(({ node }) => (
+          {data.allMarkdownRemark.edges.map(({ node }) => (
             <BlogListing key={node.id} data={node} />
           ))}
         </div>
@@ -39,7 +40,12 @@ const Tutorials = props => {
   );
 };
 
-export default Tutorials;
+Blog.propTypes = {
+  path: PropTypes.string.isRequired,
+  data: PropTypes.object.isRequired,
+};
+
+export default Blog;
 
 export const BLOG_PAGE_QUERY = graphql`
   query BLOG_PAGE_QUERY {
