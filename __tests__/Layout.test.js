@@ -4,11 +4,15 @@ import Layout from '../src/templates/layout';
 import ThemeToggleBtn from '../src/components/layout/ThemeToggleBtn';
 
 test('theme toggle button works', () => {
-  const { debug } = render(<Layout />);
+  const layout = render(<Layout />);
+
+  console.log(layout);
 
   debug();
 
   const button = getByTestId('theme-toggle-btn');
+
+  fireEvent.click(button);
 
   console.log(button);
 });
