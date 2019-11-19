@@ -18,6 +18,6 @@
     "linebreak-style": ["error", "unix"],
     // "quotes": ["error", "single"],
     "semi": ["error", "always"],
-    "styled-components/rule-name": 1
+    "styled-components/rule-name": 0
   }
 }
