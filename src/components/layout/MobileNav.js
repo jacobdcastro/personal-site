@@ -29,6 +29,11 @@ const MobileNav = ({ mobileNavIsOpen, action }) => {
                   About Me
                 </Link>
               </li>
+              <li>
+                <Link activeClassName="activePage" to="/contact">
+                  Contact
+                </Link>
+              </li>
             </ul>
           </nav>
         </div>

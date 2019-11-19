@@ -50,7 +50,7 @@ const HeaderWrapper = styled.header`
       }
     }
     nav {
-      width: 40%;
+      width: 55%;
       margin-top: 2px;
       ul {
         display: flex;
