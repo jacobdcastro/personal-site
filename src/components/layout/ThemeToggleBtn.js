@@ -10,6 +10,7 @@ const ThemeToggleBtn = () => {
       id="themeToggleBtn"
       onClick={themeData.toggleTheme}
       aria-label="toggle dark and light theme"
+      data-testid="theme-toggle-btn"
     >
       <img src={lightbulbIcon} alt="lightbulb icon" />
     </button>

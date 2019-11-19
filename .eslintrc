@@ -1,5 +1,5 @@
 {
-  "extends": ["standard", "prettier"],
+  "extends": ["prettier"],
   "env": {
     "browser": true,
     "es6": true,
@@ -16,8 +16,8 @@
   "rules": {
     "indent": ["error", 2],
     "linebreak-style": ["error", "unix"],
-    "quotes": ["error", "single"],
+    // "quotes": ["error", "single"],
     "semi": ["error", "always"],
-    "styled-components/rule-name": 2
+    "styled-components/rule-name": 1
   }
 }
