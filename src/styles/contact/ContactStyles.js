@@ -11,7 +11,7 @@ const ContactWrapper = styled.div`
     font-size: 2.7rem;
   }
 
-  #contactForm {
+  #contact {
     width: 80vw;
     max-width: 700px;
     margin: auto;
@@ -34,7 +34,7 @@ const ContactWrapper = styled.div`
 
       input,
       textarea {
-        font-family: 'Montserrat', 'Helvetica', sans-serif;
+        font-family: 'Montserrat', sans-serif;
         padding: 5px 10px;
         border: none;
         border-bottom: 3px solid ${props => props.theme.textColor};
