@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import encode from '../../utils/encode';
+import axios from 'axios';
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -18,11 +19,17 @@ const ContactForm = () => {
     e.preventDefault();
 
     try {
-      await fetch('/', {
+      const res = await axios({
+        url: '/',
+        baseURL: 'https://jacobdcastro.com/',
         method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: encode({ 'form-name': 'contactForm', ...formData }),
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+          'Access-Control-Allow-Origin': '*',
+        },
+        data: encode({ 'form-name': 'contactForm', ...formData }),
       });
+      console.log(res);
       await setFormState({ submitting: false });
       setFormState({ success: true });
     } catch (error) {
