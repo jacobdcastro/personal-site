@@ -8,8 +8,37 @@ Blog posts edits (typos, code snippets, content embeds, etc.) will be included i
 
 - Email newsletter subscription form
 - Netlify functions to use with Mailchimp API.
-- Blog post drafts
+- Blog post drafts (content/blogPosts/drafts)
 - "Talks" page featuring public speaking gigs
+- Netlify functions for contact form
+- "Work" page for portfolio
+- Jest testing w/ react-testing-library
+
+## [2.2.1] - 2019-11-20
+
+### Changed
+
+- Fixed site url in Netlify environment check (gatsby-config.js)
+
+## [2.2.0] - 2019-11-19
+
+### Added
+
+- Contact page ([jacobdcastro.com/contact](https://jacobdcastro.com/contact))
+- Contact form success page ([jacobdcastro.com/form-success](https://jacobdcastro.com/form-success))
+- Encode function for encoding axios requests (src/utils/encode.js)
+- Prop type checking on all components w/ PropTypes
+- Netlify environment checking, preventing crawling on branch/preview deploys (gatsby-config.js)
+- Some 'TODO' comments
+
+### Changed
+
+- Styled-components rule name (eslint)
+- Disallow crawling on contact form success page
+
+### Removed
+
+- Unused code and files from v1
 
 ## [2.1.0] - 2019-11-15
 
