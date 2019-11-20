@@ -1,4 +1,4 @@
-My new website just released! It's officially on v2.0.
+My new website just released! It's officially on v2.
 
 Please check it out at [jacobdcastro.com](https://jacobdcastro.com)!
 
