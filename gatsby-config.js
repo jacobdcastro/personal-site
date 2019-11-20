@@ -1,7 +1,7 @@
 const path = require(`path`);
 const {
   NODE_ENV,
-  URL: NETLIFY_SITE_URL = 'https://www.example.com',
+  URL: NETLIFY_SITE_URL = 'https://jacobdcastro.com',
   DEPLOY_PRIME_URL: NETLIFY_DEPLOY_URL = NETLIFY_SITE_URL,
   CONTEXT: NETLIFY_ENV = NODE_ENV,
 } = process.env;
@@ -15,7 +15,6 @@ module.exports = {
   siteMetadata: {
     title: `Jacob D. Castro`,
     siteUrl: `https://jacobdcastro.com`,
-    // siteURL: `https://jacobdcastro.com`,
   },
 
   plugins: [
