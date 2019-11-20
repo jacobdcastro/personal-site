@@ -20,7 +20,7 @@ const ContactForm = () => {
 
   //   try {
   //     const res = await axios.post('/.netlify/functions/contact/', {
-  //       'form-name': 'contactForm',
+  //       'form-name': 'contact',
   //       ...formData,
   //     });
   //     console.log(res);
@@ -37,8 +37,8 @@ const ContactForm = () => {
   // if (success === null) {
   return (
     <form
-      id="contactForm"
-      name="contactForm"
+      id="contact"
+      name="contact"
       method="post"
       data-netlify="true"
       data-netlify-honeypot="bot-field"
