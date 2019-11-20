@@ -11,7 +11,7 @@ const ContactWrapper = styled.div`
     font-size: 2.7rem;
   }
 
-  #contactForm {
+  #contact {
     width: 80vw;
     max-width: 700px;
     margin: auto;
