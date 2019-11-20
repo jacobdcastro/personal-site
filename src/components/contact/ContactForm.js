@@ -21,11 +21,12 @@ const ContactForm = () => {
       await fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: encode({ 'form-name': 'contact', ...formData }),
+        body: encode({ 'form-name': 'contactForm', ...formData }),
       });
+      await setFormState({ submitting: false });
       setFormState({ success: true });
     } catch (error) {
-      setFormState({ success: false });
+      setFormState({ submitting: false, success: false });
       console.log(error);
     }
   };
@@ -83,12 +84,16 @@ const ContactForm = () => {
         </div>
 
         {submitting ? (
-          <button type="submit">Submit</button>
-        ) : (
           <button type="submit">Submitting...</button>
+        ) : (
+          <button type="submit">Submit</button>
         )}
       </form>
     );
+  } else if (success) {
+    return <h3>Form submitted! thanks.</h3>;
+  } else {
+    return <h3>Form submission failed</h3>;
   }
 };
 
