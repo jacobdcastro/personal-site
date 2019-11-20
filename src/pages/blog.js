@@ -6,9 +6,6 @@ import Layout from '../templates/layout';
 import BlogPageWrapper from '../styles/blog/BlogPageStyles';
 import BlogListing from '../components/index/BlogListing';
 
-// TODO add `time to complete`
-// <h4>{timeToRead + 10} minutes to complete</h4>
-
 const Blog = ({ path, data }) => {
   const seo = {
     page: `blog`,
