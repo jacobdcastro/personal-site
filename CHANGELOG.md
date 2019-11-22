@@ -14,6 +14,19 @@ Blog posts edits (typos, code snippets, content embeds, etc.) will be included i
 - "Work" page for portfolio
 - Jest testing w/ react-testing-library
 
+## [2.2.2] - 2019-11-XX\***\*\_\_\*\***
+
+### Added
+
+- ESLint rules (no-unused-vars, incl. jsx)
+- Description on contact page
+- Add images to SEO for pages missing it
+- Animations on index page
+
+### Changed
+
+- Single quotes for ESLint rules
+
 ## [2.2.1] - 2019-11-20
 
 ### Changed
