@@ -6,17 +6,17 @@ import { AboutPageWrapper } from '../styles/about/AboutStyles';
 
 const About = ({ path, data }) => {
   const seo = {
-    page: `about`,
+    page: 'about',
     title: 'About Me',
     description: `${data.me.childMarkdownRemark.excerpt}`,
-    url: `https://jacobdcastro.com/about`,
+    url: 'https://jacobdcastro.com/about',
     imgUrl: `${data.pageImg.publicURL}`,
     imgAlt:
       'jdcastro logo, twitter, instagram, facebook, github icons with @jacobdcastro username',
     breadcrumbs: [
       {
-        name: `About`,
-        path: `/about`,
+        name: 'About',
+        path: '/about',
       },
     ],
   };

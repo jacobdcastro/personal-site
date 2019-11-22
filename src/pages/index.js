@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, graphql } from 'gatsby';
+import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import Layout from '../templates/layout';
 import { IndexPageWrapper } from '../styles/index/IndexStyles';
@@ -7,9 +7,9 @@ import BlogListing from '../components/index/BlogListing';
 
 import Twitter from '../images/svg/TwitterSVG';
 import Instagram from '../images/svg/InstagramSVG';
-import Facebook from '../images/svg/FacebookSVG';
+// import Facebook from '../images/svg/FacebookSVG';
 import Linkedin from '../images/svg/LinkedinSVG';
-import Snapchat from '../images/svg/SnapchatSVG';
+// import Snapchat from '../images/svg/SnapchatSVG';
 import Github from '../images/svg/GithubSVG';
 import Arrow from '../images/svg/DownArrowSVG';
 
@@ -19,16 +19,16 @@ const Index = ({ path, data }) => {
     twitterURL,
     instagramURL,
     githubURL,
-    facebookURL, // soon to be launched
-    snapchat, // I may use snap?
+    // facebookURL, // soon to be launched
+    // snapchat, // I may use snap?
     linkedinURL,
   } = data.me.childMarkdownRemark.frontmatter;
 
   const seo = {
-    page: `index`,
+    page: 'index',
     title: '',
     description: `${miniBio}`,
-    url: `https://jacobdcastro.com`,
+    url: 'https://jacobdcastro.com',
     imgUrl: `${data.pageImg.publicURL}`,
     imgAlt:
       'jdcastro logo, twitter, instagram, facebook, github icons with @jacobdcastro username',
@@ -138,8 +138,8 @@ Index.propTypes = {
 
 export default Index;
 
-export const INDEX_POSTS_QUERY = graphql`
-  query INDEX_POSTS_QUERY {
+export const INDEX_PAGE_QUERY = graphql`
+  query INDEX_PAGE_QUERY {
     # all blog posts, sorted by most recent
     allMarkdownRemark(
       sort: { fields: frontmatter___date, order: DESC }

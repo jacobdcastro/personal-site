@@ -58,6 +58,7 @@
     "babel-plugin-styled-components": "^1.10.6",
     "babel-preset-gatsby": "^0.2.22",
     "eslint-config-prettier": "^6.7.0",
+    "eslint-plugin-react": "^7.16.0",
     "eslint-plugin-styled-components": "0.0.0",
     "gatsby-plugin-eslint": "^2.0.8",
     "identity-obj-proxy": "^3.0.0",

@@ -2,7 +2,7 @@ import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import FooterWrapper from '../../styles/layout/FooterStyles';
-import EmailSubForm from './EmailSubForm';
+// import EmailSubForm from './EmailSubForm';
 
 import gatsbyImg from '../../images/tech-icons/Gatsby_Monogram.svg';
 import javascriptImg from '../../images/tech-icons/javascript.svg';

@@ -11,16 +11,18 @@ import BlogListing from '../components/index/BlogListing';
 
 const Tutorials = ({ path, data }) => {
   const seo = {
-    page: `tutorials`,
-    title: `Tutorials`,
-    description: `I love learning things!! These are me restating what I've learned to you peeps, in hopes of solidifying my learning and lending a hand along the way.`,
+    page: 'tutorials',
+    title: 'Tutorials',
+    description:
+      // eslint-disable-next-line quotes
+      "I love learning things!! These are me restating what I've learned to you peeps, in hopes of solidifying my learning and lending a hand along the way.",
     imgUrl: `${data.pageImg.publicURL}`,
     imgAlt:
       'jdcastro logo, twitter, instagram, facebook, github icons with @jacobdcastro username',
     breadcrumbs: [
       {
-        name: `Tutorials`,
-        path: `/tutorials`,
+        name: 'Tutorials',
+        path: '/tutorials',
       },
     ],
   };

@@ -3,7 +3,8 @@ import { Helmet } from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
 
 // Mailchimp script for website connection
-const mcEmbed = `!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/acfe9e33f6e477b7d4271061c/33f0b474bec5c1094df95b9ee.js");`;
+const mcEmbed =
+  '!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/acfe9e33f6e477b7d4271061c/33f0b474bec5c1094df95b9ee.js");';
 
 const Head = ({ seo }) => {
   const data = useStaticQuery(graphql`
@@ -31,14 +32,14 @@ const Head = ({ seo }) => {
   const {
     miniBio,
     email,
-    phone,
+    // phone,
     url,
     handle,
-    username,
+    // username,
     twitterURL,
     instagramURL,
     facebookURL,
-    snapchat,
+    // snapchat,
     linkedinURL,
   } = data.file.childMarkdownRemark.frontmatter;
 
@@ -134,6 +135,7 @@ const Head = ({ seo }) => {
         </script>
       )}
 
+      {/* Mailchimp code embed */}
       <script id="mcjs">{mcEmbed}</script>
     </Helmet>
   );
