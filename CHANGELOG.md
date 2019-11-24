@@ -14,6 +14,24 @@ Blog posts edits (typos, code snippets, content embeds, etc.) will be included i
 - "Work" page for portfolio
 - Jest testing w/ react-testing-library
 
+## [2.2.3] - 2019-11-24
+
+### Changed
+
+- Robots.txt plugin config (fixed Google crawl issue)
+
+## [2.2.2] - 2019-11-22
+
+### Added
+
+- ESLint rules (no-unused-vars, incl. jsx)
+- Description on contact page
+- Add images to SEO for pages missing it
+
+### Changed
+
+- Single quotes for ESLint rules
+
 ## [2.2.1] - 2019-11-20
 
 ### Changed

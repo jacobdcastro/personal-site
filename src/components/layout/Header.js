@@ -10,7 +10,7 @@ const Header = () => {
   let [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
-    window.addEventListener('scroll', e => {
+    window.addEventListener('scroll', () => {
       if (
         document.body.scrollTop > 30 ||
         document.documentElement.scrollTop > 30

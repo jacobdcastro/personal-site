@@ -33,8 +33,8 @@ const blogPost = ({ path, data }) => {
       imgAlt: `${data.file.imageAlt}`,
       breadcrumbs: [
         {
-          name: `Blog`,
-          path: `/blog`,
+          name: 'Blog',
+          path: '/blog',
         },
         {
           name: `${title}`,
@@ -52,8 +52,8 @@ const blogPost = ({ path, data }) => {
       imgAlt: `${data.file.imageAlt}`,
       breadcrumbs: [
         {
-          name: `Tutorials`,
-          path: `/tutorials`,
+          name: 'Tutorials',
+          path: '/tutorials',
         },
         {
           name: `${title}`,

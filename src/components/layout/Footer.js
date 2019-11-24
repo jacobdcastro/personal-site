@@ -2,7 +2,7 @@ import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import FooterWrapper from '../../styles/layout/FooterStyles';
-import EmailSubForm from './EmailSubForm';
+// import EmailSubForm from './EmailSubForm';
 
 import gatsbyImg from '../../images/tech-icons/Gatsby_Monogram.svg';
 import javascriptImg from '../../images/tech-icons/javascript.svg';
@@ -126,7 +126,7 @@ const Footer = () => {
         href="https://github.com/jacobdcastro/personal-site/releases"
         rel="noopener"
       >
-        v2.2.1
+        v2.2.3
       </a>
       <a href={`${url}/sitemap.xml`}>Sitemap</a>
       <span>&copy;2019 - JDCastro Digital</span>

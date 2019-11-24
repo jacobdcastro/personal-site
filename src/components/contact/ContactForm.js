@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import encode from '../../utils/encode';
-import axios from 'axios';
+import React /*, { useState }*/ from 'react';
+// import encode from '../../utils/encode';
+// import axios from 'axios';
 
 const ContactForm = () => {
   // const [formData, setFormData] = useState({
