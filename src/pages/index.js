@@ -51,7 +51,7 @@ const Index = ({ path, data }) => {
                 target="_blank"
                 href={twitterURL}
                 rel="noopener"
-                aria-label="Jacob's twitter profile"
+                aria-label="My twitter profile"
               >
                 <Twitter />
               </a>
@@ -61,7 +61,7 @@ const Index = ({ path, data }) => {
                 target="_blank"
                 href={instagramURL}
                 rel="noopener"
-                aria-label="Jacob's Instagram page"
+                aria-label="My Instagram page"
               >
                 <Instagram />
               </a>
@@ -71,7 +71,7 @@ const Index = ({ path, data }) => {
                 target="_blank"
                 href={facebookURL}
                 rel="noopener"
-                aria-label="Jacob's Facebook page"
+                aria-label="My Facebook page"
               >
                 <Facebook />
               </a>
@@ -81,7 +81,7 @@ const Index = ({ path, data }) => {
                 target="_blank"
                 href={linkedinURL}
                 rel="noopener"
-                aria-label="Jacob's linkedin profile"
+                aria-label="My linkedin profile"
               >
                 <Linkedin />
               </a>
@@ -91,7 +91,7 @@ const Index = ({ path, data }) => {
                 target="_blank"
                 href={snapchat}
                 rel="noopener"
-                aria-label="jacob's snapchat account"
+                aria-label="My snapchat account"
               >
                 <Snapchat />
               </a>
@@ -101,7 +101,7 @@ const Index = ({ path, data }) => {
                 target="_blank"
                 href={githubURL}
                 rel="noopener"
-                aria-label="Jacob's Github page"
+                aria-label="My Github page"
               >
                 <Github />
               </a>
@@ -111,7 +111,7 @@ const Index = ({ path, data }) => {
                 target="_blank"
                 href={data.resume.publicURL}
                 rel="noopener"
-                aria-label="Jacob's Resume"
+                aria-label="My Resume"
               >
                 <Resume />
               </a>
