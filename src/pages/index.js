@@ -12,6 +12,7 @@ import Linkedin from '../images/svg/LinkedinSVG';
 // import Snapchat from '../images/svg/SnapchatSVG';
 import Github from '../images/svg/GithubSVG';
 import Arrow from '../images/svg/DownArrowSVG';
+import Resume from '../images/svg/ResumeSVG';
 
 const Index = ({ path, data }) => {
   const {
@@ -105,6 +106,16 @@ const Index = ({ path, data }) => {
                 <Github />
               </a>
             </li>
+            <li>
+              <a
+                target="_blank"
+                href={data.resume.publicURL}
+                rel="noopener"
+                aria-label="Jacob's Resume"
+              >
+                <Resume />
+              </a>
+            </li>
           </ul>
         </div>
 
@@ -184,6 +195,10 @@ export const INDEX_PAGE_QUERY = graphql`
 
     pageImg: file(relativePath: { eq: "page-meta-img.jpg" }) {
       publicURL # used for SEO
+    }
+
+    resume: file(relativePath: { eq: "content/JDCastro_Resume_Nov2019.pdf" }) {
+      publicURL
     }
   }
 `;
