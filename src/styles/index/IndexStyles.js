@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import fadeInUpward from '../_animations/fadeInUpward';
 
 const IndexPageWrapper = styled.div`
   transition: ${props => props.theme.transition};
@@ -10,7 +11,8 @@ const IndexPageWrapper = styled.div`
     justify-content: center;
     margin: 0 auto 0;
 
-    h1 {
+    .headline {
+      animation: ${fadeInUpward} 1s;
       color: ${props => props.theme.textColor};
       letter-spacing: 0.5px;
     }
@@ -50,11 +52,11 @@ const IndexPageWrapper = styled.div`
     text-align: center;
     align-self: flex-end;
     transition: ${props => props.theme.transition};
-      
+
     a {
       height: 50px;
       width: 50px;
-      
+
       svg {
         height: 50px;
         width: auto;
@@ -68,7 +70,6 @@ const IndexPageWrapper = styled.div`
         }
       }
     }
-
   }
 
   #recentPublications {

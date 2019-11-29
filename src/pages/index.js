@@ -39,7 +39,7 @@ const Index = ({ path, data }) => {
     <Layout seo={seo} path={path}>
       <IndexPageWrapper>
         <div className="indexIntro">
-          <h1>
+          <h1 className="headline">
             I'm Jacob Daniel Castro,
             <br />a fullstack JavaScript
             <br /> developer.
