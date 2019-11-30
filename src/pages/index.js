@@ -12,6 +12,7 @@ import Linkedin from '../images/svg/LinkedinSVG';
 // import Snapchat from '../images/svg/SnapchatSVG';
 import Github from '../images/svg/GithubSVG';
 import Arrow from '../images/svg/DownArrowSVG';
+import Resume from '../images/svg/ResumeSVG';
 
 const Index = ({ path, data }) => {
   const {
@@ -39,7 +40,7 @@ const Index = ({ path, data }) => {
     <Layout seo={seo} path={path}>
       <IndexPageWrapper>
         <div className="indexIntro">
-          <h1>
+          <h1 className="headline">
             I'm Jacob Daniel Castro,
             <br />a fullstack JavaScript
             <br /> developer.
@@ -50,7 +51,7 @@ const Index = ({ path, data }) => {
                 target="_blank"
                 href={twitterURL}
                 rel="noopener"
-                aria-label="Jacob's twitter profile"
+                aria-label="My twitter profile"
               >
                 <Twitter />
               </a>
@@ -60,7 +61,7 @@ const Index = ({ path, data }) => {
                 target="_blank"
                 href={instagramURL}
                 rel="noopener"
-                aria-label="Jacob's Instagram page"
+                aria-label="My Instagram page"
               >
                 <Instagram />
               </a>
@@ -70,7 +71,7 @@ const Index = ({ path, data }) => {
                 target="_blank"
                 href={facebookURL}
                 rel="noopener"
-                aria-label="Jacob's Facebook page"
+                aria-label="My Facebook page"
               >
                 <Facebook />
               </a>
@@ -80,7 +81,7 @@ const Index = ({ path, data }) => {
                 target="_blank"
                 href={linkedinURL}
                 rel="noopener"
-                aria-label="Jacob's linkedin profile"
+                aria-label="My linkedin profile"
               >
                 <Linkedin />
               </a>
@@ -90,7 +91,7 @@ const Index = ({ path, data }) => {
                 target="_blank"
                 href={snapchat}
                 rel="noopener"
-                aria-label="jacob's snapchat account"
+                aria-label="My snapchat account"
               >
                 <Snapchat />
               </a>
@@ -100,9 +101,19 @@ const Index = ({ path, data }) => {
                 target="_blank"
                 href={githubURL}
                 rel="noopener"
-                aria-label="Jacob's Github page"
+                aria-label="My Github page"
               >
                 <Github />
+              </a>
+            </li>
+            <li>
+              <a
+                target="_blank"
+                href={data.resume.publicURL}
+                rel="noopener"
+                aria-label="My Resume"
+              >
+                <Resume />
               </a>
             </li>
           </ul>
@@ -184,6 +195,10 @@ export const INDEX_PAGE_QUERY = graphql`
 
     pageImg: file(relativePath: { eq: "page-meta-img.jpg" }) {
       publicURL # used for SEO
+    }
+
+    resume: file(relativePath: { eq: "content/JDCastro_Resume_Nov2019.pdf" }) {
+      publicURL
     }
   }
 `;

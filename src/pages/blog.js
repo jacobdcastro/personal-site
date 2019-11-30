@@ -65,6 +65,7 @@ export const BLOG_PAGE_QUERY = graphql`
             liveLink
             repo
             type
+            tags
           }
         }
       }
