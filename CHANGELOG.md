@@ -14,6 +14,21 @@ Blog posts edits (typos, code snippets, content embeds, etc.) will be included i
 - "Work" page for portfolio
 - Jest testing w/ react-testing-library
 
+## [2.3.0] - 2019-11-29
+
+### Added
+
+- Animation on index headline
+- Resume to filesystem
+- New icon for resume
+- Tags to /blog page listings
+
+### Changed
+
+- Buttons on blog listings
+- Colors of blog post tags from black to purple
+- SVG components prettified
+
 ## [2.2.3] - 2019-11-24
 
 ### Changed
