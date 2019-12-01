@@ -14,6 +14,19 @@ Blog posts edits (typos, code snippets, content embeds, etc.) will be included i
 - "Work" page for portfolio
 - Jest testing w/ react-testing-library
 
+## [2.3.1] - 2019-12-01
+
+### Added
+
+- fadeInUpward animation to social icons
+- PropTypes to Helmet.js
+
+### Changed
+
+- Moved robots.txt config and environment check to own file in src/utils
+- Prettify gatsby-config.js
+- Update README
+
 ## [2.3.0] - 2019-11-29
 
 ### Added

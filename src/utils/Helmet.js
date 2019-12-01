@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
 
@@ -55,7 +56,7 @@ const Head = ({ seo }) => {
   return (
     <Helmet>
       <title>
-        {seo.title && `${seo.title} | `}Jacob D. Castro - Fullstack Javascript
+        {seo.title && `${seo.title} | `}Jacob D. Castro - Fullstack JavaScript
         Developer
       </title>
       <meta name="Description" content={seo.description} />
@@ -69,7 +70,7 @@ const Head = ({ seo }) => {
       <meta
         property="og:title"
         content={`${seo.title &&
-          seo.title + ' | '}Jacob D. Castro - Fullstack Javascript Developer`}
+          seo.title + ' | '}Jacob D. Castro - Fullstack JavaScript Developer`}
       />
       <meta property="og:description" content={seo.description} />
       <meta property="og:url" content={seo.url} />
@@ -90,7 +91,7 @@ const Head = ({ seo }) => {
       <meta
         property="twitter:title"
         content={`${seo.title &&
-          seo.title + ' | '}Jacob D. Castro - Fullstack Javascript Developer`}
+          seo.title + ' | '}Jacob D. Castro - Fullstack JavaScript Developer`}
       />
       <meta property="twitter:description" content={seo.description} />
       <meta property="twitter:image" content={`${url}${seo.imgUrl}`} />
@@ -139,6 +140,10 @@ const Head = ({ seo }) => {
       <script id="mcjs">{mcEmbed}</script>
     </Helmet>
   );
+};
+
+Head.propTypes = {
+  seo: PropTypes.object.isRequired,
 };
 
 export default Head;

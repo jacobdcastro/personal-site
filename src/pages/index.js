@@ -7,9 +7,7 @@ import BlogListing from '../components/index/BlogListing';
 
 import Twitter from '../images/svg/TwitterSVG';
 import Instagram from '../images/svg/InstagramSVG';
-// import Facebook from '../images/svg/FacebookSVG';
 import Linkedin from '../images/svg/LinkedinSVG';
-// import Snapchat from '../images/svg/SnapchatSVG';
 import Github from '../images/svg/GithubSVG';
 import Arrow from '../images/svg/DownArrowSVG';
 import Resume from '../images/svg/ResumeSVG';
@@ -20,8 +18,6 @@ const Index = ({ path, data }) => {
     twitterURL,
     instagramURL,
     githubURL,
-    // facebookURL, // soon to be launched
-    // snapchat, // I may use snap?
     linkedinURL,
   } = data.me.childMarkdownRemark.frontmatter;
 
@@ -66,16 +62,6 @@ const Index = ({ path, data }) => {
                 <Instagram />
               </a>
             </li>
-            {/* <li>
-              <a
-                target="_blank"
-                href={facebookURL}
-                rel="noopener"
-                aria-label="My Facebook page"
-              >
-                <Facebook />
-              </a>
-            </li> */}
             <li>
               <a
                 target="_blank"
@@ -86,16 +72,6 @@ const Index = ({ path, data }) => {
                 <Linkedin />
               </a>
             </li>
-            {/* <li>
-              <a
-                target="_blank"
-                href={snapchat}
-                rel="noopener"
-                aria-label="My snapchat account"
-              >
-                <Snapchat />
-              </a>
-            </li> */}
             <li>
               <a
                 target="_blank"
