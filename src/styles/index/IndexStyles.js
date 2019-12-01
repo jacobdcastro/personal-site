@@ -22,6 +22,7 @@ const IndexPageWrapper = styled.div`
       flex-direction: row;
       justify-content: space-between;
       flex-wrap: wrap;
+      animation: ${fadeInUpward} 1s;
       width: 90vw;
       max-width: 350px;
       margin: 0;
