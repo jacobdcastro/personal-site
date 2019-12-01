@@ -1,55 +1,55 @@
-const path = require(`path`);
+const path = require('path');
 
 module.exports = {
-  pathPrefix: `/blog`,
-  pathPrefix: `/tutorials`,
-
   siteMetadata: {
-    title: `Jacob D. Castro`,
-    siteUrl: `https://jacobdcastro.com`,
+    title: 'Jacob D. Castro',
+    siteUrl: 'https://jacobdcastro.com',
   },
+
+  pathPrefix: '/blog',
+  pathPrefix: '/tutorials',
 
   plugins: [
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: 'gatsby-plugin-manifest',
       options: {
-        name: `Jacob D. Castro`,
-        short_name: `JDCastro`,
-        start_url: `/`,
-        background_color: `#000`,
-        theme_color: `#353535`,
-        lang: `en`,
+        name: 'Jacob D. Castro',
+        short_name: 'JDCastro',
+        start_url: '/',
+        background_color: '#000',
+        theme_color: '#353535',
+        lang: 'en',
         // Enables "Add to Homescreen" prompt and disables browser UI (including back button)
         // see https://developers.google.com/web/fundamentals/web-app-manifest/#display
-        display: `standalone`,
-        icon: `src/images/favicon.png`, // This path is relative to the root of the site.
+        display: 'standalone',
+        icon: path.join(__dirname, 'src', 'images', 'favicon.png'), // This path is relative to the root of the site.
       },
     },
     {
-      resolve: `gatsby-plugin-styled-components`,
+      resolve: 'gatsby-plugin-styled-components',
       options: {
         // Add any options here
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: `images`,
-        path: path.join(__dirname, `src`, `images`),
+        name: 'images',
+        path: path.join(__dirname, 'src', 'images'),
       },
     },
 
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: `images`,
-        path: path.join(__dirname, `content`),
+        name: 'images',
+        path: path.join(__dirname, 'content'),
       },
     },
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: 'gatsby-plugin-google-analytics',
       options: {
-        trackingId: `UA-130258530-1`,
+        trackingId: 'UA-130258530-1',
         head: false,
         anonymize: true,
         respectDNT: true,
@@ -65,17 +65,17 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-typography`,
+      resolve: 'gatsby-plugin-typography',
       options: {
-        pathToConfigModule: path.join(__dirname, `src`, `utils`, `typography`),
+        pathToConfigModule: path.join(__dirname, 'src', 'utils', 'typography'),
       },
     },
     {
-      resolve: `gatsby-transformer-remark`,
+      resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
           {
-            resolve: `gatsby-remark-prismjs`,
+            resolve: 'gatsby-remark-prismjs',
             options: {
               classPrefix: 'language-',
               inlineCodeMarker: null,
@@ -109,24 +109,19 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
-        host: 'https://jacobdcastro.com',
-        sitemap: 'https://jacobdcastro.com/sitemap.xml',
-        resolveEnv: () => process.env.GATSBY_ENV,
-        env: {
-          development: {
-            policy: [{ userAgent: '*', disallow: ['/'] }],
-          },
-          production: {
-            policy: [{ userAgent: '*', allow: '/', disallow: '/form-success' }],
-          },
-        },
+        configFile: path.join(
+          __dirname,
+          'src',
+          'utils',
+          'robots-txt.config.js'
+        ),
       },
     },
-    `gatsby-plugin-sitemap`,
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
-    `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-offline`,
-    `gatsby-plugin-lodash`,
+    'gatsby-plugin-sitemap',
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-offline',
+    'gatsby-plugin-lodash',
   ],
 };
