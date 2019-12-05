@@ -4,15 +4,25 @@ All notable changes will be documented right here.
 _Commits featuring only new blog posts will not be documented and will not affect verion number._
 Blog posts edits (typos, code snippets, content embeds, etc.) will be included in patch releases.
 
-## [Unreleased]
+### [Unreleased]
 
 - Email newsletter subscription form
 - Netlify functions to use with Mailchimp API.
-- Blog post drafts (content/blogPosts/drafts)
 - "Talks" page featuring public speaking gigs
 - Netlify functions for contact form
 - "Work" page for portfolio
-- Jest testing w/ react-testing-library
+- Test for <Layout> for theme context
+
+## [2.3.2] - 2019-12-04
+
+### Added
+
+- Jest configuration
+- Tests for <Header />, <MobileNav />
+
+### Changed
+
+- Update 'dotenv', 'gatsby-plugin-offline' to latest
 
 ## [2.3.1] - 2019-12-01
 

@@ -4,7 +4,7 @@
 
 # Jacob Daniel Castro Personal Site
 
-Current release is v2.3.1 as of December 1st, 2019.
+Current release is v2.3.2 as of December 1st, 2019.
 
 Please check it out at [jacobdcastro.com](https://jacobdcastro.com)!
 

@@ -7,7 +7,7 @@ const ThemeContext = React.createContext({
   toggleTheme: () => {},
 });
 
-// provider component wraps entire app in gatsby-browser.js
+// ? provider component wraps entire app in gatsby-browser.js
 class ThemeContextWrapper extends React.Component {
   constructor(props) {
     super(props);

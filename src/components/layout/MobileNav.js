@@ -9,7 +9,7 @@ const MobileNav = ({ mobileNavIsOpen, action }) => {
     <MobileNavWrapper isOpen={mobileNavIsOpen}>
       <Hamburger mobileNavIsOpen={mobileNavIsOpen} action={action} />
 
-      <div className="mobileNav">
+      <div className="mobileNav" data-testid="mobileNav">
         <div className="darkLayer" onClick={action} />
         <div id="mobileMenu">
           <nav>
