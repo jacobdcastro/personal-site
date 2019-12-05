@@ -144,6 +144,7 @@ const Hamburger = ({ mobileNavIsOpen, action }) => {
       onClick={action}
       type="button"
       aria-label="open mobile navigation menu"
+      data-testid="hamburger"
     >
       <span className="hamburger-box">
         <span className="hamburger-inner"></span>
