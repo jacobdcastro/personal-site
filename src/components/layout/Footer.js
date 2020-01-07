@@ -126,7 +126,7 @@ const Footer = () => {
         href="https://github.com/jacobdcastro/personal-site/releases"
         rel="noopener"
       >
-        v2.3.2
+        v2.3.3
       </a>
       <a href={`${url}/sitemap.xml`}>Sitemap</a>
       <small>&copy;{new Date().getFullYear()} - JDCastro Digital</small>

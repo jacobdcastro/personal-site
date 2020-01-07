@@ -4,8 +4,10 @@
 
 # Jacob Daniel Castro Personal Site
 
-Current release is v2.3.2 as of December 1st, 2019.
+Current release is v2.3.3 as of January 7th, 2020.
 
-Please check it out at [jacobdcastro.com](https://jacobdcastro.com)!
+I'll have a more thorough README to come soon to help with any contributions people would like to make. Or if you're just curious about the stack and architecture of this thing.
+
+In the mean time, please check out the site at [jacobdcastro.com](https://jacobdcastro.com)!
 
 Welcome to my favorite project! Have a look around.

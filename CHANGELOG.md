@@ -13,6 +13,19 @@ Blog posts edits (typos, code snippets, content embeds, etc.) will be included i
 - "Work" page for portfolio
 - Test for <Layout> for theme context
 
+## [2.3.3] - 2020-01-07
+
+### Added
+
+- Est. completion time to tutorial post listings
+
+### Changed
+
+- Remove colon after bracket in tutorial post listings
+- Copyright year to use `new Date().getFullYear()`
+- Copyright text to `<small>` tag
+- Styled-components tutorial content to remain updated
+
 ## [2.3.2] - 2019-12-04
 
 ### Added
