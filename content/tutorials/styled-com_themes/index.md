@@ -1,18 +1,18 @@
 ---
-slug: 'how-to-use-themes-with-styled-components'
-title: 'How To Use Themes with styled-components'
-subtitle: 'A tutorial on React and CSS-in-JS'
-image: 'cover-photo.png'
-imageTitle: 'create-react-app page'
-imageAlt: 'create-react-app page with theme toggle button'
-repo: 'https://github.com/jacobdcastro/styled-components-theme-tutorial'
-liveLink: 'https://nostalgic-perlman-000288.netlify.com/'
-date: '2019-08-23T00:00:00-07:00'
+slug: "how-to-use-themes-with-styled-components"
+title: "How To Use Themes with styled-components"
+subtitle: "A tutorial on React and CSS-in-JS"
+image: "cover-photo.png"
+imageTitle: "create-react-app page"
+imageAlt: "create-react-app page with theme toggle button"
+repo: "https://github.com/jacobdcastro/styled-components-theme-tutorial"
+liveLink: "https://nostalgic-perlman-000288.netlify.com/"
+date: "2019-08-23T00:00:00-07:00"
 tags:
   - how-to
   - css
   - react
-type: 'tutorial'
+type: "tutorial"
 ---
 
 I've been rewriting my website recently. And if you read my [last blog post], you'll see why.
@@ -33,21 +33,13 @@ Now let's get started. Feel free to follow along!
 
 Using create-react-app, let's create a new project called 'themes'.
 
-If you don't have create-react-app installed run this command:
-
 ```bash
 npx create-react-app themes
 ```
 
-If you already have it installed, simply run:
+Once create-react-app finishes, change directories into /themes and run `npm start`. After a minute or so, you can see the new default site running on the development server at localhost:3000/.
 
-```bash
-create-react-app themes
-```
-
-Once create-react-app finishes, run `npm start` so you can see the new site running on the development server at localhost:3000/.
-
-Let's jump into the /themes directory and get started.
+Now let's get started!
 
 ## Migrating To styled-components
 
@@ -62,9 +54,9 @@ Once installed, let's open up `src/App.js` where all of the app code is.
 <!-- App.js -->
 
 ```javascript{numberLines: true}
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
 
 function App() {
   return (
@@ -107,9 +99,9 @@ const Wrapper = styled.div``;
 All of our styles will go inside the backticks. So let's copy those from `App.css` and paste it all in the new component we created. Once the styles are in the Wrapper component, we'll _slap_ it in our JSX by replacing the `div` tags with the newly created `Wrapper` component. Then remove the `./App.css` import statement and delete the CSS file entirely!
 
 ```javascript
-import React from 'react';
-import logo from './logo.svg';
-import styled from 'styled-components';
+import React from "react";
+import logo from "./logo.svg";
+import styled from "styled-components";
 
 const Wrapper = styled.div`
   .App {
@@ -192,9 +184,9 @@ With that said, here's a quick summary of what's going down.
 In JSX, create a `<button>Toggle theme</button>` just below the 'Learn React' link. Then we'll add basic styles in the `<Wrapper>` component. Feel free to copy the styles in.
 
 ```javascript
-import React from 'react';
-import logo from './logo.svg';
-import styled from 'styled-components';
+import React from "react";
+import logo from "./logo.svg";
+import styled from "styled-components";
 
 const Wrapper = styled.div`
   .App {
@@ -223,9 +215,9 @@ const Wrapper = styled.div`
   }
 
   button {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
-      'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
-      'Helvetica Neue', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+      "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+      "Helvetica Neue", sans-serif;
     font-weight: 700;
     margin: 40px;
     height: 50px;
@@ -298,15 +290,15 @@ Since the default app at localhost:3000/ has a dark background, we'll declare th
 
 ```javascript
 const darkTheme = {
-  bgColor: '#282c34',
-  textColor: 'white',
-  linkColor: '#61dafb',
+  bgColor: "#282c34",
+  textColor: "white",
+  linkColor: "#61dafb",
 };
 
 const lightTheme = {
-  bgColor: '#e8ecf0',
-  textColor: '#001c38',
-  linkColor: '#5dd2f2',
+  bgColor: "#e8ecf0",
+  textColor: "#001c38",
+  linkColor: "#5dd2f2",
 };
 
 export { darkTheme, lightTheme };
@@ -315,7 +307,7 @@ export { darkTheme, lightTheme };
 Next, we'll import these two themes into `App.js` under the `styled` import on line 4 like so:
 
 ```javascript
-import { darkTheme, lightTheme } from './themes';
+import { darkTheme, lightTheme } from "./themes";
 ```
 
 ### Using ThemeProvider
@@ -323,7 +315,7 @@ import { darkTheme, lightTheme } from './themes';
 Once imported, we'll use the `<ThemeProvider>` component that comes with the styled-components library. Edit line 3 to import `ThemeProvider` like this:
 
 ```javascript
-import styled, { ThemeProvider } from 'styled-components';
+import styled, { ThemeProvider } from "styled-components";
 ```
 
 ThemeProvider does what it's name implies. You wrap your entire app with the component, and give it a "theme" prop. The theme prop will have a value of whatever theme (object) you set it to.
@@ -416,9 +408,9 @@ const Wrapper = styled.div`
   }
 
   button {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
-      'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
-      'Helvetica Neue', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+      "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+      "Helvetica Neue", sans-serif;
     font-weight: 700;
     margin: 40px;
     height: 50px;
@@ -466,7 +458,7 @@ But if you'd like to follow along, let's jump in!
 Since we're using React's new `useState()` hook, we need to import it from React on line 1.
 
 ```javascript
-import React, { useState } from 'react';
+import React, { useState } from "react";
 ```
 
 Then, just above the App component's return statement on line 62, let's add the state!
@@ -518,7 +510,7 @@ So edit line 65 like so:
 We'll do the same thing with the button text while we're at it. Editing the button tag like this:
 
 ```jsx
-<button>{isDarkTheme ? 'LIGHT' : 'DARK'} THEME</button>
+<button>{isDarkTheme ? "LIGHT" : "DARK"} THEME</button>
 ```
 
 ### Using Button to Change State
