@@ -39,6 +39,10 @@ const FooterWrapper = styled.footer`
       }
     }
   }
+
+  small {
+    padding-top: 5px;
+  }
 `;
 
 export default FooterWrapper;

@@ -129,7 +129,7 @@ const Footer = () => {
         v2.3.2
       </a>
       <a href={`${url}/sitemap.xml`}>Sitemap</a>
-      <span>&copy;2019 - JDCastro Digital</span>
+      <small>&copy;{new Date().getFullYear()} - JDCastro Digital</small>
     </FooterWrapper>
   );
 };
