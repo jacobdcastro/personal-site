@@ -16,6 +16,8 @@ const BlogListing = ({ data }) => {
     }
   };
 
+  if (frontmatter.type === 'tutorial') console.log(data);
+
   return (
     <BlogListWrapper>
       <Link
@@ -23,7 +25,7 @@ const BlogListing = ({ data }) => {
         aria-label={`Read Blog post: ${frontmatter.title}`}
       >
         <h2>
-          {frontmatter.type === 'tutorial' && '[Tutorial]: '}
+          {frontmatter.type === 'tutorial' && '[Tutorial] '}
           {frontmatter.title}
         </h2>
         <ul>
@@ -40,7 +42,7 @@ const BlogListing = ({ data }) => {
         <p>{excerpt}</p>
         {data.timeToRead &&
           (frontmatter.type === 'tutorial' ? (
-            <h4>Approx. {data.timeToRead + 5} minutes to complete</h4>
+            <h4>Approx. {data.timeToRead + 8} minutes to complete</h4>
           ) : (
             <h4>{data.timeToRead} minute read</h4>
           ))}
