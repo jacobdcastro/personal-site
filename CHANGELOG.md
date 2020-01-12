@@ -8,10 +8,18 @@ Blog posts edits (typos, code snippets, content embeds, etc.) will be included i
 
 - Email newsletter subscription form
 - Netlify functions to use with Mailchimp API.
-- "Talks" page featuring public speaking gigs
+- "Talks" page featuring past/future public speaking gigs
 - Netlify functions for contact form
 - "Work" page for portfolio
-- Test for <Layout> for theme context
+- Jest tests
+
+## [2.3.4] - 2020-01-12
+
+### Changed
+
+- Fixed typo 'JavaScipt' -> 'JavaScript' in mini bio meta description
+- 'npm run format' script edited
+- Update all outdated packages to latest versions
 
 ## [2.3.3] - 2020-01-07
 
