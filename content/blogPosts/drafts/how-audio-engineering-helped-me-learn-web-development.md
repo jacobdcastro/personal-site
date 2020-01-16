@@ -118,11 +118,17 @@ Once passing through each pedal, it goes to a guitar amplifier (amp), which usua
 
 Let's recap the signal chain so far: guitar => pedal => pedal => pedal => amp.
 
-### Stage 2. Moving the guitar signal to the room's audio system
+### Stage 2. Moving the guitar's audio to the soundboard.
 
 The sound now coming from the guitar amp is good, but nowhere near loud enough. We need that sound to come out of the house speakers. The solution? A microphone!
 
-A small microphone stand with a mic is now 2 inches away from the amp speaker taking in the sound. But where does the microphone send the newly captured audio? It sends the signal down the cable that it's connected to! That cable then leads straight back to the sound board.
+A small microphone stand with a mic is now 2 inches away from the amp speaker listening to the sound. But where does the microphone send the newly captured audio? It sends the signal through the cable that it's connected to! That cable then leads straight backstage where a device called a 'snake' is located.
+
+The snake has inputs for lots of cables, sometimes up to 64, where it can recieve many signals. For convience's sake, the snake combines all signals it recieves into one fat cable that leads straight back to the audio booth. The one snake cable then splits back up into many cable ends that can be plugged individually into the sound board. Each cable has a number assigned to it, and the number of each cable corresponds to a specific plug in the back of the soundboard that is also numbered. Once plugged into the proper plug in the sound board, the technological magic can begin!
+
+Recap time: guitar => pedal => pedal => pedal => amp => microphone => snake => soundboard.
+
+### Stage 3. Preparing the audio to be heard across the room.
 
 =======================
 
