@@ -11,7 +11,7 @@ tags:
   - "development"
   - "career"
   - "hobby"
-type: "blogPost"
+# type: "blogPost"
 ---
 
 I grew up with a handful of different hobbies and interests.
@@ -114,9 +114,15 @@ The guitar is the source of sound. It's what is creating the intial electrical s
 
 The cable from an electric guitar is usually plugged into a pedal or two or 15 to process the sound of the guitar to make it sound good. This adds distortion, reverb, delay, and all kinds of other cool effects. You do this by chaining more cables from one pedal to the next, so the electric guitar signal can pass through each pedal individually, getting processed and adjusted along the way.
 
-Once passing through each pedal, it usually goes to a guitar amplifier (amp), which usually does a little more processing before actually spitting out our first guitar sound! But amps are generally located backstage where the audience can't hear it. So we aren't done yet.
+Once passing through each pedal, it goes to a guitar amplifier (amp), which usually does a little more processing before actually spitting out our first guitar sound! But amps are generally located backstage where the audience can't hear it. So we aren't done yet.
 
 Let's recap the signal chain so far: guitar => pedal => pedal => pedal => amp.
+
+### Stage 2. Moving the guitar signal to the room's audio system
+
+The sound now coming from the guitar amp is good, but nowhere near loud enough. We need that sound to come out of the house speakers. The solution? A microphone!
+
+A small microphone stand with a mic is now 2 inches away from the amp speaker taking in the sound. But where does the microphone send the newly captured audio? It sends the signal down the cable that it's connected to! That cable then leads straight back to the sound board.
 
 =======================
 
