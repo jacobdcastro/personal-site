@@ -13,6 +13,12 @@ Blog posts edits (typos, code snippets, content embeds, etc.) will be included i
 - "Work" page for portfolio
 - Jest tests
 
+## [2.3.5] - 2020-01-23
+
+### Changed
+
+- Altered accent (purple) color
+
 ## [2.3.4] - 2020-01-12
 
 ### Changed
