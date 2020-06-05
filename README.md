@@ -4,6 +4,8 @@
 
 # Jacob Daniel Castro Personal Site
 
+> Version 3.0 is currently in the works!
+
 Current release is v2.3.5 as of January 23rd, 2020.
 
 I'll have a more thorough README to come soon to help with any contributions people would like to make. Or if you're just curious about the stack and architecture of this thing.
