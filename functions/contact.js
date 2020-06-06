@@ -2,7 +2,6 @@
 const axios = require('axios');
 
 exports.handler = async function(event, context) {
-  console.log(event);
   try {
     const res = await axios.post('/', event.body);
     if (!res.ok) {
@@ -10,7 +9,6 @@ exports.handler = async function(event, context) {
       return { statusCode: res.status, body: res.statusText };
     }
     const data = await res.json();
-    console.log(data);
 
     return {
       statusCode: 200,

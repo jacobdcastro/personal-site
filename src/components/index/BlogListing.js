@@ -16,8 +16,6 @@ const BlogListing = ({ data }) => {
     }
   };
 
-  if (frontmatter.type === 'tutorial') console.log(data);
-
   return (
     <BlogListWrapper>
       <Link
