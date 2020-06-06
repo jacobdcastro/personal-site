@@ -16,6 +16,10 @@ const FooterWrapper = styled.footer`
     margin-bottom: 5px;
   }
 
+  .typoSpan {
+    margin-top: 10px;
+  }
+
   .stackIcons {
     padding: 25px 15px 15px;
     width: 100%;
@@ -41,7 +45,7 @@ const FooterWrapper = styled.footer`
   }
 
   small {
-    color: ${props => props.theme.textColor}
+    color: ${props => props.theme.textColor};
     padding-top: 5px;
   }
 `;

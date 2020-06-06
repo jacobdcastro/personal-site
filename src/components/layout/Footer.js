@@ -9,6 +9,7 @@ import javascriptImg from '../../images/tech-icons/javascript.svg';
 import mdImg from '../../images/tech-icons/markdown.svg';
 import netlifyImg from '../../images/tech-icons/netlify.svg';
 import reactImg from '../../images/tech-icons/react.svg';
+import AnnouncementBanner from '../AnnouncementBanner';
 
 const Footer = () => {
   const data = useStaticQuery(graphql`
@@ -77,7 +78,8 @@ const Footer = () => {
 
   return (
     <FooterWrapper>
-      <span>
+      <AnnouncementBanner />
+      <span className="typoSpan">
         See a typo or want to contribute?{' '}
         <a href="mailto:jdcastro.business@gmail.com">Email me</a> or submit a PR
         or issue on{' '}
@@ -122,6 +124,7 @@ const Footer = () => {
           })}
         </ul>
       </div>
+
       <a
         href="https://github.com/jacobdcastro/personal-site/releases"
         rel="noopener"
