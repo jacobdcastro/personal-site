@@ -93,7 +93,7 @@ const Footer = () => {
 
       <span>
         Let's connect! <br />
-        Email me: <a href="mailto:jdcastro.business@gmail.com">{email}</a>
+        Email me: <a href="mailto:jacob@jdc.dev">jacob@jdc.dev</a>
         <br />
         or{' '}
         <span>
