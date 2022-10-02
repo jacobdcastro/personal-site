@@ -1,0 +1,39 @@
+{
+  "compileOnSave": true,
+  "exclude": [
+    "./content",
+    "./next.config.js",
+    "./postcss.config.js",
+    "./tailwind.config.js"
+  ],
+  "compilerOptions": {
+    "noImplicitAny": true,
+    "target": "ESNext",
+    "strict": true,
+    "jsx": "preserve",
+    "sourceMap": true,
+    "allowJs": true,
+    "module": "ESNext",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "alwaysStrict": false,
+    "moduleResolution": "Node",
+    "types": ["node"],
+    "baseUrl": ".",
+    "paths": {
+      "components": ["/components"],
+      "hooks": ["/hooks"],
+      "images": ["/images"],
+      "lib": ["/lib"],
+      "styles": ["/styles"]
+    },
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "incremental": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"]
+}

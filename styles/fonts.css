@@ -1,0 +1,37 @@
+@font-face {
+  font-family: "Monument";
+  src: url("/fonts/monument/MonumentExtended-Black.woff2") format("woff2");
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: "Monument";
+  src: url("/fonts/monument/MonumentExtended-Regular.woff2") format("woff2");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Monument";
+  src: url("/fonts/monument/MonumentExtended-Light.woff2") format("woff2");
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("/fonts/jetbrains-mono/JetBrainsMono-Regular.woff2") format("woff2"),
+       url("/fonts/jetbrains-mono/JetBrainsMono-Italic.woff2") format("woff2"),
+       url("/fonts/jetbrains-mono/JetBrainsMono-Bold.woff2") format("woff2"),
+       url("/fonts/jetbrains-mono/JetBrainsMono-BoldItalic.woff2") format("woff2"),
+       url("/fonts/jetbrains-mono/JetBrainsMono-Light.woff2") format("woff2"),
+       url("/fonts/jetbrains-mono/JetBrainsMono-LightItalic.woff2") format("woff2"),
+       url("/fonts/jetbrains-mono/JetBrainsMono-Medium.woff2") format("woff2"),
+       url("/fonts/jetbrains-mono/JetBrainsMono-MediumItalic.woff2") format("woff2"),
+       url("/fonts/jetbrains-mono/JetBrainsMono-Regular.ttf") format("ttf"),
+       url("/fonts/jetbrains-mono/JetBrainsMono-Italic.ttf") format("ttf"),
+       url("/fonts/jetbrains-mono/JetBrainsMono-Bold.ttf") format("ttf"),
+       url("/fonts/jetbrains-mono/JetBrainsMono-BoldItalic.ttf") format("ttf"),
+       url("/fonts/jetbrains-mono/JetBrainsMono-Light.ttf") format("ttf"),
+       url("/fonts/jetbrains-mono/JetBrainsMono-LightItalic.ttf") format("ttf"),
+       url("/fonts/jetbrains-mono/JetBrainsMono-Medium.ttf") format("ttf"),
+       url("/fonts/jetbrains-mono/JetBrainsMono-MediumItalic.ttf") format("ttf"),
+}

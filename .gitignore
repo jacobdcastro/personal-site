@@ -8,12 +8,11 @@ node_modules/
 
 # production
 /build
-/public
 
 # misc
 .cache
 .netlify
-/.vscode/
+.next/
 .DS_Store
 .env.local
 .env.development.local

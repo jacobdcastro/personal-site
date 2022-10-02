@@ -1,0 +1,20 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@import url(./fonts.css);
+@import url(./ticker.css);
+@import url(./keyframes.css);
+
+
+h1, h2, h3, h4, h5, h6, p, li {
+  color: white;
+}
+
+.monument {
+  font-family: 'Monument';
+}
+
+.jetbrains-mono {
+  font-family: 'JetBrains Mono';
+}
