@@ -17,14 +17,19 @@ export const skills = [
   'TypeScript',
   'React',
   'Express.js',
-  'MongoDB',
+  // 'MongoDB',
+  'NoSQL',
   'MySQL',
   'GraphQL',
   'Node.js',
   // 'Redux',
   // 'XState',
   'Web3',
-  // 'Ethereum',
+  'EVM',
   'Solidity',
+  'Intents',
+  'Chain Abstraction',
+  'MEV',
+  'Rust'
   // 'Solana'
 ];

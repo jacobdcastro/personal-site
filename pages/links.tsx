@@ -28,7 +28,7 @@ const LinksPage = () => {
           </h1>
 
           <ul>
-            <li className="jetbrains-mono md:text-xl">web3 developer</li>
+            <li className="jetbrains-mono md:text-xl">web3 software engineer</li>
           </ul>
         </div>
 
@@ -44,19 +44,13 @@ const LinksPage = () => {
               <a href="https://github.com/jacobdcastro">github</a>
             </li>
             <li className="my-4">
-              <a href="https://blog.jdc.dev">tech blog</a>
+              <a href="https://writings.xiv.systems">substack</a>
             </li>
             <li className="my-4">
-              <a href="https://mirror.xyz/xiv.eth">mirror</a>
-            </li>
-            <li
-              className="my-4 text-sm md:text-2xl"
-              onClick={() => handleCopy()}
-            >
-              {showCopied ? 'Copied!' : 'jacobdcastro#0014'}
+              <a href="mailto:jacob@xiv.systems">jacob@xiv.systems</a>
             </li>
             <li className="my-4">
-              <a href="mailto:jacob@jdc.dev">jacob@jdc.dev</a>
+              <a href="/resume.pdf">resume</a>
             </li>
           </ul>
         </nav>

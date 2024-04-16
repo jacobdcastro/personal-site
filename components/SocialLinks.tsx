@@ -11,7 +11,7 @@ const SocialLinks = () => {
               rel="noopener"
               href="https://twitter.com/jacobdcastro"
             >
-              TW
+              X
             </a>
           </li>
           <li className="monument text-xl transform -rotate-90 flex-grow-0 text-center tracking-wider">
@@ -49,12 +49,12 @@ const SocialLinks = () => {
             <a
               target="_blank"
               rel="noopener"
-              href="https://jacobdcastro.substack.com"
+              href="https://writings.xiv.systems"
             >
               SS
             </a>
           </li>
-          <li className="monument text-xl transform -rotate-90 flex-grow-0 text-center tracking-wider">
+          {/* <li className="monument text-xl transform -rotate-90 flex-grow-0 text-center tracking-wider">
             <a
               target="_blank"
               rel="noopener"
@@ -62,7 +62,7 @@ const SocialLinks = () => {
             >
               TV
             </a>
-          </li>
+          </li> */}
         </ul>
       </div>
     </div>

@@ -19,7 +19,7 @@ const MainView: FC<Props> = ({ relative }) => {
           </h1>
 
           <ul>
-            <li className="jetbrains-mono md:text-xl">web3 developer</li>
+            <li className="jetbrains-mono md:text-xl">web3 software engineer</li>
             <li className="jetbrains-mono md:text-xl">jacobdcastro.eth</li>
             <li className="jetbrains-mono md:text-xl">xiv.eth</li>
           </ul>

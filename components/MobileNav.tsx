@@ -12,19 +12,16 @@ const MobileNav: FC<Props> = ({ open = false, setOpen }) => {
       <div className="flex justify-center h-full monument font-black text-2xl tracking-widest uppercase">
         <ul className="w-full flex flex-col justify-center items-center">
           <li className="my-3">
-            <a href="https://jacobdcastro.substack.com">Substack</a>
-          </li>
-          <li className="my-3">
-            <a href="https://blog.jdc.dev">Tech Blog</a>
+            <a href="https://writings.xiv.systems">Substack</a>
           </li>
           <li className="my-3">
             <a href="https://xiv.eth.xyz">xiv.eth</a>
           </li>
           <li className="my-3">
-            <a href="mailto:jacob@jdc.dev">Email</a>
+            <a href="mailto:jacob@xiv.systems">Email</a>
           </li>
           <li className="my-3">
-            <a href="/jacob-d-castro-resume_08-2022.pdf">Resume</a>
+            <a href="/resume.pdf">Resume</a>
           </li>
         </ul>
       </div>
