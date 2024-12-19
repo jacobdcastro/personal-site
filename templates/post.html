@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block title %}{{ post.title }}{% endblock %}
+{% block description %}{{ meta_description }}{% endblock %}
+
+{% block og_title %}{{ post.title }}{% endblock %}
+{% block og_description %}{{ meta_description }}{% endblock %}
+{% block og_type %}article{% endblock %}
+{% block og_url %}https://xiv.systems/posts/{{ post.slug }}.html{% endblock %}
+
+{% block twitter_title %}{{ post.title }}{% endblock %}
+{% block twitter_description %}{{ meta_description }}{% endblock %}
+
+{% block meta_keywords %}
+{% if post.tags %}
+<meta name="keywords" content="{{ post.tags | join(sep=', ') }}">
+{% endif %}
+{% endblock %}
+
+{% block article_meta %}
+<meta property="article:published_time" content="{{ post.date | date(format='%Y-%m-%dT%H:%M:%S') }}">
+{% if post.tags %}
+{% for tag in post.tags %}
+<meta property="article:tag" content="{{ tag }}">
+{% endfor %}
+{% endif %}
+{% endblock %}
+
+{% block content %}
+<article>
+  <h1>{{ post.title }}</h1>
+  <time datetime="{{ post.date | date(format='%Y-%m-%dT%H:%M:%S') }}">
+    {{ post.date | date(format='%B %d, %Y') }}
+  </time>
+  {{ post.content | safe }}
+</article>
+{% endblock %}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  {# common meta tags #}
+  <title>{% block title %}{% endblock %}</title>
+  <meta name="description" content="{% block description %}{% endblock %}">
+
+  {# open graph tags #}
+  <meta property="og:title" content="{% block og_title %}{% endblock %}">
+  <meta property="og:description" content="{% block og_description %}{% endblock %}">
+  <meta property="og:type" content="{% block og_type %}website{% endblock %}">
+  <meta property="og:url" content="{% block og_url %}{% endblock %}">
+
+  {# twitter card tags #}
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="{% block twitter_title %}{% endblock %}">
+  <meta name="twitter:description" content="{% block twitter_description %}{% endblock %}">
+
+  {# if you have tags, output them as keywords #}
+  {% block meta_keywords %}{% endblock %}
+
+  {# article specific meta tags #}
+  {% block article_meta %}{% endblock %}
+</head>
+
+<body>
+  {% block content %}{% endblock %}
+</body>
+
+<footer>
+  <p>Built with a custom Rust SSG and minimal CSS—because shipping fast beats waiting for perfection. 🚢</p>
+  <p>&copy; 2024 XIV LLC</p>
+</footer>
+
+</html>
