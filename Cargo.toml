@@ -13,3 +13,15 @@ serde_yaml = "0.9"
 html2text = "0.13.5"
 html_parser = "0.7.0"                              # html parser and formatter
 pulldown-cmark = "0.9"
+actix-web = "4.4"
+actix-files = "0.6"
+env_logger = "0.10"
+log = "0.4"
+
+[[bin]]
+name = "dev_server"
+path = "src/dev_server.rs"
+
+[[bin]]
+name = "personal-site"
+path = "src/main.rs"
