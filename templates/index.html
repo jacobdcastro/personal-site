@@ -21,7 +21,7 @@
   <article>
     <h3>
       {{ post.date | date(format='%Y-%m-%d') }} –
-      <a href="/posts/{{ post.slug | split(pat='/') | last }}.html">{{ post.title }}</a>
+      <a href="/posts/{{ post.slug }}.html">{{ post.title }}</a>
     </h3>
   </article>
   {% endfor %}

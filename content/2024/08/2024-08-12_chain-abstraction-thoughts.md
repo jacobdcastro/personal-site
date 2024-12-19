@@ -1,9 +1,9 @@
 ---
 title: Thoughts on Chain Abstraction
-date: 2024-12-15
+date: 2024-08-12
 description: Thoughts on Chain Abstraction
-tags: [intro, blog]
-slug: 2024/12/chain-abstraction-thoughts
+tags: [chain-abstraction]
+slug: 2024/08/chain-abstraction-thoughts
 ---
 
 ## My thoughts on the recent chain abstraction (CA) discourse after building an appchain platform for a couple months:

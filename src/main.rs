@@ -16,6 +16,7 @@ struct FrontMatter {
     date: String,
     description: Option<String>,
     tags: Option<Vec<String>>,
+    slug: String,
 }
 
 #[derive(Serialize)]
@@ -118,17 +119,10 @@ fn process_markdown_file(path: &Path) -> Result<Post, Box<dyn std::error::Error>
 
     let html_content = markdown_to_html(parts[2].trim(), &ComrakOptions::default());
 
-    // Generate slug from the file path, preserving the year/month structure
-    let slug = path
-        .strip_prefix("content")?
-        .with_extension("")
-        .to_string_lossy()
-        .to_string()
-        .replace('\\', "/")
-        .trim_start_matches('/')
-        .to_string();
+    // Use the slug from front matter instead of generating from path
+    let slug = front_matter.slug.clone();
 
-    println!("generated slug: {}", slug);
+    println!("using slug from frontmatter: {}", slug);
 
     Ok(Post {
         title: front_matter.title,
@@ -251,7 +245,7 @@ fn generate_html_files(posts: Vec<Post>) {
         let html = tera.render("post.html", &context).unwrap();
         let prettified_html = prettify_html(&html);
 
-        // preserve the directory structure from the slug
+        // construct output path using the slug from frontmatter
         let output_path = format!("dist/posts/{}.html", post.slug);
 
         // ensure the parent directories exist

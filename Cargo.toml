@@ -23,5 +23,5 @@ name = "dev_server"
 path = "src/dev_server.rs"
 
 [[bin]]
-name = "personal-site"
+name = "build_site"
 path = "src/main.rs"

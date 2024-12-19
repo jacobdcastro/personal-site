@@ -4,6 +4,7 @@ description: Thoughts and doings of a crypto software engineer
 layout: home
 date: 2024-12-17
 lastmod: 2024-12-17
+slug: /
 ---
 
 # XIV Systems | Jacob D. Castro
@@ -30,4 +31,4 @@ Check out some of my notable projects:
 - [Email](mailto:jacob@xiv.systems)
 - [Twitter](https://x.com/jacobdcastro)
 - [GitHub](https://github.com/jacobdcastro)
-- [Resume](/resume.pdf)
+- [Resumé](/resume.pdf)
