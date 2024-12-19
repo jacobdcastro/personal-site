@@ -1,1 +1,0 @@
-# Consumption vs. Creation ratio

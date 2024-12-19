@@ -1,0 +1,15 @@
+[package]
+name = "personal-site"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+comrak = "0.18"                                    # markdown to html converter
+tera = "1.19"                                      # templating engine
+walkdir = "2.4"                                    # directory traversal
+chrono = { version = "0.4", features = ["serde"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_yaml = "0.9"
+html2text = "0.13.5"
+html_parser = "0.7.0"                              # html parser and formatter
+pulldown-cmark = "0.9"

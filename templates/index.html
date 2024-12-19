@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}XIV Systems | Jacob D. Castro{% endblock %}
+{% block description %}Thoughts and doings of a crypto software engineer{% endblock %}
+
+{% block og_title %}XIV Systems | Jacob D. Castro{% endblock %}
+{% block og_description %}Thoughts and doings of a crypto software engineer{% endblock %}
+{% block og_url %}https://xiv.systems/{% endblock %}
+
+{% block twitter_title %}XIV Systems | Jacob D. Castro{% endblock %}
+{% block twitter_description %}Thoughts and doings of a crypto software engineer{% endblock %}
+
+{% block content %}
+<!-- render the home.md content -->
+{{ home_content | safe }}
+
+<!-- posts section -->
+<section class="posts">
+  <h2>Posts</h2>
+  {% for post in posts | sort(attribute="date") | reverse %}
+  <article>
+    <h3>
+      {{ post.date | date(format='%Y-%m-%d') }} –
+      <a href="/posts/{{ post.slug | split(pat='/') | last }}.html">{{ post.title }}</a>
+    </h3>
+  </article>
+  {% endfor %}
+</section>
+{% endblock %}
