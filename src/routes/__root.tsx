@@ -1,11 +1,9 @@
-import { TanStackDevtools } from "@tanstack/react-devtools";
 import {
 	createRootRoute,
 	HeadContent,
 	Link,
 	Scripts,
 } from "@tanstack/react-router";
-import { TanStackRouterDevtoolsPanel } from "@tanstack/react-router-devtools";
 
 import appCss from "../styles.css?url";
 
@@ -32,6 +30,10 @@ export const Route = createRootRoute({
 				rel: "stylesheet",
 				href: appCss,
 			},
+			{
+				rel: "stylesheet",
+				href: "https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap",
+			},
 		],
 	}),
 	shellComponent: RootDocument,
@@ -44,44 +46,14 @@ function RootDocument({ children }: { children: React.ReactNode }) {
 				<HeadContent />
 			</head>
 			<body>
-				<header className="border-b border-neutral-800">
-					<nav className="mx-auto flex max-w-3xl items-center justify-between px-6 py-4 font-sans text-sm">
-						<Link to="/" className="font-bold tracking-tight">
-							XIV Systems
-						</Link>
-						<div className="flex gap-6 text-neutral-400">
-							<Link
-								to="/"
-								className="hover:text-neutral-100"
-								activeProps={{ className: "text-neutral-100" }}
-							>
-								Home
-							</Link>
-							<Link
-								to="/blog"
-								className="hover:text-neutral-100"
-								activeProps={{ className: "text-neutral-100" }}
-							>
-								Blog
-							</Link>
-							<a href="/resume.pdf" className="hover:text-neutral-100">
-								Resumé
-							</a>
-						</div>
-					</nav>
-				</header>
+				<Link
+					to="/"
+					data-ship-cursor="terminal"
+					className="fixed top-4 left-4 z-50 font-serif text-sm tracking-tight text-neutral-300 transition-colors hover:text-neutral-100"
+				>
+					Jacob D. Castro
+				</Link>
 				<main>{children}</main>
-				<TanStackDevtools
-					config={{
-						position: "bottom-right",
-					}}
-					plugins={[
-						{
-							name: "Tanstack Router",
-							render: <TanStackRouterDevtoolsPanel />,
-						},
-					]}
-				/>
 				<Scripts />
 			</body>
 		</html>
