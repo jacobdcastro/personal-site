@@ -59,7 +59,6 @@ function LinkStar({ entry, onMeshRef, onLabelRef, isFocused }: LinkStarProps) {
 			t: performance.now(),
 		};
 		entry.moved = 0;
-		e.nativeEvent.stopPropagation?.();
 	}
 
 	function handlePointerMove(e: { nativeEvent: PointerEvent }) {
@@ -86,7 +85,6 @@ function LinkStar({ entry, onMeshRef, onLabelRef, isFocused }: LinkStarProps) {
 		entry.down = null;
 
 		if (moved < 5 && elapsed < 250) {
-			e.nativeEvent.stopPropagation?.();
 			selectLink();
 		}
 	}
@@ -134,7 +132,6 @@ function LinkStar({ entry, onMeshRef, onLabelRef, isFocused }: LinkStarProps) {
 						}}
 						onPointerEnter={() => setHovered(entry.link.id)}
 						onPointerLeave={() => setHovered(null)}
-						onPointerDown={(e) => e.stopPropagation()}
 						onClick={(e) => {
 							e.stopPropagation();
 							if (entry.moved > 5) return;

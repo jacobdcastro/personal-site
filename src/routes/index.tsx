@@ -64,19 +64,8 @@ function Home() {
 	useEffect(() => {
 		document.documentElement.classList.add("viewport-locked");
 
-		function blockTouchScroll(e: TouchEvent) {
-			if (useNavStore.getState().mode !== "3d") return;
-			if (e.touches.length !== 1) return;
-			e.preventDefault();
-		}
-
-		document.addEventListener("touchmove", blockTouchScroll, {
-			passive: false,
-		});
-
 		return () => {
 			document.documentElement.classList.remove("viewport-locked");
-			document.removeEventListener("touchmove", blockTouchScroll);
 		};
 	}, []);
 

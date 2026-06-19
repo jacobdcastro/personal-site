@@ -23,7 +23,7 @@ export function GalaxyCanvas({ links, active }: GalaxyCanvasProps) {
 	});
 
 	return (
-		<div ref={containerRef} className="h-full w-full" {...handlers}>
+		<div ref={containerRef} className="h-full w-full touch-none" {...handlers}>
 			<Canvas
 				camera={{ position: [0, 0, 8.5], fov: 58 }}
 				dpr={[1, 1.5]}

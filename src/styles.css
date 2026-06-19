@@ -71,6 +71,7 @@ html.viewport-locked body {
   height: 100dvh;
   overflow: hidden;
   overscroll-behavior: none;
+  touch-action: none;
   width: 100%;
 }
 

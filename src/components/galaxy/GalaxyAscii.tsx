@@ -40,7 +40,7 @@ export function GalaxyAscii({ links, active }: GalaxyAsciiProps) {
 
 	const setFocusedLink = useNavStore((s) => s.setFocusedLink);
 
-	const { containerRef, handlers } = useGalaxyInput({
+	const { containerRef, handlers, dragMoved } = useGalaxyInput({
 		isDragging,
 		velocity,
 	});
@@ -182,7 +182,7 @@ export function GalaxyAscii({ links, active }: GalaxyAsciiProps) {
 		const moved = tapMovedRef.current;
 		tapDownRef.current = null;
 
-		if (moved >= 5 || elapsed >= 250) return;
+		if (moved >= 5 || elapsed >= 250 || dragMoved.current >= 5) return;
 
 		const el = containerRef.current;
 		if (!el) return;
@@ -206,12 +206,11 @@ export function GalaxyAscii({ links, active }: GalaxyAsciiProps) {
 	return (
 		<div
 			ref={containerRef}
-			className="relative h-full w-full overflow-hidden bg-black"
+			className="relative h-full w-full touch-none overflow-hidden bg-black"
 			onPointerDown={handlePointerDown}
 			onPointerMove={handlePointerMove}
 			onPointerUp={handlePointerUp}
 			onPointerCancel={handlers.onPointerCancel}
-			onPointerLeave={handlers.onPointerLeave}
 		>
 			<pre
 				ref={preRef}
