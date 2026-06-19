@@ -36,6 +36,9 @@ export function buildPageHead({
 			{ property: "og:type", content: ogType },
 			{ property: "og:url", content: canonical },
 			{ property: "og:image", content: ogImage },
+			{ property: "og:image:width", content: "1200" },
+			{ property: "og:image:height", content: "630" },
+			{ property: "og:image:alt", content: SITE.ogImageAlt },
 			{ property: "og:locale", content: SITE.locale },
 			{ name: "twitter:card", content: "summary_large_image" },
 			{ name: "twitter:site", content: SITE.twitterHandle },
@@ -70,8 +73,10 @@ export function personJsonLd() {
 		name: SITE.author,
 		url: SITE.url,
 		email: SITE.email,
-		// TODO: add sameAs links when social URLs are final
-		sameAs: [] as string[],
+		sameAs: [
+			"https://github.com/jacobdcastro",
+			"https://x.com/jacobdcastro",
+		],
 	};
 }
 
@@ -94,8 +99,8 @@ export function blogPostingJsonLd(input: {
 			name: SITE.author,
 		},
 		publisher: {
-			"@type": "Organization",
-			name: SITE.name,
+			"@type": "Person",
+			name: SITE.author,
 			url: SITE.url,
 		},
 		mainEntityOfPage: absoluteUrl(input.path),

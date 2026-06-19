@@ -8,9 +8,10 @@ const publicDir = join(root, "public");
 const postsDir = join(root, "src/content/posts");
 
 // keep in sync with src/lib/site.ts — duplicated here so the script stays standalone
-const SITE_URL = "https://xiv.systems";
-const SITE_TITLE = "XIV Systems | Jacob D. Castro";
-const SITE_DESCRIPTION = "Thoughts and doings of a crypto software engineer";
+const SITE_URL = "https://jacobdcastro.com";
+const SITE_TITLE = "Jacob D. Castro | Fullstack Software Engineer";
+const SITE_DESCRIPTION =
+	"Fullstack software engineer building Ethereum systems and developer tools. Writing, experiments, and open source.";
 const SITE_EMAIL = "jacob@xiv.systems";
 
 interface PostFrontmatter {

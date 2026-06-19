@@ -2,5 +2,4 @@
 User-agent: *
 Disallow:
 
-# TODO: confirm production URL
-Sitemap: https://xiv.systems/sitemap.xml
+Sitemap: https://jacobdcastro.com/sitemap.xml

@@ -8,8 +8,10 @@
   "scripts": {
     "dev": "vite dev --port 3000",
     "generate-routes": "tsr generate",
-    "build": "bun scripts/generate-seo-files.ts && vite build",
+    "build": "bun scripts/generate-seo-files.ts && bun scripts/generate-og-image.ts && bun scripts/generate-favicon.ts && vite build",
     "generate-seo": "bun scripts/generate-seo-files.ts",
+    "generate-og": "bun scripts/generate-og-image.ts",
+    "generate-favicon": "bun scripts/generate-favicon.ts",
     "preview": "vite preview",
     "test": "vitest run",
     "format": "biome format",
@@ -43,6 +45,7 @@
   },
   "devDependencies": {
     "@biomejs/biome": "2.4.5",
+    "@napi-rs/canvas": "^1.0.0",
     "@netlify/vite-plugin-tanstack-start": "^1.2.15",
     "@tailwindcss/typography": "^0.5.16",
     "@tanstack/devtools-vite": "latest",
@@ -55,6 +58,7 @@
     "@types/three": "^0.184.1",
     "@vitejs/plugin-react": "^6.0.1",
     "jsdom": "^28.1.0",
+    "sharp": "^0.34.3",
     "typescript": "^6.0.2",
     "vite": "^8.0.0",
     "vitest": "^4.1.5"

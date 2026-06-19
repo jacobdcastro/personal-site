@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>XIV Systems | Jacob D. Castro</title>
-    <link>https://xiv.systems/blog</link>
-    <description>Thoughts and doings of a crypto software engineer</description>
+    <title>Jacob D. Castro | Fullstack Software Engineer</title>
+    <link>https://jacobdcastro.com/blog</link>
+    <description>Fullstack software engineer building Ethereum systems and developer tools. Writing, experiments, and open source.</description>
     <language>en-us</language>
-    <managingEditor>jacob@xiv.systems (XIV Systems | Jacob D. Castro)</managingEditor>
-    <atom:link href="https://xiv.systems/feed.xml" rel="self" type="application/rss+xml"/>
+    <managingEditor>jacob@xiv.systems (Jacob D. Castro | Fullstack Software Engineer)</managingEditor>
+    <atom:link href="https://jacobdcastro.com/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>Thoughts on Chain Abstraction</title>
-      <link>https://xiv.systems/blog/chain-abstraction-thoughts</link>
-      <guid isPermaLink="true">https://xiv.systems/blog/chain-abstraction-thoughts</guid>
+      <link>https://jacobdcastro.com/blog/chain-abstraction-thoughts</link>
+      <guid isPermaLink="true">https://jacobdcastro.com/blog/chain-abstraction-thoughts</guid>
       <pubDate>Invalid Date</pubDate>
       <description>Thoughts on Chain Abstraction</description>
     </item>

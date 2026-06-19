@@ -1,17 +1,14 @@
-// update these values before launch — placeholders marked with TODO
 export const SITE = {
-	name: "XIV Systems",
-	title: "XIV Systems | Jacob D. Castro",
-	description: "Thoughts and doings of a crypto software engineer",
-	/** TODO: confirm production URL */
-	url: "https://xiv.systems",
+	name: "Jacob D. Castro",
+	title: "Jacob D. Castro | Fullstack Software Engineer",
+	description:
+		"Fullstack software engineer building Ethereum systems and developer tools. Writing, experiments, and open source.",
+	url: "https://jacobdcastro.com",
 	author: "Jacob D. Castro",
-	/** TODO: confirm contact email */
 	email: "jacob@xiv.systems",
-	/** TODO: confirm handle */
 	twitterHandle: "@jacobdcastro",
-	/** TODO: add public/og.png and update this path */
 	ogImagePath: "/og.png",
+	ogImageAlt: "ASCII art of Saturn and its rings",
 	locale: "en_US",
 	themeColor: "#0a0a0a",
 } as const;

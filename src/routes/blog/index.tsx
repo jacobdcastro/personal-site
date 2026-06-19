@@ -8,7 +8,8 @@ export const Route = createFileRoute("/blog/")({
 	head: () =>
 		buildPageHead({
 			title: "Blog",
-			description: "Writing on engineering, design, and technology.",
+			description:
+				"Essays on Ethereum, systems design, and software engineering by Jacob D. Castro.",
 			path: "/blog",
 		}),
 	component: BlogIndex,
@@ -23,7 +24,8 @@ function BlogIndex() {
 					"@type": "Blog",
 					name: `${SITE.name} Blog`,
 					url: `${SITE.url}/blog`,
-					description: "Writing on engineering, design, and technology.",
+					description:
+						"Essays on Ethereum, systems design, and software engineering by Jacob D. Castro.",
 				}}
 			/>
 			<h1 className="text-4xl font-bold">Blog</h1>
