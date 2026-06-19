@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, ClientOnly } from "@tanstack/react-router";
 import { lazy, Suspense, useEffect } from "react";
 import { ShipCursor } from "../components/cursor/ShipCursor";
 import { GalaxyErrorBoundary } from "../components/galaxy/GalaxyErrorBoundary";
@@ -10,17 +10,11 @@ import { JsonLd } from "../components/seo/JsonLd";
 import { LINKS } from "../data/links";
 import { buildPageHead, personJsonLd, websiteJsonLd } from "../lib/seo";
 import { SITE } from "../lib/site";
-import { useNavStore } from "../store/nav-store";
+import { useNavStore, useNavStoreHydrated } from "../store/nav-store";
 
-const GalaxyCanvas = lazy(() =>
-	import("../components/galaxy/GalaxyCanvas").then((mod) => ({
-		default: mod.GalaxyCanvas,
-	})),
-);
-
-const GalaxyAscii = lazy(() =>
-	import("../components/galaxy/GalaxyAscii").then((mod) => ({
-		default: mod.GalaxyAscii,
+const GalaxyView = lazy(() =>
+	import("../components/galaxy/GalaxyView").then((mod) => ({
+		default: mod.GalaxyView,
 	})),
 );
 
@@ -46,12 +40,14 @@ function canUseWebGL() {
 }
 
 function Home() {
+	const navHydrated = useNavStoreHydrated();
 	const mode = useNavStore((s) => s.mode);
-	const renderStyle = useNavStore((s) => s.renderStyle);
 	const setMode = useNavStore((s) => s.setMode);
 	const setFocusedLink = useNavStore((s) => s.setFocusedLink);
 
 	useEffect(() => {
+		if (!navHydrated) return;
+
 		const persisted = localStorage.getItem("galaxy-nav");
 		if (persisted) return;
 
@@ -59,7 +55,7 @@ function Home() {
 		if (mq.matches || !canUseWebGL()) {
 			setMode("list");
 		}
-	}, [setMode]);
+	}, [navHydrated, setMode]);
 
 	useEffect(() => {
 		if (mode !== "3d") setFocusedLink(null);
@@ -69,21 +65,19 @@ function Home() {
 		<div className="relative h-screen h-dvh w-full overflow-hidden bg-black">
 			<JsonLd data={[websiteJsonLd(), personJsonLd()]} />
 
-			{mode === "3d" ? (
-				<GalaxyErrorBoundary links={LINKS} onFallback={() => setMode("list")}>
-					<Suspense fallback={<PlainNav links={LINKS} />}>
-						{renderStyle === "webgl" ? (
-							<GalaxyCanvas links={LINKS} />
-						) : (
-							<GalaxyAscii links={LINKS} />
-						)}
-					</Suspense>
-				</GalaxyErrorBoundary>
+			{!navHydrated ? null : mode === "3d" ? (
+				<ClientOnly fallback={null}>
+					<GalaxyErrorBoundary links={LINKS}>
+						<Suspense fallback={null}>
+							<GalaxyView links={LINKS} />
+						</Suspense>
+					</GalaxyErrorBoundary>
+				</ClientOnly>
 			) : (
 				<PlainNav links={LINKS} />
 			)}
 
-			{mode === "3d" && (
+			{navHydrated && mode === "3d" && (
 				<>
 					<ShipCursor />
 					<LinkDetailPanel links={LINKS} />
@@ -91,9 +85,9 @@ function Home() {
 				</>
 			)}
 
-			{mode === "3d" && <PlainNav links={LINKS} hidden />}
+			{navHydrated && mode === "3d" && <PlainNav links={LINKS} hidden />}
 
-			<ModeToggle />
+			{navHydrated && <ModeToggle />}
 		</div>
 	);
 }

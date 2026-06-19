@@ -1,5 +1,6 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
+import { useSyncExternalStore } from "react";
 
 type Mode = "3d" | "list";
 type RenderStyle = "webgl" | "ascii";
@@ -8,6 +9,7 @@ interface NavState {
 	// persisted: survives page reload
 	mode: Mode;
 	setMode: (m: Mode) => void;
+	// ephemeral: resets to webgl each session
 	renderStyle: RenderStyle;
 	setRenderStyle: (s: RenderStyle) => void;
 
@@ -40,8 +42,21 @@ export const useNavStore = create<NavState>()(
 		}),
 		{
 			name: "galaxy-nav",
-			// only persist the user's mode preference
-			partialize: (s) => ({ mode: s.mode, renderStyle: s.renderStyle }),
+			version: 1,
+			migrate: (persisted) => {
+				const state = persisted as { mode?: Mode };
+				return { mode: state.mode ?? "3d" };
+			},
+			// only persist the user's galaxy/list mode preference
+			partialize: (s) => ({ mode: s.mode }),
 		},
 	),
 );
+
+export function useNavStoreHydrated() {
+	return useSyncExternalStore(
+		(onStoreChange) => useNavStore.persist.onFinishHydration(onStoreChange),
+		() => useNavStore.persist.hasHydrated(),
+		() => false,
+	);
+}

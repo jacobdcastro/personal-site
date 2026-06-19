@@ -25,9 +25,14 @@ interface SmoothedLink {
 interface GalaxyLinkLabelsProps {
 	links: GalaxyLink[];
 	projectedRef?: RefObject<ProjectedLink[]>;
+	active?: boolean;
 }
 
-export function GalaxyLinkLabels({ links, projectedRef }: GalaxyLinkLabelsProps) {
+export function GalaxyLinkLabels({
+	links,
+	projectedRef,
+	active = true,
+}: GalaxyLinkLabelsProps) {
 	const containerRef = useRef<HTMLDivElement>(null);
 	const markerRefs = useRef(new Map<string, HTMLDivElement>());
 	const smoothRef = useRef(new Map<string, SmoothedLink>());
@@ -35,6 +40,15 @@ export function GalaxyLinkLabels({ links, projectedRef }: GalaxyLinkLabelsProps)
 	const setFocusedLink = useNavStore((s) => s.setFocusedLink);
 
 	useEffect(() => {
+		if (!active) {
+			for (const el of markerRefs.current.values()) {
+				el.style.visibility = "hidden";
+				el.style.pointerEvents = "none";
+				el.style.opacity = "0";
+			}
+			return;
+		}
+
 		const container = containerRef.current;
 		if (!container) return;
 
@@ -119,7 +133,7 @@ export function GalaxyLinkLabels({ links, projectedRef }: GalaxyLinkLabelsProps)
 
 		raf = requestAnimationFrame(frame);
 		return () => cancelAnimationFrame(raf);
-	}, [links, projectedRef]);
+	}, [active, links, projectedRef]);
 
 	function selectLink(link: GalaxyLink) {
 		const current = useNavStore.getState().focusedLinkId;

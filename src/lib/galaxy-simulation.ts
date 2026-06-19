@@ -60,7 +60,7 @@ const _right = new Vector3();
 const _baseOffset = new Vector3(0, 0, ZOOM_DISTANCE);
 const linkLocalCache = new Map<string, [number, number, number]>();
 
-function starLocalPosition(link: GalaxyLink, out: Vector3) {
+function starLocalPosition(link: GalaxyLink, out: Vector3): Vector3 {
 	let cached = linkLocalCache.get(link.id);
 	if (!cached) {
 		const [lx, ly, lz] = spiralPosition(link.radius, link.branch, {
@@ -71,6 +71,7 @@ function starLocalPosition(link: GalaxyLink, out: Vector3) {
 		linkLocalCache.set(link.id, cached);
 	}
 	out.set(cached[0], cached[1], cached[2]);
+	return out;
 }
 
 function orbitOffsetFromBase(
@@ -386,6 +387,9 @@ class GalaxySimulation {
 		// camera first so zoomFocusState is updated before rotation reads eased
 		this.tickCamera(delta, input);
 		this.tickRotation(delta, input);
+		// keep projection/view in sync for ASCII projection (WebGL updates via R3F each frame)
+		this.camera.updateMatrixWorld();
+		this.camera.updateProjectionMatrix();
 	}
 }
 

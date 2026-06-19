@@ -4,7 +4,6 @@ import { PlainNav } from "../nav/PlainNav";
 
 interface GalaxyErrorBoundaryProps {
 	links: GalaxyLink[];
-	onFallback: () => void;
 	children: ReactNode;
 }
 
@@ -22,8 +21,8 @@ export class GalaxyErrorBoundary extends Component<
 		return { hasError: true };
 	}
 
-	componentDidCatch() {
-		this.props.onFallback();
+	componentDidCatch(error: unknown) {
+		console.error("galaxy render failed:", error);
 	}
 
 	render() {

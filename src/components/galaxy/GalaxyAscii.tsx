@@ -20,9 +20,10 @@ const IDLE_ASCII_MS = 48;
 
 interface GalaxyAsciiProps {
 	links: GalaxyLink[];
+	active: boolean;
 }
 
-export function GalaxyAscii({ links }: GalaxyAsciiProps) {
+export function GalaxyAscii({ links, active }: GalaxyAsciiProps) {
 	const isDragging = useRef(false);
 	const velocity = useRef({ x: 0, y: 0 });
 	const preRef = useRef<HTMLPreElement>(null);
@@ -45,6 +46,8 @@ export function GalaxyAscii({ links }: GalaxyAsciiProps) {
 	});
 
 	useEffect(() => {
+		if (!active) return;
+
 		const el = containerRef.current;
 		if (!el) return;
 
@@ -153,7 +156,7 @@ export function GalaxyAscii({ links }: GalaxyAsciiProps) {
 			cancelAnimationFrame(raf);
 			galaxyCoordsRef.current = null;
 		};
-	}, [links, containerRef]);
+	}, [active, links, containerRef]);
 
 	function handlePointerDown(e: React.PointerEvent<HTMLDivElement>) {
 		handlers.onPointerDown(e);
@@ -221,7 +224,7 @@ export function GalaxyAscii({ links }: GalaxyAsciiProps) {
 			>
 				{" "}
 			</pre>
-			<GalaxyLinkLabels links={links} projectedRef={projectedRef} />
+			<GalaxyLinkLabels links={links} projectedRef={projectedRef} active={active} />
 		</div>
 	);
 }

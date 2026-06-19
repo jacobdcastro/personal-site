@@ -9,9 +9,10 @@ import { GalaxyScene, GalaxySimDriver } from "./GalaxySimDriver";
 
 interface GalaxyCanvasProps {
 	links: GalaxyLink[];
+	active: boolean;
 }
 
-export function GalaxyCanvas({ links }: GalaxyCanvasProps) {
+export function GalaxyCanvas({ links, active }: GalaxyCanvasProps) {
 	const galaxyGroupRef = useRef<Group>(null);
 	const isDragging = useRef(false);
 	const velocity = useRef({ x: 0, y: 0 });
@@ -27,17 +28,19 @@ export function GalaxyCanvas({ links }: GalaxyCanvasProps) {
 				camera={{ position: [0, 0, 8.5], fov: 58 }}
 				dpr={[1, 1.5]}
 				gl={{ antialias: false }}
+				frameloop="always"
 			>
 				<group ref={galaxyGroupRef}>
-					<GalaxyScene links={links} />
+					<GalaxyScene links={links} active={active} />
 				</group>
 				<GalaxySimDriver
 					galaxyGroupRef={galaxyGroupRef}
 					isDragging={isDragging}
 					velocity={velocity}
 					links={links}
+					active={active}
 				/>
-				<GalaxyCursorTracker groupRef={galaxyGroupRef} />
+				<GalaxyCursorTracker groupRef={galaxyGroupRef} active={active} />
 				<EffectComposer multisampling={0}>
 					<Bloom
 						luminanceThreshold={0.2}

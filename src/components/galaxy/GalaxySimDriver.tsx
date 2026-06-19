@@ -7,11 +7,19 @@ import { useNavStore } from "../../store/nav-store";
 import { GalaxyDust } from "./GalaxyDust";
 import { LinkStars } from "./LinkStars";
 
+function cssViewportSize(size: { width: number; height: number }, dpr: number) {
+	return {
+		width: size.width / dpr,
+		height: size.height / dpr,
+	};
+}
+
 interface GalaxySimDriverProps {
 	galaxyGroupRef: RefObject<Group | null>;
 	isDragging: React.MutableRefObject<boolean>;
 	velocity: React.MutableRefObject<{ x: number; y: number }>;
 	links: GalaxyLink[];
+	active: boolean;
 }
 
 export function GalaxySimDriver({
@@ -19,19 +27,23 @@ export function GalaxySimDriver({
 	isDragging,
 	velocity,
 	links,
+	active,
 }: GalaxySimDriverProps) {
-	const { camera, size } = useThree();
+	const { camera, size, gl } = useThree();
 	const focusedLinkId = useNavStore((s) => s.focusedLinkId);
 
 	useFrame((_, delta) => {
-		galaxySim.tick(delta, {
-			isDragging: isDragging.current,
-			velocity: velocity.current,
-			focusedLinkId,
-			links,
-			width: size.width,
-			height: size.height,
-		});
+		const { width, height } = cssViewportSize(size, gl.getPixelRatio());
+		if (active) {
+			galaxySim.tick(delta, {
+				isDragging: isDragging.current,
+				velocity: velocity.current,
+				focusedLinkId,
+				links,
+				width,
+				height,
+			});
+		}
 
 		const g = galaxyGroupRef.current;
 		if (g) {
@@ -68,13 +80,14 @@ export function GalaxySimDriver({
 
 interface GalaxySceneProps {
 	links: GalaxyLink[];
+	active: boolean;
 }
 
-export function GalaxyScene({ links }: GalaxySceneProps) {
+export function GalaxyScene({ links, active }: GalaxySceneProps) {
 	return (
 		<>
 			<GalaxyDust />
-			<LinkStars links={links} />
+			<LinkStars links={links} active={active} />
 		</>
 	);
 }

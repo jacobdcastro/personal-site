@@ -12,9 +12,13 @@ export interface GalaxyPointer {
 
 interface GalaxyCursorTrackerProps {
 	groupRef: RefObject<Group | null>;
+	active?: boolean;
 }
 
-export function GalaxyCursorTracker({ groupRef }: GalaxyCursorTrackerProps) {
+export function GalaxyCursorTracker({
+	groupRef,
+	active = true,
+}: GalaxyCursorTrackerProps) {
 	const { camera, gl } = useThree();
 	const lastCoords = useRef<{ x: number; y: number } | null>(null);
 
@@ -25,6 +29,8 @@ export function GalaxyCursorTracker({ groupRef }: GalaxyCursorTrackerProps) {
 	}, []);
 
 	useFrame(() => {
+		if (!active) return;
+
 		const group = groupRef.current;
 
 		if (!cursorPos.active || !group) {

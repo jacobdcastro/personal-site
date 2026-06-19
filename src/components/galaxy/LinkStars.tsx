@@ -1,6 +1,6 @@
 import { Html } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
-import { useMemo, useRef } from "react";
+import { useEffect, useMemo, useRef } from "react";
 import {
 	AdditiveBlending,
 	type Mesh,
@@ -8,6 +8,7 @@ import {
 	Vector3,
 } from "three";
 import type { GalaxyLink } from "../../data/links";
+import { getLinkLocalPosition } from "../../lib/galaxy-simulation";
 import { prefersReducedMotion } from "../../lib/input-device";
 import {
 	canDismissZoomLock,
@@ -16,7 +17,7 @@ import {
 	zoomFocusState,
 } from "../../lib/zoom-focus-state";
 import { useNavStore } from "../../store/nav-store";
-import { colorAtRadius, hashOffset, spiralPosition } from "./galaxy-math";
+import { colorAtRadius } from "./galaxy-math";
 
 const FACE_SCALE = 3;
 const LABEL_DISTANCE_FACTOR = 10;
@@ -162,32 +163,51 @@ function LinkStar({ entry, onMeshRef, onLabelRef, isFocused }: LinkStarProps) {
 
 interface LinkStarsProps {
 	links: GalaxyLink[];
+	active?: boolean;
 }
 
-export function LinkStars({ links }: LinkStarsProps) {
+function hideLabels(entries: StarEntry[]) {
+	for (const entry of entries) {
+		if (!entry.label) continue;
+		entry.label.style.visibility = "hidden";
+		entry.label.style.pointerEvents = "none";
+		entry.label.style.opacity = "0";
+	}
+}
+
+export function LinkStars({ links, active = true }: LinkStarsProps) {
 	const entriesRef = useRef<StarEntry[]>([]);
 	const tmpVec = useRef(new Vector3());
 	const focusedLinkId = useNavStore((s) => s.focusedLinkId);
 
 	const entries = useMemo(() => {
-		const next = links.map((link) => ({
-			link,
-			mesh: null as Mesh | null,
-			label: null as HTMLDivElement | null,
-			position: spiralPosition(link.radius, link.branch, {
-				scatter: 0.6,
-				offset: hashOffset(link.id),
-			}),
-			starColor: colorAtRadius(link.radius).getStyle(),
-			labelOpacity: 0,
-			down: null as { x: number; y: number; t: number } | null,
-			moved: 0,
-		}));
+		const next = links.map((link) => {
+			const local = getLinkLocalPosition(link);
+			return {
+				link,
+				mesh: null as Mesh | null,
+				label: null as HTMLDivElement | null,
+				position: [local.x, local.y, local.z] as [number, number, number],
+				starColor: colorAtRadius(link.radius).getStyle(),
+				labelOpacity: 0,
+				down: null as { x: number; y: number; t: number } | null,
+				moved: 0,
+			};
+		});
 		entriesRef.current = next;
 		return next;
 	}, [links]);
 
+	useEffect(() => {
+		if (!active) hideLabels(entriesRef.current);
+	}, [active]);
+
 	useFrame(() => {
+		if (!active) {
+			hideLabels(entriesRef.current);
+			return;
+		}
+
 		const snap = prefersReducedMotion();
 		const zoomLocked = isFocusLockedView();
 		const focusedId = useNavStore.getState().focusedLinkId;
