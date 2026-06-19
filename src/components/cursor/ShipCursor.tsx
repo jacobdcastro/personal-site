@@ -267,7 +267,7 @@ export function ShipCursor() {
 	if (touchHud) {
 		return (
 			<div
-				className="pointer-events-none fixed top-3 right-4 z-[100] w-[11.5rem] max-w-[calc(100vw-9rem)]"
+				className="pointer-events-none fixed top-3 right-4 z-[100] w-[11.5rem] max-w-[calc(100vw-5rem)]"
 				aria-hidden
 			>
 				<div className="border border-[#8ec8ff]/40 bg-black/75 px-3 py-2 text-right shadow-[0_0_24px_rgba(142,200,255,0.06)] backdrop-blur-md">

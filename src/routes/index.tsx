@@ -61,8 +61,27 @@ function Home() {
 		if (mode !== "3d") setFocusedLink(null);
 	}, [mode, setFocusedLink]);
 
+	useEffect(() => {
+		document.documentElement.classList.add("viewport-locked");
+
+		function blockTouchScroll(e: TouchEvent) {
+			if (useNavStore.getState().mode !== "3d") return;
+			if (e.touches.length !== 1) return;
+			e.preventDefault();
+		}
+
+		document.addEventListener("touchmove", blockTouchScroll, {
+			passive: false,
+		});
+
+		return () => {
+			document.documentElement.classList.remove("viewport-locked");
+			document.removeEventListener("touchmove", blockTouchScroll);
+		};
+	}, []);
+
 	return (
-		<div className="relative h-screen h-dvh w-full overflow-hidden bg-black">
+		<div className="fixed inset-0 h-dvh w-full overflow-hidden bg-black">
 			<JsonLd data={[websiteJsonLd(), personJsonLd()]} />
 
 			{!navHydrated ? null : mode === "3d" ? (
