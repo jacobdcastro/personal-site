@@ -159,7 +159,7 @@ export function GalaxyAscii({ links, active }: GalaxyAsciiProps) {
 	}, [active, links, containerRef]);
 
 	function handlePointerDown(e: React.PointerEvent<HTMLDivElement>) {
-		handlers.onPointerDown(e);
+		if (!handlers.onPointerDown(e)) return;
 		tapDownRef.current = { x: e.clientX, y: e.clientY, t: performance.now() };
 		tapMovedRef.current = 0;
 	}
@@ -173,10 +173,12 @@ export function GalaxyAscii({ links, active }: GalaxyAsciiProps) {
 	}
 
 	function handlePointerUp(e: React.PointerEvent<HTMLDivElement>) {
+		const hadTap = !!tapDownRef.current;
+		const tapStart = tapDownRef.current;
 		handlers.onPointerUp(e);
 
-		if (!tapDownRef.current) return;
-		const elapsed = performance.now() - tapDownRef.current.t;
+		if (!hadTap || !tapStart) return;
+		const elapsed = performance.now() - tapStart.t;
 		const moved = tapMovedRef.current;
 		tapDownRef.current = null;
 
@@ -208,6 +210,7 @@ export function GalaxyAscii({ links, active }: GalaxyAsciiProps) {
 			onPointerDown={handlePointerDown}
 			onPointerMove={handlePointerMove}
 			onPointerUp={handlePointerUp}
+			onPointerCancel={handlers.onPointerCancel}
 			onPointerLeave={handlers.onPointerLeave}
 		>
 			<pre

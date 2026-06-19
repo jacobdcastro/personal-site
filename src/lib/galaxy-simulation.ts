@@ -339,14 +339,15 @@ class GalaxySimulation {
 		const interacting = isDragging || hasVelocity;
 
 		if (interacting) {
+			// camera orbit inverts screen motion vs rotating the galaxy group
 			if (isDragging) {
-				this.orbit.pitch += velocity.x;
-				this.orbit.yaw += velocity.y;
+				this.orbit.pitch -= velocity.x;
+				this.orbit.yaw -= velocity.y;
 			} else {
 				velocity.x *= INERTIA_DECAY;
 				velocity.y *= INERTIA_DECAY;
-				this.orbit.pitch += velocity.x;
-				this.orbit.yaw += velocity.y;
+				this.orbit.pitch -= velocity.x;
+				this.orbit.yaw -= velocity.y;
 			}
 
 			this.orbit.pitch = Math.max(
