@@ -165,7 +165,6 @@ export function GalaxyAscii({ links, active }: GalaxyAsciiProps) {
 	}
 
 	function handlePointerMove(e: React.PointerEvent<HTMLDivElement>) {
-		handlers.onPointerMove(e);
 		if (!tapDownRef.current) return;
 		const dx = e.clientX - tapDownRef.current.x;
 		const dy = e.clientY - tapDownRef.current.y;

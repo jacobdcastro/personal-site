@@ -67,54 +67,67 @@ export function useGalaxyInput({
 			velocity.current.y = y;
 		}
 
+		function onPointerMoveCapture(e: PointerEvent) {
+			if (e.pointerId !== activePointerId.current) return;
+			if (multiTouchPaused.current) return;
+			if (!isDragging.current) return;
+
+			if (skipNextDelta.current) {
+				skipNextDelta.current = false;
+				lastPointer.current = { x: e.clientX, y: e.clientY };
+				return;
+			}
+
+			const dx = e.clientX - lastPointer.current.x;
+			const dy = e.clientY - lastPointer.current.y;
+			dragMoved.current += Math.hypot(dx, dy);
+			velocity.current.y = dx * DRAG_SENSITIVITY;
+			velocity.current.x = dy * DRAG_SENSITIVITY;
+			lastPointer.current = { x: e.clientX, y: e.clientY };
+		}
+
 		el.addEventListener("wheel", handleWheel, {
 			passive: false,
 			capture: true,
 		});
-		return () =>
+		el.addEventListener("pointermove", onPointerMoveCapture, {
+			capture: true,
+		});
+		return () => {
 			el.removeEventListener("wheel", handleWheel, { capture: true });
+			el.removeEventListener("pointermove", onPointerMoveCapture, {
+				capture: true,
+			});
+		};
 	}, [setFocusedLink, velocity]);
 
-	function applyPointerMove(clientX: number, clientY: number) {
-		if (multiTouchPaused.current) return;
-		if (!isDragging.current) return;
-
-		if (skipNextDelta.current) {
-			skipNextDelta.current = false;
-			lastPointer.current = { x: clientX, y: clientY };
-			return;
-		}
-
-		const dx = clientX - lastPointer.current.x;
-		const dy = clientY - lastPointer.current.y;
-		dragMoved.current += Math.hypot(dx, dy);
-		velocity.current.y = dx * DRAG_SENSITIVITY;
-		velocity.current.x = dy * DRAG_SENSITIVITY;
-		lastPointer.current = { x: clientX, y: clientY };
+	function pauseForMultiTouch() {
+		multiTouchPaused.current = true;
+		velocity.current = { x: 0, y: 0 };
+		isDragging.current = false;
+		setDragging(false);
 	}
 
 	function resumeFromMultiTouchPause() {
-		if (multiTouchPaused.current && activePointerId.current !== null) {
-			multiTouchPaused.current = false;
-			skipNextDelta.current = true;
-			isDragging.current = true;
-			setDragging(true);
-		}
+		if (!multiTouchPaused.current || activePointerId.current === null) return;
+		multiTouchPaused.current = false;
+		skipNextDelta.current = true;
+		isDragging.current = true;
+		setDragging(true);
 	}
 
-	function releasePointer(pointerId: number) {
-		if (pointerId !== activePointerId.current) {
+	function releasePointer(e: ReactPointerEvent<HTMLDivElement>) {
+		if (!e.isPrimary) {
 			resumeFromMultiTouchPause();
 			return;
 		}
 
-		const el = containerRef.current;
-		if (el) {
-			try {
-				el.releasePointerCapture(pointerId);
-			} catch {
-				// pointer may already be released
-			}
+		if (e.pointerId !== activePointerId.current) return;
+
+		try {
+			e.currentTarget.releasePointerCapture(e.pointerId);
+		} catch {
+			// pointer may already be released
 		}
 
 		if (
@@ -135,68 +148,13 @@ export function useGalaxyInput({
 		setDragging(false);
 	}
 
-	const windowHandlersRef = useRef<{
-		onMove: (e: PointerEvent) => void;
-		onUp: (e: PointerEvent) => void;
-		onDown: (e: PointerEvent) => void;
-	} | null>(null);
-
-	function detachWindowListeners() {
-		const handlers = windowHandlersRef.current;
-		if (!handlers) return;
-		window.removeEventListener("pointermove", handlers.onMove);
-		window.removeEventListener("pointerup", handlers.onUp);
-		window.removeEventListener("pointercancel", handlers.onUp);
-		window.removeEventListener("pointerdown", handlers.onDown);
-		windowHandlersRef.current = null;
-	}
-
-	function attachWindowListeners() {
-		if (windowHandlersRef.current) return;
-
-		const onDown = (e: PointerEvent) => {
-			if (
-				activePointerId.current !== null &&
-				e.pointerId !== activePointerId.current
-			) {
-				multiTouchPaused.current = true;
-				velocity.current = { x: 0, y: 0 };
-				isDragging.current = false;
-				setDragging(false);
-			}
-		};
-
-		const onMove = (e: PointerEvent) => {
-			if (e.pointerId !== activePointerId.current) return;
-			applyPointerMove(e.clientX, e.clientY);
-		};
-
-		const onUp = (e: PointerEvent) => {
-			if (e.pointerId !== activePointerId.current) {
-				resumeFromMultiTouchPause();
-				return;
-			}
-			releasePointer(e.pointerId);
-			detachWindowListeners();
-		};
-
-		windowHandlersRef.current = { onMove, onUp, onDown };
-		window.addEventListener("pointerdown", onDown);
-		window.addEventListener("pointermove", onMove);
-		window.addEventListener("pointerup", onUp);
-		window.addEventListener("pointercancel", onUp);
-	}
-
-	useEffect(() => detachWindowListeners, []);
-
 	function handlePointerDown(e: ReactPointerEvent<HTMLDivElement>) {
-		if (activePointerId.current !== null) {
-			multiTouchPaused.current = true;
-			velocity.current = { x: 0, y: 0 };
-			isDragging.current = false;
-			setDragging(false);
+		if (!e.isPrimary) {
+			if (activePointerId.current !== null) pauseForMultiTouch();
 			return false;
 		}
+
+		if (activePointerId.current !== null) return false;
 
 		activePointerId.current = e.pointerId;
 		try {
@@ -204,7 +162,6 @@ export function useGalaxyInput({
 		} catch {
 			// capture may fail on some synthetic events
 		}
-		attachWindowListeners();
 
 		pointerDownOnCanvas.current = true;
 		isDragging.current = true;
@@ -220,28 +177,13 @@ export function useGalaxyInput({
 		return true;
 	}
 
-	function handlePointerMove(e: ReactPointerEvent<HTMLDivElement>) {
-		if (e.pointerId !== activePointerId.current) return;
-		applyPointerMove(e.clientX, e.clientY);
-	}
-
-	function handlePointerRelease(e: ReactPointerEvent<HTMLDivElement>) {
-		if (e.pointerId !== activePointerId.current) {
-			resumeFromMultiTouchPause();
-			return;
-		}
-		releasePointer(e.pointerId);
-		detachWindowListeners();
-	}
-
 	return {
 		containerRef,
 		dragMoved,
 		handlers: {
 			onPointerDown: handlePointerDown,
-			onPointerMove: handlePointerMove,
-			onPointerUp: handlePointerRelease,
-			onPointerCancel: handlePointerRelease,
+			onPointerUp: releasePointer,
+			onPointerCancel: releasePointer,
 		},
 	};
 }
