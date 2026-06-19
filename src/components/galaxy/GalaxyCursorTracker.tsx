@@ -1,7 +1,7 @@
 import { useFrame, useThree } from "@react-three/fiber";
 import { type RefObject, useEffect, useRef } from "react";
 import type { Group } from "three";
-import { galaxyCoordsRef } from "../../lib/cursor-motion";
+import { cursorPos, galaxyCoordsRef } from "../../lib/cursor-motion";
 import { pointerToGalaxyPlane } from "./galaxy-math";
 
 export interface GalaxyPointer {
@@ -12,13 +12,9 @@ export interface GalaxyPointer {
 
 interface GalaxyCursorTrackerProps {
 	groupRef: RefObject<Group | null>;
-	pointerRef: RefObject<GalaxyPointer>;
 }
 
-export function GalaxyCursorTracker({
-	groupRef,
-	pointerRef,
-}: GalaxyCursorTrackerProps) {
+export function GalaxyCursorTracker({ groupRef }: GalaxyCursorTrackerProps) {
 	const { camera, gl } = useThree();
 	const lastCoords = useRef<{ x: number; y: number } | null>(null);
 
@@ -29,10 +25,9 @@ export function GalaxyCursorTracker({
 	}, []);
 
 	useFrame(() => {
-		const pointer = pointerRef.current;
 		const group = groupRef.current;
 
-		if (!pointer?.active || !group) {
+		if (!cursorPos.active || !group) {
 			if (lastCoords.current !== null) {
 				lastCoords.current = null;
 				galaxyCoordsRef.current = null;
@@ -41,8 +36,8 @@ export function GalaxyCursorTracker({
 		}
 
 		const coords = pointerToGalaxyPlane(
-			pointer.clientX,
-			pointer.clientY,
+			cursorPos.x,
+			cursorPos.y,
 			gl.domElement,
 			camera,
 			group,

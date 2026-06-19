@@ -1,10 +1,14 @@
 import { useEffect, useRef, useState } from "react";
-import { formatGalaxyCoords } from "../galaxy/galaxy-math";
+import { formatGalaxyAxis, formatGalaxyCoords } from "../galaxy/galaxy-math";
 import {
 	cursorPos,
 	cursorVelocity,
 	galaxyCoordsRef,
 } from "../../lib/cursor-motion";
+import {
+	prefersTouchLayout,
+} from "../../lib/input-device";
+import { startPointerTracking } from "../../lib/pointer-tracker";
 import { useNavStore } from "../../store/nav-store";
 
 type CursorState = "scan" | "grip" | "acquire" | "lock" | "terminal";
@@ -19,8 +23,8 @@ const STATE_LABEL: Record<CursorState, string> = {
 
 const INNER = "#ffd4a8";
 const OUTER = "#8ec8ff";
-const TERMINAL_CHECK_MS = 80;
-const TERMINAL_CHECK_PX = 16;
+const TERMINAL_CHECK_MS = 100;
+const TERMINAL_CHECK_PX = 20;
 
 function resolveState(
 	isTerminal: boolean,
@@ -37,43 +41,51 @@ function resolveState(
 
 export function ShipCursor() {
 	const mode = useNavStore((s) => s.mode);
-	const isDragging = useNavStore((s) => s.isDragging);
-	const hoveredId = useNavStore((s) => s.hoveredId);
-	const focusedLinkId = useNavStore((s) => s.focusedLinkId);
 
-	const [visible, setVisible] = useState(false);
-	const [isTerminal, setIsTerminal] = useState(false);
+	const [touchHud, setTouchHud] = useState(false);
 	const [reducedMotion, setReducedMotion] = useState(false);
 
 	const cursorRef = useRef<HTMLDivElement>(null);
+	const stateLabelRef = useRef<HTMLDivElement>(null);
 	const coordsHudRef = useRef<HTMLDivElement>(null);
-	const lastPos = useRef({ x: 0, y: 0 });
-	const lastDrag = useRef(isDragging);
-	const wobbleRef = useRef(0);
+	const touchCoordsXRef = useRef<HTMLSpanElement>(null);
+	const touchCoordsYRef = useRef<HTMLSpanElement>(null);
+	const chevronRefs = useRef<{
+		left: HTMLSpanElement | null;
+		right: HTMLSpanElement | null;
+		up: HTMLSpanElement | null;
+		down: HTMLSpanElement | null;
+	}>({ left: null, right: null, up: null, down: null });
+
 	const visibleRef = useRef(false);
-	const isTerminalRef = useRef(false);
+	const touchHudRef = useRef(false);
 	const reducedMotionRef = useRef(false);
+	const lastDrag = useRef(false);
+	const wobbleRef = useRef(0);
 	const lastTerminalCheck = useRef({ t: 0, x: 0, y: 0 });
 	const lastHudCoords = useRef("");
-
-	const state = resolveState(
-		isTerminal,
-		isDragging,
-		focusedLinkId,
-		hoveredId,
-	);
+	const lastTouchHudCoords = useRef({ x: "", y: "" });
+	const lastState = useRef<CursorState>("scan");
+	const lastStateLabel = useRef("");
+	const isTerminalRef = useRef(false);
 
 	useEffect(() => {
-		visibleRef.current = visible;
-	}, [visible]);
-
-	useEffect(() => {
-		isTerminalRef.current = isTerminal;
-	}, [isTerminal]);
+		touchHudRef.current = touchHud;
+	}, [touchHud]);
 
 	useEffect(() => {
 		reducedMotionRef.current = reducedMotion;
 	}, [reducedMotion]);
+
+	useEffect(() => {
+		const mq = window.matchMedia("(hover: none) and (pointer: coarse)");
+		setTouchHud(mq.matches);
+		function handleChange() {
+			setTouchHud(prefersTouchLayout());
+		}
+		mq.addEventListener("change", handleChange);
+		return () => mq.removeEventListener("change", handleChange);
+	}, []);
 
 	useEffect(() => {
 		const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -86,14 +98,21 @@ export function ShipCursor() {
 	}, []);
 
 	useEffect(() => {
-		if (mode !== "3d") return;
+		if (mode !== "3d" || touchHud || reducedMotion) return;
 
 		document.body.classList.add("ship-cursor-active");
 		return () => document.body.classList.remove("ship-cursor-active");
+	}, [mode, touchHud, reducedMotion]);
+
+	useEffect(() => {
+		if (mode !== "3d") return;
+		startPointerTracking();
 	}, [mode]);
 
 	useEffect(() => {
 		if (mode !== "3d") return;
+
+		let frameId = 0;
 
 		function maybeCheckTerminal(x: number, y: number) {
 			const now = performance.now();
@@ -107,65 +126,63 @@ export function ShipCursor() {
 			lastTerminalCheck.current = { t: now, x, y };
 
 			const target = document.elementFromPoint(x, y);
-			const terminal = !!target?.closest('[data-ship-cursor="terminal"]');
-			if (terminal !== isTerminalRef.current) {
-				isTerminalRef.current = terminal;
-				setIsTerminal(terminal);
-			}
+			isTerminalRef.current = !!target?.closest('[data-ship-cursor="terminal"]');
 		}
 
-		function handleMove(e: PointerEvent) {
-			const dx = e.clientX - lastPos.current.x;
-			const dy = e.clientY - lastPos.current.y;
-			cursorVelocity.x = dx;
-			cursorVelocity.y = dy;
-			lastPos.current = { x: e.clientX, y: e.clientY };
+		function applyState(state: CursorState) {
+			if (state === lastState.current) return;
+			lastState.current = state;
 
-			cursorPos.x = e.clientX;
-			cursorPos.y = e.clientY;
-			cursorPos.active = true;
-
-			if (!visibleRef.current) {
-				visibleRef.current = true;
-				setVisible(true);
-			}
-
-			maybeCheckTerminal(e.clientX, e.clientY);
-		}
-
-		function handleLeave() {
-			cursorPos.active = false;
-			visibleRef.current = false;
-			setVisible(false);
-		}
-
-		window.addEventListener("pointermove", handleMove, { passive: true });
-		document.documentElement.addEventListener("pointerleave", handleLeave);
-		return () => {
-			window.removeEventListener("pointermove", handleMove);
-			document.documentElement.removeEventListener("pointerleave", handleLeave);
-		};
-	}, [mode]);
-
-	// wobble when releasing a fast drag
-	useEffect(() => {
-		if (lastDrag.current && !isDragging) {
-			const speed = Math.hypot(cursorVelocity.x, cursorVelocity.y);
-			if (speed > 4 && !reducedMotionRef.current) {
-				wobbleRef.current = speed * 0.4;
-			}
-		}
-		lastDrag.current = isDragging;
-	}, [isDragging]);
-
-	// position + HUD coords via direct DOM — bypasses React on every move
-	useEffect(() => {
-		if (mode !== "3d") return;
-
-		let frameId = 0;
-		function tick() {
 			const el = cursorRef.current;
-			if (el && visibleRef.current) {
+			if (el) {
+				el.dataset.state = state;
+				el.style.display =
+					visibleRef.current && !touchHudRef.current ? "" : "none";
+			}
+
+			const label = STATE_LABEL[state];
+			if (label !== lastStateLabel.current) {
+				lastStateLabel.current = label;
+				if (stateLabelRef.current) {
+					stateLabelRef.current.textContent = label;
+				}
+			}
+
+			if (coordsHudRef.current) {
+				coordsHudRef.current.style.display =
+					state === "terminal" ? "none" : "";
+			}
+		}
+
+		function tick() {
+			const nav = useNavStore.getState();
+			const dragging = nav.isDragging;
+
+			if (lastDrag.current && !dragging) {
+				const speed = Math.hypot(cursorVelocity.x, cursorVelocity.y);
+				if (speed > 4 && !reducedMotionRef.current) {
+					wobbleRef.current = speed * 0.4;
+				}
+			}
+			lastDrag.current = dragging;
+
+			if (cursorPos.active) {
+				if (!touchHudRef.current && !visibleRef.current) {
+					visibleRef.current = true;
+					if (cursorRef.current) {
+						cursorRef.current.style.display = "";
+					}
+				}
+				maybeCheckTerminal(cursorPos.x, cursorPos.y);
+			} else if (visibleRef.current) {
+				visibleRef.current = false;
+				if (cursorRef.current) {
+					cursorRef.current.style.display = "none";
+				}
+			}
+
+			const el = cursorRef.current;
+			if (el && visibleRef.current && !touchHudRef.current) {
 				const wobble = wobbleRef.current;
 				el.style.transform = `translate3d(${cursorPos.x}px, ${cursorPos.y}px, 0) rotate(${wobble * 0.6}deg)`;
 				if (wobble > 0.05) {
@@ -175,8 +192,59 @@ export function ShipCursor() {
 				}
 			}
 
+			const state = resolveState(
+				isTerminalRef.current,
+				dragging,
+				nav.focusedLinkId,
+				nav.hoveredId,
+			);
+			applyState(state);
+
+			if (state === "grip") {
+				const chevrons = chevronRefs.current;
+				const speed = Math.hypot(cursorVelocity.x, cursorVelocity.y);
+				const chevronOpacity = Math.min(1, speed / 6);
+				if (chevrons.left) {
+					chevrons.left.style.opacity = String(
+						chevronOpacity * (cursorVelocity.x < -0.5 ? 1 : 0.2),
+					);
+				}
+				if (chevrons.right) {
+					chevrons.right.style.opacity = String(
+						chevronOpacity * (cursorVelocity.x > 0.5 ? 1 : 0.2),
+					);
+				}
+				if (chevrons.up) {
+					chevrons.up.style.opacity = String(
+						chevronOpacity * (cursorVelocity.y < -0.5 ? 1 : 0.2),
+					);
+				}
+				if (chevrons.down) {
+					chevrons.down.style.opacity = String(
+						chevronOpacity * (cursorVelocity.y > 0.5 ? 1 : 0.2),
+					);
+				}
+			}
+
 			const hud = coordsHudRef.current;
-			if (hud) {
+			if (touchHudRef.current) {
+				const xEl = touchCoordsXRef.current;
+				const yEl = touchCoordsYRef.current;
+				if (xEl && yEl) {
+					const coords = galaxyCoordsRef.current;
+					const xText = coords ? formatGalaxyAxis("X", coords.x) : "X ---";
+					const yText = coords ? formatGalaxyAxis("Y", coords.y) : "Y ---";
+
+					if (xText !== lastTouchHudCoords.current.x) {
+						lastTouchHudCoords.current.x = xText;
+						xEl.textContent = xText;
+					}
+					if (yText !== lastTouchHudCoords.current.y) {
+						lastTouchHudCoords.current.y = yText;
+						yEl.textContent = yText;
+					}
+				}
+			} else if (hud) {
 				const coords = galaxyCoordsRef.current;
 				const text = coords
 					? formatGalaxyCoords(coords.x, coords.y)
@@ -194,46 +262,68 @@ export function ShipCursor() {
 		return () => cancelAnimationFrame(frameId);
 	}, [mode]);
 
-	if (mode !== "3d" || !visible) return null;
+	if (mode !== "3d") return null;
 
-	const chevronOpacity =
-		state === "grip"
-			? Math.min(1, Math.hypot(cursorVelocity.x, cursorVelocity.y) / 6)
-			: 0;
-	const ringSpin = state === "scan" && !reducedMotion;
-	const bracketScale = state === "acquire" ? 1 : state === "lock" ? 1.08 : 0.72;
-	const bracketOpacity =
-		state === "acquire" ? 1 : state === "lock" ? 1 : 0;
-	const coreScale =
-		state === "terminal" ? 0.6 : state === "grip" ? 1.15 : state === "lock" ? 1.1 : 1;
-	const ringOpacity = state === "terminal" ? 0.35 : state === "grip" ? 0.9 : 0.65;
-	const pulse = state === "lock" && !reducedMotion;
+	if (touchHud) {
+		return (
+			<div
+				className="pointer-events-none fixed top-3 right-4 z-[100] w-[11.5rem] max-w-[calc(100vw-9rem)]"
+				aria-hidden
+			>
+				<div className="border border-[#8ec8ff]/40 bg-black/75 px-3 py-2 text-right shadow-[0_0_24px_rgba(142,200,255,0.06)] backdrop-blur-md">
+					<div className="flex items-baseline justify-end gap-2">
+						<span className="font-mono text-[8px] tracking-[0.2em] text-[#8ec8ff]/50 uppercase">
+							state
+						</span>
+						<span
+							ref={stateLabelRef}
+							className="min-w-[5.5rem] font-mono text-[10px] tracking-wider text-[#ffd4a8]/90"
+						>
+							SCAN
+						</span>
+					</div>
+					<div className="mt-1 font-mono text-[8px] tracking-[0.2em] text-[#8ec8ff]/50 uppercase">
+						coords
+					</div>
+					<div className="mt-0.5 flex items-baseline justify-end gap-2 font-mono text-[10px] tracking-wider tabular-nums">
+						<span
+							ref={touchCoordsXRef}
+							className="w-[5rem] text-right text-[#8ec8ff]/70"
+						>
+							X ---
+						</span>
+						<span className="text-[#8ec8ff]/35">·</span>
+						<span
+							ref={touchCoordsYRef}
+							className="w-[5rem] text-right text-[#8ec8ff]/70"
+						>
+							Y ---
+						</span>
+					</div>
+				</div>
+			</div>
+		);
+	}
 
 	return (
 		<div
 			ref={cursorRef}
 			className="ship-cursor pointer-events-none fixed top-0 left-0 z-[100]"
-			style={{ willChange: "transform" }}
+			data-state="scan"
+			data-reduced-motion={reducedMotion ? "true" : "false"}
+			style={{ willChange: "transform", display: "none" }}
 			aria-hidden
 		>
 			<div
 				className="absolute -translate-x-1/2 -translate-y-1/2"
 				style={{ width: 48, height: 48 }}
 			>
-				{/* sonar ping — scan only */}
-				{state === "scan" && !reducedMotion && (
-					<div className="ship-cursor-ping absolute inset-0 rounded-full border border-[#8ec8ff]/30" />
-				)}
+				<div className="ship-cursor-ping absolute inset-0 rounded-full border border-[#8ec8ff]/30" />
 
-				{/* outer attitude ring */}
 				<svg
-					className={`absolute inset-0${ringSpin ? " ship-cursor-ring-spin" : ""}`}
+					className="ship-cursor-ring absolute inset-0"
 					viewBox="0 0 48 48"
 					fill="none"
-					style={{
-						opacity: ringOpacity,
-						transition: "opacity 0.2s",
-					}}
 				>
 					<circle
 						cx="24"
@@ -258,16 +348,10 @@ export function ShipCursor() {
 					))}
 				</svg>
 
-				{/* lock / acquire brackets */}
 				<svg
-					className="absolute inset-0"
+					className="ship-cursor-brackets absolute inset-0"
 					viewBox="0 0 48 48"
 					fill="none"
-					style={{
-						opacity: bracketOpacity,
-						transform: `scale(${bracketScale})`,
-						transition: "opacity 0.15s, transform 0.2s ease-out",
-					}}
 				>
 					{(
 						[
@@ -280,104 +364,146 @@ export function ShipCursor() {
 						<polyline
 							key={i}
 							points={points.join(" ")}
-							stroke={state === "lock" ? INNER : OUTER}
+							stroke={OUTER}
 							strokeWidth="1.25"
 							fill="none"
-							className={pulse ? "ship-cursor-bracket-pulse" : undefined}
+							className="ship-cursor-bracket-pulse"
 						/>
 					))}
 				</svg>
 
-				{/* grip chevrons */}
-				{state === "grip" && (
-					<>
-						<span
-							className="absolute top-1/2 left-0 -translate-y-1/2 font-mono text-[8px] text-[#8ec8ff]"
-							style={{ opacity: chevronOpacity * (cursorVelocity.x < -0.5 ? 1 : 0.2) }}
-						>
-							‹
-						</span>
-						<span
-							className="absolute top-1/2 right-0 -translate-y-1/2 font-mono text-[8px] text-[#8ec8ff]"
-							style={{ opacity: chevronOpacity * (cursorVelocity.x > 0.5 ? 1 : 0.2) }}
-						>
-							›
-						</span>
-						<span
-							className="absolute top-0 left-1/2 -translate-x-1/2 font-mono text-[8px] text-[#8ec8ff]"
-							style={{ opacity: chevronOpacity * (cursorVelocity.y < -0.5 ? 1 : 0.2) }}
-						>
-							˄
-						</span>
-						<span
-							className="absolute bottom-0 left-1/2 -translate-x-1/2 font-mono text-[8px] text-[#8ec8ff]"
-							style={{ opacity: chevronOpacity * (cursorVelocity.y > 0.5 ? 1 : 0.2) }}
-						>
-							˅
-						</span>
-					</>
-				)}
+				<div className="ship-cursor-chevrons">
+					<span
+						ref={(el) => {
+							chevronRefs.current.left = el;
+						}}
+						className="absolute top-1/2 left-0 -translate-y-1/2 font-mono text-[8px] text-[#8ec8ff]"
+					>
+						‹
+					</span>
+					<span
+						ref={(el) => {
+							chevronRefs.current.right = el;
+						}}
+						className="absolute top-1/2 right-0 -translate-y-1/2 font-mono text-[8px] text-[#8ec8ff]"
+					>
+						›
+					</span>
+					<span
+						ref={(el) => {
+							chevronRefs.current.up = el;
+						}}
+						className="absolute top-0 left-1/2 -translate-x-1/2 font-mono text-[8px] text-[#8ec8ff]"
+					>
+						˄
+					</span>
+					<span
+						ref={(el) => {
+							chevronRefs.current.down = el;
+						}}
+						className="absolute bottom-0 left-1/2 -translate-x-1/2 font-mono text-[8px] text-[#8ec8ff]"
+					>
+						˅
+					</span>
+				</div>
 
-				{/* center reticle */}
 				<svg
-					className="absolute inset-0"
+					className="ship-cursor-core absolute inset-0"
 					viewBox="0 0 48 48"
 					fill="none"
-					style={{
-						transform: `scale(${coreScale})`,
-						transition: "transform 0.15s ease-out",
-					}}
 				>
-					{state === "terminal" ? (
-						<>
-							<rect
-								x="22"
-								y="14"
-								width="4"
-								height="20"
-								fill={INNER}
-								fillOpacity="0.9"
-								className="ship-cursor-blink"
-							/>
-							<rect x="16" y="22" width="16" height="4" stroke={OUTER} strokeWidth="0.75" fill="none" />
-						</>
-					) : (
-						<>
-							<circle cx="24" cy="24" r="2.5" fill={INNER} className="ship-cursor-core-glow" />
-							<line x1="24" y1="16" x2="24" y2="20" stroke={INNER} strokeWidth="1" strokeOpacity="0.8" />
-							<line x1="24" y1="28" x2="24" y2="32" stroke={INNER} strokeWidth="1" strokeOpacity="0.8" />
-							<line x1="16" y1="24" x2="20" y2="24" stroke={INNER} strokeWidth="1" strokeOpacity="0.8" />
-							<line x1="28" y1="24" x2="32" y2="24" stroke={INNER} strokeWidth="1" strokeOpacity="0.8" />
-							<polygon
-								points="24,18 26,22 22,22"
-								stroke={OUTER}
-								strokeWidth="0.75"
-								fill="none"
-								strokeOpacity="0.6"
-							/>
-							<polygon
-								points="24,30 26,26 22,26"
-								stroke={OUTER}
-								strokeWidth="0.75"
-								fill="none"
-								strokeOpacity="0.6"
-							/>
-						</>
-					)}
+					<g className="ship-cursor-terminal-only" style={{ display: "none" }}>
+						<rect
+							x="22"
+							y="14"
+							width="4"
+							height="20"
+							fill={INNER}
+							fillOpacity="0.9"
+							className="ship-cursor-blink"
+						/>
+						<rect
+							x="16"
+							y="22"
+							width="16"
+							height="4"
+							stroke={OUTER}
+							strokeWidth="0.75"
+							fill="none"
+						/>
+					</g>
+					<g className="ship-cursor-default-only">
+						<circle
+							cx="24"
+							cy="24"
+							r="2.5"
+							fill={INNER}
+							className="ship-cursor-core-glow"
+						/>
+						<line
+							x1="24"
+							y1="16"
+							x2="24"
+							y2="20"
+							stroke={INNER}
+							strokeWidth="1"
+							strokeOpacity="0.8"
+						/>
+						<line
+							x1="24"
+							y1="28"
+							x2="24"
+							y2="32"
+							stroke={INNER}
+							strokeWidth="1"
+							strokeOpacity="0.8"
+						/>
+						<line
+							x1="16"
+							y1="24"
+							x2="20"
+							y2="24"
+							stroke={INNER}
+							strokeWidth="1"
+							strokeOpacity="0.8"
+						/>
+						<line
+							x1="28"
+							y1="24"
+							x2="32"
+							y2="24"
+							stroke={INNER}
+							strokeWidth="1"
+							strokeOpacity="0.8"
+						/>
+						<polygon
+							points="24,18 26,22 22,22"
+							stroke={OUTER}
+							strokeWidth="0.75"
+							fill="none"
+							strokeOpacity="0.6"
+						/>
+						<polygon
+							points="24,30 26,26 22,26"
+							stroke={OUTER}
+							strokeWidth="0.75"
+							fill="none"
+							strokeOpacity="0.6"
+						/>
+					</g>
 				</svg>
 			</div>
 
-			{/* HUD readout */}
 			<div
 				className="absolute mt-3 ml-2 font-mono text-[9px] leading-tight tracking-wider whitespace-nowrap"
 				style={{ color: "rgba(142, 200, 255, 0.75)" }}
 			>
-				<div className="text-[#ffd4a8]/90">{STATE_LABEL[state]}</div>
-				{state !== "terminal" && (
-					<div ref={coordsHudRef} className="mt-0.5 text-[#8ec8ff]/55">
-						X --- · Y ---
-					</div>
-				)}
+				<div ref={stateLabelRef} className="text-[#ffd4a8]/90">
+					SCAN
+				</div>
+				<div ref={coordsHudRef} className="mt-0.5 text-[#8ec8ff]/55">
+					X --- · Y ---
+				</div>
 			</div>
 		</div>
 	);

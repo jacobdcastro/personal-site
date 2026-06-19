@@ -1,4 +1,12 @@
-import { type Camera, Color, type Group, Matrix4, Raycaster, Vector2, Vector3 } from "three";
+import {
+	type Camera,
+	Color,
+	type Group,
+	Matrix4,
+	Raycaster,
+	Vector2,
+	Vector3,
+} from "three";
 
 export const DEFAULT_VIEW_TILT = Math.PI / 9; // 20° off the galactic plane
 
@@ -42,10 +50,15 @@ export function spiralPosition(
 
 	// floor keeps inner arms from collapsing to hairlines; outer arms still widen further
 	const scatterFactor = (0.4 + 0.6 * (radius / GALAXY.RADIUS)) * scatter;
-	const rx = gaussianRandom(GALAXY.RANDOMNESS_POWER) * GALAXY.RANDOMNESS * scatterFactor;
+	const rx =
+		gaussianRandom(GALAXY.RANDOMNESS_POWER) * GALAXY.RANDOMNESS * scatterFactor;
 	const ry =
-		gaussianRandom(GALAXY.RANDOMNESS_POWER) * GALAXY.RANDOMNESS * 0.65 * scatterFactor;
-	const rz = gaussianRandom(GALAXY.RANDOMNESS_POWER) * GALAXY.RANDOMNESS * scatterFactor;
+		gaussianRandom(GALAXY.RANDOMNESS_POWER) *
+		GALAXY.RANDOMNESS *
+		0.65 *
+		scatterFactor;
+	const rz =
+		gaussianRandom(GALAXY.RANDOMNESS_POWER) * GALAXY.RANDOMNESS * scatterFactor;
 
 	const offset = options?.offset ?? [0, 0, 0];
 
@@ -94,12 +107,12 @@ const _direction = new Vector3();
 const _raycaster = new Raycaster();
 
 // cast a screen point onto the galaxy disk (local y = 0); HUD Y maps to local z
-export function pointerToGalaxyPlane(
+export function pointerToGalaxyPlaneFromMatrix(
 	clientX: number,
 	clientY: number,
 	canvas: HTMLElement,
 	camera: Camera,
-	galaxyGroup: Group,
+	groupMatrix: Matrix4,
 ): { x: number; y: number } | null {
 	const rect = canvas.getBoundingClientRect();
 	if (
@@ -118,11 +131,13 @@ export function pointerToGalaxyPlane(
 
 	_raycaster.setFromCamera(_ndc, camera);
 
-	galaxyGroup.updateWorldMatrix(true, false);
-	_inv.copy(galaxyGroup.matrixWorld).invert();
+	_inv.copy(groupMatrix).invert();
 
 	_origin.copy(_raycaster.ray.origin).applyMatrix4(_inv);
-	_direction.copy(_raycaster.ray.direction).transformDirection(_inv).normalize();
+	_direction
+		.copy(_raycaster.ray.direction)
+		.transformDirection(_inv)
+		.normalize();
 
 	if (Math.abs(_direction.y) < 1e-8) return null;
 
@@ -135,12 +150,35 @@ export function pointerToGalaxyPlane(
 	};
 }
 
+export function pointerToGalaxyPlane(
+	clientX: number,
+	clientY: number,
+	canvas: HTMLElement,
+	camera: Camera,
+	galaxyGroup: Group,
+): { x: number; y: number } | null {
+	galaxyGroup.updateWorldMatrix(true, false);
+	return pointerToGalaxyPlaneFromMatrix(
+		clientX,
+		clientY,
+		canvas,
+		camera,
+		galaxyGroup.matrixWorld,
+	);
+}
+
 export function formatGalaxyCoords(x: number, y: number) {
 	const fmt = (n: number) => {
 		const sign = n >= 0 ? "+" : "−";
 		return `${sign}${Math.abs(n).toFixed(2)}`;
 	};
 	return `X ${fmt(x)} · Y ${fmt(y)}`;
+}
+
+export function formatGalaxyAxis(axis: "X" | "Y", value: number | null) {
+	if (value === null) return `${axis} ---`;
+	const sign = value >= 0 ? "+" : "−";
+	return `${axis} ${sign}${Math.abs(value).toFixed(2)}`;
 }
 
 export function hashOffset(id: string): [number, number, number] {

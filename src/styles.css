@@ -76,9 +76,14 @@ canvas {
   touch-action: none;
 }
 
-body.ship-cursor-active,
-body.ship-cursor-active * {
-  cursor: none !important;
+body.ship-cursor-active {
+  cursor: none;
+}
+
+body.ship-cursor-active canvas,
+body.ship-cursor-active a,
+body.ship-cursor-active button {
+  cursor: none;
 }
 
 .ship-cursor-core-glow {
@@ -86,20 +91,95 @@ body.ship-cursor-active * {
     drop-shadow(0 0 8px rgba(255, 212, 168, 0.4));
 }
 
-.ship-cursor-ring-spin {
-  animation: ship-cursor-ring-spin 14s linear infinite;
+.ship-cursor-ping {
+  display: none;
 }
 
-.ship-cursor-ping {
+.ship-cursor[data-state="scan"]:not([data-reduced-motion="true"]) .ship-cursor-ping {
+  display: block;
   animation: ship-cursor-ping 3s ease-out infinite;
 }
 
-.ship-cursor-bracket-pulse {
+.ship-cursor-ring {
+  opacity: 0.65;
+  transition: opacity 0.2s;
+}
+
+.ship-cursor[data-state="grip"] .ship-cursor-ring {
+  opacity: 0.9;
+}
+
+.ship-cursor[data-state="terminal"] .ship-cursor-ring {
+  opacity: 0.35;
+}
+
+.ship-cursor[data-state="scan"]:not([data-reduced-motion="true"]) .ship-cursor-ring {
+  animation: ship-cursor-ring-spin 14s linear infinite;
+}
+
+.ship-cursor-brackets {
+  opacity: 0;
+  transform: scale(0.72);
+  transition: opacity 0.15s, transform 0.2s ease-out;
+}
+
+.ship-cursor[data-state="acquire"] .ship-cursor-brackets {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.ship-cursor[data-state="lock"] .ship-cursor-brackets {
+  opacity: 1;
+  transform: scale(1.08);
+}
+
+.ship-cursor[data-state="lock"]:not([data-reduced-motion="true"]) .ship-cursor-bracket-pulse {
   animation: ship-cursor-bracket-pulse 1.2s ease-in-out infinite;
 }
 
-.ship-cursor-blink {
-  animation: ship-cursor-blink 1s step-end infinite;
+.ship-cursor-core {
+  transform: scale(1);
+  transition: transform 0.15s ease-out;
+}
+
+.ship-cursor[data-state="grip"] .ship-cursor-core {
+  transform: scale(1.15);
+}
+
+.ship-cursor[data-state="lock"] .ship-cursor-core {
+  transform: scale(1.1);
+}
+
+.ship-cursor[data-state="terminal"] .ship-cursor-core {
+  transform: scale(0.6);
+}
+
+.ship-cursor-chevrons {
+  display: none;
+}
+
+.ship-cursor[data-state="grip"] .ship-cursor-chevrons {
+  display: block;
+}
+
+.ship-cursor[data-state="lock"] .ship-cursor-bracket-pulse {
+  stroke: #ffd4a8;
+}
+
+.ship-cursor-terminal-only {
+  display: none;
+}
+
+.ship-cursor[data-state="terminal"] .ship-cursor-terminal-only {
+  display: block;
+}
+
+.ship-cursor[data-state="terminal"] .ship-cursor-default-only {
+  display: none;
+}
+
+.ship-cursor-ring-spin {
+  animation: ship-cursor-ring-spin 14s linear infinite;
 }
 
 @keyframes ship-cursor-ring-spin {

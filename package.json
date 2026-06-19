@@ -8,7 +8,8 @@
   "scripts": {
     "dev": "vite dev --port 3000",
     "generate-routes": "tsr generate",
-    "build": "vite build",
+    "build": "bun scripts/generate-seo-files.ts && vite build",
+    "generate-seo": "bun scripts/generate-seo-files.ts",
     "preview": "vite preview",
     "test": "vitest run",
     "format": "biome format",

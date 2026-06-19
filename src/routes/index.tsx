@@ -1,32 +1,63 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { lazy, Suspense, useEffect } from "react";
 import { ShipCursor } from "../components/cursor/ShipCursor";
+import { GalaxyErrorBoundary } from "../components/galaxy/GalaxyErrorBoundary";
 import { LinkDetailPanel } from "../components/galaxy/LinkDetailPanel";
 import { ModeToggle } from "../components/nav/ModeToggle";
 import { PlainNav } from "../components/nav/PlainNav";
+import { RenderToggle } from "../components/nav/RenderToggle";
+import { JsonLd } from "../components/seo/JsonLd";
 import { LINKS } from "../data/links";
+import { buildPageHead, personJsonLd, websiteJsonLd } from "../lib/seo";
+import { SITE } from "../lib/site";
 import { useNavStore } from "../store/nav-store";
 
-// client-only — Canvas cannot run on the server
 const GalaxyCanvas = lazy(() =>
 	import("../components/galaxy/GalaxyCanvas").then((mod) => ({
 		default: mod.GalaxyCanvas,
 	})),
 );
 
-export const Route = createFileRoute("/")({ component: Home });
+const GalaxyAscii = lazy(() =>
+	import("../components/galaxy/GalaxyAscii").then((mod) => ({
+		default: mod.GalaxyAscii,
+	})),
+);
+
+export const Route = createFileRoute("/")({
+	head: () =>
+		buildPageHead({
+			title: SITE.title,
+			description: SITE.description,
+			path: "/",
+		}),
+	component: Home,
+});
+
+function canUseWebGL() {
+	try {
+		const canvas = document.createElement("canvas");
+		return !!(
+			canvas.getContext("webgl") ?? canvas.getContext("experimental-webgl")
+		);
+	} catch {
+		return false;
+	}
+}
 
 function Home() {
 	const mode = useNavStore((s) => s.mode);
+	const renderStyle = useNavStore((s) => s.renderStyle);
 	const setMode = useNavStore((s) => s.setMode);
 	const setFocusedLink = useNavStore((s) => s.setFocusedLink);
 
-	// default to list mode when the user prefers reduced motion (only on first visit)
 	useEffect(() => {
+		const persisted = localStorage.getItem("galaxy-nav");
+		if (persisted) return;
+
 		const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
-		if (mq.matches) {
-			const persisted = localStorage.getItem("galaxy-nav");
-			if (!persisted) setMode("list");
+		if (mq.matches || !canUseWebGL()) {
+			setMode("list");
 		}
 	}, [setMode]);
 
@@ -35,11 +66,19 @@ function Home() {
 	}, [mode, setFocusedLink]);
 
 	return (
-		<div className="relative h-screen w-full overflow-hidden bg-black">
+		<div className="relative h-screen h-dvh w-full overflow-hidden bg-black">
+			<JsonLd data={[websiteJsonLd(), personJsonLd()]} />
+
 			{mode === "3d" ? (
-				<Suspense fallback={null}>
-					<GalaxyCanvas links={LINKS} />
-				</Suspense>
+				<GalaxyErrorBoundary links={LINKS} onFallback={() => setMode("list")}>
+					<Suspense fallback={<PlainNav links={LINKS} />}>
+						{renderStyle === "webgl" ? (
+							<GalaxyCanvas links={LINKS} />
+						) : (
+							<GalaxyAscii links={LINKS} />
+						)}
+					</Suspense>
+				</GalaxyErrorBoundary>
 			) : (
 				<PlainNav links={LINKS} />
 			)}
@@ -48,11 +87,11 @@ function Home() {
 				<>
 					<ShipCursor />
 					<LinkDetailPanel links={LINKS} />
+					<RenderToggle />
 				</>
 			)}
 
-			{/* always in the DOM for screen readers + crawlers, visually hidden */}
-			<PlainNav links={LINKS} hidden />
+			{mode === "3d" && <PlainNav links={LINKS} hidden />}
 
 			<ModeToggle />
 		</div>

@@ -1,8 +1,14 @@
 import { Html } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import { useMemo, useRef } from "react";
-import { AdditiveBlending, type Mesh, type MeshBasicMaterial, Vector3 } from "three";
+import {
+	AdditiveBlending,
+	type Mesh,
+	type MeshBasicMaterial,
+	Vector3,
+} from "three";
 import type { GalaxyLink } from "../../data/links";
+import { prefersReducedMotion } from "../../lib/input-device";
 import {
 	canDismissZoomLock,
 	focusedStarWorld,
@@ -12,9 +18,7 @@ import {
 import { useNavStore } from "../../store/nav-store";
 import { colorAtRadius, hashOffset, spiralPosition } from "./galaxy-math";
 
-// stars facing the camera (world-Z > 0) get opacity 1; behind the galaxy fade to 0
 const FACE_SCALE = 3;
-// drei Html (default mode): higher distanceFactor = larger on screen
 const LABEL_DISTANCE_FACTOR = 10;
 const LABEL_OPACITY_LERP = 0.09;
 
@@ -25,113 +29,61 @@ function isFocusLockedView() {
 	return phase === "entering" || phase === "active";
 }
 
-interface LinkStarProps {
+interface StarEntry {
 	link: GalaxyLink;
+	mesh: Mesh | null;
+	label: HTMLDivElement | null;
+	position: [number, number, number];
+	starColor: string;
+	labelOpacity: number;
+	down: { x: number; y: number; t: number } | null;
+	moved: number;
 }
 
-function LinkStar({ link }: LinkStarProps) {
-	const meshRef = useRef<Mesh>(null);
-	const labelRef = useRef<HTMLDivElement>(null);
+interface LinkStarProps {
+	entry: StarEntry;
+	onMeshRef: (mesh: Mesh | null) => void;
+	onLabelRef: (label: HTMLDivElement | null) => void;
+	isFocused: boolean;
+}
+
+function LinkStar({ entry, onMeshRef, onLabelRef, isFocused }: LinkStarProps) {
 	const setHovered = useNavStore((s) => s.setHovered);
 	const setFocusedLink = useNavStore((s) => s.setFocusedLink);
-	const isFocused = useNavStore((s) => s.focusedLinkId === link.id);
-
-	const position = useMemo(
-		() => spiralPosition(link.radius, link.branch, { scatter: 0.6, offset: hashOffset(link.id) }),
-		[link.branch, link.id, link.radius],
-	);
-
-	const starColor = useMemo(() => colorAtRadius(link.radius), [link.radius]);
-
-	// tap-vs-drag tracking — all refs, never state
-	const downRef = useRef<{ x: number; y: number; t: number } | null>(null);
-	const movedRef = useRef(0);
-
-	const tmpVec = useRef(new Vector3());
-	const labelOpacity = useRef(0);
-
-	useFrame(() => {
-		const mesh = meshRef.current;
-		if (!mesh) return;
-
-		mesh.getWorldPosition(tmpVec.current);
-		const worldZ = tmpVec.current.z;
-		const isFocused = useNavStore.getState().focusedLinkId === link.id;
-
-		// opacity is a continuous function of the star's world-Z position
-		const faceOpacity = Math.max(0, Math.min(1, (worldZ + 1) / FACE_SCALE));
-		const opacity = isFocused ? 1 : faceOpacity;
-
-		const mat = mesh.material as MeshBasicMaterial;
-		// link stars are slightly brighter than dust, but same hue — not a different color family
-		mat.opacity = 0.35 + opacity * 0.65;
-
-		// subtle scale bump when facing the viewer
-		const scale = 1 + opacity * 0.35;
-		mesh.scale.setScalar(scale);
-
-		if (labelRef.current) {
-			const zoomLocked = isFocusLockedView();
-			const targetOpacity = zoomLocked ? 0 : opacity;
-			const snap = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-			if (snap) {
-				labelOpacity.current = targetOpacity;
-			} else {
-				labelOpacity.current +=
-					(targetOpacity - labelOpacity.current) * LABEL_OPACITY_LERP;
-				if (Math.abs(labelOpacity.current - targetOpacity) < 0.008) {
-					labelOpacity.current = targetOpacity;
-				}
-			}
-
-			const shown = labelOpacity.current;
-			labelRef.current.style.opacity = String(shown);
-			labelRef.current.style.visibility = shown < 0.02 ? "hidden" : "visible";
-			labelRef.current.style.pointerEvents =
-				!zoomLocked && shown > 0.35 ? "auto" : "none";
-		}
-
-		if (isFocused) {
-			mesh.getWorldPosition(focusedStarWorld);
-			focusedStarWorldValid.current = true;
-		}
-	});
 
 	function handlePointerDown(e: { nativeEvent: PointerEvent }) {
-		downRef.current = {
+		entry.down = {
 			x: e.nativeEvent.clientX,
 			y: e.nativeEvent.clientY,
 			t: performance.now(),
 		};
-		movedRef.current = 0;
+		entry.moved = 0;
 		e.nativeEvent.stopPropagation?.();
 	}
 
 	function handlePointerMove(e: { nativeEvent: PointerEvent }) {
-		if (!downRef.current) return;
-		const dx = e.nativeEvent.clientX - downRef.current.x;
-		const dy = e.nativeEvent.clientY - downRef.current.y;
-		movedRef.current = Math.sqrt(dx * dx + dy * dy);
+		if (!entry.down) return;
+		const dx = e.nativeEvent.clientX - entry.down.x;
+		const dy = e.nativeEvent.clientY - entry.down.y;
+		entry.moved = Math.sqrt(dx * dx + dy * dy);
 	}
 
 	function selectLink() {
 		const current = useNavStore.getState().focusedLinkId;
-		if (current === link.id) {
+		if (current === entry.link.id) {
 			if (!canDismissZoomLock()) return;
 			setFocusedLink(null);
 			return;
 		}
-		setFocusedLink(link.id);
+		setFocusedLink(entry.link.id);
 	}
 
 	function handlePointerUp(e: { nativeEvent: PointerEvent }) {
-		if (!downRef.current) return;
-		const elapsed = performance.now() - downRef.current.t;
-		const moved = movedRef.current;
-		downRef.current = null;
+		if (!entry.down) return;
+		const elapsed = performance.now() - entry.down.t;
+		const moved = entry.moved;
+		entry.down = null;
 
-		// only treat as a tap if the pointer barely moved and was quick
 		if (moved < 5 && elapsed < 250) {
 			e.nativeEvent.stopPropagation?.();
 			selectLink();
@@ -140,26 +92,30 @@ function LinkStar({ link }: LinkStarProps) {
 
 	return (
 		<mesh
-			ref={meshRef}
-			position={position}
+			ref={onMeshRef}
+			position={entry.position}
 			onPointerDown={handlePointerDown}
 			onPointerMove={handlePointerMove}
 			onPointerUp={handlePointerUp}
-			onPointerOver={() => setHovered(link.id)}
+			onPointerOver={() => setHovered(entry.link.id)}
 			onPointerOut={() => setHovered(null)}
 		>
 			<sphereGeometry args={[0.018, 8, 8]} />
 			<meshBasicMaterial
-				color={starColor}
+				color={entry.starColor}
 				transparent
 				opacity={0.85}
 				blending={AdditiveBlending}
 				depthWrite={false}
 			/>
 
-			<Html distanceFactor={LABEL_DISTANCE_FACTOR} center={false} style={{ pointerEvents: "none" }}>
+			<Html
+				distanceFactor={LABEL_DISTANCE_FACTOR}
+				center={false}
+				style={{ pointerEvents: "none" }}
+			>
 				<div
-					ref={labelRef}
+					ref={onLabelRef}
 					className="-translate-y-full"
 					style={{
 						marginLeft: "-0.5px",
@@ -175,12 +131,12 @@ function LinkStar({ link }: LinkStarProps) {
 							gridTemplateColumns: "1px auto",
 							gridTemplateRows: "auto 1.5rem",
 						}}
-						onPointerEnter={() => setHovered(link.id)}
+						onPointerEnter={() => setHovered(entry.link.id)}
 						onPointerLeave={() => setHovered(null)}
 						onPointerDown={(e) => e.stopPropagation()}
 						onClick={(e) => {
 							e.stopPropagation();
-							if (movedRef.current > 5) return;
+							if (entry.moved > 5) return;
 							selectLink();
 						}}
 					>
@@ -195,7 +151,7 @@ function LinkStar({ link }: LinkStarProps) {
 									"0 0 6px rgba(0,0,0,0.95), 0 0 12px rgba(0,0,0,0.7), 0 1px 2px rgba(0,0,0,0.9)",
 							}}
 						>
-							{link.label}
+							{entry.link.label}
 						</span>
 					</button>
 				</div>
@@ -209,10 +165,93 @@ interface LinkStarsProps {
 }
 
 export function LinkStars({ links }: LinkStarsProps) {
+	const entriesRef = useRef<StarEntry[]>([]);
+	const tmpVec = useRef(new Vector3());
+	const focusedLinkId = useNavStore((s) => s.focusedLinkId);
+
+	const entries = useMemo(() => {
+		const next = links.map((link) => ({
+			link,
+			mesh: null as Mesh | null,
+			label: null as HTMLDivElement | null,
+			position: spiralPosition(link.radius, link.branch, {
+				scatter: 0.6,
+				offset: hashOffset(link.id),
+			}),
+			starColor: colorAtRadius(link.radius).getStyle(),
+			labelOpacity: 0,
+			down: null as { x: number; y: number; t: number } | null,
+			moved: 0,
+		}));
+		entriesRef.current = next;
+		return next;
+	}, [links]);
+
+	useFrame(() => {
+		const snap = prefersReducedMotion();
+		const zoomLocked = isFocusLockedView();
+		const focusedId = useNavStore.getState().focusedLinkId;
+
+		for (const entry of entriesRef.current) {
+			const mesh = entry.mesh;
+			if (!mesh) continue;
+
+			mesh.getWorldPosition(tmpVec.current);
+			const worldZ = tmpVec.current.z;
+			const isFocused = focusedId === entry.link.id;
+
+			const faceOpacity = Math.max(0, Math.min(1, (worldZ + 1) / FACE_SCALE));
+			const opacity = isFocused ? 1 : faceOpacity;
+
+			const mat = mesh.material as MeshBasicMaterial;
+			mat.opacity = 0.35 + opacity * 0.65;
+
+			const scale = 1 + opacity * 0.35;
+			mesh.scale.setScalar(scale);
+
+			if (entry.label) {
+				const targetOpacity = zoomLocked ? 0 : opacity;
+
+				if (snap) {
+					entry.labelOpacity = targetOpacity;
+				} else {
+					entry.labelOpacity +=
+						(targetOpacity - entry.labelOpacity) * LABEL_OPACITY_LERP;
+					if (Math.abs(entry.labelOpacity - targetOpacity) < 0.008) {
+						entry.labelOpacity = targetOpacity;
+					}
+				}
+
+				const shown = entry.labelOpacity;
+				entry.label.style.opacity = String(shown);
+				entry.label.style.visibility = shown < 0.02 ? "hidden" : "visible";
+				entry.label.style.pointerEvents =
+					!zoomLocked && shown > 0.35 ? "auto" : "none";
+			}
+
+			if (isFocused) {
+				mesh.getWorldPosition(focusedStarWorld);
+				focusedStarWorldValid.current = true;
+			}
+		}
+	});
+
 	return (
 		<>
-			{links.map((link) => (
-				<LinkStar key={link.id} link={link} />
+			{entries.map((entry, i) => (
+				<LinkStar
+					key={entry.link.id}
+					entry={entriesRef.current[i] ?? entry}
+					isFocused={focusedLinkId === entry.link.id}
+					onMeshRef={(mesh) => {
+						const target = entriesRef.current[i];
+						if (target) target.mesh = mesh;
+					}}
+					onLabelRef={(label) => {
+						const target = entriesRef.current[i];
+						if (target) target.label = label;
+					}}
+				/>
 			))}
 		</>
 	);

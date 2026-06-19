@@ -37,10 +37,11 @@ export const LINKS: GalaxyLink[] = [
 		radius: 1.4,
 	},
 	{
-		id: "blog",
-		label: "Blog",
-		href: "/blog",
-		description: "Longer-form writing on engineering, design, and technology.",
+		id: "calltrace",
+		label: "EVM Calltrace",
+		href: "https://github.com/jacobdcastro/txn-calltrace",
+		description:
+			"A minimal app to search and view calltrace data for an Ethereum transaction hash.",
 		branch: 3,
 		radius: 2.8,
 	},
@@ -54,7 +55,7 @@ export const LINKS: GalaxyLink[] = [
 	},
 	{
 		id: "hackathon",
-		label: "ZuBerlin 2024",
+		label: "ZuBerlin Hackathon Project",
 		href: "https://github.com/jacobdcastro/preconf-devnet-dashboard",
 		description:
 			"A real-time dashboard for Ethereum preconfirmation devnets, built at ZuBerlin 2024.",

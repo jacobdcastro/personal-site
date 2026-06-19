@@ -2,11 +2,14 @@ import { create } from "zustand";
 import { persist } from "zustand/middleware";
 
 type Mode = "3d" | "list";
+type RenderStyle = "webgl" | "ascii";
 
 interface NavState {
 	// persisted: survives page reload
 	mode: Mode;
 	setMode: (m: Mode) => void;
+	renderStyle: RenderStyle;
+	setRenderStyle: (s: RenderStyle) => void;
 
 	// ephemeral: reset on each session
 	hoveredId: string | null;
@@ -22,9 +25,12 @@ export const useNavStore = create<NavState>()(
 		(set) => ({
 			mode: "3d",
 			setMode: (mode) => set({ mode }),
+			renderStyle: "webgl",
+			setRenderStyle: (renderStyle) => set({ renderStyle }),
 
 			hoveredId: null,
-			setHovered: (id) => set({ hoveredId: id }),
+			setHovered: (id) =>
+				set((s) => (s.hoveredId === id ? s : { hoveredId: id })),
 
 			focusedLinkId: null,
 			setFocusedLink: (id) => set({ focusedLinkId: id }),
@@ -35,7 +41,7 @@ export const useNavStore = create<NavState>()(
 		{
 			name: "galaxy-nav",
 			// only persist the user's mode preference
-			partialize: (s) => ({ mode: s.mode }),
+			partialize: (s) => ({ mode: s.mode, renderStyle: s.renderStyle }),
 		},
 	),
 );

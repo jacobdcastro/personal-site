@@ -7,6 +7,10 @@ interface PlainNavProps {
 	hidden?: boolean;
 }
 
+function isExternalHref(href: string) {
+	return href.startsWith("http");
+}
+
 export function PlainNav({ links, hidden = false }: PlainNavProps) {
 	const mode = useNavStore((s) => s.mode);
 	const setFocusedLink = useNavStore((s) => s.setFocusedLink);
@@ -33,30 +37,30 @@ export function PlainNav({ links, hidden = false }: PlainNavProps) {
 					hidden ? undefined : "flex flex-col gap-4 font-sans text-neutral-300"
 				}
 			>
-				{links.map((link) => (
-					<li key={link.id}>
-						<a
-							href={link.href}
-							onFocus={() => handleFocus(link.id)}
-							onBlur={handleBlur}
-							target={
-								link.href.startsWith("http") || link.href.startsWith("mailto")
-									? "_blank"
-									: undefined
-							}
-							rel={
-								link.href.startsWith("http") ? "noopener noreferrer" : undefined
-							}
-							className={
-								hidden
-									? undefined
-									: "text-2xl hover:text-neutral-100 transition-colors"
-							}
-						>
-							{link.label}
-						</a>
-					</li>
-				))}
+				{links.map((link) => {
+					const external = isExternalHref(link.href);
+					return (
+						<li key={link.id}>
+							<a
+								href={link.href}
+								onFocus={() => handleFocus(link.id)}
+								onBlur={handleBlur}
+								target={external ? "_blank" : undefined}
+								rel={external ? "noopener noreferrer" : undefined}
+								className={
+									hidden
+										? undefined
+										: "text-2xl hover:text-neutral-100 transition-colors"
+								}
+							>
+								{link.label}
+								{external && (
+									<span className="sr-only"> (opens in new tab)</span>
+								)}
+							</a>
+						</li>
+					);
+				})}
 			</ul>
 		</nav>
 	);
