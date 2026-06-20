@@ -11,7 +11,6 @@ import {
 } from "../../lib/ascii-projector";
 import { cursorPos, galaxyCoordsRef } from "../../lib/cursor-motion";
 import { galaxySim } from "../../lib/galaxy-simulation";
-import { canDismissZoomLock } from "../../lib/zoom-focus-state";
 import { useNavStore } from "../../store/nav-store";
 import { findNearestLinkAt, GalaxyLinkLabels } from "./GalaxyLinkLabels";
 import { pointerToGalaxyPlaneFromMatrix } from "./galaxy-math";
@@ -28,8 +27,6 @@ export function GalaxyAscii({ links, active }: GalaxyAsciiProps) {
 	const velocity = useRef({ x: 0, y: 0 });
 	const preRef = useRef<HTMLPreElement>(null);
 	const projectedRef = useRef<ProjectedLink[]>([]);
-	const tapDownRef = useRef<{ x: number; y: number; t: number } | null>(null);
-	const tapMovedRef = useRef(0);
 	const lastCoordsRef = useRef<{ x: number; y: number } | null>(null);
 	const gridOffsetRef = useRef({ offsetX: 0, offsetY: 0 });
 	const lastAsciiRender = useRef(0);
@@ -38,11 +35,18 @@ export function GalaxyAscii({ links, active }: GalaxyAsciiProps) {
 	);
 	const cachedGridSize = useRef({ width: 0, height: 0 });
 
-	const setFocusedLink = useNavStore((s) => s.setFocusedLink);
-
-	const { containerRef, handlers, dragMoved } = useGalaxyInput({
+	const { containerRef, handlers } = useGalaxyInput({
 		isDragging,
 		velocity,
+		resolveTapLink: (x, y) => {
+			const el = containerRef.current;
+			if (!el) return null;
+			const projected =
+				projectedRef.current.length > 0
+					? projectedRef.current
+					: projectLinks(links, el.clientWidth, el.clientHeight);
+			return findNearestLinkAt(projected, x, y);
+		},
 	});
 
 	useEffect(() => {
@@ -159,47 +163,11 @@ export function GalaxyAscii({ links, active }: GalaxyAsciiProps) {
 	}, [active, links, containerRef]);
 
 	function handlePointerDown(e: React.PointerEvent<HTMLDivElement>) {
-		if (!handlers.onPointerDown(e)) return;
-		tapDownRef.current = { x: e.clientX, y: e.clientY, t: performance.now() };
-		tapMovedRef.current = 0;
-	}
-
-	function handlePointerMove(e: React.PointerEvent<HTMLDivElement>) {
-		if (!tapDownRef.current) return;
-		const dx = e.clientX - tapDownRef.current.x;
-		const dy = e.clientY - tapDownRef.current.y;
-		tapMovedRef.current = Math.hypot(dx, dy);
+		handlers.onPointerDown(e);
 	}
 
 	function handlePointerUp(e: React.PointerEvent<HTMLDivElement>) {
-		const hadTap = !!tapDownRef.current;
-		const tapStart = tapDownRef.current;
 		handlers.onPointerUp(e);
-
-		if (!hadTap || !tapStart) return;
-		const elapsed = performance.now() - tapStart.t;
-		const moved = tapMovedRef.current;
-		tapDownRef.current = null;
-
-		if (moved >= 5 || elapsed >= 250 || dragMoved.current >= 5) return;
-
-		const el = containerRef.current;
-		if (!el) return;
-
-		const projected =
-			projectedRef.current.length > 0
-				? projectedRef.current
-				: projectLinks(links, el.clientWidth, el.clientHeight);
-
-		const nearest = findNearestLinkAt(projected, e.clientX, e.clientY);
-		if (!nearest) return;
-
-		const current = useNavStore.getState().focusedLinkId;
-		if (current === nearest) {
-			if (canDismissZoomLock()) setFocusedLink(null);
-		} else {
-			setFocusedLink(nearest);
-		}
 	}
 
 	return (
@@ -207,7 +175,6 @@ export function GalaxyAscii({ links, active }: GalaxyAsciiProps) {
 			ref={containerRef}
 			className="relative h-full w-full touch-none overflow-hidden bg-black"
 			onPointerDown={handlePointerDown}
-			onPointerMove={handlePointerMove}
 			onPointerUp={handlePointerUp}
 			onPointerCancel={handlers.onPointerCancel}
 		>

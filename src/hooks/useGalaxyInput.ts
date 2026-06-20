@@ -30,11 +30,13 @@ function wheelDeltas(e: WheelEvent): { x: number; y: number } {
 interface UseGalaxyInputOptions {
 	isDragging: RefObject<boolean>;
 	velocity: RefObject<{ x: number; y: number }>;
+	resolveTapLink?: (x: number, y: number) => string | null;
 }
 
 export function useGalaxyInput({
 	isDragging,
 	velocity,
+	resolveTapLink,
 }: UseGalaxyInputOptions) {
 	const containerRef = useRef<HTMLDivElement>(null);
 	const lastPointer = useRef({ x: 0, y: 0 });
@@ -43,9 +45,12 @@ export function useGalaxyInput({
 	const activePointerId = useRef<number | null>(null);
 	const multiTouchPaused = useRef(false);
 	const skipNextDelta = useRef(false);
+	const pressedLinkId = useRef<string | null>(null);
 	const setFocusedLink = useNavStore((s) => s.setFocusedLink);
 	const setDragging = useNavStore((s) => s.setDragging);
 	const focusedLinkId = useNavStore((s) => s.focusedLinkId);
+	const resolveTapLinkRef = useRef(resolveTapLink);
+	resolveTapLinkRef.current = resolveTapLink;
 
 	useEffect(() => {
 		if (!focusedLinkId) velocity.current = { x: 0, y: 0 };
@@ -116,6 +121,21 @@ export function useGalaxyInput({
 		setDragging(true);
 	}
 
+	function selectLinkOnTap(clientX: number, clientY: number) {
+		const linkId =
+			pressedLinkId.current ??
+			resolveTapLinkRef.current?.(clientX, clientY) ??
+			null;
+		if (!linkId) return;
+
+		const current = useNavStore.getState().focusedLinkId;
+		if (current === linkId) {
+			if (canDismissZoomLock()) setFocusedLink(null);
+		} else {
+			setFocusedLink(linkId);
+		}
+	}
+
 	function releasePointer(e: ReactPointerEvent<HTMLDivElement>) {
 		if (!e.isPrimary) {
 			resumeFromMultiTouchPause();
@@ -130,19 +150,19 @@ export function useGalaxyInput({
 			// pointer may already be released
 		}
 
-		if (
-			pointerDownOnCanvas.current &&
-			isFocusLocked() &&
-			dragMoved.current < 5 &&
-			canDismissZoomLock()
-		) {
+		const wasTap = dragMoved.current < 5;
+
+		if (pointerDownOnCanvas.current && isFocusLocked() && wasTap && canDismissZoomLock()) {
 			setFocusedLink(null);
 			velocity.current = { x: 0, y: 0 };
+		} else if (wasTap && !isFocusLocked()) {
+			selectLinkOnTap(e.clientX, e.clientY);
 		}
 
 		activePointerId.current = null;
 		multiTouchPaused.current = false;
 		skipNextDelta.current = false;
+		pressedLinkId.current = null;
 		pointerDownOnCanvas.current = false;
 		isDragging.current = false;
 		setDragging(false);
@@ -163,6 +183,7 @@ export function useGalaxyInput({
 			// capture may fail on some synthetic events
 		}
 
+		pressedLinkId.current = useNavStore.getState().hoveredId;
 		pointerDownOnCanvas.current = true;
 		isDragging.current = true;
 		setDragging(true);

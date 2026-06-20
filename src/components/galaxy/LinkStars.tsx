@@ -132,6 +132,7 @@ function LinkStar({ entry, onMeshRef, onLabelRef, isFocused }: LinkStarProps) {
 						}}
 						onPointerEnter={() => setHovered(entry.link.id)}
 						onPointerLeave={() => setHovered(null)}
+						onPointerDown={(e) => e.stopPropagation()}
 						onClick={(e) => {
 							e.stopPropagation();
 							if (entry.moved > 5) return;

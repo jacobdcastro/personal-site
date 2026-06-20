@@ -166,6 +166,7 @@ export function GalaxyLinkLabels({
 						className="group flex items-start gap-1.5 border-0 bg-transparent p-0 text-left"
 						onPointerEnter={() => setHovered(link.id)}
 						onPointerLeave={() => setHovered(null)}
+						onPointerDown={(e) => e.stopPropagation()}
 						onClick={(e) => {
 							e.stopPropagation();
 							selectLink(link);
