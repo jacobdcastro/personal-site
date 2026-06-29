@@ -8,10 +8,12 @@
   "scripts": {
     "dev": "vite dev --port 3000",
     "generate-routes": "tsr generate",
-    "build": "bun scripts/generate-seo-files.ts && bun scripts/generate-og-image.ts && bun scripts/generate-favicon.ts && vite build",
+    "build": "bun scripts/generate-seo-files.ts && bun scripts/generate-og-image.ts && bun scripts/generate-favicon.ts && bun scripts/generate-resume.tsx && vite build",
     "generate-seo": "bun scripts/generate-seo-files.ts",
     "generate-og": "bun scripts/generate-og-image.ts",
     "generate-favicon": "bun scripts/generate-favicon.ts",
+    "generate-resume": "bun scripts/generate-resume.tsx",
+    "generate-resume-preview": "bun scripts/generate-resume.tsx resume_new.pdf",
     "preview": "vite preview",
     "test": "vitest run",
     "format": "biome format",
@@ -21,6 +23,7 @@
   "dependencies": {
     "@mdx-js/react": "^3.1.1",
     "@mdx-js/rollup": "^3.1.1",
+    "@react-pdf/renderer": "^4.5.1",
     "@react-spring/three": "^10.1.1",
     "@react-spring/web": "^10.1.1",
     "@react-three/drei": "^10.7.7",
