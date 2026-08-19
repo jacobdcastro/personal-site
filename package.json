@@ -6,7 +6,7 @@
     "#/*": "./src/*"
   },
   "scripts": {
-    "dev": "vite dev --port 3000",
+    "dev": "vite dev --port 1414",
     "generate-routes": "tsr generate",
     "build": "bun scripts/generate-seo-files.ts && bun scripts/generate-og-image.ts && bun scripts/generate-favicon.ts && bun scripts/generate-resume.tsx && vite build",
     "generate-seo": "bun scripts/generate-seo-files.ts",
