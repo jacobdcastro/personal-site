@@ -10,15 +10,15 @@ export const styles = StyleSheet.create({
 	page: {
 		fontFamily: FONT_FAMILY,
 		fontSize: BODY_SIZE,
-		lineHeight: 1.2,
+		lineHeight: 1.15,
 		color: "#000000",
 		backgroundColor: "#ffffff",
-		paddingTop: 32,
-		paddingBottom: 28,
-		paddingHorizontal: 44,
+		paddingTop: 26,
+		paddingBottom: 18,
+		paddingHorizontal: 28,
 	},
 	header: {
-		marginBottom: 14,
+		marginBottom: 9,
 	},
 	name: {
 		fontSize: NAME_SIZE,
@@ -28,15 +28,15 @@ export const styles = StyleSheet.create({
 	},
 	contactRow: {
 		fontSize: BODY_SIZE,
-		lineHeight: 1.2,
+		lineHeight: 1.15,
 	},
 	section: {
-		marginBottom: 12,
+		marginBottom: 8,
 	},
 	sectionTitleRow: {
 		flexDirection: "row",
 		alignItems: "flex-end",
-		marginBottom: 6,
+		marginBottom: 5,
 	},
 	sectionTitle: {
 		fontSize: SECTION_TITLE_SIZE,
@@ -52,7 +52,7 @@ export const styles = StyleSheet.create({
 	},
 	skillRow: {
 		flexDirection: "row",
-		marginBottom: 3,
+		marginBottom: 2,
 	},
 	skillLabel: {
 		fontWeight: "bold",
@@ -62,15 +62,15 @@ export const styles = StyleSheet.create({
 	skillItems: {
 		flex: 1,
 		fontSize: BODY_SIZE,
-		lineHeight: 1.2,
+		lineHeight: 1.15,
 	},
 	job: {
-		marginBottom: 8,
+		marginBottom: 5,
 	},
 	jobHeader: {
 		flexDirection: "row",
 		justifyContent: "space-between",
-		marginBottom: 1,
+		marginBottom: 0.5,
 	},
 	jobRole: {
 		fontWeight: "bold",
@@ -87,12 +87,12 @@ export const styles = StyleSheet.create({
 		fontSize: BODY_SIZE,
 	},
 	bulletList: {
-		paddingLeft: 10,
-		marginTop: 2,
+		paddingLeft: 0,
+		marginTop: 1,
 	},
 	bulletItem: {
 		flexDirection: "row",
-		marginBottom: 2,
+		marginBottom: 1,
 	},
 	bulletMarker: {
 		width: 10,
@@ -101,7 +101,7 @@ export const styles = StyleSheet.create({
 	bulletText: {
 		flex: 1,
 		fontSize: BODY_SIZE,
-		lineHeight: 1.2,
+		lineHeight: 1.15,
 	},
 	projectName: {
 		fontWeight: "bold",
