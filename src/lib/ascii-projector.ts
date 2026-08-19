@@ -74,6 +74,13 @@ function faceOpacity(worldZ: number) {
 	return Math.max(0, Math.min(1, (worldZ + 1) / FACE_SCALE));
 }
 
+// labels hold full opacity through mid-depth, then fade out fast
+// (full at worldZ >= 0.1, gone by worldZ <= -0.7) — narrower than faceOpacity,
+// which dust glyphs and marker sizing still use.
+function labelOpacity(worldZ: number) {
+	return Math.max(0, Math.min(1, (worldZ + 0.7) / 0.8));
+}
+
 function brightnessToGlyph(radius: number): number {
 	const t = Math.min(1, radius / GALAXY.RADIUS);
 	const innerBoost = 1 - t * 0.35;
@@ -153,7 +160,7 @@ export function projectLinks(
 			screenX: projected.x,
 			screenY: projected.y,
 			worldZ: projected.worldZ,
-			opacity: faceOpacity(projected.worldZ),
+			opacity: labelOpacity(projected.worldZ),
 		});
 	}
 

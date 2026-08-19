@@ -1,74 +1,92 @@
 export interface GalaxyLink {
-	id: string;
-	label: string;
-	href: string;
-	description: string;
-	/** spiral arm index (0 … branches-1) */
-	branch: number;
-	/** distance from galactic center */
-	radius: number;
+  id: string;
+  label: string;
+  href: string;
+  description: string;
+  /** spiral arm index (0 … branches-1) */
+  branch: number;
+  /** distance from galactic center */
+  radius: number;
 }
 
 // single source of truth for all site navigation links.
 // each link sits on a spiral arm at a given radius — positions are derived at render time.
 export const LINKS: GalaxyLink[] = [
-	{
-		id: "twitter",
-		label: "Twitter",
-		href: "https://x.com/jacobdcastro",
-		description: "Thoughts on systems, Ethereum, and whatever I'm building.",
-		branch: 0,
-		radius: 2.6,
-	},
-	{
-		id: "github",
-		label: "GitHub",
-		href: "https://github.com/jacobdcastro",
-		description: "Open-source projects, experiments, and work-in-progress code.",
-		branch: 2,
-		radius: 2.2,
-	},
-	{
-		id: "resume",
-		label: "Resumé",
-		href: "/resume.pdf",
-		description: "A PDF overview of experience, skills, and past roles.",
-		branch: 1,
-		radius: 1.4,
-	},
-	{
-		id: "calltrace",
-		label: "EVM Calltrace",
-		href: "https://github.com/jacobdcastro/txn-calltrace",
-		description:
-			"A minimal app to search and view calltrace data for an Ethereum transaction hash.",
-		branch: 3,
-		radius: 2.8,
-	},
-	{
-		id: "email",
-		label: "Email",
-		href: "mailto:jacob@xiv.systems",
-		description: "Reach out directly — always happy to chat about ideas or work.",
-		branch: 4,
-		radius: 2.0,
-	},
-	{
-		id: "hackathon",
-		label: "ZuBerlin Hackathon Project",
-		href: "https://github.com/jacobdcastro/preconf-devnet-dashboard",
-		description:
-			"A real-time dashboard for Ethereum preconfirmation devnets, built at ZuBerlin 2024.",
-		branch: 1,
-		radius: 3.2,
-	},
-	{
-		id: "chip8",
-		label: "CHIP-8 Emulator",
-		href: "https://github.com/jacobdcastro/chip8-cpu-emulator",
-		description:
-			"A from-scratch CHIP-8 interpreter and emulator written in Rust.",
-		branch: 3,
-		radius: 1.8,
-	},
+  {
+    id: "twitter",
+    label: "Twitter",
+    href: "https://x.com/jacobdcastro",
+    description: "Random thoughts about tech, AI, and sometimes sports.",
+    branch: 0,
+    radius: 3.1,
+  },
+  {
+    id: "github",
+    label: "GitHub",
+    href: "https://github.com/jacobdcastro",
+    description: "My code... obviously.",
+    branch: 2,
+    radius: 2.7,
+  },
+  {
+    id: "resume",
+    label: "Resumé",
+    href: "/resume.pdf",
+    description: "The ole PDF. Summary of my skills and experience.",
+    branch: 1,
+    radius: 3.2,
+  },
+  {
+    id: "calltrace",
+    label: "EVM Calltrace",
+    href: "https://github.com/jacobdcastro/txn-calltrace",
+    description:
+      "A minimal app to search and view calltrace data for an Ethereum transaction.",
+    branch: 3,
+    radius: 2.85,
+  },
+  {
+    id: "email",
+    label: "Email",
+    href: "mailto:me@jacobdcastro.com",
+    description:
+      "Live in your inbox? Reach out here! Always happy to chat about ideas or work.",
+    branch: 4,
+    radius: 2.4,
+  },
+  {
+    id: "hackathon",
+    label: "ZuBerlin Hackathon Project",
+    href: "https://github.com/jacobdcastro/preconf-devnet-dashboard",
+    description:
+      "A first-place-winning real-time dashboard for Ethereum preconfirmations, built at ZuBerlin 2024.",
+    branch: 1,
+    radius: 2.6,
+  },
+  {
+    id: "workflows",
+    label: "AI Agent Workflows",
+    href: "https://github.com/jacobdcastro/workflows",
+    description:
+      "My own agent-driven engineering workflows, wrapped in a CLI to implement, review, and ship good code.",
+    branch: 2,
+    radius: 3.3,
+  },
+  {
+    id: "neovim",
+    label: "Neovim Config",
+    href: "https://github.com/jacobdcastro/nvim-config",
+    description: "I use neovim btw.",
+    branch: 0,
+    radius: 2.5,
+  },
+  {
+    id: "chip8",
+    label: "CHIP-8 Emulator",
+    href: "https://github.com/jacobdcastro/chip8-cpu-emulator",
+    description:
+      "I built a CHIP-8 CPU interpreter and emulator from scratch in Rust. T'was a joy!",
+    branch: 4,
+    radius: 3.0,
+  },
 ];
