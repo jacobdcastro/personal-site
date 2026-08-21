@@ -60,7 +60,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
 				<Link
 					to="/"
 					data-ship-cursor="terminal"
-					className="fixed top-4 left-4 z-50 font-serif text-sm tracking-tight text-neutral-300 transition-colors hover:text-neutral-100"
+					className="fixed top-4 left-4 z-50 font-serif text-lg tracking-tight text-neutral-300 transition-colors hover:text-neutral-100 sm:text-xl"
 				>
 					Jacob D. Castro
 				</Link>

@@ -29,12 +29,14 @@ export function PlainNav({ links, hidden = false }: PlainNavProps) {
 			className={
 				hidden
 					? "sr-only"
-					: "flex h-full w-full flex-col items-center justify-center gap-8 px-6 py-12"
+					: "flex h-full w-full flex-col items-center overflow-y-auto px-6 py-12"
 			}
 		>
 			<ul
 				className={
-					hidden ? undefined : "flex flex-col gap-4 font-sans text-neutral-300"
+					hidden
+						? undefined
+						: "m-auto flex flex-col gap-6 text-center font-sans text-neutral-300"
 				}
 			>
 				{links.map((link) => {
@@ -47,15 +49,24 @@ export function PlainNav({ links, hidden = false }: PlainNavProps) {
 								onBlur={handleBlur}
 								target={external ? "_blank" : undefined}
 								rel={external ? "noopener noreferrer" : undefined}
-								className={
-									hidden
-										? undefined
-										: "text-2xl hover:text-neutral-100 transition-colors"
-								}
+								className={hidden ? undefined : "group block"}
 							>
-								{link.label}
+								<span
+									className={
+										hidden
+											? undefined
+											: "block text-2xl leading-tight transition-colors group-hover:text-neutral-100"
+									}
+								>
+									{link.label}
+								</span>
 								{external && (
 									<span className="sr-only"> (opens in new tab)</span>
+								)}
+								{!hidden && (
+									<span className="mx-auto mt-0.5 block max-w-sm text-sm text-neutral-500 transition-colors group-hover:text-neutral-400">
+										{link.description}
+									</span>
 								)}
 							</a>
 						</li>
