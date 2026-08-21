@@ -3,7 +3,7 @@ import type { ResumeData } from "./types";
 export const RESUME_DATA: ResumeData = {
   name: "Jacob D. Castro",
   contact: {
-    location: "Santa Maria, CA, USA",
+    location: "Santa Maria, CA, USA (willing to relocate)",
     links: [
       { label: "me@jacobdcastro.com", href: "mailto:me@jacobdcastro.com" },
       { label: "jacobdcastro.com", href: "https://jacobdcastro.com" },
@@ -11,64 +11,53 @@ export const RESUME_DATA: ResumeData = {
         label: "github.com/jacobdcastro",
         href: "https://github.com/jacobdcastro",
       },
-      { label: "x.com/jacobdcastro", href: "https://x.com/jacobdcastro" },
+      {
+        label: "linkedin.com/in/jacobdcastro1",
+        href: "https://www.linkedin.com/in/jacobdcastro1",
+      },
     ],
   },
+  summary: [
+    "Full stack engineer building web products since 2020, most recently in TypeScript, React, Node, and GraphQL. Founder and founding-engineer background, with a product engineer's habits: prototyping against real user feedback, carrying features from ambiguous idea to production, and keeping technical decisions tied to the business goal behind them.",
+  ],
   skills: [
     {
       label: "Programming",
-      items: "TypeScript, JavaScript, Python, Rust, SQL, Node.js",
+      items: "TypeScript, JavaScript, Python, Rust, SQL",
     },
     {
       label: "Frameworks",
       items:
-        "React, Next.js, GraphQL, TanStack Query, Zod, Tailwind, Vitest, Playwright, Storybook",
+        "React, Node.js, Effect, GraphQL, Next.js, TanStack Query, Zod, Tailwind, Vitest, Playwright, Storybook",
     },
     {
       label: "AI & Pipelines",
       items:
-        "LLM workflows, agent tooling, prompt engineering, structured outputs, event-driven jobs",
+        "LLM workflows, agent tooling, prompt engineering, structured outputs, eval harnesses, event-driven jobs",
     },
     {
       label: "Infrastructure",
       items:
-        "Docker, PostgreSQL, GCP, AWS, Vercel, Railway, CI/CD, OpenTelemetry, Grafana, Sentry",
+        "PostgreSQL, Docker, GCP, AWS, Vercel, Railway, CI/CD, OpenTelemetry, Grafana, Sentry, Git, Jujutsu",
     },
   ],
   experience: [
     {
-      role: "Senior Fullstack Engineer",
+      role: "Senior Full Stack Engineer",
       dates: "01/2025 - Present",
       company: "Phylax Systems",
-      location: "Remote",
       bullets: [
         [
-          "Led the fullstack TypeScript-based microservices platform: contract-first API design (130+ Zod-validated RESTful endpoints) with cross-service contract and version compatibility testing, multi-tenant PostgreSQL with row-level security, React UI, data pipelines, and CI/CD. Reviewed all teammate PRs and owned core features from ambiguous requirements through spec, implementation, and deployment.",
+          "Led the full stack TypeScript microservices platform: contract-first API design (130+ Zod-validated endpoints), cross-service compatibility testing, multi-tenant PostgreSQL with row-level security, React UI, and CI/CD.",
         ],
         [
-          "Architected an LLM agent service from the first commit, designing Python workflows, custom agent tools, generate-critique-refine quality loops, and deterministic verification of model output to power four AI features shipped to production.",
+          "Architected an LLM agent service from the first commit: Python workflows, agent tools, generate-critique-refine loops, and deterministic output verification with grounding and hallucination checks, powering four production AI features.",
         ],
         [
-          "Designed and built the platform's event-driven data backbone: 40+ background workers, a GraphQL chain indexing layer, and a typed async job engine with retry policies and payload redaction, powering alerting, on-chain events, and AI workflows.",
-        ],
-        ["Stack: TypeScript, Node.js, React, PostgreSQL, GraphQL, Zod, Docker"],
-      ],
-    },
-    {
-      role: "Freelancer",
-      dates: "11/2018 - 01/2025",
-      company: "XIV Systems",
-      location: "Remote",
-      bullets: [
-        [
-          "Contributed full-stack improvement features for Sudoswap (",
-          { text: "sudoswap.xyz", href: "https://sudoswap.xyz/" },
-          ")",
+          "Owned core customer-facing features end to end, from ambiguous requirements through spec, implementation, and deployment, and reviewed all teammate PRs.",
         ],
         [
-          "Developed and deployed smart contracts, NFT minting app, and first e-commerce website for Highly Liquid (",
-          { text: "highlyliquidny.com", href: "https://highlyliquidny.com/" },
-          ")",
+          "Designed and built the platform's event-driven data backbone: 40+ background workers, a GraphQL-backed event indexing layer, and a typed async job engine with retry policies and payload redaction, powering alerting, real-time event processing, and AI workflows.",
         ],
       ],
     },
@@ -76,39 +65,25 @@ export const RESUME_DATA: ResumeData = {
       role: "Co-Founder and CEO",
       dates: "05/2024 - 01/2025",
       company: "Monea",
-      location: "Remote",
       bullets: [
         [
           "Built Monea's core product: a Rust-based CLI and engine for deploying rollup and Ethereum infrastructure.",
         ],
         [
-          "Led business development, including networking, partnerships, and fundraising strategy.",
+          "Ran the company as a technical founder while remaining its primary engineer: customer discovery, partnerships, and fundraising strategy.",
         ],
-        ["Stack: Rust, Starlark, Docker"],
       ],
     },
     {
       role: "Lead Engineer",
       dates: "11/2022 - 07/2024",
       company: "Brink",
-      location: "Remote",
       bullets: [
         [
-          "Developed ",
-          { text: "Brink V2 Intents Protocol", href: "https://brink.trade/" },
-          ", ",
-          { text: "CroutonSwap", href: "https://croutonswap.com/" },
-          ", ",
-          { text: "Brinkscan", href: "https://www.brinkscan.com/" },
-          ", ",
-          { text: "Nomial", href: "https://nomial.io/" },
-          ", and Brink L2 chain.",
+          "Designed, architected, built, and deployed five products, including an intents-based trading protocol and SDK, a swap interface, a block explorer, and an L2 chain.",
         ],
         [
-          "Managed developer relations, documentation, and NPM releases; keynoted at ETHGlobal NYC and Devconnect Istanbul.",
-        ],
-        [
-          "Stack: JavaScript, TypeScript, Next.js, React, Redux, wagmi/ethers.js, Node.js, Solidity",
+          "Owned the developer-facing surface: SDK releases to NPM, documentation, and integration support for external teams, plus conference keynotes on the protocol.",
         ],
       ],
     },
@@ -116,29 +91,26 @@ export const RESUME_DATA: ResumeData = {
       role: "Founding Engineer",
       dates: "04/2022 - 08/2022",
       company: "Coinbooks (YC-backed)",
-      location: "Remote",
       bullets: [
         [
-          "Led development of a full-stack crypto invoicing app with native integration to core accounting product.",
+          "Led development of a full-stack invoicing app with native integration to the core accounting product.",
         ],
         [
-          "Ran YC's 'write code and talk to users' playbook — met directly with paying customers, rapidly prototyped their requests, and folded their feedback into every release cycle.",
-        ],
-        [
-          "Stack: SPA React, TypeScript, Next.js, Ethers.js, Solidity, Express, MongoDB, AWS",
+          "Ran YC's 'write code and talk to users' playbook: met directly with paying customers, rapidly prototyped their requests, and folded their feedback into every release cycle.",
         ],
       ],
     },
     {
-      role: "Full-stack Developer",
-      dates: "06/2021 - 04/2022",
-      company: "cocoNFT (Acquired)",
-      location: "Remote",
+      role: "Freelance Engineer",
+      dates: "01/2020 - 01/2025",
+      company: "XIV Systems",
       bullets: [
         [
-          "Worked on an NFT minting and sales platform for creators, developing pixel-perfect UI based on designer's Figma files. (",
-          { text: "coconft.com", href: "https://coconft.com/" },
-          ")",
+          "Occasional one-off client projects: full-stack feature work for Sudoswap (",
+          { text: "sudoswap.xyz", href: "https://sudoswap.xyz/" },
+          "), plus smart contracts, an NFT minting app, and the first e-commerce site for Highly Liquid (",
+          { text: "highlyliquidny.com", href: "https://highlyliquidny.com/" },
+          "), among other short-term contracts.",
         ],
       ],
     },
@@ -149,7 +121,7 @@ export const RESUME_DATA: ResumeData = {
       href: "https://github.com/jacobdcastro/preconf-devnet-dashboard",
       bullets: [
         [
-          "ZuBerlin 2024 hackathon winner — real-time dashboard for Ethereum preconfirmation devnets with live block and validator metrics.",
+          "ZuBerlin 2024 hackathon winner. Real-time Ethereum preconfirmation devnet dashboard.",
         ],
       ],
     },
@@ -163,11 +135,20 @@ export const RESUME_DATA: ResumeData = {
       ],
     },
     {
-      name: "xiv — AI Agent Workflows",
+      name: "AI Agent Workflows",
       href: "https://github.com/jacobdcastro/workflows",
       bullets: [
         [
-          "Custom CLI orchestrating AI agent engineering workflows — automated implement, review, and ship loops with local review agents and overnight stacked-branch feature builds.",
+          "Custom CLI orchestrating automated implement, review, and ship loops with local agents.",
+        ],
+      ],
+    },
+    {
+      name: "EVM Calltrace",
+      href: "https://github.com/jacobdcastro/txn-calltrace",
+      bullets: [
+        [
+          "Call trace explorer with an Effect-based fetch layer: schema-validated decoding and retry schedules.",
         ],
       ],
     },
@@ -176,9 +157,12 @@ export const RESUME_DATA: ResumeData = {
       href: "https://github.com/jacobdcastro/personal-site",
       bullets: [
         [
-          "Interactive portfolio built with TanStack Start, Three.js galaxy navigation, and a programmatic PDF resume generator.",
+          "TanStack Start portfolio with Three.js galaxy navigation and a programmatic PDF resume generator.",
         ],
       ],
     },
+  ],
+  education: [
+    "Self-taught developer and engineer. Production experience across venture-backed startups in place of a formal CS degree, with continuous project-based study in fullstack engineering, systems programming, data pipelines, and applied AI.",
   ],
 };

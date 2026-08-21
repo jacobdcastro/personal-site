@@ -12,5 +12,8 @@ dist-ssr
 __unconfig*
 todos.json
 
+# Resume preview build output (generate-resume-preview)
+public/resume_new.pdf
+
 # Local Netlify folder
 .netlify

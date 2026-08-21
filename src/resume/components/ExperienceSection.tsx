@@ -25,7 +25,7 @@ export function ExperienceSection() {
 					</View>
 					<View style={styles.jobHeader}>
 						<Text style={styles.jobCompany}>{job.company}</Text>
-						<Text style={styles.jobLocation}>{job.location}</Text>
+						<Text style={styles.jobLocation}>{job.location ?? ""}</Text>
 					</View>
 					<View style={styles.bulletList}>
 						{job.bullets.map((bullet) => (

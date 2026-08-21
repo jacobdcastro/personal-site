@@ -3,7 +3,7 @@ import { FONT_FAMILY } from "./fonts";
 
 // LaTeX article 10pt scale (CMR10 body, CMBX10 headings)
 const BODY_SIZE = 10;
-const NAME_SIZE = 18;
+const NAME_SIZE = 20;
 const SECTION_TITLE_SIZE = 10;
 
 export const styles = StyleSheet.create({
@@ -20,15 +20,30 @@ export const styles = StyleSheet.create({
 	header: {
 		marginBottom: 9,
 	},
+	nameRow: {
+		flexDirection: "row",
+		justifyContent: "space-between",
+		alignItems: "flex-end",
+		marginBottom: 6,
+	},
 	name: {
 		fontSize: NAME_SIZE,
 		fontWeight: "bold",
 		lineHeight: 1.1,
-		marginBottom: 6,
+	},
+	headerLocation: {
+		fontSize: BODY_SIZE,
+		lineHeight: 1.15,
+		paddingBottom: 2,
 	},
 	contactRow: {
 		fontSize: BODY_SIZE,
 		lineHeight: 1.15,
+	},
+	summary: {
+		fontSize: BODY_SIZE,
+		lineHeight: 1.15,
+		marginTop: 4,
 	},
 	section: {
 		marginBottom: 8,
