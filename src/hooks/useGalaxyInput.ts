@@ -1,5 +1,8 @@
+import { useNavigate } from "@tanstack/react-router";
 import type { PointerEvent as ReactPointerEvent } from "react";
 import { type RefObject, useEffect, useRef } from "react";
+import { LINKS } from "../data/links";
+import { isPageLink } from "../lib/galaxy-link-action";
 import { canDismissZoomLock } from "../lib/zoom-focus-state";
 import { useNavStore } from "../store/nav-store";
 
@@ -38,6 +41,7 @@ export function useGalaxyInput({
 	velocity,
 	resolveTapLink,
 }: UseGalaxyInputOptions) {
+	const navigate = useNavigate();
 	const containerRef = useRef<HTMLDivElement>(null);
 	const lastPointer = useRef({ x: 0, y: 0 });
 	const dragMoved = useRef(0);
@@ -127,6 +131,12 @@ export function useGalaxyInput({
 			resolveTapLinkRef.current?.(clientX, clientY) ??
 			null;
 		if (!linkId) return;
+
+		const link = LINKS.find((entry) => entry.id === linkId);
+		if (link && isPageLink(link)) {
+			navigate({ to: link.href });
+			return;
+		}
 
 		const current = useNavStore.getState().focusedLinkId;
 		if (current === linkId) {

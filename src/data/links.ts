@@ -3,6 +3,8 @@ export interface GalaxyLink {
   label: string;
   href: string;
   description: string;
+  /** internal route — tap navigates to a full page instead of zoom + detail panel */
+  page?: boolean;
   /** spiral arm index (0 … branches-1) */
   branch: number;
   /** distance from galactic center */
@@ -20,6 +22,15 @@ export const LINKS: GalaxyLink[] = [
     description: "My code... obviously.",
     branch: 2,
     radius: 2.7,
+  },
+  {
+    id: "about",
+    label: "About me",
+    href: "/about",
+    description: "The human behind the stars.",
+    page: true,
+    branch: 3,
+    radius: 2.15,
   },
   {
     id: "resume",
