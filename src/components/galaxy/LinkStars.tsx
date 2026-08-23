@@ -7,7 +7,9 @@ import {
 	type MeshBasicMaterial,
 	Vector3,
 } from "three";
+import { useNavigate } from "@tanstack/react-router";
 import type { GalaxyLink } from "../../data/links";
+import { isPageLink } from "../../lib/galaxy-link-action";
 import { getLinkLocalPosition } from "../../lib/galaxy-simulation";
 import { prefersReducedMotion } from "../../lib/input-device";
 import {
@@ -49,6 +51,7 @@ interface LinkStarProps {
 }
 
 function LinkStar({ entry, onMeshRef, onLabelRef, isFocused }: LinkStarProps) {
+	const navigate = useNavigate();
 	const setHovered = useNavStore((s) => s.setHovered);
 	const setFocusedLink = useNavStore((s) => s.setFocusedLink);
 
@@ -69,6 +72,11 @@ function LinkStar({ entry, onMeshRef, onLabelRef, isFocused }: LinkStarProps) {
 	}
 
 	function selectLink() {
+		if (isPageLink(entry.link)) {
+			navigate({ to: entry.link.href });
+			return;
+		}
+
 		const current = useNavStore.getState().focusedLinkId;
 		if (current === entry.link.id) {
 			if (!canDismissZoomLock()) return;
