@@ -10,16 +10,9 @@ export interface GalaxyLink {
 }
 
 // single source of truth for all site navigation links.
-// each link sits on a spiral arm at a given radius — positions are derived at render time.
+// each link sits on a spiral arm at a given radius — positions are derived at render time,
+// so array order only controls the list view and the reading order for assistive tech.
 export const LINKS: GalaxyLink[] = [
-  {
-    id: "twitter",
-    label: "Twitter",
-    href: "https://x.com/jacobdcastro",
-    description: "Random thoughts about tech, AI, and sometimes sports.",
-    branch: 0,
-    radius: 3.1,
-  },
   {
     id: "github",
     label: "GitHub",
@@ -37,15 +30,6 @@ export const LINKS: GalaxyLink[] = [
     radius: 3.2,
   },
   {
-    id: "calltrace",
-    label: "EVM Calltrace",
-    href: "https://github.com/jacobdcastro/txn-calltrace",
-    description:
-      "A minimal app to search and view calltrace data for an Ethereum transaction.",
-    branch: 3,
-    radius: 2.85,
-  },
-  {
     id: "email",
     label: "Email",
     href: "mailto:me@jacobdcastro.com",
@@ -55,13 +39,12 @@ export const LINKS: GalaxyLink[] = [
     radius: 2.4,
   },
   {
-    id: "hackathon",
-    label: "ZuBerlin Hackathon Project",
-    href: "https://github.com/jacobdcastro/preconf-devnet-dashboard",
-    description:
-      "A first-place-winning real-time dashboard for Ethereum preconfirmations, built at ZuBerlin 2024.",
-    branch: 1,
-    radius: 2.6,
+    id: "twitter",
+    label: "X (fka Twitter)",
+    href: "https://x.com/jacobdcastro",
+    description: "Random thoughts about tech, AI, and sometimes sports.",
+    branch: 0,
+    radius: 3.1,
   },
   {
     id: "workflows",
@@ -88,5 +71,23 @@ export const LINKS: GalaxyLink[] = [
       "I built a CHIP-8 CPU interpreter and emulator from scratch in Rust. T'was a joy!",
     branch: 4,
     radius: 3.0,
+  },
+  {
+    id: "calltrace",
+    label: "EVM Calltrace",
+    href: "https://github.com/jacobdcastro/txn-calltrace",
+    description:
+      "A minimal app to search and view calltrace data for an Ethereum transaction.",
+    branch: 3,
+    radius: 2.85,
+  },
+  {
+    id: "hackathon",
+    label: "ZuBerlin Hackathon Project",
+    href: "https://github.com/jacobdcastro/preconf-devnet-dashboard",
+    description:
+      "A first-place-winning real-time dashboard for Ethereum preconfirmations, built at ZuBerlin 2024.",
+    branch: 1,
+    radius: 2.6,
   },
 ];
