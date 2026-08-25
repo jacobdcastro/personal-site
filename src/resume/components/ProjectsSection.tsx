@@ -30,7 +30,7 @@ export function ProjectsSection() {
 							{project.bullets.map((bullet) => (
 								<RichText
 									key={`${project.name}-${bulletKey(bullet)}`}
-									parts={[" — ", ...bullet]}
+									parts={[": ", ...bullet]}
 									style={styles.bulletText}
 								/>
 							))}

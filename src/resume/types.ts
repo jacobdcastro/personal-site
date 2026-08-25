@@ -17,11 +17,13 @@ export interface SkillCategory {
 
 export interface ExperienceEntry {
 	company: string;
-	location: string;
+	/** omitted when the placement adds no signal (e.g. every role was remote) */
+	location?: string;
 	role: string;
 	dates: string;
 	bullets: TextPart[][];
 }
+
 
 export interface ProjectEntry {
 	name: string;
@@ -32,7 +34,9 @@ export interface ProjectEntry {
 export interface ResumeData {
 	name: string;
 	contact: ResumeContact;
+	summary: TextPart[];
 	skills: SkillCategory[];
 	experience: ExperienceEntry[];
 	projects: ProjectEntry[];
+	education: TextPart[];
 }
