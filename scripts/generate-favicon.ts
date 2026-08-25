@@ -128,6 +128,50 @@ async function scaleToSquare(png: Buffer, size: number, marginRatio = 0.06) {
 		.toBuffer();
 }
 
+interface IcoEntry {
+	/** pixel dimension of the square image */
+	size: number;
+	png: Buffer;
+}
+
+const ICO_HEADER_SIZE = 6;
+const ICO_ENTRY_SIZE = 16;
+
+/**
+ * Packs PNGs into a real ICO container. Writing raw PNG bytes to favicon.ico
+ * mostly works, but it is not the declared format, and `nosniff` in production
+ * means the browser is told image/vnd.microsoft.icon and handed PNG data.
+ */
+function encodeIco(entries: readonly IcoEntry[]): Buffer {
+	const header = Buffer.alloc(ICO_HEADER_SIZE);
+	header.writeUInt16LE(0, 0); // reserved
+	header.writeUInt16LE(1, 2); // resource type: icon
+	header.writeUInt16LE(entries.length, 4);
+
+	let offset = ICO_HEADER_SIZE + ICO_ENTRY_SIZE * entries.length;
+	const directory = entries.map((entry) => {
+		const record = Buffer.alloc(ICO_ENTRY_SIZE);
+		// 0 encodes 256 in the single-byte dimension fields
+		const dimension = entry.size >= 256 ? 0 : entry.size;
+		record.writeUInt8(dimension, 0);
+		record.writeUInt8(dimension, 1);
+		record.writeUInt8(0, 2); // palette entries (0 for truecolor)
+		record.writeUInt8(0, 3); // reserved
+		record.writeUInt16LE(1, 4); // color planes
+		record.writeUInt16LE(32, 6); // bits per pixel
+		record.writeUInt32LE(entry.png.length, 8);
+		record.writeUInt32LE(offset, 12);
+		offset += entry.png.length;
+		return record;
+	});
+
+	return Buffer.concat([
+		header,
+		...directory,
+		...entries.map((entry) => entry.png),
+	]);
+}
+
 async function main() {
 	const grid = centerGrid(buildSaturnGrid(FAVICON_SATURN));
 	const raw = gridToCanvas(grid, MASTER_SIZE);
@@ -144,7 +188,13 @@ async function main() {
 
 	writeFileSync(join(publicDir, "favicon-32.png"), png32);
 	writeFileSync(join(publicDir, "favicon-16.png"), png16);
-	writeFileSync(join(publicDir, "favicon.ico"), png32);
+	writeFileSync(
+		join(publicDir, "favicon.ico"),
+		encodeIco([
+			{ size: 16, png: png16 },
+			{ size: 32, png: png32 },
+		]),
+	);
 
 	console.log(
 		`generated favicon (${GRID}x${GRID} ascii → ${MASTER_SIZE}px master → 16/32px)`,
