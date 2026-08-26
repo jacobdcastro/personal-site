@@ -4,6 +4,7 @@ import tailwindcss from "@tailwindcss/vite";
 import { tanstackStart } from "@tanstack/react-start/plugin/vite";
 import viteReact from "@vitejs/plugin-react";
 import remarkFrontmatter from "remark-frontmatter";
+import remarkGfm from "remark-gfm";
 import remarkMdxFrontmatter from "remark-mdx-frontmatter";
 import { defineConfig } from "vite";
 
@@ -15,7 +16,7 @@ const config = defineConfig({
 		{
 			enforce: "pre",
 			...mdx({
-				remarkPlugins: [remarkFrontmatter, remarkMdxFrontmatter],
+				remarkPlugins: [remarkFrontmatter, remarkMdxFrontmatter, remarkGfm],
 			}),
 		},
 		tanstackStart(),
