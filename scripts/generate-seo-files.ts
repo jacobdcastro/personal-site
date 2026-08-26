@@ -12,7 +12,7 @@ const SITE_URL = "https://jacobdcastro.com";
 const SITE_TITLE = "Jacob D. Castro | Fullstack Software Engineer";
 const SITE_DESCRIPTION =
 	"Fullstack software engineer building Ethereum systems and developer tools. Writing, experiments, and open source.";
-const SITE_EMAIL = "jacob@xiv.systems";
+const SITE_EMAIL = "me@jacobdcastro.com";
 
 interface PostFrontmatter {
 	title: string;

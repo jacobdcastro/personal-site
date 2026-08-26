@@ -5,7 +5,7 @@ export const SITE = {
 		"Fullstack software engineer building Ethereum systems and developer tools. Writing, experiments, and open source.",
 	url: "https://jacobdcastro.com",
 	author: "Jacob D. Castro",
-	email: "jacob@xiv.systems",
+	email: "me@jacobdcastro.com",
 	twitterHandle: "@jacobdcastro",
 	ogImagePath: "/og.png",
 	ogImageAlt: "ASCII art of Saturn and its rings",

@@ -5,7 +5,7 @@
     <link>https://jacobdcastro.com/blog</link>
     <description>Fullstack software engineer building Ethereum systems and developer tools. Writing, experiments, and open source.</description>
     <language>en-us</language>
-    <managingEditor>jacob@xiv.systems (Jacob D. Castro | Fullstack Software Engineer)</managingEditor>
+    <managingEditor>me@jacobdcastro.com (Jacob D. Castro | Fullstack Software Engineer)</managingEditor>
     <atom:link href="https://jacobdcastro.com/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>Thoughts on Chain Abstraction</title>
