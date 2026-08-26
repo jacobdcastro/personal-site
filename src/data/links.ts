@@ -49,7 +49,7 @@ export const LINKS: GalaxyLink[] = [
   {
     id: "workflows",
     label: "AI Agent Workflows",
-    href: "https://github.com/jacobdcastro/workflows",
+    href: "https://xiv.sh",
     description:
       "My own agent-driven engineering workflows, wrapped in a CLI to implement, review, and ship good code.",
     branch: 2,

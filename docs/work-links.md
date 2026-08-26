@@ -24,5 +24,5 @@ Candidates for a "work" or "things I've built" page on the site.
 
 - [Preconf Devnet Dashboard](https://github.com/jacobdcastro/preconf-devnet-dashboard) — ZuBerlin 2024 hackathon winner
 - [CHIP-8 CPU Emulator](https://github.com/jacobdcastro/chip8-cpu-emulator)
-- [AI Agent Workflows](https://github.com/jacobdcastro/workflows)
+- [AI Agent Workflows](https://xiv.sh)
 - [Personal Site](https://github.com/jacobdcastro/personal-site)

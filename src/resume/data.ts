@@ -136,7 +136,7 @@ export const RESUME_DATA: ResumeData = {
     },
     {
       name: "AI Agent Workflows",
-      href: "https://github.com/jacobdcastro/workflows",
+      href: "https://github.com/jacobdcastro/xiv",
       bullets: [
         [
           "Custom CLI orchestrating automated implement, review, and ship loops with local agents.",
