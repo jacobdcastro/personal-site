@@ -5,3 +5,9 @@
   command = "npm run dev"
   targetPort = 3000
   port = 8888
+
+# vanity path for the PDF resume
+[[redirects]]
+  from = "/resume"
+  to = "/resume.pdf"
+  status = 302
