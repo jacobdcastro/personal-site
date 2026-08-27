@@ -1,7 +1,5 @@
-import { useEffect, useRef, type RefObject } from "react";
-import { useNavigate } from "@tanstack/react-router";
+import { type RefObject, useEffect, useRef } from "react";
 import type { GalaxyLink } from "../../data/links";
-import { isPageLink } from "../../lib/galaxy-link-action";
 import {
 	linkRadiusCells,
 	type ProjectedLink,
@@ -38,7 +36,6 @@ export function GalaxyLinkLabels({
 	const containerRef = useRef<HTMLDivElement>(null);
 	const markerRefs = useRef(new Map<string, HTMLDivElement>());
 	const smoothRef = useRef(new Map<string, SmoothedLink>());
-	const navigate = useNavigate();
 	const setHovered = useNavStore((s) => s.setHovered);
 	const setFocusedLink = useNavStore((s) => s.setFocusedLink);
 
@@ -139,11 +136,6 @@ export function GalaxyLinkLabels({
 	}, [active, links, projectedRef]);
 
 	function selectLink(link: GalaxyLink) {
-		if (isPageLink(link)) {
-			navigate({ to: link.href });
-			return;
-		}
-
 		const current = useNavStore.getState().focusedLinkId;
 		if (current === link.id) {
 			if (!canDismissZoomLock()) return;

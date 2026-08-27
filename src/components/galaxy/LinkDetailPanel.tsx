@@ -1,6 +1,11 @@
+import { Link } from "@tanstack/react-router";
 import { useEffect, useRef } from "react";
 import type { GalaxyLink } from "../../data/links";
+import { isPageLink } from "../../lib/galaxy-link-action";
 import { useNavStore } from "../../store/nav-store";
+
+const ACTION_CLASS =
+	"mt-4 inline-block font-mono text-xs tracking-wide text-white/90 underline decoration-white/40 underline-offset-4 transition-colors hover:text-white hover:decoration-white/70";
 
 interface LinkDetailPanelProps {
 	links: GalaxyLink[];
@@ -96,15 +101,21 @@ export function LinkDetailPanel({ links }: LinkDetailPanelProps) {
 				<p className="mt-2 font-sans text-sm leading-relaxed text-white/70">
 					{link.description}
 				</p>
-				<a
-					href={link.href}
-					target={linkTarget(link.href)}
-					rel={linkRel(link.href)}
-					className="mt-4 inline-block font-mono text-xs tracking-wide text-white/90 underline decoration-white/40 underline-offset-4 transition-colors hover:text-white hover:decoration-white/70"
-				>
-					{link.href.replace(/^mailto:/, "")}
-					{external && <span className="sr-only"> (opens in new tab)</span>}
-				</a>
+				{isPageLink(link) ? (
+					<Link to={link.href} className={ACTION_CLASS}>
+						{link.href} →
+					</Link>
+				) : (
+					<a
+						href={link.href}
+						target={linkTarget(link.href)}
+						rel={linkRel(link.href)}
+						className={ACTION_CLASS}
+					>
+						{link.href.replace(/^mailto:/, "")}
+						{external && <span className="sr-only"> (opens in new tab)</span>}
+					</a>
+				)}
 			</div>
 		</div>
 	);
