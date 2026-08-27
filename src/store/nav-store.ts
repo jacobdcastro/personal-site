@@ -1,6 +1,6 @@
+import { useSyncExternalStore } from "react";
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
-import { useSyncExternalStore } from "react";
 
 type Mode = "3d" | "list";
 type RenderStyle = "webgl" | "ascii";

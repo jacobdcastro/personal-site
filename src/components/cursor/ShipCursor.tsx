@@ -1,15 +1,13 @@
 import { useEffect, useRef, useState } from "react";
-import { formatGalaxyAxis, formatGalaxyCoords } from "../galaxy/galaxy-math";
 import {
 	cursorPos,
 	cursorVelocity,
 	galaxyCoordsRef,
 } from "../../lib/cursor-motion";
-import {
-	prefersTouchLayout,
-} from "../../lib/input-device";
+import { prefersTouchLayout } from "../../lib/input-device";
 import { startPointerTracking } from "../../lib/pointer-tracker";
 import { useNavStore } from "../../store/nav-store";
+import { formatGalaxyAxis, formatGalaxyCoords } from "../galaxy/galaxy-math";
 
 type CursorState = "scan" | "grip" | "acquire" | "lock" | "terminal";
 
@@ -126,7 +124,9 @@ export function ShipCursor() {
 			lastTerminalCheck.current = { t: now, x, y };
 
 			const target = document.elementFromPoint(x, y);
-			isTerminalRef.current = !!target?.closest('[data-ship-cursor="terminal"]');
+			isTerminalRef.current = !!target?.closest(
+				'[data-ship-cursor="terminal"]',
+			);
 		}
 
 		function applyState(state: CursorState) {
@@ -149,8 +149,7 @@ export function ShipCursor() {
 			}
 
 			if (coordsHudRef.current) {
-				coordsHudRef.current.style.display =
-					state === "terminal" ? "none" : "";
+				coordsHudRef.current.style.display = state === "terminal" ? "none" : "";
 			}
 		}
 
@@ -321,6 +320,7 @@ export function ShipCursor() {
 				<div className="ship-cursor-ping absolute inset-0 rounded-full border border-[#8ec8ff]/30" />
 
 				<svg
+					aria-hidden="true"
 					className="ship-cursor-ring absolute inset-0"
 					viewBox="0 0 48 48"
 					fill="none"
@@ -349,6 +349,7 @@ export function ShipCursor() {
 				</svg>
 
 				<svg
+					aria-hidden="true"
 					className="ship-cursor-brackets absolute inset-0"
 					viewBox="0 0 48 48"
 					fill="none"
@@ -360,9 +361,9 @@ export function ShipCursor() {
 							[6, 42, 6, 34, 10, 34, 10, 38, 14, 38, 14, 42],
 							[42, 42, 42, 34, 38, 34, 38, 38, 34, 38, 34, 42],
 						] as const
-					).map((points, i) => (
+					).map((points) => (
 						<polyline
-							key={i}
+							key={points.join(",")}
 							points={points.join(" ")}
 							stroke={OUTER}
 							strokeWidth="1.25"
@@ -408,6 +409,7 @@ export function ShipCursor() {
 				</div>
 
 				<svg
+					aria-hidden="true"
 					className="ship-cursor-core absolute inset-0"
 					viewBox="0 0 48 48"
 					fill="none"

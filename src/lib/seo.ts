@@ -73,10 +73,7 @@ export function personJsonLd() {
 		name: SITE.author,
 		url: SITE.url,
 		email: SITE.email,
-		sameAs: [
-			"https://github.com/jacobdcastro",
-			"https://x.com/jacobdcastro",
-		],
+		sameAs: ["https://github.com/jacobdcastro", "https://x.com/jacobdcastro"],
 	};
 }
 

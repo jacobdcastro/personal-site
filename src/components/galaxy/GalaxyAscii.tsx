@@ -68,10 +68,8 @@ export function GalaxyAscii({ links, active }: GalaxyAsciiProps) {
 				const focusedLinkId = useNavStore.getState().focusedLinkId;
 				const dragging = isDragging.current;
 				const vel = velocity.current;
-				const hasVelocity =
-					Math.abs(vel.x) > 1e-4 || Math.abs(vel.y) > 1e-4;
-				const interacting =
-					dragging || hasVelocity || !!focusedLinkId;
+				const hasVelocity = Math.abs(vel.x) > 1e-4 || Math.abs(vel.y) > 1e-4;
+				const interacting = dragging || hasVelocity || !!focusedLinkId;
 
 				galaxySim.tick(delta, {
 					isDragging: dragging,
@@ -192,7 +190,11 @@ export function GalaxyAscii({ links, active }: GalaxyAsciiProps) {
 			>
 				{" "}
 			</pre>
-			<GalaxyLinkLabels links={links} projectedRef={projectedRef} active={active} />
+			<GalaxyLinkLabels
+				links={links}
+				projectedRef={projectedRef}
+				active={active}
+			/>
 		</div>
 	);
 }

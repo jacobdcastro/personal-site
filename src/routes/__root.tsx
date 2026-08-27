@@ -13,7 +13,10 @@ export const Route = createRootRoute({
 	head: () => ({
 		meta: [
 			{ charSet: "utf-8" },
-			{ name: "viewport", content: "width=device-width, initial-scale=1, viewport-fit=cover" },
+			{
+				name: "viewport",
+				content: "width=device-width, initial-scale=1, viewport-fit=cover",
+			},
 			{ name: "theme-color", content: SITE.themeColor },
 		],
 		links: [
@@ -23,8 +26,18 @@ export const Route = createRootRoute({
 				href: "https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap",
 			},
 			{ rel: "icon", href: "/favicon.ico", sizes: "any" },
-			{ rel: "icon", href: "/favicon-32.png", sizes: "32x32", type: "image/png" },
-			{ rel: "icon", href: "/favicon-16.png", sizes: "16x16", type: "image/png" },
+			{
+				rel: "icon",
+				href: "/favicon-32.png",
+				sizes: "32x32",
+				type: "image/png",
+			},
+			{
+				rel: "icon",
+				href: "/favicon-16.png",
+				sizes: "16x16",
+				type: "image/png",
+			},
 			{ rel: "manifest", href: "/manifest.json" },
 			{
 				rel: "alternate",

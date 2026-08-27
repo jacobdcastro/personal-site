@@ -5,7 +5,11 @@ import {
 	spiralPosition,
 } from "../components/galaxy/galaxy-math";
 import type { GalaxyLink } from "../data/links";
-import { prefersReducedMotion, prefersTouchLayout, zoomViewOffsetY } from "./input-device";
+import {
+	prefersReducedMotion,
+	prefersTouchLayout,
+	zoomViewOffsetY,
+} from "./input-device";
 import {
 	clearFocusedStarWorld,
 	easeInOutCubic,

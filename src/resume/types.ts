@@ -24,7 +24,6 @@ export interface ExperienceEntry {
 	bullets: TextPart[][];
 }
 
-
 export interface ProjectEntry {
 	name: string;
 	href?: string;

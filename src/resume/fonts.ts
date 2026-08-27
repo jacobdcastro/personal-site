@@ -10,7 +10,11 @@ Font.register({
 		{ src: join(fontsDir, "cmunrm.ttf") },
 		{ src: join(fontsDir, "cmunbx.ttf"), fontWeight: "bold" },
 		{ src: join(fontsDir, "cmunti.ttf"), fontStyle: "italic" },
-		{ src: join(fontsDir, "cmunbi.ttf"), fontWeight: "bold", fontStyle: "italic" },
+		{
+			src: join(fontsDir, "cmunbi.ttf"),
+			fontWeight: "bold",
+			fontStyle: "italic",
+		},
 	],
 });
 

@@ -1,4 +1,4 @@
-import { createFileRoute, ClientOnly } from "@tanstack/react-router";
+import { ClientOnly, createFileRoute } from "@tanstack/react-router";
 import { lazy, Suspense, useEffect } from "react";
 import { ShipCursor } from "../components/cursor/ShipCursor";
 import { GalaxyErrorBoundary } from "../components/galaxy/GalaxyErrorBoundary";
