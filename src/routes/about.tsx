@@ -45,7 +45,9 @@ function AboutPage() {
 
 			<header className="paper-head">
 				<h1 className="paper-title">{frontmatter.title}</h1>
-				<p className="paper-subtitle">{frontmatter.subtitle}</p>
+				{frontmatter.subtitle && (
+					<p className="paper-subtitle">{frontmatter.subtitle}</p>
+				)}
 				<div className="paper-byline">
 					<p className="paper-author">{frontmatter.author}</p>
 					<p className="paper-meta">{frontmatter.affiliation}</p>
