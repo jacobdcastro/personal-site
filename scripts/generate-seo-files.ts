@@ -45,6 +45,7 @@ function buildSitemap(posts: PostFrontmatter[]) {
 	const urls = [
 		{ loc: `${SITE_URL}/`, changefreq: "monthly", priority: "1.0" },
 		{ loc: `${SITE_URL}/about`, changefreq: "monthly", priority: "0.9" },
+		{ loc: `${SITE_URL}/now`, changefreq: "weekly", priority: "0.8" },
 		{ loc: `${SITE_URL}/blog`, changefreq: "weekly", priority: "0.8" },
 		...posts.map((post) => ({
 			loc: `${SITE_URL}/blog/${post.slug}`,

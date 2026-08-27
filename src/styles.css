@@ -285,6 +285,34 @@ canvas {
   text-indent: 0;
 }
 
+.paper-note {
+  color: var(--paper-ink-muted);
+  font-size: 0.86rem;
+  font-style: italic;
+  margin-top: 1.1rem;
+  text-align: center;
+}
+
+/* dated snapshots on /now — same paper furniture, no section numbering */
+.now-entry + .now-entry {
+  border-top: 1px solid var(--paper-rule);
+  margin-top: 3rem;
+  padding-top: 2rem;
+}
+
+.paper-body h2.now-entry-date {
+  counter-increment: none;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  margin-top: 0;
+  text-transform: uppercase;
+}
+
+.paper-body h2.now-entry-date::before {
+  content: none;
+}
+
 .paper-nav {
   color: var(--paper-ink-muted);
   font-family: var(--font-sans);
