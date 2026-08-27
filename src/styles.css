@@ -225,8 +225,33 @@ canvas {
   text-indent: 0;
 }
 
+.paper-body ul + p {
+  margin-top: 1.1rem;
+  text-indent: 0;
+}
+
 .paper-body strong {
   font-weight: 700;
+}
+
+.paper-body ul {
+  list-style: disc;
+  margin: 0.9rem 0 0;
+  padding-left: 1.4rem;
+}
+
+.paper-body ul li {
+  margin-top: 0.4rem;
+  text-align: left;
+}
+
+.paper-body ul li::marker {
+  color: var(--paper-ink-muted);
+}
+
+.paper-body ul li p {
+  margin: 0;
+  text-indent: 0;
 }
 
 .paper-body sup a {

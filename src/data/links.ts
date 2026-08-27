@@ -43,6 +43,15 @@ export const LINKS: GalaxyLink[] = [
 		radius: 3.5,
 	},
 	{
+		id: "uses",
+		label: "Uses",
+		href: "/uses",
+		description: "The hardware, editor, and services I actually reach for.",
+		page: true,
+		branch: 4,
+		radius: 3.6,
+	},
+	{
 		id: "resume",
 		label: "Resumé",
 		href: "/resume.pdf",

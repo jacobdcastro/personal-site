@@ -9,6 +9,7 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as UsesRouteImport } from './routes/uses'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as NowIndexRouteImport } from './routes/now/index'
@@ -16,6 +17,11 @@ import { Route as BlogIndexRouteImport } from './routes/blog/index'
 import { Route as NowArchiveRouteImport } from './routes/now/archive'
 import { Route as BlogSlugRouteImport } from './routes/blog/$slug'
 
+const UsesRoute = UsesRouteImport.update({
+  id: '/uses',
+  path: '/uses',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AboutRoute = AboutRouteImport.update({
   id: '/about',
   path: '/about',
@@ -50,6 +56,7 @@ const BlogSlugRoute = BlogSlugRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/uses': typeof UsesRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/now/archive': typeof NowArchiveRoute
   '/blog/': typeof BlogIndexRoute
@@ -58,6 +65,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/uses': typeof UsesRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/now/archive': typeof NowArchiveRoute
   '/blog': typeof BlogIndexRoute
@@ -67,6 +75,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/uses': typeof UsesRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/now/archive': typeof NowArchiveRoute
   '/blog/': typeof BlogIndexRoute
@@ -77,16 +86,25 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/about'
+    | '/uses'
     | '/blog/$slug'
     | '/now/archive'
     | '/blog/'
     | '/now/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/blog/$slug' | '/now/archive' | '/blog' | '/now'
+  to:
+    | '/'
+    | '/about'
+    | '/uses'
+    | '/blog/$slug'
+    | '/now/archive'
+    | '/blog'
+    | '/now'
   id:
     | '__root__'
     | '/'
     | '/about'
+    | '/uses'
     | '/blog/$slug'
     | '/now/archive'
     | '/blog/'
@@ -96,6 +114,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
+  UsesRoute: typeof UsesRoute
   BlogSlugRoute: typeof BlogSlugRoute
   NowArchiveRoute: typeof NowArchiveRoute
   BlogIndexRoute: typeof BlogIndexRoute
@@ -104,6 +123,13 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/uses': {
+      id: '/uses'
+      path: '/uses'
+      fullPath: '/uses'
+      preLoaderRoute: typeof UsesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/about': {
       id: '/about'
       path: '/about'
@@ -152,6 +178,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
+  UsesRoute: UsesRoute,
   BlogSlugRoute: BlogSlugRoute,
   NowArchiveRoute: NowArchiveRoute,
   BlogIndexRoute: BlogIndexRoute,
